@@ -138,8 +138,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 
 // pages/contract/sign/next/signConfirm/signConfirm.js
-var app = getApp();var avatar = function avatar() {__webpack_require__.e(/*! require.ensure | components/avatar/avatar */ "components/avatar/avatar").then((function () {return resolve(__webpack_require__(/*! ../../../../../components/avatar/avatar */ 564));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
-
+var app = getApp();var _default =
 
 {
   data: function data() {
@@ -149,9 +148,6 @@ var app = getApp();var avatar = function avatar() {__webpack_require__.e(/*! req
       prodWebSrc: 'https://shanqian.cn/miniSign' };
 
   },
-
-  components: {
-    avatar: avatar },
 
   props: {},
   onLoad: function onLoad(options) {

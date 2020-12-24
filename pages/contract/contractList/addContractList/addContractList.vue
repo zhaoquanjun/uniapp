@@ -47,8 +47,8 @@
 </template>
 
 <script>
-// pages/contract/contractList/addContractList/addContractList.js
-var api = require("../../../../api/request.js");
+import { get, postBody } from '../../../../api/request.js'
+import { findNoRelatedContractSubject, saveEvidenceContractRel } from '../../../../api/contract.js'
 var utils = require("../../../../utils/utils.js");
 import search from "../../../../components/search/search";
 import searchHighlightTextView from "../../../../components/searchHighlightTextView/searchHighlightTextView";
@@ -114,13 +114,12 @@ export default {
     */
     getChainsFun(isSearch) {
       var self = this;
-      var url = api.findNoRelatedContractSubject;
       var params = {
         contractTitle: this.searchParams ? this.searchParams : '',
         certificateEvidenceId: this.pageId
       };
-      api.sendGet({
-        url: url,
+      get({
+        url: findNoRelatedContractSubject,
         params: params,
         success: function (res) {
           var contracts = res;
@@ -236,8 +235,8 @@ export default {
         certificateEvidenceId: this.pageId,
         contractSubjectIds: [...this.selectList]
       };
-      api.sendPostBody({
-        url: api.saveEvidenceContractRel,
+      postBody({
+        url: saveEvidenceContractRel,
         params: params,
         success: res => {
           this.getChainsFun();

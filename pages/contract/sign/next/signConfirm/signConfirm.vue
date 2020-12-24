@@ -7,7 +7,6 @@
 <script>
 // pages/contract/sign/next/signConfirm/signConfirm.js
 const app = getApp();
-import avatar from "../../../../../components/avatar/avatar";
 
 export default {
   data() {
@@ -18,9 +17,6 @@ export default {
     };
   },
 
-  components: {
-    avatar
-  },
   props: {},
   onLoad: function (options) {
     console.log(options);

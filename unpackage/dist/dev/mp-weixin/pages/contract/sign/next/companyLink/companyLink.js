@@ -130,117 +130,114 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-// pages/contract/sign/next/companyLink/companyLink.js
-var api = __webpack_require__(/*! ../../../../../api/request.js */ 8);var avatar = function avatar() {__webpack_require__.e(/*! require.ensure | components/avatar/avatar */ "components/avatar/avatar").then((function () {return resolve(__webpack_require__(/*! ../../../../../components/avatar/avatar */ 564));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
-{
-  data: function data() {
-    return {
-      ishighLight: false,
-      companyName: '',
-      userName: '',
-      userPhone: '',
-      companyAuth: '',
-      personAuth: '',
-      searchPersonResultList: [],
-      searchCompanyResultList: [],
-      timer: null };
 
-  },
 
-  components: {
-    avatar: avatar },
 
-  props: {},
 
-  /**
-              * 生命周期函数--监听页面加载
-              */
-  onLoad: function onLoad(options) {},
 
-  /**
-                                        * 生命周期函数--监听页面初次渲染完成
-                                        */
-  onReady: function onReady() {},
 
-  /**
-                                   * 生命周期函数--监听页面显示
-                                   */
-  onShow: function onShow() {},
 
-  /**
-                                 * 生命周期函数--监听页面隐藏
-                                 */
-  onHide: function onHide() {},
 
-  /**
-                                 * 生命周期函数--监听页面卸载
-                                 */
-  onUnload: function onUnload() {},
 
-  /**
-                                     * 页面相关事件处理函数--监听用户下拉动作
-                                     */
-  onPullDownRefresh: function onPullDownRefresh() {},
 
-  /**
-                                                       * 页面上拉触底事件的处理函数
-                                                       */
-  onReachBottom: function onReachBottom() {},
 
-  /**
-                                               * 用户点击右上角分享
-                                               */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../../../api/request.js */ 8);
+var _contract = __webpack_require__(/*! ../../../../../api/contract.js */ 729);
+var _account = __webpack_require__(/*! ../../../../../api/account.js */ 58); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = { data: function data() {return { ishighLight: false, companyName: '', userName: '', userPhone: '', companyAuth: '', personAuth: '', searchPersonResultList: [], searchCompanyResultList: [], timer: null };}, props: {}, /**
+                                                                                                                                                                                                                                          * 生命周期函数--监听页面加载
+                                                                                                                                                                                                                                          */onLoad: function onLoad(options) {}, /**
+                                                                                                                                                                                                                                                                                  * 生命周期函数--监听页面初次渲染完成
+                                                                                                                                                                                                                                                                                  */onReady: function onReady() {}, /**
+                                                                                                                                                                                                                                                                                                                     * 生命周期函数--监听页面显示
+                                                                                                                                                                                                                                                                                                                     */onShow: function onShow() {}, /**
+                                                                                                                                                                                                                                                                                                                                                      * 生命周期函数--监听页面隐藏
+                                                                                                                                                                                                                                                                                                                                                      */onHide: function onHide() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                       * 生命周期函数--监听页面卸载
+                                                                                                                                                                                                                                                                                                                                                                                       */onUnload: function onUnload() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                            * 页面相关事件处理函数--监听用户下拉动作
+                                                                                                                                                                                                                                                                                                                                                                                                                            */onPullDownRefresh: function onPullDownRefresh() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   * 页面上拉触底事件的处理函数
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   */onReachBottom: function onReachBottom() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  * 用户点击右上角分享
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  */
   onShareAppMessage: function onShareAppMessage() {},
   methods: {
     getPersonContactList: function getPersonContactList(name) {var _this = this;
       if (this.timer) clearTimeout(this.timer);
       this.setData({
         timer: setTimeout(function () {
-          api.sendGet({
-            url: api.get_signal_sign_person_list + '?contactType=1&name=' + name,
+          (0, _request.get)({
+            url: _contract.get_signal_sign_person_list + '?contactType=1&name=' + name,
             success: function success(res) {
               _this.setData({
                 searchPersonResultList: res });
@@ -258,8 +255,8 @@ var api = __webpack_require__(/*! ../../../../../api/request.js */ 8);var avatar
       if (this.timer) clearTimeout(this.timer);
       this.setData({
         timer: setTimeout(function () {
-          api.sendGet({
-            url: api.get_signal_sign_person_list + '?contactType=2&name=' + name,
+          (0, _request.get)({
+            url: _contract.get_signal_sign_person_list + '?contactType=2&name=' + name,
             success: function success(res) {
               _this2.setData({
                 searchCompanyResultList: res });
@@ -365,8 +362,8 @@ var api = __webpack_require__(/*! ../../../../../api/request.js */ 8);var avatar
       }
 
       var promise1 = new Promise(function (resolve, reject) {
-        api.sendGet({
-          url: api.company_message,
+        (0, _request.get)({
+          url: _account.company_message,
           params: {
             "companyName": that.companyName },
 
@@ -376,8 +373,8 @@ var api = __webpack_require__(/*! ../../../../../api/request.js */ 8);var avatar
 
       });
       var promise2 = new Promise(function (resolve, reject) {
-        api.sendGet({
-          url: api.person_message,
+        (0, _request.get)({
+          url: _account.person_message,
           params: {
             "name": that.userName,
             "phone": that.userPhone },

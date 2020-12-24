@@ -67,8 +67,8 @@
 </template>
 
 <script>
-// pages/contract/contractList/contract.js
-var api = require("../../../api/request.js");
+import { get } from '../../../api/request.js'
+import { get_contract_list, previewChainImg } from '../../../api/contract.js'
 var utils = require("../../../utils/utils.js");
 import search from "../../../components/search/search";
 import searchHighlightTextView from "../../../components/searchHighlightTextView/searchHighlightTextView";
@@ -170,15 +170,14 @@ export default {
      * @params {operateType} 操作类型 0-初次请求 1-下拉刷新 2-触底加载更多 3-搜索
      */
     getContractsFun(operateType) {
-      var url = api.get_contract_list;
       var params = {
         searchType: this.searchType,
         contractTitle: this.searchParams ? this.searchParams : '',
         pageIndex: this.pageIndex,
         pageSize: this.pageSize
       };
-      api.sendGet({
-        url: url,
+      get({
+        url: get_contract_list,
         params: params,
         success: res => {
           var contracts = res.data;
@@ -475,8 +474,8 @@ export default {
      * @desc 查看存证证书
      */
     previewContractChain() {
-      api.sendGet({
-        url: api.previewChainImg + this.activeItme.id,
+      get({
+        url: previewChainImg + this.activeItme.id,
         success: res => {
           this.setData({
             chainImg: res,

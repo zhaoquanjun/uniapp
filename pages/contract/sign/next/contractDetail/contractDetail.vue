@@ -60,8 +60,8 @@
 </template>
 
 <script>
-// pages/contract/sign/next/signConfirm/signConfirm.js
-var api = require("../../../../../api/request.js");
+import { get } from '../../../../../api/request.js'
+import { get_contract_detail } from '../../../../../api/contract.js'
 import avatar from "../../../../../components/avatar/avatar";
 
 export default {
@@ -122,8 +122,8 @@ export default {
     getDetailDataFun(id) {
       var _this = this;
 
-      api.sendGet({
-        url: api.get_contract_detail,
+      get({
+        url: get_contract_detail,
         params: {
           id: id
         },

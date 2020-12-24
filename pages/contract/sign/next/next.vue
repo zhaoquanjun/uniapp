@@ -200,7 +200,9 @@
 </template>
 
 <script>
-let api = require("../../../../api/request.js"); // pages/contract/sign/next/next.js
+import { get, postBody } from '../../../../api/request.js'
+import { get_contract_detail, get_contract_launch } from '../../../../api/contract.js'
+import { company_message, person_message } from '../../../../api/account.js'
 import avatar from "../../../../components/avatar/avatar";
 import vanDatetimePicker from "../../../../miniprogram_npm/vant-weapp/datetime-picker/index";
 
@@ -360,8 +362,8 @@ export default {
       callback
     }) {
       let promise1 = new Promise(function (resolve, reject) {
-        api.sendGet({
-          url: api.company_message,
+        get({
+          url: company_message,
           params: {
             "companyName": companyName
           },
@@ -371,8 +373,8 @@ export default {
         });
       });
       let promise2 = new Promise(function (resolve, reject) {
-        api.sendGet({
-          url: api.person_message,
+        get({
+          url: person_message,
           params: {
             "name": name,
             "phone": phone
@@ -448,8 +450,8 @@ export default {
     getDetailDataFun(id) {
       var _this = this;
 
-      api.sendGet({
-        url: api.get_contract_detail,
+      get({
+        url: get_contract_detail,
         params: {
           id: id
         },
@@ -652,8 +654,8 @@ export default {
       uni.showLoading({
         title: '加载中'
       });
-      api.sendPostBody({
-        url: api.get_contract_launch,
+      postBody({
+        url: get_contract_launch,
         params: {
           "contractSubject": {
             "contractTitle": contractData.contractTitle,
@@ -854,8 +856,8 @@ export default {
       arr1 = arr1.concat(arr2);
       const contractData = uni.getStorageSync('contractData');
       uni.showLoading({});
-      api.sendPostBody({
-        url: api.get_contract_launch,
+      postBody({
+        url: get_contract_launch,
         params: {
           "contractSubject": {
             "contractTitle": contractData.contractTitle,

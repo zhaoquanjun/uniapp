@@ -39,9 +39,9 @@
 </template>
 
 <script>
-// pages/contract/sign/next/companyLink/companyLink.js
-let api = require("../../../../../api/request.js");
-import avatar from "../../../../../components/avatar/avatar";
+import { get } from '../../../../../api/request.js'
+import { get_signal_sign_person_list } from '../../../../../api/contract.js'
+import { company_message, person_message } from '../../../../../api/account.js'
 
 export default {
   data() {
@@ -58,9 +58,6 @@ export default {
     };
   },
 
-  components: {
-    avatar
-  },
   props: {},
 
   /**
@@ -107,8 +104,8 @@ export default {
       if (this.timer) clearTimeout(this.timer);
       this.setData({
         timer: setTimeout(() => {
-          api.sendGet({
-            url: api.get_signal_sign_person_list + '?contactType=1&name=' + name,
+          get({
+            url: get_signal_sign_person_list + '?contactType=1&name=' + name,
             success: res => {
               this.setData({
                 searchPersonResultList: res
@@ -126,8 +123,8 @@ export default {
       if (this.timer) clearTimeout(this.timer);
       this.setData({
         timer: setTimeout(() => {
-          api.sendGet({
-            url: api.get_signal_sign_person_list + '?contactType=2&name=' + name,
+          get({
+            url: get_signal_sign_person_list + '?contactType=2&name=' + name,
             success: res => {
               this.setData({
                 searchCompanyResultList: res
@@ -233,8 +230,8 @@ export default {
       }
 
       let promise1 = new Promise(function (resolve, reject) {
-        api.sendGet({
-          url: api.company_message,
+        get({
+          url: company_message,
           params: {
             "companyName": that.companyName
           },
@@ -244,8 +241,8 @@ export default {
         });
       });
       let promise2 = new Promise(function (resolve, reject) {
-        api.sendGet({
-          url: api.person_message,
+        get({
+          url: person_message,
           params: {
             "name": that.userName,
             "phone": that.userPhone

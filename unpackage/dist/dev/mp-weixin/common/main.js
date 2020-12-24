@@ -144,7 +144,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
-var api = __webpack_require__(/*! ./api/request.js */ 8);var _default =
+var _request = __webpack_require__(/*! ./api/request.js */ 8);
+var _account = __webpack_require__(/*! ./api/account.js */ 58);var _default =
 
 {
   //当小程序启动，或从后台进入前台显示，会触发 onShow
@@ -312,8 +313,8 @@ var api = __webpack_require__(/*! ./api/request.js */ 8);var _default =
           console.log(res);
           var latitude = res.latitude;
           var longitude = res.longitude;
-          api.sendPost({
-            url: api.upload_local,
+          (0, _request.post)({
+            url: _account.upload_local,
             params: {
               latitude: latitude,
               longitude: longitude },
@@ -335,8 +336,8 @@ var api = __webpack_require__(/*! ./api/request.js */ 8);var _default =
     updateUserInfo: function updateUserInfo(callback) {
       var _this = this;
 
-      api.sendGet({
-        url: api.get_user_info,
+      (0, _request.get)({
+        url: _account.get_user_info,
         success: function success(data) {
           if (!data) {
             return;

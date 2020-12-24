@@ -3,7 +3,5 @@
   "backgroundTextStyle": "dark",
   "navigationBarBackgroundColor": "#ffffff",
   "navigationBarTextStyle": "black",
-  "usingComponents": {
-    "avatar": "/components/avatar/avatar"
-  }
+  "usingComponents": {}
 }

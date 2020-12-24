@@ -130,432 +130,434 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-var api = __webpack_require__(/*! ../../../../api/request.js */ 8); // pages/contract/sign/next/next.js
-var avatar = function avatar() {__webpack_require__.e(/*! require.ensure | components/avatar/avatar */ "components/avatar/avatar").then((function () {return resolve(__webpack_require__(/*! ../../../../components/avatar/avatar */ 564));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var vanDatetimePicker = function vanDatetimePicker() {Promise.all(/*! require.ensure | miniprogram_npm/vant-weapp/datetime-picker/index */[__webpack_require__.e("common/vendor"), __webpack_require__.e("miniprogram_npm/vant-weapp/datetime-picker/index")]).then((function () {return resolve(__webpack_require__(/*! ../../../../miniprogram_npm/vant-weapp/datetime-picker/index */ 585));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
-
-
-{
-  data: function data() {
-    return {
-      currentDate: '',
-      ishighLight: false,
-      isSign: false,
-      isLink: false,
-      isSort: false,
-      userOrder: 0,
-      signingDeadline: '',
-      //签署截止时间
-      fileTermination: '',
-      //文件终止时间
-      showCopy: false,
-      copyItem: {
-        top: 0,
-        companyName: '',
-        userName: '',
-        userPhone: '',
-        chapter: '',
-        signType: '',
-        personAuth: '',
-        companyAuth: '' },
-
-      replace: {
-        companyName: '',
-        userName: '',
-        userPhone: '',
-        chapter: '',
-        signType: '',
-        personAuth: '',
-        companyAuth: '' },
-
-      signMans: [],
-      linkMans: [],
-      startX: 0,
-      startY: 0,
-      contractId: '' };
-
-  },
-
-  components: {
-    avatar: avatar,
-    vanDatetimePicker: vanDatetimePicker },
-
-  props: {},
-
-  /**
-              * 生命周期函数--监听页面加载
-              */
-  onLoad: function onLoad(options) {
-    var signs = uni.getStorageSync('signMans') ? uni.getStorageSync('signMans') : [];
-    var links = uni.getStorageSync('linkMans') ? uni.getStorageSync('linkMans') : [];
-    var currentUser = uni.getStorageSync('currentUser');
-    var isdraft = options.isdraft;
-    this.setData({
-      contractId: options.contractId });
-
-
-    if (isdraft) {
-      this.getDetailDataFun(options.contractId);
-    } else {
-      var self = {
-        userName: uni.getStorageSync('userName'),
-        userPhone: uni.getStorageSync('userAccount'),
-        isPersonAuth: true,
-        processType: 2,
-        status: 1 };
-
-
-      if (!currentUser.companyId) {
-        self.sealName = '手绘章，个人模版章';
-        self.sealType = [1, 4].join();
-        self.relationType = 1;
-      } else {
-        self.companyName = currentUser.companyName;
-        self.isCompanyAuth = true;
-        self.sealName = '企业章，法人代表章';
-        self.sealType = [2, 3].join();
-        self.relationType = 2;
-      }
-
-      var flag = true;
-
-      if (signs && signs.length > 0) {
-        for (var i = 0; i < signs.length; i++) {
-          if (signs[i].userName == self.userName || signs[i].userPhone == self.userPhone) {
-            flag = false;
-          }
-        }
-      }
-
-      if (flag) {
-        signs.push(self);
-      }
-
-      this.setData({
-        signMans: signs,
-        linkMans: links });
-
-      uni.setStorageSync('signMans', signs);
-      this.ishighLightFun();
-    }
-  },
-
-  /**
-      * 生命周期函数--监听页面初次渲染完成
-      */
-  onReady: function onReady() {},
-
-  /**
-                                   * 生命周期函数--监听页面显示
-                                   */
-  onShow: function onShow() {},
-
-  /**
-                                 * 生命周期函数--监听页面隐藏
-                                 */
-  onHide: function onHide() {
-    uni.removeStorageSync('companySign');
-    uni.removeStorageSync('personSign');
-    uni.removeStorageSync('personLink');
-    uni.removeStorageSync('companyLink');
-  },
-
-  /**
-      * 生命周期函数--监听页面卸载
-      */
-  onUnload: function onUnload() {
-    uni.removeStorageSync('signMans');
-    uni.removeStorageSync('linkMans');
-  },
-
-  /**
-      * 页面相关事件处理函数--监听用户下拉动作
-      */
-  onPullDownRefresh: function onPullDownRefresh() {},
-
-  /**
-                                                       * 页面上拉触底事件的处理函数
-                                                       */
-  onReachBottom: function onReachBottom() {},
-
-  /**
-                                               * 用户点击右上角分享
-                                               */
-  onShareAppMessage: function onShareAppMessage() {},
-  methods: {
-    checkAuthFun: function checkAuthFun(_ref)
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
 
 
 
-    {var type = _ref.type,companyName = _ref.companyName,name = _ref.name,phone = _ref.phone,callback = _ref.callback;
-      var promise1 = new Promise(function (resolve, reject) {
-        api.sendGet({
-          url: api.company_message,
-          params: {
-            "companyName": companyName },
 
-          success: function success(res) {
-            resolve(res);
-          } });
 
-      });
-      var promise2 = new Promise(function (resolve, reject) {
-        api.sendGet({
-          url: api.person_message,
-          params: {
-            "name": name,
-            "phone": phone },
 
-          success: function success(res) {
-            resolve(res);
-          } });
 
-      });
-      var arr = type == 1 ? [promise2] : [promise2, promise1];
-      Promise.all(arr).then(function (res) {
-        console.log(res, 222);
 
-        if (typeof callback == 'function') {
-          if (type == 1) {
-            callback(res == 1);
-          } else {
-            callback(res[0] == 1, res[1] == 1);
-          }
-        }
-      });
-    },
 
-    ishighLightFun: function ishighLightFun(e) {
-      var that = this;
 
-      if (that.signMans.length > 0) {
-        that.setData({
-          ishighLight: true });
 
-      } else {
-        that.setData({
-          ishighLight: false });
 
-      }
 
-      setTimeout(function () {
-        that.ishighLightFun();
-      }, 1000);
-    },
 
-    /**
-       * 
-       * @param {*} timestamp 时间戳
-       * @param {*} num 格式化类型
-       */
-    formatTimeConvert: function formatTimeConvert(timestamp, num) {
-      timestamp = timestamp + '';
-      timestamp = timestamp.length == 10 ? timestamp * 1000 : timestamp;
-      var date = new Date(Number(timestamp));
-      var y = date.getFullYear();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../../api/request.js */ 8);
+var _contract = __webpack_require__(/*! ../../../../api/contract.js */ 729);
+var _account = __webpack_require__(/*! ../../../../api/account.js */ 58); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var avatar = function avatar() {__webpack_require__.e(/*! require.ensure | components/avatar/avatar */ "components/avatar/avatar").then((function () {return resolve(__webpack_require__(/*! ../../../../components/avatar/avatar */ 564));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var vanDatetimePicker = function vanDatetimePicker() {Promise.all(/*! require.ensure | miniprogram_npm/vant-weapp/datetime-picker/index */[__webpack_require__.e("common/vendor"), __webpack_require__.e("miniprogram_npm/vant-weapp/datetime-picker/index")]).then((function () {return resolve(__webpack_require__(/*! ../../../../miniprogram_npm/vant-weapp/datetime-picker/index */ 585));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { currentDate: '', ishighLight: false, isSign: false, isLink: false, isSort: false, userOrder: 0, signingDeadline: '', //签署截止时间
+      fileTermination: '', //文件终止时间
+      showCopy: false, copyItem: { top: 0, companyName: '', userName: '', userPhone: '', chapter: '', signType: '', personAuth: '', companyAuth: '' }, replace: { companyName: '', userName: '', userPhone: '', chapter: '', signType: '', personAuth: '', companyAuth: '' }, signMans: [], linkMans: [], startX: 0, startY: 0, contractId: '' };}, components: { avatar: avatar, vanDatetimePicker: vanDatetimePicker }, props: {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                      * 生命周期函数--监听页面加载
+                                                                                                                                                                                                                                                                                                                                                                                                                                      */onLoad: function onLoad(options) {var signs = uni.getStorageSync('signMans') ? uni.getStorageSync('signMans') : [];var links = uni.getStorageSync('linkMans') ? uni.getStorageSync('linkMans') : [];var currentUser = uni.getStorageSync('currentUser');var isdraft = options.isdraft;this.setData({ contractId: options.contractId });if (isdraft) {this.getDetailDataFun(options.contractId);} else {var self = { userName: uni.getStorageSync('userName'), userPhone: uni.getStorageSync('userAccount'), isPersonAuth: true, processType: 2, status: 1 };if (!currentUser.companyId) {self.sealName = '手绘章，个人模版章';self.sealType = [1, 4].join();self.relationType = 1;} else {self.companyName = currentUser.companyName;self.isCompanyAuth = true;self.sealName = '企业章，法人代表章';self.sealType = [2, 3].join();self.relationType = 2;}var flag = true;if (signs && signs.length > 0) {for (var i = 0; i < signs.length; i++) {if (signs[i].userName == self.userName || signs[i].userPhone == self.userPhone) {flag = false;}}}if (flag) {signs.push(self);}this.setData({ signMans: signs, linkMans: links });uni.setStorageSync('signMans', signs);this.ishighLightFun();}}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         * 生命周期函数--监听页面初次渲染完成
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         */onReady: function onReady() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            * 生命周期函数--监听页面显示
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            */onShow: function onShow() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             * 生命周期函数--监听页面隐藏
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             */onHide: function onHide() {uni.removeStorageSync('companySign');uni.removeStorageSync('personSign');uni.removeStorageSync('personLink');uni.removeStorageSync('companyLink');}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 生命周期函数--监听页面卸载
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */onUnload: function onUnload() {uni.removeStorageSync('signMans');uni.removeStorageSync('linkMans');}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         * 页面相关事件处理函数--监听用户下拉动作
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         */onPullDownRefresh: function onPullDownRefresh() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 页面上拉触底事件的处理函数
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */onReachBottom: function onReachBottom() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * 用户点击右上角分享
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */onShareAppMessage: function onShareAppMessage() {}, methods: { checkAuthFun: function checkAuthFun(_ref) {var type = _ref.type,companyName = _ref.companyName,name = _ref.name,phone = _ref.phone,callback = _ref.callback;var promise1 = new Promise(function (resolve, reject) {(0, _request.get)({ url: _account.company_message, params: { "companyName": companyName }, success: function success(res) {resolve(res);} });});var promise2 = new Promise(function (resolve, reject) {(0, _request.get)({ url: _account.person_message, params: { "name": name, "phone": phone }, success: function success(res) {resolve(res);} });});var arr = type == 1 ? [promise2] : [promise2, promise1];Promise.all(arr).then(function (res) {console.log(res, 222);if (typeof callback == 'function') {if (type == 1) {callback(res == 1);} else {callback(res[0] == 1, res[1] == 1);}}});}, ishighLightFun: function ishighLightFun(e) {var that = this;if (that.signMans.length > 0) {that.setData({ ishighLight: true });} else {that.setData({ ishighLight: false });}setTimeout(function () {that.ishighLightFun();}, 1000);}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @param {*} timestamp 时间戳
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * @param {*} num 格式化类型
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */formatTimeConvert: function formatTimeConvert(timestamp, num) {timestamp = timestamp + '';timestamp = timestamp.length == 10 ? timestamp * 1000 : timestamp;var date = new Date(Number(timestamp));var y = date.getFullYear();
       var m = date.getMonth() + 1;
       m = m < 10 ? '0' + m : m;
       var d = date.getDate();
@@ -580,8 +582,8 @@ var avatar = function avatar() {__webpack_require__.e(/*! require.ensure | compo
     getDetailDataFun: function getDetailDataFun(id) {var _this2 = this;
       var _this = this;
 
-      api.sendGet({
-        url: api.get_contract_detail,
+      (0, _request.get)({
+        url: _contract.get_contract_detail,
         params: {
           id: id },
 
@@ -784,8 +786,8 @@ var avatar = function avatar() {__webpack_require__.e(/*! require.ensure | compo
       uni.showLoading({
         title: '加载中' });
 
-      api.sendPostBody({
-        url: api.get_contract_launch,
+      (0, _request.postBody)({
+        url: _contract.get_contract_launch,
         params: {
           "contractSubject": {
             "contractTitle": contractData.contractTitle,
@@ -986,8 +988,8 @@ var avatar = function avatar() {__webpack_require__.e(/*! require.ensure | compo
       arr1 = arr1.concat(arr2);
       var contractData = uni.getStorageSync('contractData');
       uni.showLoading({});
-      api.sendPostBody({
-        url: api.get_contract_launch,
+      (0, _request.postBody)({
+        url: _contract.get_contract_launch,
         params: {
           "contractSubject": {
             "contractTitle": contractData.contractTitle,

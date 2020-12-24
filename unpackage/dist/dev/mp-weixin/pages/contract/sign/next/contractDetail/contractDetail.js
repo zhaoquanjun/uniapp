@@ -130,147 +130,147 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-// pages/contract/sign/next/signConfirm/signConfirm.js
-var api = __webpack_require__(/*! ../../../../../api/request.js */ 8);var avatar = function avatar() {__webpack_require__.e(/*! require.ensure | components/avatar/avatar */ "components/avatar/avatar").then((function () {return resolve(__webpack_require__(/*! ../../../../../components/avatar/avatar */ 564));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
-{
-  data: function data() {
-    return {
-      contractData: null };
 
-  },
 
-  components: {
-    avatar: avatar },
 
-  props: {},
 
-  /**
-              * 生命周期函数--监听页面加载
-              */
-  onLoad: function onLoad(options) {
-    console.log(options);
-    this.getDetailDataFun(options.contractId);
-  },
 
-  /**
-      * 生命周期函数--监听页面初次渲染完成
-      */
-  onReady: function onReady() {},
 
-  /**
-                                   * 生命周期函数--监听页面显示
-                                   */
-  onShow: function onShow() {},
 
-  /**
-                                 * 生命周期函数--监听页面隐藏
-                                 */
-  onHide: function onHide() {},
 
-  /**
-                                 * 生命周期函数--监听页面卸载
-                                 */
-  onUnload: function onUnload() {},
 
-  /**
-                                     * 页面相关事件处理函数--监听用户下拉动作
-                                     */
-  onPullDownRefresh: function onPullDownRefresh() {},
 
-  /**
-                                                       * 页面上拉触底事件的处理函数
-                                                       */
-  onReachBottom: function onReachBottom() {},
 
-  /**
-                                               * 用户点击右上角分享
-                                               */
-  onShareAppMessage: function onShareAppMessage() {},
-  methods: {
-    getDetailDataFun: function getDetailDataFun(id) {
-      var _this = this;
 
-      api.sendGet({
-        url: api.get_contract_detail,
-        params: {
-          id: id },
 
-        success: function success(res) {
-          console.log(res);
-          var copy = res.contractFlowTasks.filter(function (it) {
-            return it.processType == 2;
-          });
-          res.contractFlowTasks = copy;
-          var contractSubject = res.contractSubject;
 
-          if (contractSubject.gmtCreate) {
-            res.contractSubject.gmtCreate = _this.formatTimeConvert(contractSubject.gmtCreate, 1);
-          }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../../../api/request.js */ 8);
+var _contract = __webpack_require__(/*! ../../../../../api/contract.js */ 729); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var avatar = function avatar() {__webpack_require__.e(/*! require.ensure | components/avatar/avatar */ "components/avatar/avatar").then((function () {return resolve(__webpack_require__(/*! ../../../../../components/avatar/avatar */ 564));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { contractData: null };}, components: { avatar: avatar }, props: {}, /**
+                                                                                                                                                                                                                                                                                         * 生命周期函数--监听页面加载
+                                                                                                                                                                                                                                                                                         */onLoad: function onLoad(options) {console.log(options);this.getDetailDataFun(options.contractId);}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                * 生命周期函数--监听页面初次渲染完成
+                                                                                                                                                                                                                                                                                                                                                                                                */onReady: function onReady() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                   * 生命周期函数--监听页面显示
+                                                                                                                                                                                                                                                                                                                                                                                                                                   */onShow: function onShow() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    * 生命周期函数--监听页面隐藏
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                    */onHide: function onHide() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     * 生命周期函数--监听页面卸载
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     */onUnload: function onUnload() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * 页面相关事件处理函数--监听用户下拉动作
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          */onPullDownRefresh: function onPullDownRefresh() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 * 页面上拉触底事件的处理函数
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */onReachBottom: function onReachBottom() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 用户点击右上角分享
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */onShareAppMessage: function onShareAppMessage() {}, methods: { getDetailDataFun: function getDetailDataFun(id) {var _this = this;(0, _request.get)({ url: _contract.get_contract_detail, params: { id: id }, success: function success(res) {console.log(res);var copy = res.contractFlowTasks.filter(function (it) {return it.processType == 2;});res.contractFlowTasks = copy;var contractSubject = res.contractSubject;if (contractSubject.gmtCreate) {res.contractSubject.gmtCreate = _this.formatTimeConvert(contractSubject.gmtCreate, 1);}
           if (contractSubject.signingDeadline) {
             res.contractSubject.signingDeadline = _this.formatTimeConvert(contractSubject.signingDeadline, 1);
           }

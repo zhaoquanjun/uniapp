@@ -61,8 +61,8 @@
 </template>
 
 <script>
-// pages/chains/chains.js
-var api = require("../../../../api/request.js");
+import { get, postBody} from '../../../../api/request'
+import { getChainsList, deleteContractEvidenceRel } from '../../../../api/contract.js'
 var utils = require("../../../../utils/utils.js");
 import search from "../../../../components/search/search";
 import searchHighlightTextView from "../../../../components/searchHighlightTextView/searchHighlightTextView";
@@ -128,15 +128,14 @@ export default {
     */
     getChainsFun(isSearch) {
       var self = this;
-      var url = api.getChainsList;
       var params = {
         name: this.searchParams ? this.searchParams : '',
         pageIndex: this.pageIndex,
         pageSize: this.pageSize,
         contractSubjectId: this.queryId
       };
-      api.sendGet({
-        url: url,
+      get({
+        url: getChainsList,
         params: params,
         success: function (res) {
           console.log(res);
@@ -259,8 +258,8 @@ export default {
         contractSubjectId: this.queryId,
         certificateEvidenceIds: this.activeItme.id
       };
-      api.sendPostBody({
-        url: api.deleteContractEvidenceRel,
+      postBody({
+        url: deleteContractEvidenceRel,
         params: params,
         success: res => {
           setTimeout(() => {

@@ -61,7 +61,8 @@
 </template>
 
 <script>
-var api = require("../../../../api/request.js");
+import { get } from '../../../../api/request.js'
+import { companyList } from '../../../../api/account.js'
 require("../../../../prototype/prototype.js");
 let utils = require("../../../../utils/utils.js");
 var app = getApp();
@@ -138,8 +139,8 @@ export default {
     chooseSponsor: function () {
       var _this = this;
 
-      api.sendGet({
-        url: api.companyList,
+      get({
+        url: companyList,
         success: function (res) {
           let authcompanyList = [];
           res.data.forEach(function (item) {

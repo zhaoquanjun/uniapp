@@ -1,5 +1,6 @@
 <script>
-var api = require("./api/request.js");
+import { get, post } from './api/request.js'
+import { get_user_info, upload_local } from './api/account.js'
 
 export default {
   //当小程序启动，或从后台进入前台显示，会触发 onShow
@@ -167,8 +168,8 @@ export default {
           console.log(res);
           var latitude = res.latitude;
           var longitude = res.longitude;
-          api.sendPost({
-            url: api.upload_local,
+          post({
+            url: upload_local,
             params: {
               latitude: latitude,
               longitude: longitude
@@ -190,8 +191,8 @@ export default {
     updateUserInfo: function (callback) {
       var _this = this;
 
-      api.sendGet({
-        url: api.get_user_info,
+      get({
+        url: get_user_info,
         success: function (data) {
           if (!data) {
             return;

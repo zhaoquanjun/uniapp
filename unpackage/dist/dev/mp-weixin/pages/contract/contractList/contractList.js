@@ -140,77 +140,77 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;} //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-// pages/contract/contractList/contract.js
-var api = __webpack_require__(/*! ../../../api/request.js */ 8);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
+var _contract = __webpack_require__(/*! ../../../api/contract.js */ 729);function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
 var utils = __webpack_require__(/*! ../../../utils/utils.js */ 35);var search = function search() {__webpack_require__.e(/*! require.ensure | components/search/search */ "components/search/search").then((function () {return resolve(__webpack_require__(/*! ../../../components/search/search */ 529));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var searchHighlightTextView = function searchHighlightTextView() {__webpack_require__.e(/*! require.ensure | components/searchHighlightTextView/searchHighlightTextView */ "components/searchHighlightTextView/searchHighlightTextView").then((function () {return resolve(__webpack_require__(/*! ../../../components/searchHighlightTextView/searchHighlightTextView */ 578));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../../components/halfSlideItem/halfSlideItem */ 536));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
@@ -312,15 +312,14 @@ var utils = __webpack_require__(/*! ../../../utils/utils.js */ 35);var search = 
         * @params {operateType} 操作类型 0-初次请求 1-下拉刷新 2-触底加载更多 3-搜索
         */
     getContractsFun: function getContractsFun(operateType) {var _this = this;
-      var url = api.get_contract_list;
       var params = {
         searchType: this.searchType,
         contractTitle: this.searchParams ? this.searchParams : '',
         pageIndex: this.pageIndex,
         pageSize: this.pageSize };
 
-      api.sendGet({
-        url: url,
+      (0, _request.get)({
+        url: _contract.get_contract_list,
         params: params,
         success: function success(res) {
           var contracts = res.data;
@@ -617,8 +616,8 @@ var utils = __webpack_require__(/*! ../../../utils/utils.js */ 35);var search = 
         * @desc 查看存证证书
         */
     previewContractChain: function previewContractChain() {var _this3 = this;
-      api.sendGet({
-        url: api.previewChainImg + this.activeItme.id,
+      (0, _request.get)({
+        url: _contract.previewChainImg + this.activeItme.id,
         success: function success(res) {
           _this3.setData({
             chainImg: res,

@@ -44,9 +44,10 @@
 </template>
 
 <script>
-// pages/contract/sign/next/personSign/personSign.js
-let api = require("../../../../../api/request.js");
-import avatar from "../../../../../components/avatar/avatar";
+
+import { get } from '../../../../../api/request.js'
+import { get_signal_sign_person_list } from '../../../../../api/contract.js'
+import { person_message } from '../../../../../api/account.js'
 
 export default {
   data() {
@@ -62,9 +63,6 @@ export default {
     };
   },
 
-  components: {
-    avatar
-  },
   props: {},
 
   /**
@@ -164,8 +162,8 @@ export default {
 
       var that = this;
       let promise1 = new Promise(function (resolve, reject) {
-        api.sendGet({
-          url: api.person_message,
+        get({
+          url: person_message,
           params: {
             "name": that.userName,
             "phone": that.userPhone
@@ -241,8 +239,8 @@ export default {
       if (this.timer) clearTimeout(this.timer);
       this.setData({
         timer: setTimeout(() => {
-          api.sendGet({
-            url: api.get_signal_sign_person_list + '?contactType=1&name=' + name,
+          get({
+            url: get_signal_sign_person_list + '?contactType=1&name=' + name,
             success: res => {
               this.setData({
                 searchResultList: res
