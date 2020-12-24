@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "视频存证",
-  "navigationBarBackgroundColor": "#ffffff",
-  "navigationBarTextStyle": "black",
-  "enablePullDownRefresh": true,
-  "backgroundTextStyle": "dark",
-  "usingComponents": {}
-}

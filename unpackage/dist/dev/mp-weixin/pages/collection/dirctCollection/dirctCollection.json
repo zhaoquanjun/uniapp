@@ -1,8 +1,0 @@
-{
-  "enablePullDownRefresh": false,
-  "backgroundTextStyle": "dark",
-  "navigationBarBackgroundColor": "#F7F8F9",
-  "navigationBarTitleText": "发起收款",
-  "navigationBarTextStyle": "black",
-  "usingComponents": {}
-}

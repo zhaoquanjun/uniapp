@@ -40,7 +40,7 @@
 			<!-- 上传文件 start -->
 			<view class="certificate-content-item--file" v-if="type==='file'">
 				<view class="h1" style="margin-top:32rpx">选择文件</view>
-				<view class="file-size">文件大小：{{addFileInfo.size}}<text v-if="addFileInfo.size">M</text></view>
+				<view class="file-size" v-if="addFileInfo.size">文件大小：{{addFileInfo.size}}<text>M</text></view>
 				<view class="upload-btn" @tap="handleChooseFileFun">选择上传文件</view>
 			</view>
 			<!-- 上传文字 start -->

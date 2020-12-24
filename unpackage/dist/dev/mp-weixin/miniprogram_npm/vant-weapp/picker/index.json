@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "picker-column": "/miniprogram_npm/vant-weapp/picker-column/index",
-    "loading": "/miniprogram_npm/vant-weapp/loading/index"
-  }
-}

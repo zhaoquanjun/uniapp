@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "消费明细",
-  "backgroundTextStyle": "dark",
-  "navigationBarBackgroundColor": "#ffffff",
-  "backgroundColorTop": "#ffffff",
-  "navigationBarTextStyle": "black",
-  "enablePullDownRefresh": true,
-  "usingComponents": {}
-}

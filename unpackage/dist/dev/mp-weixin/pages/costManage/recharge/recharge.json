@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "充值",
-  "backgroundTextStyle": "dark",
-  "navigationBarBackgroundColor": "#ffffff",
-  "backgroundColorTop": "#ffffff",
-  "navigationBarTextStyle": "black",
-  "enablePullDownRefresh": true,
-  "usingComponents": {}
-}

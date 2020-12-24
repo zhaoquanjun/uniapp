@@ -1,1 +1,0 @@
-<view><block wx:for="{{textArr}}" wx:for-item="item" wx:for-index="index" wx:key="index"><text class="{{[item==skeyword?'highlight':'normal']}}">{{item}}</text></block></view>
