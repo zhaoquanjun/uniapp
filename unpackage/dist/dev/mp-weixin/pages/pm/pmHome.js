@@ -2,7 +2,7 @@
 
 /***/ 38:
 /*!*******************************************************************************!*\
-  !*** /Users/icourt/Desktop/code/wxApp/main.js?{"page":"pages%2Fpm%2FpmHome"} ***!
+  !*** /Users/icourt/Desktop/mycode/uni/main.js?{"page":"pages%2Fpm%2FpmHome"} ***!
   \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -18,7 +18,7 @@ createPage(_pmHome.default);
 
 /***/ 39:
 /*!************************************************************!*\
-  !*** /Users/icourt/Desktop/code/wxApp/pages/pm/pmHome.vue ***!
+  !*** /Users/icourt/Desktop/mycode/uni/pages/pm/pmHome.vue ***!
   \************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -59,7 +59,7 @@ component.options.__file = "pages/pm/pmHome.vue"
 
 /***/ 40:
 /*!*******************************************************************************************!*\
-  !*** /Users/icourt/Desktop/code/wxApp/pages/pm/pmHome.vue?vue&type=template&id=7788f9a5& ***!
+  !*** /Users/icourt/Desktop/mycode/uni/pages/pm/pmHome.vue?vue&type=template&id=7788f9a5& ***!
   \*******************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -81,7 +81,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ 41:
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/icourt/Desktop/code/wxApp/pages/pm/pmHome.vue?vue&type=template&id=7788f9a5& ***!
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/icourt/Desktop/mycode/uni/pages/pm/pmHome.vue?vue&type=template&id=7788f9a5& ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -94,7 +94,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   wechatUserInfo: function() {
-    return __webpack_require__.e(/*! import() | components/wechatUserInfo/wechatUserInfo */ "components/wechatUserInfo/wechatUserInfo").then(__webpack_require__.bind(null, /*! @/components/wechatUserInfo/wechatUserInfo.vue */ 574))
+    return __webpack_require__.e(/*! import() | components/wechatUserInfo/wechatUserInfo */ "components/wechatUserInfo/wechatUserInfo").then(__webpack_require__.bind(null, /*! @/components/wechatUserInfo/wechatUserInfo.vue */ 558))
   }
 }
 var render = function() {
@@ -112,7 +112,7 @@ render._withStripped = true
 
 /***/ 42:
 /*!*************************************************************************************!*\
-  !*** /Users/icourt/Desktop/code/wxApp/pages/pm/pmHome.vue?vue&type=script&lang=js& ***!
+  !*** /Users/icourt/Desktop/mycode/uni/pages/pm/pmHome.vue?vue&type=script&lang=js& ***!
   \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -128,7 +128,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ 43:
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/icourt/Desktop/code/wxApp/pages/pm/pmHome.vue?vue&type=script&lang=js& ***!
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/icourt/Desktop/mycode/uni/pages/pm/pmHome.vue?vue&type=script&lang=js& ***!
   \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -190,7 +190,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // pages/pm/pmHome.js
 var app = getApp();
-var api = __webpack_require__(/*! ../../api/request.js */ 8);var icon = function icon() {__webpack_require__.e(/*! require.ensure | components/icon/icon */ "components/icon/icon").then((function () {return resolve(__webpack_require__(/*! ../../components/icon/icon */ 581));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var avatar = function avatar() {__webpack_require__.e(/*! require.ensure | components/avatar/avatar */ "components/avatar/avatar").then((function () {return resolve(__webpack_require__(/*! ../../components/avatar/avatar */ 588));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var wechatUserInfo = function wechatUserInfo() {__webpack_require__.e(/*! require.ensure | components/wechatUserInfo/wechatUserInfo */ "components/wechatUserInfo/wechatUserInfo").then((function () {return resolve(__webpack_require__(/*! ../../components/wechatUserInfo/wechatUserInfo */ 574));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../components/halfSlideItem/halfSlideItem */ 560));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../components/sliderPicker/sliderPicker */ 546));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var api = __webpack_require__(/*! ../../api/request.js */ 8);var icon = function icon() {__webpack_require__.e(/*! require.ensure | components/icon/icon */ "components/icon/icon").then((function () {return resolve(__webpack_require__(/*! ../../components/icon/icon */ 565));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var avatar = function avatar() {__webpack_require__.e(/*! require.ensure | components/avatar/avatar */ "components/avatar/avatar").then((function () {return resolve(__webpack_require__(/*! ../../components/avatar/avatar */ 572));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var wechatUserInfo = function wechatUserInfo() {__webpack_require__.e(/*! require.ensure | components/wechatUserInfo/wechatUserInfo */ "components/wechatUserInfo/wechatUserInfo").then((function () {return resolve(__webpack_require__(/*! ../../components/wechatUserInfo/wechatUserInfo */ 558));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../components/halfSlideItem/halfSlideItem */ 544));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../components/sliderPicker/sliderPicker */ 530));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -328,15 +328,15 @@ var api = __webpack_require__(/*! ../../api/request.js */ 8);var icon = function
 
       switch (index) {
         case 0:
-          pageURI = "/pages/home/stamp/stampManager";
+          pageURI = "/pages/pm/stamp/stampManager";
           break;
 
         case 1:
-          pageURI = "/pages/home/costManage/costManage";
+          pageURI = "/pages/costManage/costManage";
           break;
 
         case 2:
-          pageURI = '/pages/home/invoice/invoice';
+          pageURI = '/pages/invvoice/invoice';
           break;
 
         case 3:
@@ -451,13 +451,13 @@ var api = __webpack_require__(/*! ../../api/request.js */ 8);var icon = function
       switch (e.detail) {
         case 0:
           uni.navigateTo({
-            url: '/pages/home/templateReceipt/templateReceipt?isTemplate=1' });
+            url: '/pages/home/templateCollection/templateReceipt?isTemplate=1' });
 
           break;
 
         case 1:
           uni.navigateTo({
-            url: '/pages/home/receipt/receipt?isTemplate=0' });
+            url: '/pages/collection/dirctCollection/receipt?isTemplate=0' });
 
           break;
 
@@ -473,7 +473,7 @@ var api = __webpack_require__(/*! ../../api/request.js */ 8);var icon = function
 
 /***/ 44:
 /*!*********************************************************************************************!*\
-  !*** /Users/icourt/Desktop/code/wxApp/pages/pm/pmHome.vue?vue&type=style&index=0&lang=css& ***!
+  !*** /Users/icourt/Desktop/mycode/uni/pages/pm/pmHome.vue?vue&type=style&index=0&lang=css& ***!
   \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -489,7 +489,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ 45:
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/icourt/Desktop/code/wxApp/pages/pm/pmHome.vue?vue&type=style&index=0&lang=css& ***!
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/icourt/Desktop/mycode/uni/pages/pm/pmHome.vue?vue&type=style&index=0&lang=css& ***!
   \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {

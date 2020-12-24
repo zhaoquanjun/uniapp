@@ -13,7 +13,7 @@
 /* 11 */,
 /* 12 */
 /*!*******************************************************************************!*\
-  !*** /Users/icourt/Desktop/code/wxApp/main.js?{"page":"pages%2Fhome%2Fhome"} ***!
+  !*** /Users/icourt/Desktop/mycode/uni/main.js?{"page":"pages%2Fhome%2Fhome"} ***!
   \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -28,7 +28,7 @@ createPage(_home.default);
 /***/ }),
 /* 13 */
 /*!************************************************************!*\
-  !*** /Users/icourt/Desktop/code/wxApp/pages/home/home.vue ***!
+  !*** /Users/icourt/Desktop/mycode/uni/pages/home/home.vue ***!
   \************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -68,7 +68,7 @@ component.options.__file = "pages/home/home.vue"
 /***/ }),
 /* 14 */
 /*!*******************************************************************************************!*\
-  !*** /Users/icourt/Desktop/code/wxApp/pages/home/home.vue?vue&type=template&id=92bb8f34& ***!
+  !*** /Users/icourt/Desktop/mycode/uni/pages/home/home.vue?vue&type=template&id=92bb8f34& ***!
   \*******************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -89,7 +89,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 /* 15 */
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/icourt/Desktop/code/wxApp/pages/home/home.vue?vue&type=template&id=92bb8f34& ***!
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/icourt/Desktop/mycode/uni/pages/home/home.vue?vue&type=template&id=92bb8f34& ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -102,7 +102,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
   homeAddDataStorge: function() {
-    return __webpack_require__.e(/*! import() | components/home-add-dataStorge/home-add-dataStorge */ "components/home-add-dataStorge/home-add-dataStorge").then(__webpack_require__.bind(null, /*! @/components/home-add-dataStorge/home-add-dataStorge.vue */ 539))
+    return __webpack_require__.e(/*! import() | components/home-add-dataStorge/home-add-dataStorge */ "components/home-add-dataStorge/home-add-dataStorge").then(__webpack_require__.bind(null, /*! @/components/home-add-dataStorge/home-add-dataStorge.vue */ 523))
   }
 }
 var render = function() {
@@ -119,7 +119,7 @@ render._withStripped = true
 /***/ }),
 /* 16 */
 /*!*************************************************************************************!*\
-  !*** /Users/icourt/Desktop/code/wxApp/pages/home/home.vue?vue&type=script&lang=js& ***!
+  !*** /Users/icourt/Desktop/mycode/uni/pages/home/home.vue?vue&type=script&lang=js& ***!
   \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -134,7 +134,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 /* 17 */
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/icourt/Desktop/code/wxApp/pages/home/home.vue?vue&type=script&lang=js& ***!
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/icourt/Desktop/mycode/uni/pages/home/home.vue?vue&type=script&lang=js& ***!
   \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -293,7 +293,7 @@ var _home = __webpack_require__(/*! ../../api/home */ 18); //
 //
 //
 //
-var app = getApp();var homeAddDataStorge = function homeAddDataStorge() {__webpack_require__.e(/*! require.ensure | components/home-add-dataStorge/home-add-dataStorge */ "components/home-add-dataStorge/home-add-dataStorge").then((function () {return resolve(__webpack_require__(/*! ../../components/home-add-dataStorge/home-add-dataStorge */ 539));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../components/sliderPicker/sliderPicker */ 546));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { showDialog: false, mineSignCount: '0', otherSignCount: '0', hasAuth: false, fileName: '', userName: '', userList: [], sliderList: [{ label: '发起文件签署', value: 1 }, { label: '从合同模版发起签署', value: 2 }, { label: '取消', value: 2 }], authType: 1 // 未认证状态 1:个人 2:企业 
+var app = getApp();var homeAddDataStorge = function homeAddDataStorge() {__webpack_require__.e(/*! require.ensure | components/home-add-dataStorge/home-add-dataStorge */ "components/home-add-dataStorge/home-add-dataStorge").then((function () {return resolve(__webpack_require__(/*! ../../components/home-add-dataStorge/home-add-dataStorge */ 523));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../components/sliderPicker/sliderPicker */ 530));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { showDialog: false, mineSignCount: '0', otherSignCount: '0', hasAuth: false, fileName: '', userName: '', userList: [], sliderList: [{ label: '发起文件签署', value: 1 }, { label: '从合同模版发起签署', value: 2 }, { label: '取消', value: 2 }], authType: 1 // 未认证状态 1:个人 2:企业 
       , isLogin: "" };}, components: { homeAddDataStorge: homeAddDataStorge, sliderPicker: sliderPicker }, props: {}, onLoad: function onLoad() {}, onShow: function onShow() {this.initUserStatusOnLoadingFun();}, onUnload: function onUnload() {}, onShareAppMessage: function onShareAppMessage() {}, methods: { /**
                                                                                                                                                                                                                                                                                                                       * @name 初始化用户信息
                                                                                                                                                                                                                                                                                                                       */initUserStatusOnLoadingFun: function initUserStatusOnLoadingFun() {var currentUser = uni.getStorageSync('currentUser');var name = currentUser && currentUser.companyId ? currentUser.companyName : currentUser.name && currentUser.name != '' ? currentUser.name : '未登录用户';this.setData({ userName: name, isLogin: app.globalData.isLoginIn() });this.getCompanyUserInfoFun();this.getContractCountFun();}, /**
@@ -362,7 +362,7 @@ var app = getApp();var homeAddDataStorge = function homeAddDataStorge() {__webpa
 
       if (app.globalData.checkHasAuth()) {
         uni.navigateTo({
-          url: '/pages/home/searchResult/searchResult' });
+          url: '/pages/searchResult/searchResult' });
 
       }
     },
@@ -438,7 +438,7 @@ var app = getApp();var homeAddDataStorge = function homeAddDataStorge() {__webpa
 
       if (app.globalData.checkHasAuth()) {
         uni.navigateTo({
-          url: '/pages/home/contract/contract?searchType=2&pageTitle=待自己处理' });
+          url: '/pages/contract/contractList/contract?searchType=2&pageTitle=待自己处理' });
 
       }
     },
@@ -454,7 +454,7 @@ var app = getApp();var homeAddDataStorge = function homeAddDataStorge() {__webpa
 
       if (app.globalData.checkHasAuth()) {
         uni.navigateTo({
-          url: '/pages/home/contract/contract?searchType=3&pageTitle=待他人处理' });
+          url: '/pages/contract/contractList/contract?searchType=3&pageTitle=待他人处理' });
 
       }
     },
@@ -539,7 +539,7 @@ var app = getApp();var homeAddDataStorge = function homeAddDataStorge() {__webpa
             //filename
             success: function success(res) {
               uni.navigateTo({
-                url: '/pages/home/sign/launchSign/launchSign?fileName=' + uploadFileName + '&url=' + res.url + '&coverUrl=' + res.coverUrl + '&backfileName=' + res.fileName });
+                url: '/pages/contract/sign/launchSign/launchSign?fileName=' + uploadFileName + '&url=' + res.url + '&coverUrl=' + res.coverUrl + '&backfileName=' + res.fileName });
 
             },
             fail: function fail(err) {
@@ -625,7 +625,7 @@ var app = getApp();var homeAddDataStorge = function homeAddDataStorge() {__webpa
 /* 18 */,
 /* 19 */
 /*!*********************************************************************************************!*\
-  !*** /Users/icourt/Desktop/code/wxApp/pages/home/home.vue?vue&type=style&index=0&lang=css& ***!
+  !*** /Users/icourt/Desktop/mycode/uni/pages/home/home.vue?vue&type=style&index=0&lang=css& ***!
   \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -640,7 +640,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 /* 20 */
 /*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/icourt/Desktop/code/wxApp/pages/home/home.vue?vue&type=style&index=0&lang=css& ***!
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/icourt/Desktop/mycode/uni/pages/home/home.vue?vue&type=style&index=0&lang=css& ***!
   \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {

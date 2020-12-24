@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "存证详情",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "half-slide-item": "/components/halfSlideItem/halfSlideItem"
+  }
+}

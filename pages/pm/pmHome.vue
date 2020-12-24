@@ -192,15 +192,15 @@ export default {
 
       switch (index) {
         case 0:
-          pageURI = "/pages/home/stamp/stampManager";
+          pageURI = "/pages/pm/stamp/stampManager";
           break;
 
         case 1:
-          pageURI = "/pages/home/costManage/costManage";
+          pageURI = "/pages/costManage/costManage";
           break;
 
         case 2:
-          pageURI = '/pages/home/invoice/invoice';
+          pageURI = '/pages/invvoice/invoice';
           break;
 
         case 3:
@@ -315,13 +315,13 @@ export default {
       switch (e.detail) {
         case 0:
           uni.navigateTo({
-            url: '/pages/home/templateReceipt/templateReceipt?isTemplate=1'
+            url: '/pages/home/templateCollection/templateReceipt?isTemplate=1'
           });
           break;
 
         case 1:
           uni.navigateTo({
-            url: '/pages/home/receipt/receipt?isTemplate=0'
+            url: '/pages/collection/dirctCollection/receipt?isTemplate=0'
           });
           break;
 

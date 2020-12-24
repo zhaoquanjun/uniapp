@@ -1,0 +1,1 @@
+{"version":3,"sources":["uni-app:///main.js"],"names":["createPage","Page"],"mappings":";;;;;;;;;;kDAAA;AACA;AACA,uO;AACAA,UAAU,CAACC,oBAAD,CAAV,C","file":"pages/invvoice/payContract/payContract.js","sourcesContent":["import 'uni-pages';\nimport Vue from 'vue'\nimport Page from './pages/invvoice/payContract/payContract.vue'\ncreatePage(Page)"],"sourceRoot":""}

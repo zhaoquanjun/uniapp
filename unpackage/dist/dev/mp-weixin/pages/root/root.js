@@ -2,7 +2,7 @@
 
 /***/ 46:
 /*!*******************************************************************************!*\
-  !*** /Users/icourt/Desktop/code/wxApp/main.js?{"page":"pages%2Froot%2Froot"} ***!
+  !*** /Users/icourt/Desktop/mycode/uni/main.js?{"page":"pages%2Froot%2Froot"} ***!
   \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -18,7 +18,7 @@ createPage(_root.default);
 
 /***/ 47:
 /*!************************************************************!*\
-  !*** /Users/icourt/Desktop/code/wxApp/pages/root/root.vue ***!
+  !*** /Users/icourt/Desktop/mycode/uni/pages/root/root.vue ***!
   \************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -57,7 +57,7 @@ component.options.__file = "pages/root/root.vue"
 
 /***/ 48:
 /*!*******************************************************************************************!*\
-  !*** /Users/icourt/Desktop/code/wxApp/pages/root/root.vue?vue&type=template&id=d63f5b74& ***!
+  !*** /Users/icourt/Desktop/mycode/uni/pages/root/root.vue?vue&type=template&id=d63f5b74& ***!
   \*******************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -79,7 +79,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ 49:
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/icourt/Desktop/code/wxApp/pages/root/root.vue?vue&type=template&id=d63f5b74& ***!
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/icourt/Desktop/mycode/uni/pages/root/root.vue?vue&type=template&id=d63f5b74& ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -106,7 +106,7 @@ render._withStripped = true
 
 /***/ 50:
 /*!*************************************************************************************!*\
-  !*** /Users/icourt/Desktop/code/wxApp/pages/root/root.vue?vue&type=script&lang=js& ***!
+  !*** /Users/icourt/Desktop/mycode/uni/pages/root/root.vue?vue&type=script&lang=js& ***!
   \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -122,7 +122,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ 51:
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/icourt/Desktop/code/wxApp/pages/root/root.vue?vue&type=script&lang=js& ***!
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!/Users/icourt/Desktop/mycode/uni/pages/root/root.vue?vue&type=script&lang=js& ***!
   \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {

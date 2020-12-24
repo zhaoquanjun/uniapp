@@ -10,6 +10,7 @@ const env = {
 const prefix = 'prod'; // current env
 
 var host = env[prefix + 'Host'];
+
 module.exports.host = host; // 发票部分 start
 
 module.exports.get_invoice_data = host + '/v1/invoice/findInvoiceList'; // 获取发票申请数据

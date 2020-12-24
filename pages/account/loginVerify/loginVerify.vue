@@ -185,7 +185,7 @@ export default {
           }, 50);
           setTimeout(() => {
             uni.redirectTo({
-              url: '/pages/home/costManage/accountCard/accountCard?type=1'
+              url: '/pages/costManage/accountCard/accountCard?type=1'
             });
           }, 1500);
         },

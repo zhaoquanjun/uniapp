@@ -58,8 +58,8 @@
 </template>
 
 <script>
-const FXQ = require("../../../utils/FXQ");
-const api = require("../../../api/request");
+const FXQ = require("../../../../utils/FXQ");
+const api = require("../../../../api/request");
 var app = getApp();
 
 export default {

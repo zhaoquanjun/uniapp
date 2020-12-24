@@ -201,14 +201,14 @@ Convert miniprogram_npm/vant-weapp/transition/index.vue success!
 Convert miniprogram_npm/vant-weapp/tree-select/index.vue success!
 Convert pages/account/login/login.vue success!
 Convert pages/account/loginVerify/loginVerify.vue success!
-Convert pages/home/contract/contract.vue success!
-Convert pages/home/costManage/costManage.vue success!
-Convert pages/home/fill/fill.vue success!
-Convert pages/home/invoice/invoice.vue success!
-Convert pages/home/receipt/receipt.vue success!
-Convert pages/home/searchResult/searchResult.vue success!
-Convert pages/home/stamp/stampManager.vue success!
-Convert pages/home/templateReceipt/templateReceipt.vue success!
+Convert pages/contract/contractList/contract.vue success!
+Convert pages/costManage/costManage.vue success!
+Convert pages/contract/fill/fill.vue success!
+Convert pages/invvoice/invoice.vue success!
+Convert pages/collection/dirctCollection/receipt.vue success!
+Convert pages/searchResult/searchResult.vue success!
+Convert pages/pm/stamp/stampManager.vue success!
+Convert pages/home/templateCollection/templateReceipt.vue success!
 Convert component pages/newEvidence/certificateDetail/certificateDetail.vue.wxml success!
 Convert pages/template/addCompany/index.vue success!
 Convert pages/template/addPerson/index.vue success!
@@ -387,31 +387,31 @@ Convert node_modules/vant-weapp/lib/toast/index.vue success!
 Convert component node_modules/vant-weapp/lib/toast/toast.js success!
 Convert node_modules/vant-weapp/lib/transition/index.vue success!
 Convert node_modules/vant-weapp/lib/tree-select/index.vue success!
-Convert pages/home/contract/addContractList/addContractList.vue success!
-Convert pages/home/contract/chainList/chainList.vue success!
-Convert pages/home/contract/chains/chains.vue success!
-Convert pages/home/costManage/accountBalance/accountBalance.vue success!
-Convert pages/home/costManage/accountCard/accountCard.vue success!
-Convert pages/home/costManage/buyCard/buyCard.vue success!
-Convert pages/home/costManage/cardDetail/cardDetail.vue success!
-Convert pages/home/costManage/giveSettings/giveSettings.vue success!
-Convert pages/home/costManage/giveWay/giveWay.vue success!
-Convert pages/home/costManage/giving/giving.vue success!
-Convert pages/home/costManage/receiveCard/receiveCard.vue success!
-Convert pages/home/costManage/receiveResult/receiveResult.vue success!
-Convert pages/home/costManage/recharge/recharge.vue success!
-Convert pages/home/costManage/sendResult/sendResult.vue success!
-Convert pages/home/invoice/applyInvoice/applyInvoice.vue success!
-Convert pages/home/invoice/nuonuoPay/nuonuoPay.vue success!
-Convert pages/home/invoice/payContract/payContract.vue success!
-Convert pages/home/invoice/payDetail/payDetail.vue success!
-Convert pages/home/invoice/payResult/payResult.vue success!
-Convert pages/home/receipt/receiptLaunch/receiptLaunch.vue success!
-Convert pages/home/sign/launchSign/launchSign.vue success!
-Convert pages/home/sign/next/next.vue success!
-Convert pages/home/sign/submitSign/submitSign.vue success!
-Convert pages/home/stamp/add/addStamp.vue success!
-Convert pages/home/stamp/addCachet/addCachet.vue success!
+Convert pages/contract/contractList/addContractList/addContractList.vue success!
+Convert pages/contract/contractList/chainList/chainList.vue success!
+Convert pages/contract/contractList/chains/chains.vue success!
+Convert pages/costManage/accountBalance/accountBalance.vue success!
+Convert pages/costManage/accountCard/accountCard.vue success!
+Convert pages/costManage/buyCard/buyCard.vue success!
+Convert pages/costManage/cardDetail/cardDetail.vue success!
+Convert pages/costManage/giveSettings/giveSettings.vue success!
+Convert pages/costManage/giveWay/giveWay.vue success!
+Convert pages/costManage/giving/giving.vue success!
+Convert pages/costManage/receiveCard/receiveCard.vue success!
+Convert pages/costManage/receiveResult/receiveResult.vue success!
+Convert pages/costManage/recharge/recharge.vue success!
+Convert pages/costManage/sendResult/sendResult.vue success!
+Convert pages/invvoice/applyInvoice/applyInvoice.vue success!
+Convert pages/invvoice/nuonuoPay/nuonuoPay.vue success!
+Convert pages/invvoice/payContract/payContract.vue success!
+Convert pages/invvoice/payDetail/payDetail.vue success!
+Convert pages/invvoice/payResult/payResult.vue success!
+Convert pages/collection/dirctCollection/dirctCollectionLaunch/dirctCollectionLaunchtion.vue success!
+Convert pages/contract/sign/launchSign/launchSign.vue success!
+Convert pages/contract/sign/next/next.vue success!
+Convert pages/contract/sign/submitSign/submitSign.vue success!
+Convert pages/pm/stamp/add/addStamp.vue success!
+Convert pages/pm/stamp/addCachet/addCachet.vue success!
 Convert wxApp_uni/pages/authentication/company/account-info/index.vue success!
 Convert wxApp_uni/pages/authentication/company/auth-result/index.vue success!
 Convert wxApp_uni/pages/authentication/company/company-auth-type/index.vue success!
@@ -495,14 +495,14 @@ Convert wxApp_uni/miniprogram_npm/vant-weapp/transition/index.vue success!
 Convert wxApp_uni/miniprogram_npm/vant-weapp/tree-select/index.vue success!
 Convert wxApp_uni/pages/account/login/login.vue success!
 Convert wxApp_uni/pages/account/loginVerify/loginVerify.vue success!
-Convert wxApp_uni/pages/home/contract/contract.vue success!
-Convert wxApp_uni/pages/home/costManage/costManage.vue success!
-Convert wxApp_uni/pages/home/fill/fill.vue success!
-Convert wxApp_uni/pages/home/invoice/invoice.vue success!
-Convert wxApp_uni/pages/home/receipt/receipt.vue success!
-Convert wxApp_uni/pages/home/searchResult/searchResult.vue success!
-Convert wxApp_uni/pages/home/stamp/stampManager.vue success!
-Convert wxApp_uni/pages/home/templateReceipt/templateReceipt.vue success!
+Convert wxApp_uni/pages/contract/contractList/contract.vue success!
+Convert wxApp_uni/pages/costManage/costManage.vue success!
+Convert wxApp_uni/pages/contract/fill/fill.vue success!
+Convert wxApp_uni/pages/invvoice/invoice.vue success!
+Convert wxApp_uni/pages/collection/dirctCollection/receipt.vue success!
+Convert wxApp_uni/pages/searchResult/searchResult.vue success!
+Convert wxApp_uni/pages/pm/stamp/stampManager.vue success!
+Convert wxApp_uni/pages/home/templateCollection/templateReceipt.vue success!
 Convert component wxApp_uni/pages/newEvidence/certificateDetail/certificateDetail.vue.wxml success!
 Convert wxApp_uni/pages/template/addCompany/index.vue success!
 Convert wxApp_uni/pages/template/addPerson/index.vue success!
@@ -515,12 +515,12 @@ Convert component node_modules/vant-weapp/dist/mixins/observer/props.js success!
 Convert component node_modules/vant-weapp/lib/mixins/observer/behavior.js success!
 Convert component node_modules/vant-weapp/lib/mixins/observer/index.js success!
 Convert component node_modules/vant-weapp/lib/mixins/observer/props.js success!
-Convert pages/home/sign/next/companyLink/companyLink.vue success!
-Convert pages/home/sign/next/companySign/companySign.vue success!
-Convert pages/home/sign/next/contractDetail/contractDetail.vue success!
-Convert pages/home/sign/next/personLink/personLink.vue success!
-Convert pages/home/sign/next/personSign/personSign.vue success!
-Convert pages/home/sign/next/signConfirm/signConfirm.vue success!
+Convert pages/contract/sign/next/companyLink/companyLink.vue success!
+Convert pages/contract/sign/next/companySign/companySign.vue success!
+Convert pages/contract/sign/next/contractDetail/contractDetail.vue success!
+Convert pages/contract/sign/next/personLink/personLink.vue success!
+Convert pages/contract/sign/next/personSign/personSign.vue success!
+Convert pages/contract/sign/next/signConfirm/signConfirm.vue success!
 Convert component wxApp_uni/miniprogram_npm/vant-weapp/mixins/observer/behavior.js success!
 Convert component wxApp_uni/miniprogram_npm/vant-weapp/mixins/observer/index.js success!
 Convert component wxApp_uni/miniprogram_npm/vant-weapp/mixins/observer/props.js success!
@@ -662,43 +662,43 @@ Convert wxApp_uni/node_modules/vant-weapp/lib/toast/index.vue success!
 Convert component wxApp_uni/node_modules/vant-weapp/lib/toast/toast.js success!
 Convert wxApp_uni/node_modules/vant-weapp/lib/transition/index.vue success!
 Convert wxApp_uni/node_modules/vant-weapp/lib/tree-select/index.vue success!
-Convert wxApp_uni/pages/home/contract/addContractList/addContractList.vue success!
-Convert wxApp_uni/pages/home/contract/chainList/chainList.vue success!
-Convert wxApp_uni/pages/home/contract/chains/chains.vue success!
-Convert wxApp_uni/pages/home/costManage/accountBalance/accountBalance.vue success!
-Convert wxApp_uni/pages/home/costManage/accountCard/accountCard.vue success!
-Convert wxApp_uni/pages/home/costManage/buyCard/buyCard.vue success!
-Convert wxApp_uni/pages/home/costManage/cardDetail/cardDetail.vue success!
-Convert wxApp_uni/pages/home/costManage/giveSettings/giveSettings.vue success!
-Convert wxApp_uni/pages/home/costManage/giveWay/giveWay.vue success!
-Convert wxApp_uni/pages/home/costManage/giving/giving.vue success!
-Convert wxApp_uni/pages/home/costManage/receiveCard/receiveCard.vue success!
-Convert wxApp_uni/pages/home/costManage/receiveResult/receiveResult.vue success!
-Convert wxApp_uni/pages/home/costManage/recharge/recharge.vue success!
-Convert wxApp_uni/pages/home/costManage/sendResult/sendResult.vue success!
-Convert wxApp_uni/pages/home/invoice/applyInvoice/applyInvoice.vue success!
-Convert wxApp_uni/pages/home/invoice/nuonuoPay/nuonuoPay.vue success!
-Convert wxApp_uni/pages/home/invoice/payContract/payContract.vue success!
-Convert wxApp_uni/pages/home/invoice/payDetail/payDetail.vue success!
-Convert wxApp_uni/pages/home/invoice/payResult/payResult.vue success!
-Convert wxApp_uni/pages/home/receipt/receiptLaunch/receiptLaunch.vue success!
-Convert wxApp_uni/pages/home/sign/launchSign/launchSign.vue success!
-Convert wxApp_uni/pages/home/sign/next/next.vue success!
-Convert wxApp_uni/pages/home/sign/submitSign/submitSign.vue success!
-Convert wxApp_uni/pages/home/stamp/add/addStamp.vue success!
-Convert wxApp_uni/pages/home/stamp/addCachet/addCachet.vue success!
+Convert wxApp_uni/pages/contract/contractList/addContractList/addContractList.vue success!
+Convert wxApp_uni/pages/contract/contractList/chainList/chainList.vue success!
+Convert wxApp_uni/pages/contract/contractList/chains/chains.vue success!
+Convert wxApp_uni/pages/costManage/accountBalance/accountBalance.vue success!
+Convert wxApp_uni/pages/costManage/accountCard/accountCard.vue success!
+Convert wxApp_uni/pages/costManage/buyCard/buyCard.vue success!
+Convert wxApp_uni/pages/costManage/cardDetail/cardDetail.vue success!
+Convert wxApp_uni/pages/costManage/giveSettings/giveSettings.vue success!
+Convert wxApp_uni/pages/costManage/giveWay/giveWay.vue success!
+Convert wxApp_uni/pages/costManage/giving/giving.vue success!
+Convert wxApp_uni/pages/costManage/receiveCard/receiveCard.vue success!
+Convert wxApp_uni/pages/costManage/receiveResult/receiveResult.vue success!
+Convert wxApp_uni/pages/costManage/recharge/recharge.vue success!
+Convert wxApp_uni/pages/costManage/sendResult/sendResult.vue success!
+Convert wxApp_uni/pages/invvoice/applyInvoice/applyInvoice.vue success!
+Convert wxApp_uni/pages/invvoice/nuonuoPay/nuonuoPay.vue success!
+Convert wxApp_uni/pages/invvoice/payContract/payContract.vue success!
+Convert wxApp_uni/pages/invvoice/payDetail/payDetail.vue success!
+Convert wxApp_uni/pages/invvoice/payResult/payResult.vue success!
+Convert wxApp_uni/pages/collection/dirctCollection/dirctCollectionLaunch/dirctCollectionLaunchtion.vue success!
+Convert wxApp_uni/pages/contract/sign/launchSign/launchSign.vue success!
+Convert wxApp_uni/pages/contract/sign/next/next.vue success!
+Convert wxApp_uni/pages/contract/sign/submitSign/submitSign.vue success!
+Convert wxApp_uni/pages/pm/stamp/add/addStamp.vue success!
+Convert wxApp_uni/pages/pm/stamp/addCachet/addCachet.vue success!
 Convert component wxApp_uni/node_modules/vant-weapp/dist/mixins/observer/behavior.js success!
 Convert component wxApp_uni/node_modules/vant-weapp/dist/mixins/observer/index.js success!
 Convert component wxApp_uni/node_modules/vant-weapp/dist/mixins/observer/props.js success!
 Convert component wxApp_uni/node_modules/vant-weapp/lib/mixins/observer/behavior.js success!
 Convert component wxApp_uni/node_modules/vant-weapp/lib/mixins/observer/index.js success!
 Convert component wxApp_uni/node_modules/vant-weapp/lib/mixins/observer/props.js success!
-Convert wxApp_uni/pages/home/sign/next/companyLink/companyLink.vue success!
-Convert wxApp_uni/pages/home/sign/next/companySign/companySign.vue success!
-Convert wxApp_uni/pages/home/sign/next/contractDetail/contractDetail.vue success!
-Convert wxApp_uni/pages/home/sign/next/personLink/personLink.vue success!
-Convert wxApp_uni/pages/home/sign/next/personSign/personSign.vue success!
-Convert wxApp_uni/pages/home/sign/next/signConfirm/signConfirm.vue success!
+Convert wxApp_uni/pages/contract/sign/next/companyLink/companyLink.vue success!
+Convert wxApp_uni/pages/contract/sign/next/companySign/companySign.vue success!
+Convert wxApp_uni/pages/contract/sign/next/contractDetail/contractDetail.vue success!
+Convert wxApp_uni/pages/contract/sign/next/personLink/personLink.vue success!
+Convert wxApp_uni/pages/contract/sign/next/personSign/personSign.vue success!
+Convert wxApp_uni/pages/contract/sign/next/signConfirm/signConfirm.vue success!
 Convert font.css.wxss success!
 Convert weui.css.wxss success!
 Convert wxApp_uni/font.css.wxss success!
@@ -736,15 +736,15 @@ Convert wxApp_uni/node_modules/vant-weapp/lib/common/style/hairline.css.wxss suc
 [命名替换]:  _sendPhoneCode  -->  sendPhoneCodeFun    file: pages/account/loginVerify/loginVerify.js
 [命名替换]:  _login  -->  loginFun    file: pages/account/loginVerify/loginVerify.js
 [命名替换]:  _sendPhoneCode  -->  sendPhoneCodeFun    file: pages/account/loginVerify/loginVerify.js
-[命名替换]:  _submitSign  -->  submitSignFun    file: pages/home/sign/submitSign/submitSign.js
-[命名替换]:  _submitSign  -->  submitSignFun    file: pages/home/sign/submitSign/submitSign.js
+[命名替换]:  _submitSign  -->  submitSignFun    file: pages/contract/sign/submitSign/submitSign.js
+[命名替换]:  _submitSign  -->  submitSignFun    file: pages/contract/sign/submitSign/submitSign.js
 [命名替换]:  _getGiftCardStatus  -->  getGiftCardStatusFun    file: wxApp_uni/pages/account/loginVerify/loginVerify.js
 [命名替换]:  _getGiftCard  -->  getGiftCardFun    file: wxApp_uni/pages/account/loginVerify/loginVerify.js
 [命名替换]:  _sendPhoneCode  -->  sendPhoneCodeFun    file: wxApp_uni/pages/account/loginVerify/loginVerify.js
 [命名替换]:  _login  -->  loginFun    file: wxApp_uni/pages/account/loginVerify/loginVerify.js
 [命名替换]:  _sendPhoneCode  -->  sendPhoneCodeFun    file: wxApp_uni/pages/account/loginVerify/loginVerify.js
-[命名替换]:  _submitSign  -->  submitSignFun    file: wxApp_uni/pages/home/sign/submitSign/submitSign.js
-[命名替换]:  _submitSign  -->  submitSignFun    file: wxApp_uni/pages/home/sign/submitSign/submitSign.js
+[命名替换]:  _submitSign  -->  submitSignFun    file: wxApp_uni/pages/contract/sign/submitSign/submitSign.js
+[命名替换]:  _submitSign  -->  submitSignFun    file: wxApp_uni/pages/contract/sign/submitSign/submitSign.js
 [命名替换]:  _loginWx  -->  loginWxFun    file: pages/account/login/login.js
 [命名替换]:  _getUserRegisterInfo  -->  getUserRegisterInfoFun    file: pages/account/login/login.js
 [命名替换]:  _loginWx  -->  loginWxFun    file: pages/account/login/login.js
@@ -763,154 +763,154 @@ Convert wxApp_uni/node_modules/vant-weapp/lib/common/style/hairline.css.wxss suc
 [命名替换]:  _loginWx  -->  loginWxFun    file: wxApp_uni/pages/account/login/login.js
 [命名替换]:  _getPhone  -->  getPhoneFun    file: wxApp_uni/pages/account/login/login.js
 [命名替换]:  _getRegisterStatus  -->  getRegisterStatusFun    file: wxApp_uni/pages/account/login/login.js
-[命名替换]:  _cancelShare  -->  cancelShareFun    file: pages/home/costManage/giveWay/giveWay.js
-[命名替换]:  _shareCard  -->  shareCardFun    file: pages/home/costManage/giveWay/giveWay.js
-[命名替换]:  _cancelShare  -->  cancelShareFun    file: pages/home/costManage/giveWay/giveWay.js
-[命名替换]:  _cancelShare  -->  cancelShareFun    file: pages/home/costManage/giveWay/giveWay.js
-[命名替换]:  _cancelShare  -->  cancelShareFun    file: wxApp_uni/pages/home/costManage/giveWay/giveWay.js
-[命名替换]:  _shareCard  -->  shareCardFun    file: wxApp_uni/pages/home/costManage/giveWay/giveWay.js
-[命名替换]:  _cancelShare  -->  cancelShareFun    file: wxApp_uni/pages/home/costManage/giveWay/giveWay.js
-[命名替换]:  _cancelShare  -->  cancelShareFun    file: wxApp_uni/pages/home/costManage/giveWay/giveWay.js
-[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/home/costManage/cardDetail/cardDetail.js
-[命名替换]:  _getDetailData  -->  getDetailDataFun    file: pages/home/costManage/cardDetail/cardDetail.js
-[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/home/costManage/cardDetail/cardDetail.js
-[命名替换]:  _getDetailData  -->  getDetailDataFun    file: wxApp_uni/pages/home/costManage/cardDetail/cardDetail.js
-[命名替换]:  _getGiftCardStatus  -->  getGiftCardStatusFun    file: pages/home/costManage/receiveCard/receiveCard.js
-[命名替换]:  _getGiftCard  -->  getGiftCardFun    file: pages/home/costManage/receiveCard/receiveCard.js
-[命名替换]:  _loginWx  -->  loginWxFun    file: pages/home/costManage/receiveCard/receiveCard.js
-[命名替换]:  _getUserRegisterInfo  -->  getUserRegisterInfoFun    file: pages/home/costManage/receiveCard/receiveCard.js
-[命名替换]:  _loginWx  -->  loginWxFun    file: pages/home/costManage/receiveCard/receiveCard.js
-[命名替换]:  _getPhone  -->  getPhoneFun    file: pages/home/costManage/receiveCard/receiveCard.js
-[命名替换]:  _getGiftCardStatus  -->  getGiftCardStatusFun    file: pages/home/costManage/receiveCard/receiveCard.js
-[命名替换]:  _getGiftCard  -->  getGiftCardFun    file: pages/home/costManage/receiveCard/receiveCard.js
-[命名替换]:  _getGiftCardStatus  -->  getGiftCardStatusFun    file: wxApp_uni/pages/home/costManage/receiveCard/receiveCard.js
-[命名替换]:  _getGiftCard  -->  getGiftCardFun    file: wxApp_uni/pages/home/costManage/receiveCard/receiveCard.js
-[命名替换]:  _loginWx  -->  loginWxFun    file: wxApp_uni/pages/home/costManage/receiveCard/receiveCard.js
-[命名替换]:  _getUserRegisterInfo  -->  getUserRegisterInfoFun    file: wxApp_uni/pages/home/costManage/receiveCard/receiveCard.js
-[命名替换]:  _loginWx  -->  loginWxFun    file: wxApp_uni/pages/home/costManage/receiveCard/receiveCard.js
-[命名替换]:  _getPhone  -->  getPhoneFun    file: wxApp_uni/pages/home/costManage/receiveCard/receiveCard.js
-[命名替换]:  _getGiftCardStatus  -->  getGiftCardStatusFun    file: wxApp_uni/pages/home/costManage/receiveCard/receiveCard.js
-[命名替换]:  _getGiftCard  -->  getGiftCardFun    file: wxApp_uni/pages/home/costManage/receiveCard/receiveCard.js
-[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/home/invoice/invoice.js
-[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: pages/home/invoice/invoice.js
-[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: pages/home/invoice/invoice.js
-[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: pages/home/invoice/invoice.js
-[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: pages/home/invoice/invoice.js
-[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: pages/home/invoice/invoice.js
-[命名替换]:  _getContracts  -->  getContractsFun    file: pages/home/searchResult/searchResult.js
-[命名替换]:  _parseData  -->  parseDataFun    file: pages/home/searchResult/searchResult.js
-[命名替换]:  _getCurrentContractStatus  -->  getCurrentContractStatusFun    file: pages/home/searchResult/searchResult.js
-[命名替换]:  _handleBackToCost  -->  handleBackToCostFun    file: pages/home/costManage/sendResult/sendResult.js
-[命名替换]:  _getPayInfo  -->  getPayInfoFun    file: pages/home/invoice/payContract/payContract.js
-[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/home/invoice/invoice.js
-[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: wxApp_uni/pages/home/invoice/invoice.js
-[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: wxApp_uni/pages/home/invoice/invoice.js
-[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: wxApp_uni/pages/home/invoice/invoice.js
-[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: wxApp_uni/pages/home/invoice/invoice.js
-[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: wxApp_uni/pages/home/invoice/invoice.js
-[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/home/searchResult/searchResult.js
-[命名替换]:  _parseData  -->  parseDataFun    file: wxApp_uni/pages/home/searchResult/searchResult.js
-[命名替换]:  _getCurrentContractStatus  -->  getCurrentContractStatusFun    file: wxApp_uni/pages/home/searchResult/searchResult.js
-[命名替换]:  _handleBackToCost  -->  handleBackToCostFun    file: wxApp_uni/pages/home/costManage/sendResult/sendResult.js
-[命名替换]:  _getPayInfo  -->  getPayInfoFun    file: wxApp_uni/pages/home/invoice/payContract/payContract.js
-[命名替换]:  _payByWx  -->  payByWxFun    file: pages/home/costManage/recharge/recharge.js
-[命名替换]:  _getWxPayParams  -->  getWxPayParamsFun    file: pages/home/costManage/recharge/recharge.js
-[命名替换]:  _getCurrentUserName  -->  getCurrentUserNameFun    file: pages/home/costManage/recharge/recharge.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/personLink/personLink.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/personLink/personLink.js
-[命名替换]:  _payByWx  -->  payByWxFun    file: wxApp_uni/pages/home/costManage/recharge/recharge.js
-[命名替换]:  _getWxPayParams  -->  getWxPayParamsFun    file: wxApp_uni/pages/home/costManage/recharge/recharge.js
-[命名替换]:  _getCurrentUserName  -->  getCurrentUserNameFun    file: wxApp_uni/pages/home/costManage/recharge/recharge.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/personLink/personLink.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/personLink/personLink.js
-[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/chainList/chainList.js
-[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/chainList/chainList.js
-[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/chainList/chainList.js
-[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/chainList/chainList.js
-[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/chainList/chainList.js
-[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/home/invoice/payDetail/payDetail.js
-[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/home/invoice/payDetail/payDetail.js
-[命名替换]:  _getPayDetail  -->  getPayDetailFun    file: pages/home/invoice/payDetail/payDetail.js
-[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/chainList/chainList.js
-[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/chainList/chainList.js
-[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/chainList/chainList.js
-[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/chainList/chainList.js
-[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/chainList/chainList.js
-[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/home/invoice/payDetail/payDetail.js
-[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/home/invoice/payDetail/payDetail.js
-[命名替换]:  _getPayDetail  -->  getPayDetailFun    file: wxApp_uni/pages/home/invoice/payDetail/payDetail.js
-[命名替换]:  _setDefaultSeal  -->  setDefaultSealFun    file: pages/home/stamp/stampManager.js
-[命名替换]:  _setDefaultSeal  -->  setDefaultSealFun    file: wxApp_uni/pages/home/stamp/stampManager.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/companyLink/companyLink.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/companyLink/companyLink.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/companyLink/companyLink.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/companyLink/companyLink.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/companyLink/companyLink.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/companyLink/companyLink.js
-[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/addContractList/addContractList.js
-[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/addContractList/addContractList.js
-[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/addContractList/addContractList.js
-[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/addContractList/addContractList.js
-[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/addContractList/addContractList.js
-[命名替换]:  _getWxPayParams  -->  getWxPayParamsFun    file: pages/home/costManage/buyCard/buyCard.js
-[命名替换]:  _payByWx  -->  payByWxFun    file: pages/home/costManage/buyCard/buyCard.js
-[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/addContractList/addContractList.js
-[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/addContractList/addContractList.js
-[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/addContractList/addContractList.js
-[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/addContractList/addContractList.js
-[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/addContractList/addContractList.js
-[命名替换]:  _getWxPayParams  -->  getWxPayParamsFun    file: wxApp_uni/pages/home/costManage/buyCard/buyCard.js
-[命名替换]:  _payByWx  -->  payByWxFun    file: wxApp_uni/pages/home/costManage/buyCard/buyCard.js
-[命名替换]:  _getUserAccountInfo  -->  getUserAccountInfoFun    file: pages/home/costManage/costManage.js
-[命名替换]:  _getUserAccountInfo  -->  getUserAccountInfoFun    file: pages/home/costManage/costManage.js
-[命名替换]:  _getUserAccountInfo  -->  getUserAccountInfoFun    file: wxApp_uni/pages/home/costManage/costManage.js
-[命名替换]:  _getUserAccountInfo  -->  getUserAccountInfoFun    file: wxApp_uni/pages/home/costManage/costManage.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/personSign/personSign.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/personSign/personSign.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/personSign/personSign.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/personSign/personSign.js
+[命名替换]:  _cancelShare  -->  cancelShareFun    file: pages/costManage/giveWay/giveWay.js
+[命名替换]:  _shareCard  -->  shareCardFun    file: pages/costManage/giveWay/giveWay.js
+[命名替换]:  _cancelShare  -->  cancelShareFun    file: pages/costManage/giveWay/giveWay.js
+[命名替换]:  _cancelShare  -->  cancelShareFun    file: pages/costManage/giveWay/giveWay.js
+[命名替换]:  _cancelShare  -->  cancelShareFun    file: wxApp_uni/pages/costManage/giveWay/giveWay.js
+[命名替换]:  _shareCard  -->  shareCardFun    file: wxApp_uni/pages/costManage/giveWay/giveWay.js
+[命名替换]:  _cancelShare  -->  cancelShareFun    file: wxApp_uni/pages/costManage/giveWay/giveWay.js
+[命名替换]:  _cancelShare  -->  cancelShareFun    file: wxApp_uni/pages/costManage/giveWay/giveWay.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/costManage/cardDetail/cardDetail.js
+[命名替换]:  _getDetailData  -->  getDetailDataFun    file: pages/costManage/cardDetail/cardDetail.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/costManage/cardDetail/cardDetail.js
+[命名替换]:  _getDetailData  -->  getDetailDataFun    file: wxApp_uni/pages/costManage/cardDetail/cardDetail.js
+[命名替换]:  _getGiftCardStatus  -->  getGiftCardStatusFun    file: pages/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getGiftCard  -->  getGiftCardFun    file: pages/costManage/receiveCard/receiveCard.js
+[命名替换]:  _loginWx  -->  loginWxFun    file: pages/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getUserRegisterInfo  -->  getUserRegisterInfoFun    file: pages/costManage/receiveCard/receiveCard.js
+[命名替换]:  _loginWx  -->  loginWxFun    file: pages/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getPhone  -->  getPhoneFun    file: pages/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getGiftCardStatus  -->  getGiftCardStatusFun    file: pages/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getGiftCard  -->  getGiftCardFun    file: pages/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getGiftCardStatus  -->  getGiftCardStatusFun    file: wxApp_uni/pages/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getGiftCard  -->  getGiftCardFun    file: wxApp_uni/pages/costManage/receiveCard/receiveCard.js
+[命名替换]:  _loginWx  -->  loginWxFun    file: wxApp_uni/pages/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getUserRegisterInfo  -->  getUserRegisterInfoFun    file: wxApp_uni/pages/costManage/receiveCard/receiveCard.js
+[命名替换]:  _loginWx  -->  loginWxFun    file: wxApp_uni/pages/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getPhone  -->  getPhoneFun    file: wxApp_uni/pages/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getGiftCardStatus  -->  getGiftCardStatusFun    file: wxApp_uni/pages/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getGiftCard  -->  getGiftCardFun    file: wxApp_uni/pages/costManage/receiveCard/receiveCard.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/invvoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: pages/invvoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: pages/invvoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: pages/invvoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: pages/invvoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: pages/invvoice/invoice.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: pages/searchResult/searchResult.js
+[命名替换]:  _parseData  -->  parseDataFun    file: pages/searchResult/searchResult.js
+[命名替换]:  _getCurrentContractStatus  -->  getCurrentContractStatusFun    file: pages/searchResult/searchResult.js
+[命名替换]:  _handleBackToCost  -->  handleBackToCostFun    file: pages/costManage/sendResult/sendResult.js
+[命名替换]:  _getPayInfo  -->  getPayInfoFun    file: pages/invvoice/payContract/payContract.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/invvoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: wxApp_uni/pages/invvoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: wxApp_uni/pages/invvoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: wxApp_uni/pages/invvoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: wxApp_uni/pages/invvoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: wxApp_uni/pages/invvoice/invoice.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/searchResult/searchResult.js
+[命名替换]:  _parseData  -->  parseDataFun    file: wxApp_uni/pages/searchResult/searchResult.js
+[命名替换]:  _getCurrentContractStatus  -->  getCurrentContractStatusFun    file: wxApp_uni/pages/searchResult/searchResult.js
+[命名替换]:  _handleBackToCost  -->  handleBackToCostFun    file: wxApp_uni/pages/costManage/sendResult/sendResult.js
+[命名替换]:  _getPayInfo  -->  getPayInfoFun    file: wxApp_uni/pages/invvoice/payContract/payContract.js
+[命名替换]:  _payByWx  -->  payByWxFun    file: pages/costManage/recharge/recharge.js
+[命名替换]:  _getWxPayParams  -->  getWxPayParamsFun    file: pages/costManage/recharge/recharge.js
+[命名替换]:  _getCurrentUserName  -->  getCurrentUserNameFun    file: pages/costManage/recharge/recharge.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/contract/sign/next/personLink/personLink.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/contract/sign/next/personLink/personLink.js
+[命名替换]:  _payByWx  -->  payByWxFun    file: wxApp_uni/pages/costManage/recharge/recharge.js
+[命名替换]:  _getWxPayParams  -->  getWxPayParamsFun    file: wxApp_uni/pages/costManage/recharge/recharge.js
+[命名替换]:  _getCurrentUserName  -->  getCurrentUserNameFun    file: wxApp_uni/pages/costManage/recharge/recharge.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/contract/sign/next/personLink/personLink.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/contract/sign/next/personLink/personLink.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/contract/contractList/chainList/chainList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/contract/contractList/chainList/chainList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/contract/contractList/chainList/chainList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/contract/contractList/chainList/chainList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/contract/contractList/chainList/chainList.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/invvoice/payDetail/payDetail.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/invvoice/payDetail/payDetail.js
+[命名替换]:  _getPayDetail  -->  getPayDetailFun    file: pages/invvoice/payDetail/payDetail.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/contract/contractList/chainList/chainList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/contract/contractList/chainList/chainList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/contract/contractList/chainList/chainList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/contract/contractList/chainList/chainList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/contract/contractList/chainList/chainList.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/invvoice/payDetail/payDetail.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/invvoice/payDetail/payDetail.js
+[命名替换]:  _getPayDetail  -->  getPayDetailFun    file: wxApp_uni/pages/invvoice/payDetail/payDetail.js
+[命名替换]:  _setDefaultSeal  -->  setDefaultSealFun    file: pages/pm/stamp/stampManager.js
+[命名替换]:  _setDefaultSeal  -->  setDefaultSealFun    file: wxApp_uni/pages/pm/stamp/stampManager.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/contract/sign/next/companyLink/companyLink.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/contract/sign/next/companyLink/companyLink.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/contract/sign/next/companyLink/companyLink.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/contract/sign/next/companyLink/companyLink.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/contract/sign/next/companyLink/companyLink.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/contract/sign/next/companyLink/companyLink.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/contract/contractList/addContractList/addContractList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/contract/contractList/addContractList/addContractList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/contract/contractList/addContractList/addContractList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/contract/contractList/addContractList/addContractList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/contract/contractList/addContractList/addContractList.js
+[命名替换]:  _getWxPayParams  -->  getWxPayParamsFun    file: pages/costManage/buyCard/buyCard.js
+[命名替换]:  _payByWx  -->  payByWxFun    file: pages/costManage/buyCard/buyCard.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/contract/contractList/addContractList/addContractList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/contract/contractList/addContractList/addContractList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/contract/contractList/addContractList/addContractList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/contract/contractList/addContractList/addContractList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/contract/contractList/addContractList/addContractList.js
+[命名替换]:  _getWxPayParams  -->  getWxPayParamsFun    file: wxApp_uni/pages/costManage/buyCard/buyCard.js
+[命名替换]:  _payByWx  -->  payByWxFun    file: wxApp_uni/pages/costManage/buyCard/buyCard.js
+[命名替换]:  _getUserAccountInfo  -->  getUserAccountInfoFun    file: pages/costManage/costManage.js
+[命名替换]:  _getUserAccountInfo  -->  getUserAccountInfoFun    file: pages/costManage/costManage.js
+[命名替换]:  _getUserAccountInfo  -->  getUserAccountInfoFun    file: wxApp_uni/pages/costManage/costManage.js
+[命名替换]:  _getUserAccountInfo  -->  getUserAccountInfoFun    file: wxApp_uni/pages/costManage/costManage.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/contract/sign/next/personSign/personSign.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/contract/sign/next/personSign/personSign.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/contract/sign/next/personSign/personSign.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/contract/sign/next/personSign/personSign.js
 [命名替换]:  _getSealBase64  -->  getSealBase64Fun    file: authentication/company/company-info/index.js
 [命名替换]:  _createSeal  -->  createSealFun    file: authentication/company/company-info/index.js
 [命名替换]:  _uploadCompanySeal  -->  uploadCompanySealFun    file: authentication/company/company-info/index.js
-[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/home/costManage/accountBalance/accountBalance.js
-[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: pages/home/costManage/accountBalance/accountBalance.js
-[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: pages/home/costManage/accountBalance/accountBalance.js
-[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: pages/home/costManage/accountBalance/accountBalance.js
-[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: pages/home/costManage/accountBalance/accountBalance.js
-[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: pages/home/costManage/accountBalance/accountBalance.js
-[命名替换]:  _personalIsAuth  -->  personalIsAuthFun    file: pages/home/costManage/giving/giving.js
-[命名替换]:  _personalIsAuth  -->  personalIsAuthFun    file: pages/home/costManage/giving/giving.js
-[命名替换]:  _comapnyIsAuth  -->  comapnyIsAuthFun    file: pages/home/costManage/giving/giving.js
-[命名替换]:  _sendByGive  -->  sendByGiveFun    file: pages/home/costManage/giving/giving.js
-[命名替换]:  _sendByCard  -->  sendByCardFun    file: pages/home/costManage/giving/giving.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: pages/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: pages/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: pages/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: pages/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: pages/costManage/accountBalance/accountBalance.js
+[命名替换]:  _personalIsAuth  -->  personalIsAuthFun    file: pages/costManage/giving/giving.js
+[命名替换]:  _personalIsAuth  -->  personalIsAuthFun    file: pages/costManage/giving/giving.js
+[命名替换]:  _comapnyIsAuth  -->  comapnyIsAuthFun    file: pages/costManage/giving/giving.js
+[命名替换]:  _sendByGive  -->  sendByGiveFun    file: pages/costManage/giving/giving.js
+[命名替换]:  _sendByCard  -->  sendByCardFun    file: pages/costManage/giving/giving.js
 [命名替换]:  _getSealBase64  -->  getSealBase64Fun    file: wxApp_uni/pages/authentication/company/company-info/index.js
 [命名替换]:  _createSeal  -->  createSealFun    file: wxApp_uni/pages/authentication/company/company-info/index.js
 [命名替换]:  _uploadCompanySeal  -->  uploadCompanySealFun    file: wxApp_uni/pages/authentication/company/company-info/index.js
-[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/home/costManage/accountBalance/accountBalance.js
-[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: wxApp_uni/pages/home/costManage/accountBalance/accountBalance.js
-[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: wxApp_uni/pages/home/costManage/accountBalance/accountBalance.js
-[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: wxApp_uni/pages/home/costManage/accountBalance/accountBalance.js
-[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: wxApp_uni/pages/home/costManage/accountBalance/accountBalance.js
-[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: wxApp_uni/pages/home/costManage/accountBalance/accountBalance.js
-[命名替换]:  _personalIsAuth  -->  personalIsAuthFun    file: wxApp_uni/pages/home/costManage/giving/giving.js
-[命名替换]:  _personalIsAuth  -->  personalIsAuthFun    file: wxApp_uni/pages/home/costManage/giving/giving.js
-[命名替换]:  _comapnyIsAuth  -->  comapnyIsAuthFun    file: wxApp_uni/pages/home/costManage/giving/giving.js
-[命名替换]:  _sendByGive  -->  sendByGiveFun    file: wxApp_uni/pages/home/costManage/giving/giving.js
-[命名替换]:  _sendByCard  -->  sendByCardFun    file: wxApp_uni/pages/home/costManage/giving/giving.js
-[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/chains/chains.js
-[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/chains/chains.js
-[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/chains/chains.js
-[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/chains/chains.js
-[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/chains/chains.js
-[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/chains/chains.js
-[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/chains/chains.js
-[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/chains/chains.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/companySign/companySign.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/companySign/companySign.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/companySign/companySign.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/companySign/companySign.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/companySign/companySign.js
-[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/companySign/companySign.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: wxApp_uni/pages/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: wxApp_uni/pages/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: wxApp_uni/pages/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: wxApp_uni/pages/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: wxApp_uni/pages/costManage/accountBalance/accountBalance.js
+[命名替换]:  _personalIsAuth  -->  personalIsAuthFun    file: wxApp_uni/pages/costManage/giving/giving.js
+[命名替换]:  _personalIsAuth  -->  personalIsAuthFun    file: wxApp_uni/pages/costManage/giving/giving.js
+[命名替换]:  _comapnyIsAuth  -->  comapnyIsAuthFun    file: wxApp_uni/pages/costManage/giving/giving.js
+[命名替换]:  _sendByGive  -->  sendByGiveFun    file: wxApp_uni/pages/costManage/giving/giving.js
+[命名替换]:  _sendByCard  -->  sendByCardFun    file: wxApp_uni/pages/costManage/giving/giving.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/contract/contractList/chains/chains.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/contract/contractList/chains/chains.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/contract/contractList/chains/chains.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/contract/contractList/chains/chains.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/contract/contractList/chains/chains.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/contract/contractList/chains/chains.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/contract/contractList/chains/chains.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/contract/contractList/chains/chains.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/contract/sign/next/companySign/companySign.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/contract/sign/next/companySign/companySign.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/contract/sign/next/companySign/companySign.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/contract/sign/next/companySign/companySign.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/contract/sign/next/companySign/companySign.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/contract/sign/next/companySign/companySign.js
 [命名替换]:  _getCompanyUserInfo  -->  getCompanyUserInfoFun    file: pages/home/home.js
 [命名替换]:  _getContractCount  -->  getContractCountFun    file: pages/home/home.js
 [命名替换]:  _getSignalUsersInfo  -->  getSignalUsersInfoFun    file: pages/home/home.js
@@ -953,13 +953,13 @@ Convert wxApp_uni/node_modules/vant-weapp/lib/common/style/hairline.css.wxss suc
 [命名替换]:  _getPageData  -->  getPageDataFun    file: pages/evidence/index.js
 [命名替换]:  _getPageData  -->  getPageDataFun    file: pages/evidence/index.js
 [命名替换]:  _getPageData  -->  getPageDataFun    file: pages/evidence/index.js
-[命名替换]:  _getContracts  -->  getContractsFun    file: pages/home/contract/contract.js
-[命名替换]:  _getContracts  -->  getContractsFun    file: pages/home/contract/contract.js
-[命名替换]:  _getCurrentContractStatus  -->  getCurrentContractStatusFun    file: pages/home/contract/contract.js
-[命名替换]:  _getContracts  -->  getContractsFun    file: pages/home/contract/contract.js
-[命名替换]:  _getContracts  -->  getContractsFun    file: pages/home/contract/contract.js
-[命名替换]:  _getContracts  -->  getContractsFun    file: pages/home/contract/contract.js
-[命名替换]:  _getContracts  -->  getContractsFun    file: pages/home/contract/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: pages/contract/contractList/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: pages/contract/contractList/contract.js
+[命名替换]:  _getCurrentContractStatus  -->  getCurrentContractStatusFun    file: pages/contract/contractList/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: pages/contract/contractList/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: pages/contract/contractList/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: pages/contract/contractList/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: pages/contract/contractList/contract.js
 [命名替换]:  _getPageData  -->  getPageDataFun    file: wxApp_uni/pages/evidence/index.js
 [命名替换]:  _getPageData  -->  getPageDataFun    file: wxApp_uni/pages/evidence/index.js
 [命名替换]:  _getPageData  -->  getPageDataFun    file: wxApp_uni/pages/evidence/index.js
@@ -970,19 +970,19 @@ Convert wxApp_uni/node_modules/vant-weapp/lib/common/style/hairline.css.wxss suc
 [命名替换]:  _getPageData  -->  getPageDataFun    file: wxApp_uni/pages/evidence/index.js
 [命名替换]:  _getPageData  -->  getPageDataFun    file: wxApp_uni/pages/evidence/index.js
 [命名替换]:  _getPageData  -->  getPageDataFun    file: wxApp_uni/pages/evidence/index.js
-[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/home/contract/contract.js
-[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/home/contract/contract.js
-[命名替换]:  _getCurrentContractStatus  -->  getCurrentContractStatusFun    file: wxApp_uni/pages/home/contract/contract.js
-[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/home/contract/contract.js
-[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/home/contract/contract.js
-[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/home/contract/contract.js
-[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/home/contract/contract.js
-[命名替换]:  _getDetailData  -->  getDetailDataFun    file: pages/home/sign/next/contractDetail/contractDetail.js
-[命名替换]:  _getDetailData  -->  getDetailDataFun    file: wxApp_uni/pages/home/sign/next/contractDetail/contractDetail.js
-[命名替换]:  _getSellerName  -->  getSellerNameFun    file: pages/home/invoice/applyInvoice/applyInvoice.js
-[命名替换]:  _getInvoiceInfo  -->  getInvoiceInfoFun    file: pages/home/invoice/applyInvoice/applyInvoice.js
-[命名替换]:  _getSellerName  -->  getSellerNameFun    file: wxApp_uni/pages/home/invoice/applyInvoice/applyInvoice.js
-[命名替换]:  _getInvoiceInfo  -->  getInvoiceInfoFun    file: wxApp_uni/pages/home/invoice/applyInvoice/applyInvoice.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/contract/contractList/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/contract/contractList/contract.js
+[命名替换]:  _getCurrentContractStatus  -->  getCurrentContractStatusFun    file: wxApp_uni/pages/contract/contractList/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/contract/contractList/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/contract/contractList/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/contract/contractList/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/contract/contractList/contract.js
+[命名替换]:  _getDetailData  -->  getDetailDataFun    file: pages/contract/sign/next/contractDetail/contractDetail.js
+[命名替换]:  _getDetailData  -->  getDetailDataFun    file: wxApp_uni/pages/contract/sign/next/contractDetail/contractDetail.js
+[命名替换]:  _getSellerName  -->  getSellerNameFun    file: pages/invvoice/applyInvoice/applyInvoice.js
+[命名替换]:  _getInvoiceInfo  -->  getInvoiceInfoFun    file: pages/invvoice/applyInvoice/applyInvoice.js
+[命名替换]:  _getSellerName  -->  getSellerNameFun    file: wxApp_uni/pages/invvoice/applyInvoice/applyInvoice.js
+[命名替换]:  _getInvoiceInfo  -->  getInvoiceInfoFun    file: wxApp_uni/pages/invvoice/applyInvoice/applyInvoice.js
 [命名替换]:  _checkAllowUpload  -->  checkAllowUploadFun    file: newEvidence/addCertificate/addCertificate.js
 [命名替换]:  showTime  -->  showTimeFun    file: newEvidence/addCertificate/addCertificate.js
 [命名替换]:  _switchTabBar  -->  switchTabBarFun    file: newEvidence/addCertificate/addCertificate.js
@@ -1007,46 +1007,46 @@ Convert wxApp_uni/node_modules/vant-weapp/lib/common/style/hairline.css.wxss suc
 [命名替换]:  _checkSignRepeat  -->  checkSignRepeatFun    file: wxApp_uni/pages/template/useTemplate/index.js
 [命名替换]:  _checkCcRepeat  -->  checkCcRepeatFun    file: wxApp_uni/pages/template/useTemplate/index.js
 [命名替换]:  _getTemplateDetail  -->  getTemplateDetailFun    file: wxApp_uni/pages/template/useTemplate/index.js
-[命名替换]:  _getCardListData  -->  getCardListDataFun    file: pages/home/costManage/accountCard/accountCard.js
-[命名替换]:  _getCardListData  -->  getCardListDataFun    file: pages/home/costManage/accountCard/accountCard.js
-[命名替换]:  _getCardListData  -->  getCardListDataFun    file: pages/home/costManage/accountCard/accountCard.js
-[命名替换]:  _getCardListData  -->  getCardListDataFun    file: pages/home/costManage/accountCard/accountCard.js
-[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/home/costManage/accountCard/accountCard.js
-[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/home/costManage/accountCard/accountCard.js
-[命名替换]:  _getCardListData  -->  getCardListDataFun    file: pages/home/costManage/accountCard/accountCard.js
-[命名替换]:  _getCardListData  -->  getCardListDataFun    file: pages/home/costManage/accountCard/accountCard.js
-[命名替换]:  _getCardListData  -->  getCardListDataFun    file: wxApp_uni/pages/home/costManage/accountCard/accountCard.js
-[命名替换]:  _getCardListData  -->  getCardListDataFun    file: wxApp_uni/pages/home/costManage/accountCard/accountCard.js
-[命名替换]:  _getCardListData  -->  getCardListDataFun    file: wxApp_uni/pages/home/costManage/accountCard/accountCard.js
-[命名替换]:  _getCardListData  -->  getCardListDataFun    file: wxApp_uni/pages/home/costManage/accountCard/accountCard.js
-[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/home/costManage/accountCard/accountCard.js
-[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/home/costManage/accountCard/accountCard.js
-[命名替换]:  _getCardListData  -->  getCardListDataFun    file: wxApp_uni/pages/home/costManage/accountCard/accountCard.js
-[命名替换]:  _getCardListData  -->  getCardListDataFun    file: wxApp_uni/pages/home/costManage/accountCard/accountCard.js
-[命名替换]:  ishighLight  -->  ishighLightFun    file: pages/home/sign/next/next.js
-[命名替换]:  _checkAuth  -->  checkAuthFun    file: pages/home/sign/next/next.js
-[命名替换]:  _getSealName  -->  getSealNameFun    file: pages/home/sign/next/next.js
-[命名替换]:  _checkAuth  -->  checkAuthFun    file: pages/home/sign/next/next.js
-[命名替换]:  _getSealName  -->  getSealNameFun    file: pages/home/sign/next/next.js
-[命名替换]:  _checkAuth  -->  checkAuthFun    file: pages/home/sign/next/next.js
-[命名替换]:  _getSealName  -->  getSealNameFun    file: pages/home/sign/next/next.js
-[命名替换]:  _checkAuth  -->  checkAuthFun    file: pages/home/sign/next/next.js
-[命名替换]:  _getSealName  -->  getSealNameFun    file: pages/home/sign/next/next.js
-[命名替换]:  ishighLight  -->  ishighLightFun    file: pages/home/sign/next/next.js
-[命名替换]:  _getDetailData  -->  getDetailDataFun    file: pages/home/sign/next/next.js
-[命名替换]:  ishighLight  -->  ishighLightFun    file: pages/home/sign/next/next.js
-[命名替换]:  ishighLight  -->  ishighLightFun    file: wxApp_uni/pages/home/sign/next/next.js
-[命名替换]:  _checkAuth  -->  checkAuthFun    file: wxApp_uni/pages/home/sign/next/next.js
-[命名替换]:  _getSealName  -->  getSealNameFun    file: wxApp_uni/pages/home/sign/next/next.js
-[命名替换]:  _checkAuth  -->  checkAuthFun    file: wxApp_uni/pages/home/sign/next/next.js
-[命名替换]:  _getSealName  -->  getSealNameFun    file: wxApp_uni/pages/home/sign/next/next.js
-[命名替换]:  _checkAuth  -->  checkAuthFun    file: wxApp_uni/pages/home/sign/next/next.js
-[命名替换]:  _getSealName  -->  getSealNameFun    file: wxApp_uni/pages/home/sign/next/next.js
-[命名替换]:  _checkAuth  -->  checkAuthFun    file: wxApp_uni/pages/home/sign/next/next.js
-[命名替换]:  _getSealName  -->  getSealNameFun    file: wxApp_uni/pages/home/sign/next/next.js
-[命名替换]:  ishighLight  -->  ishighLightFun    file: wxApp_uni/pages/home/sign/next/next.js
-[命名替换]:  _getDetailData  -->  getDetailDataFun    file: wxApp_uni/pages/home/sign/next/next.js
-[命名替换]:  ishighLight  -->  ishighLightFun    file: wxApp_uni/pages/home/sign/next/next.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: pages/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: pages/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: pages/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: pages/costManage/accountCard/accountCard.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/costManage/accountCard/accountCard.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: pages/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: pages/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: wxApp_uni/pages/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: wxApp_uni/pages/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: wxApp_uni/pages/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: wxApp_uni/pages/costManage/accountCard/accountCard.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/costManage/accountCard/accountCard.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: wxApp_uni/pages/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: wxApp_uni/pages/costManage/accountCard/accountCard.js
+[命名替换]:  ishighLight  -->  ishighLightFun    file: pages/contract/sign/next/next.js
+[命名替换]:  _checkAuth  -->  checkAuthFun    file: pages/contract/sign/next/next.js
+[命名替换]:  _getSealName  -->  getSealNameFun    file: pages/contract/sign/next/next.js
+[命名替换]:  _checkAuth  -->  checkAuthFun    file: pages/contract/sign/next/next.js
+[命名替换]:  _getSealName  -->  getSealNameFun    file: pages/contract/sign/next/next.js
+[命名替换]:  _checkAuth  -->  checkAuthFun    file: pages/contract/sign/next/next.js
+[命名替换]:  _getSealName  -->  getSealNameFun    file: pages/contract/sign/next/next.js
+[命名替换]:  _checkAuth  -->  checkAuthFun    file: pages/contract/sign/next/next.js
+[命名替换]:  _getSealName  -->  getSealNameFun    file: pages/contract/sign/next/next.js
+[命名替换]:  ishighLight  -->  ishighLightFun    file: pages/contract/sign/next/next.js
+[命名替换]:  _getDetailData  -->  getDetailDataFun    file: pages/contract/sign/next/next.js
+[命名替换]:  ishighLight  -->  ishighLightFun    file: pages/contract/sign/next/next.js
+[命名替换]:  ishighLight  -->  ishighLightFun    file: wxApp_uni/pages/contract/sign/next/next.js
+[命名替换]:  _checkAuth  -->  checkAuthFun    file: wxApp_uni/pages/contract/sign/next/next.js
+[命名替换]:  _getSealName  -->  getSealNameFun    file: wxApp_uni/pages/contract/sign/next/next.js
+[命名替换]:  _checkAuth  -->  checkAuthFun    file: wxApp_uni/pages/contract/sign/next/next.js
+[命名替换]:  _getSealName  -->  getSealNameFun    file: wxApp_uni/pages/contract/sign/next/next.js
+[命名替换]:  _checkAuth  -->  checkAuthFun    file: wxApp_uni/pages/contract/sign/next/next.js
+[命名替换]:  _getSealName  -->  getSealNameFun    file: wxApp_uni/pages/contract/sign/next/next.js
+[命名替换]:  _checkAuth  -->  checkAuthFun    file: wxApp_uni/pages/contract/sign/next/next.js
+[命名替换]:  _getSealName  -->  getSealNameFun    file: wxApp_uni/pages/contract/sign/next/next.js
+[命名替换]:  ishighLight  -->  ishighLightFun    file: wxApp_uni/pages/contract/sign/next/next.js
+[命名替换]:  _getDetailData  -->  getDetailDataFun    file: wxApp_uni/pages/contract/sign/next/next.js
+[命名替换]:  ishighLight  -->  ishighLightFun    file: wxApp_uni/pages/contract/sign/next/next.js
 
 转换完成: 
 耗时：17364ms

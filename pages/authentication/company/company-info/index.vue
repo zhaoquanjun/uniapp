@@ -55,8 +55,8 @@
 
 <script>
 // authentication/auth-type/index.js
-const api = require("../../../api/request.js");
-const FXQ = require("../../../utils/FXQ");
+const api = require("../../../../api/request.js");
+const FXQ = require("../../../../utils/FXQ");
 
 export default {
   data() {

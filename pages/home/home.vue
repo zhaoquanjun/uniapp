@@ -220,7 +220,7 @@ export default {
 
       if (app.globalData.checkHasAuth()) {
         uni.navigateTo({
-          url: '/pages/home/searchResult/searchResult'
+          url: '/pages/searchResult/searchResult'
         });
       }
     },
@@ -296,7 +296,7 @@ export default {
 
       if (app.globalData.checkHasAuth()) {
         uni.navigateTo({
-          url: '/pages/home/contract/contract?searchType=2&pageTitle=待自己处理'
+          url: '/pages/contract/contractList/contract?searchType=2&pageTitle=待自己处理'
         });
       }
     },
@@ -312,7 +312,7 @@ export default {
 
       if (app.globalData.checkHasAuth()) {
         uni.navigateTo({
-          url: '/pages/home/contract/contract?searchType=3&pageTitle=待他人处理'
+          url: '/pages/contract/contractList/contract?searchType=3&pageTitle=待他人处理'
         });
       }
     },
@@ -397,7 +397,7 @@ export default {
             //filename
             success: res => {
               uni.navigateTo({
-                url: '/pages/home/sign/launchSign/launchSign?fileName=' + uploadFileName + '&url=' + res.url + '&coverUrl=' + res.coverUrl + '&backfileName=' + res.fileName
+                url: '/pages/contract/sign/launchSign/launchSign?fileName=' + uploadFileName + '&url=' + res.url + '&coverUrl=' + res.coverUrl + '&backfileName=' + res.fileName
               });
             },
             fail: function (err) {

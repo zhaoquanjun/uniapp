@@ -1,6 +1,6 @@
 <template>
 <view>
-<!--pages/home/contract/contractTemplate/contractTemplate.wxml-->
+<!--pages/contract/contractList/contractTemplate/contractTemplate.wxml-->
 <view class="contract-search">
 	<search @inputChanged="inputSearchFun" @cancelClicked="cancleSearchFun" onTimeSearch="true" isShowCancel="true"></search>
 </view>
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-// pages/home/contract/contractTemplate/contractTemplate.js
+// pages/contract/contractList/contractTemplate/contractTemplate.js
 var api = require("../../../api/request.js");
 const utils = require("../../../utils/utils.js");
 import search from "../../../components/search/search";

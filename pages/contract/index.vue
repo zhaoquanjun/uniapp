@@ -120,7 +120,7 @@ export default {
       }
 
       uni.navigateTo({
-        url: `/pages/home/contract/contract?searchType=${type}&pageTitle=${name}`
+        url: `/pages/contract/contractList/contract?searchType=${type}&pageTitle=${name}`
       });
     },
 

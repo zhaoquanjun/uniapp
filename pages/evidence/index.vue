@@ -295,7 +295,7 @@ export default {
         evidenceMenuShow: false
       });
       uni.navigateTo({
-        url: "/pages/home/contract/addContractList/addContractList?id=" + this.activeItme.id
+        url: "/pages/contract/contractList/addContractList/addContractList?id=" + this.activeItme.id
       });
     },
 

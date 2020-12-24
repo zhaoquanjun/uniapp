@@ -475,9 +475,9 @@ export default {
           let url = '';
 
           if (fills.length > 0) {
-            url = '/pages/home/fill/fill?contractId=' + res;
+            url = '/pages/contract/fill/fill?contractId=' + res;
           } else {
-            url = '/pages/home/sign/next/signConfirm/signConfirm?contractId=' + res;
+            url = '/pages/contract/sign/next/signConfirm/signConfirm?contractId=' + res;
           }
 
           setTimeout(() => {

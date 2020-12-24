@@ -59,8 +59,8 @@
 
 <script>
 // authentication/auth-type/index.js
-const api = require("../../../api/request.js");
-import modal from "../../../components/modal/modal";
+const api = require("../../../../api/request.js");
+import modal from "../../../../components/modal/modal";
 
 export default {
   data() {

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-// pages/home/sign/next/signConfirm/signConfirm.js
+// pages/contract/sign/next/signConfirm/signConfirm.js
 const app = getApp();
 
 export default {
