@@ -23,8 +23,8 @@
     </view>
     <view :class="'space ' + (isBottomRefresh ? 'refresh' : '')"></view>
   </scroll-view>
-  <slider-picker id="sliderPicker" :sliderList="list" @selectWay="handleSelectItemFun"></slider-picker>
-  <message-box id="messageBox" :messageInfo="messageInfo"></message-box>
+  <slider-picker ref="sliderPicker" :sliderList="list" @selectWay="handleSelectItemFun"></slider-picker>
+  <message-box ref="messageBox" :messageInfo="messageInfo"></message-box>
 </view>
 </template>
 
@@ -259,10 +259,10 @@ export default {
         this.setData({
           messageInfo: options
         });
-        this.selectComponent('#messageBox').show();
+        this.$refs.messageBox.show();
       }
 
-      this.selectComponent('#sliderPicker').hide();
+      this.$refs.sliderPicker.hide();
     },
 
     /**
@@ -273,7 +273,7 @@ export default {
         curItem: e.currentTarget.dataset.item,
         list: e.currentTarget.dataset.item.status == 2 ? this.check : this.refuse
       });
-      this.selectComponent('#sliderPicker').show();
+      this.$refs.sliderPicker.show();
     },
 
     /**

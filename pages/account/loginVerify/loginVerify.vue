@@ -1,7 +1,7 @@
 <template>
 <!--pages/account/loginVerify/loginVerify.wxml-->
 
- <verifycode id="verifycode"></verifycode>
+ <verifycode ref="verifycode"></verifycode>
 </template>
 
 <script>
@@ -53,7 +53,7 @@ export default {
       openId: options.openId,
       unionId: options.unionId
     });
-    this.verifycode = this.selectComponent("#verifycode");
+    this.verifycode = this.$refs.verifycode;
     this.sendPhoneCodeFun(phone); //弹出verifycode
 
     var _this = this;

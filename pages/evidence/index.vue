@@ -48,7 +48,7 @@
 		</scroll-view>
 	</view>
 </view>
-<mp-halfScreenDialog id="mp-halfScreenDialog"></mp-halfScreenDialog>
+<mp-halfScreenDialog ref="mphalfScreenDialog"></mp-halfScreenDialog>
 
 <!-- 证据链菜单 -->
 <halfSlideItem :isShow="evidenceMenuShow">
@@ -124,7 +124,7 @@ export default {
   },
 
   onReady() {
-    this.dialog = this.selectComponent('#mp-halfScreenDialog');
+    this.dialog = this.$refs.mphalfScreenDialog;
   },
 
   onHide() {

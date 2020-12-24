@@ -1,1 +1,0 @@
-<view><web-view src="{{webSrc}}" data-event-opts="{{[['message',[['getRecordVideoFun',['$event']]]]]}}" bindmessage="__e"></web-view></view>

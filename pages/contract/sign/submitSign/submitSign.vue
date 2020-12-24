@@ -1,6 +1,6 @@
 <template>
 <!--pages/contract/sign/submitSign/submitSign.wxml-->
- <verifycode id="verifycode"></verifycode>
+ <verifycode ref="verifycode"></verifycode>
 </template>
 
 <script>
@@ -30,7 +30,7 @@ export default {
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.verifycode = this.selectComponent("#verifycode");
+    this.verifycode = this.$refs.verifycode;
     var contractId = options.contractId;
     var stampId = options.stampId;
     var stampLeft = options.stampLeft;

@@ -33,7 +33,7 @@
 			</view>
 		</view>
 	</view>
-	<slider-picker id="sliderPicker" :sliderList="selectList" @selectWay="handleSelectPayWayFun"></slider-picker>
+	<slider-picker ref="sliderPicker" :sliderList="selectList" @selectWay="handleSelectPayWayFun"></slider-picker>
 	<view class="confirm-btn" @tap="handleConfirmBuyFun">确认购买</view>
 </view>
 </template>
@@ -142,7 +142,7 @@ export default {
       this.setData({
         activeIndex: e.detail
       });
-      this.selectComponent('#sliderPicker').hide();
+      this.$refs.sliderPicker.hide();
     },
 
     /**
@@ -212,7 +212,7 @@ export default {
      * @name 选择支付方式
      */
     handleSelectWayFun() {
-      this.selectComponent('#sliderPicker').show();
+      this.$refs.sliderPicker.show();
     },
 
     /**

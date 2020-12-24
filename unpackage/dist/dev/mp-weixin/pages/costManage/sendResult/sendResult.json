@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "赠送结果",
-  "backgroundTextStyle": "dark",
-  "navigationBarBackgroundColor": "#ffffff",
-  "backgroundColorTop": "#ffffff",
-  "navigationBarTextStyle": "black",
-  "enablePullDownRefresh": true,
-  "usingComponents": {}
-}

@@ -40,7 +40,7 @@
 		</view>
 	</view>
   <view class="confirm-btn" @tap="handleConfirmSendFun">确认赠送</view>
-	<slider-picker id="sliderPicker" :sliderList="accountList" @selectWay="handleSelectAccoutFun"></slider-picker>
+	<slider-picker ref="sliderPicker" :sliderList="accountList" @selectWay="handleSelectAccoutFun"></slider-picker>
 </view>
 </template>
 
@@ -147,7 +147,7 @@ export default {
      * @name 选择账户点击事件
      */
     handleSelectWayFun() {
-      this.selectComponent('#sliderPicker').show();
+      this.$refs.sliderPicker.show();
     },
 
     /**
@@ -157,7 +157,7 @@ export default {
       this.setData({
         activeIndex: e.detail
       });
-      this.selectComponent('#sliderPicker').hide();
+      this.$refs.sliderPicker.hide();
     },
 
     /**

@@ -39,7 +39,7 @@
 		</view>
 	</view>
 	<!--收款方式菜单 -->
-	<slider-picker id="sliderPicker" :sliderList="sliderList" @selectWay="handleSliderOperateFun"></slider-picker>
+	<slider-picker ref="sliderPicker" :sliderList="sliderList" @selectWay="handleSliderOperateFun"></slider-picker>
 	<!-- <halfSlideItem isShow='{{isShowReceiptMethod}}'>
 		<view class='slide-menu_list'>
 			<view class="slide-menu_item" bindtap="templateReceipt">销售模版发起收款</view>
@@ -304,7 +304,7 @@ export default {
      * @desc 显示收款方式
      */
     selectReceipMathod() {
-      this.selectComponent('#sliderPicker').show();
+      this.$refs.sliderPicker.show();
     },
 
     /**
@@ -329,7 +329,7 @@ export default {
           break;
       }
 
-      this.selectComponent('#sliderPicker').hide();
+      this.$refs.sliderPicker.hide();
     }
 
   }

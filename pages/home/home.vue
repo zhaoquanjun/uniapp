@@ -33,9 +33,9 @@
 		从聊天文件发起签署
 	</view>
 	<!-- 存证部分 -->
-	<home-add-dataStorge id="home-add-dataStorge"></home-add-dataStorge>
+	<home-add-dataStorge ref="homeadddataStorge"></home-add-dataStorge>
 	<!-- 选择签署方式上滑slider -->
-	<slider-picker id="sliderPicker" ref="sliderPicker" :sliderList="sliderList" @selectWay="handleSliderOperateFun"></slider-picker>
+	<slider-picker ref="sliderPicker" :sliderList="sliderList" @selectWay="handleSliderOperateFun"></slider-picker>
 	<!-- 未认证提示 -->
 	<view class="warning" v-if="!hasAuth && isLogin" @tap.stop="authAction">
 		<text class="warn-title" v-if="authType == 1">您的账号尚未实名认证</text>
@@ -328,7 +328,7 @@ export default {
       }
 
       if (app.globalData.checkHasAuth()) {
-        this.selectComponent('#sliderPicker').show();
+        this.$refs.sliderPicker.show();
       }
     },
 
@@ -349,7 +349,7 @@ export default {
           break;
       }
 
-      this.selectComponent('#sliderPicker').hide();
+      this.$refs.sliderPicker.hide();
     },
 
     /**

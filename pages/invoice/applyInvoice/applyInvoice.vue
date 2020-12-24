@@ -71,7 +71,7 @@
   <view class="btn-wrapper">
     <view class="confirm-btn" @tap="handleConfirmFun">申请开票</view>
   </view>
-  <slider-picker id="sliderPicker" :sliderList="list" @selectWay="handleSelectItemFun"></slider-picker>
+  <slider-picker ref :sliderList="list" @selectWay="handleSelectItemFun"></slider-picker>
 </view>
 </template>
 
@@ -247,7 +247,7 @@ export default {
         list: this.invoiceType,
         isDown: false
       });
-      this.selectComponent('#sliderPicker').show();
+      this.$refs.sliderPicker.show();
     },
 
     /**
@@ -259,7 +259,7 @@ export default {
         list: this.postWay,
         isDown: false
       });
-      this.selectComponent('#sliderPicker').show();
+      this.$refs.sliderPicker.show();
     },
 
     /**
@@ -320,7 +320,7 @@ export default {
       this.setData({
         isDown: true
       });
-      this.selectComponent('#sliderPicker').hide();
+      this.$refs.sliderPicker.hide();
     },
 
     /**

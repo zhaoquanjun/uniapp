@@ -1,8 +1,0 @@
-/* components/searchHighlightTextView/searchHighlightTextView.wxss */
-.highlight {
-  color: red;
-}
-.normal {
-  color: #484848;
-}
-

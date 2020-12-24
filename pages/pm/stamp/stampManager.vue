@@ -49,7 +49,7 @@
 		</view>
 	</view>
 </view>
-<slider-picker id="sliderPicker" :sliderList="list" @selectWay="handleSelectItemFun"></slider-picker>
+<slider-picker ref="sliderPicker" :sliderList="list" @selectWay="handleSelectItemFun"></slider-picker>
 </view>
 </template>
 
@@ -363,7 +363,7 @@ export default {
         curItem: e.currentTarget.dataset.item,
         curIndex: e.currentTarget.dataset.index
       });
-      this.selectComponent('#sliderPicker').show();
+      this.$refs.sliderPicker.show();
     },
 
     /**
@@ -391,7 +391,7 @@ export default {
           break;
       }
 
-      this.selectComponent('#sliderPicker').hide();
+      this.$refs.sliderPicker.hide();
     },
 
     /**

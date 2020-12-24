@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "费用管理",
-  "backgroundTextStyle": "dark",
-  "navigationBarBackgroundColor": "#ffffff",
-  "backgroundColorTop": "#ffffff",
-  "navigationBarTextStyle": "black",
-  "enablePullDownRefresh": true,
-  "usingComponents": {}
-}

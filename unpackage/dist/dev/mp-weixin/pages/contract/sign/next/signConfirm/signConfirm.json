@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "签署合同",
-  "backgroundTextStyle": "dark",
-  "navigationBarBackgroundColor": "#ffffff",
-  "navigationBarTextStyle": "black",
-  "usingComponents": {
-    "avatar": "/components/avatar/avatar"
-  }
-}
