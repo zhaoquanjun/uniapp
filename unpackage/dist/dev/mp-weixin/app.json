@@ -1,0 +1,129 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/contract/index",
+    "pages/evidence/index",
+    "pages/pm/pmHome",
+    "pages/root/root",
+    "pages/account/login/login",
+    "pages/account/loginVerify/loginVerify",
+    "pages/home/searchResult/searchResult",
+    "pages/home/stamp/stampManager",
+    "pages/home/stamp/add/addStamp",
+    "pages/home/stamp/addCachet/addCachet",
+    "pages/home/contract/contract",
+    "pages/home/sign/next/signConfirm/signConfirm",
+    "pages/home/sign/next/contractDetail/contractDetail",
+    "pages/home/sign/launchSign/launchSign",
+    "pages/home/sign/next/next",
+    "pages/home/sign/next/personSign/personSign",
+    "pages/home/sign/next/companySign/companySign",
+    "pages/home/sign/next/personLink/personLink",
+    "pages/home/sign/next/companyLink/companyLink",
+    "pages/home/sign/submitSign/submitSign",
+    "pages/home/costManage/costManage",
+    "pages/home/contract/chains/chains",
+    "pages/home/contract/chainList/chainList",
+    "pages/home/contract/addContractList/addContractList",
+    "pages/home/costManage/accountBalance/accountBalance",
+    "pages/home/costManage/accountCard/accountCard",
+    "pages/home/costManage/recharge/recharge",
+    "pages/home/costManage/buyCard/buyCard",
+    "pages/home/costManage/receiveCard/receiveCard",
+    "pages/home/costManage/receiveResult/receiveResult",
+    "pages/home/costManage/giving/giving",
+    "pages/home/costManage/giveWay/giveWay",
+    "pages/home/costManage/giveSettings/giveSettings",
+    "pages/home/costManage/sendResult/sendResult",
+    "pages/home/costManage/cardDetail/cardDetail",
+    "pages/home/fill/fill",
+    "pages/home/invoice/invoice",
+    "pages/home/invoice/payResult/payResult",
+    "pages/home/invoice/payContract/payContract",
+    "pages/home/invoice/applyInvoice/applyInvoice",
+    "pages/home/invoice/payDetail/payDetail",
+    "pages/home/invoice/nuonuoPay/nuonuoPay",
+    "pages/home/receipt/receipt",
+    "pages/home/templateReceipt/templateReceipt",
+    "pages/home/receipt/receiptLaunch/receiptLaunch",
+    "pages/template/useTemplate/index",
+    "pages/template/contractTemplate/contractTemplate",
+    "pages/template/addPerson/index",
+    "pages/template/addCompany/index",
+    "pages/template/preview/index"
+  ],
+  "subPackages": [
+    {
+      "root": "authentication",
+      "pages": [
+        "company/company-create/index",
+        "company/company-auth-type/index",
+        "company/company-info/index",
+        "company/company-pay-info/index",
+        "company/auth-result/index",
+        "company/account-info/index",
+        "personal/personal-phone-auth/index",
+        "personal/personal-face-auth/index",
+        "personal/personal-auth-type/index",
+        "personal/auth-result/index"
+      ]
+    },
+    {
+      "root": "newEvidence",
+      "pages": [
+        "signCertificate/signCertificate",
+        "addCertificate/addCertificate",
+        "certificateDetail/certificateDetail",
+        "videoRecord/videoRecord"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#333333",
+    "backgroundColorTop": "#333333",
+    "navigationBarTitleText": "闪签",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#C5C5C5",
+    "selectedColor": "#464646",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/static/images/tabbar/home.png",
+        "selectedIconPath": "/static/images/tabbar/home_selected.png"
+      },
+      {
+        "pagePath": "pages/contract/index",
+        "text": "合同",
+        "iconPath": "/static/images/tabbar/assignment.png",
+        "selectedIconPath": "/static/images/tabbar/assignment_selected.png"
+      },
+      {
+        "pagePath": "pages/evidence/index",
+        "text": "证据",
+        "iconPath": "/static/images/tabbar/proof.png",
+        "selectedIconPath": "/static/images/tabbar/proof_selected.png"
+      },
+      {
+        "pagePath": "pages/pm/pmHome",
+        "text": "我的",
+        "iconPath": "/static/images/tabbar/mine.png",
+        "selectedIconPath": "/static/images/tabbar/mine_selected.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "plugins": {},
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

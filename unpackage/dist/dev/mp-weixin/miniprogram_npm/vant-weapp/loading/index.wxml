@@ -1,0 +1,1 @@
+<view class="van-loading custom-class" style="{{('width: '+size+'; height: '+size)}}"><view class="{{['van-loading__spinner van-loading__spinner--'+type]}}" style="{{('color: '+color+';')}}"><block wx:for="{{12}}" wx:for-item="item" wx:for-index="index" wx:key="index"><block wx:if="{{type==='spinner'}}"><view class="van-loading__dot"></view></block></block></view></view>

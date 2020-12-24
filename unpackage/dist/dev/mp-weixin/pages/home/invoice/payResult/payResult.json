@@ -1,0 +1,9 @@
+{
+  "onReachBottomDistance": 50,
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#333333",
+  "navigationBarTitleText": "支付结果",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {}
+}

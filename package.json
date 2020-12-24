@@ -1,0 +1,19 @@
+{
+  "name": "wxApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://code.alphalawyer.cn/shouyiner-frontend/wxApp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vant-weapp": "^0.5.28"
+  }
+}

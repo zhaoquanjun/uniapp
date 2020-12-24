@@ -1,0 +1,1 @@
+{"version":3,"sources":["uni-app:///main.js"],"names":["createPage","Page"],"mappings":";;;;;;;;;;kDAAA;AACA;AACA,4H;AACAA,UAAU,CAACC,cAAD,CAAV,C","file":"authentication/personal/personal-face-auth/index.js","sourcesContent":["import 'uni-pages';\nimport Vue from 'vue'\nimport Page from './authentication/personal/personal-face-auth/index.vue'\ncreatePage(Page)"],"sourceRoot":""}

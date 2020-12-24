@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "销售模版",
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "search": "/components/search/search",
+    "search-highlight-text-view": "/components/searchHighlightTextView/searchHighlightTextView"
+  }
+}

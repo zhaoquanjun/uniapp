@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的印章",
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "slider-picker": "/components/sliderPicker/sliderPicker"
+  }
+}

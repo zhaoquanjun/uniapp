@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "添加企业抄送方",
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "avatar": "/components/avatar/avatar"
+  }
+}

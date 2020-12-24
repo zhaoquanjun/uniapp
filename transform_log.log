@@ -1,0 +1,1065 @@
+miniprogram to uni-app 转换日志
+
+---基本信息---
+时间: 2020-12-24 14:54:43
+语言: Javascript
+转换模式: Hbuilder X
+是否转换wxs文件: false
+
+---小程序基本信息---
+name: wxApp
+version: 1.0.0
+description: 
+appid: wxd672f1935abe90f2
+projectname: 
+compileType: miniprogram
+author: 
+
+---目录信息---
+sourceFolder: /Users/icourt/Desktop/code/wxApp
+targetFolder: /Users/icourt/Desktop/code/wxApp_uni
+outputFolder: /Users/icourt/Desktop/code/wxApp_uni
+miniprogramRoot: /Users/icourt/Desktop/code/wxApp
+
+---日志信息---
+Convert wxs file ../wxApp_uni/utils/tools.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/utils/tools.wxs success!
+Convert wxs file ../wxApp_uni/miniprogram_npm/vant-weapp/picker-column/index.wxs success!
+Convert wxs file ../wxApp_uni/miniprogram_npm/vant-weapp/progress/index.wxs success!
+Convert wxs file ../wxApp_uni/miniprogram_npm/vant-weapp/tree-select/index.wxs success!
+Convert wxs file ../wxApp_uni/miniprogram_npm/vant-weapp/wxs/array.wxs success!
+Convert wxs file ../wxApp_uni/miniprogram_npm/vant-weapp/wxs/bem.wxs success!
+Convert wxs file ../wxApp_uni/miniprogram_npm/vant-weapp/wxs/memoize.wxs success!
+Convert wxs file ../wxApp_uni/miniprogram_npm/vant-weapp/wxs/object.wxs success!
+Convert wxs file ../wxApp_uni/miniprogram_npm/vant-weapp/wxs/utils.wxs success!
+Convert wxs file ../wxApp_uni/node_modules/vant-weapp/dist/picker-column/index.wxs success!
+Convert wxs file ../wxApp_uni/node_modules/vant-weapp/dist/progress/index.wxs success!
+Convert wxs file ../wxApp_uni/node_modules/vant-weapp/dist/tree-select/index.wxs success!
+Convert wxs file ../wxApp_uni/node_modules/vant-weapp/dist/wxs/array.wxs success!
+Convert wxs file ../wxApp_uni/node_modules/vant-weapp/dist/wxs/bem.wxs success!
+Convert wxs file ../wxApp_uni/node_modules/vant-weapp/dist/wxs/memoize.wxs success!
+Convert wxs file ../wxApp_uni/node_modules/vant-weapp/dist/wxs/object.wxs success!
+Convert wxs file ../wxApp_uni/node_modules/vant-weapp/dist/wxs/utils.wxs success!
+Convert wxs file ../wxApp_uni/node_modules/vant-weapp/lib/picker-column/index.wxs success!
+Convert wxs file ../wxApp_uni/node_modules/vant-weapp/lib/progress/index.wxs success!
+Convert wxs file ../wxApp_uni/node_modules/vant-weapp/lib/tree-select/index.wxs success!
+Convert wxs file ../wxApp_uni/node_modules/vant-weapp/lib/wxs/array.wxs success!
+Convert wxs file ../wxApp_uni/node_modules/vant-weapp/lib/wxs/bem.wxs success!
+Convert wxs file ../wxApp_uni/node_modules/vant-weapp/lib/wxs/memoize.wxs success!
+Convert wxs file ../wxApp_uni/node_modules/vant-weapp/lib/wxs/object.wxs success!
+Convert wxs file ../wxApp_uni/node_modules/vant-weapp/lib/wxs/utils.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/miniprogram_npm/vant-weapp/picker-column/index.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/miniprogram_npm/vant-weapp/progress/index.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/miniprogram_npm/vant-weapp/tree-select/index.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/miniprogram_npm/vant-weapp/wxs/array.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/miniprogram_npm/vant-weapp/wxs/bem.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/miniprogram_npm/vant-weapp/wxs/memoize.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/miniprogram_npm/vant-weapp/wxs/object.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/miniprogram_npm/vant-weapp/wxs/utils.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/node_modules/vant-weapp/dist/picker-column/index.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/node_modules/vant-weapp/dist/progress/index.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/node_modules/vant-weapp/dist/tree-select/index.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/node_modules/vant-weapp/dist/wxs/array.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/node_modules/vant-weapp/dist/wxs/bem.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/node_modules/vant-weapp/dist/wxs/memoize.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/node_modules/vant-weapp/dist/wxs/object.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/node_modules/vant-weapp/dist/wxs/utils.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/node_modules/vant-weapp/lib/picker-column/index.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/node_modules/vant-weapp/lib/progress/index.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/node_modules/vant-weapp/lib/tree-select/index.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/node_modules/vant-weapp/lib/wxs/array.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/node_modules/vant-weapp/lib/wxs/bem.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/node_modules/vant-weapp/lib/wxs/memoize.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/node_modules/vant-weapp/lib/wxs/object.wxs success!
+Convert wxs file ../wxApp_uni/wxApp_uni/node_modules/vant-weapp/lib/wxs/utils.wxs success!
+Convert App.vue success!
+Convert component api/account.js success!
+Convert component api/home.js success!
+Convert component api/request.js success!
+Convert component api/socket.js success!
+Convert component prototype/prototype.js success!
+Convert component utils/FXQ.js success!
+Convert component utils/base64.js success!
+Convert component utils/utils.js success!
+Convert wxApp_uni/app.css.wxss success!
+Convert components/avatar/avatar.vue success!
+Convert components/backHomeBtn/backHomeBtn.vue success!
+Convert components/fuzzySearch/suzzySearch.vue success!
+Convert components/half-screen-dialog/half-screen-dialog.vue success!
+Convert components/halfSlideItem/halfSlideItem.vue success!
+Convert components/home-add-dataStorge/home-add-dataStorge.vue success!
+Convert components/home-half-screen-dialog /home-half-screen-dialog .vue success!
+Convert components/icon/icon.vue success!
+Convert components/inputAlert/inputAlert.vue success!
+Convert components/messageBox/messageBox.vue success!
+Convert components/modal/modal.vue success!
+Convert components/rejectAlert/rejectAlert.vue success!
+Convert components/search/search.vue success!
+Convert components/searchHighlightTextView/searchHighlightTextView.vue success!
+Convert components/searchInput/searchInput.vue success!
+Convert components/slideitem/slideitem.vue success!
+Convert components/sliderPicker/sliderPicker.vue success!
+Convert components/verifycode/verifycode.vue success!
+Convert components/videoPlay/videoPlay.vue success!
+Convert components/videoPlayer/videoPlayer.vue success!
+Convert components/wechatUserInfo/wechatUserInfo.vue success!
+Convert newEvidence/addCertificate/addCertificate.vue success!
+Convert newEvidence/certificateDetail/certificateDetail.vue success!
+Convert newEvidence/signCertificate/signCertificate.vue success!
+Convert newEvidence/videoRecord/videoRecord.vue success!
+Convert pages/contract/index.vue success!
+Convert pages/evidence/index.vue success!
+Convert pages/home/home.vue success!
+Convert pages/pm/pmHome.vue success!
+Convert pages/root/root.vue success!
+Convert component wxApp_uni/common/api.js success!
+Convert component wxApp_uni/common/socket.js success!
+Convert component wxApp_uni/prototype/prototype.js success!
+Convert component wxApp_uni/utils/FXQ.js success!
+Convert component wxApp_uni/utils/base64.js success!
+Convert component wxApp_uni/utils/utils.js success!
+Convert authentication/personal/auth-result/index.vue success!
+Convert authentication/personal/personal-auth-type/index.vue success!
+Convert authentication/personal/personal-face-auth/index.vue success!
+Convert authentication/personal/personal-phone-auth/index.vue success!
+Convert authentication/company/account-info/index.vue success!
+Convert authentication/company/auth-result/index.vue success!
+Convert authentication/company/company-auth-type/index.vue success!
+Convert authentication/company/company-create/index.vue success!
+Convert authentication/company/company-info/index.vue success!
+Convert authentication/company/company-pay-info/index.vue success!
+Convert miniprogram_npm/vant-weapp/action-sheet/index.vue success!
+Convert miniprogram_npm/vant-weapp/area/index.vue success!
+Convert miniprogram_npm/vant-weapp/badge/index.vue success!
+Convert miniprogram_npm/vant-weapp/badge-group/index.vue success!
+Convert miniprogram_npm/vant-weapp/button/index.vue success!
+Convert miniprogram_npm/vant-weapp/card/index.vue success!
+Convert miniprogram_npm/vant-weapp/cell/index.vue success!
+Convert miniprogram_npm/vant-weapp/cell-group/index.vue success!
+Convert miniprogram_npm/vant-weapp/checkbox/index.vue success!
+Convert miniprogram_npm/vant-weapp/checkbox-group/index.vue success!
+Convert miniprogram_npm/vant-weapp/col/index.vue success!
+Convert miniprogram_npm/vant-weapp/collapse/index.vue success!
+Convert miniprogram_npm/vant-weapp/collapse-item/index.vue success!
+Convert component miniprogram_npm/vant-weapp/common/color.js success!
+Convert component miniprogram_npm/vant-weapp/common/component.js success!
+Convert component miniprogram_npm/vant-weapp/common/utils.js success!
+Convert miniprogram_npm/vant-weapp/datetime-picker/index.vue success!
+Convert miniprogram_npm/vant-weapp/definitions/index.js success!
+[Error] targetFilePath: /Users/icourt/Desktop/code/wxApp_uni/miniprogram_npm/vant-weapp/definitions/index.js 内容为空！！！ r
+
+Convert miniprogram_npm/vant-weapp/definitions/weapp.js success!
+[Error] targetFilePath: /Users/icourt/Desktop/code/wxApp_uni/miniprogram_npm/vant-weapp/definitions/weapp.js 内容为空！！！ r
+
+Convert component miniprogram_npm/vant-weapp/dialog/dialog.js success!
+Convert miniprogram_npm/vant-weapp/dialog/index.vue success!
+Convert miniprogram_npm/vant-weapp/field/index.vue success!
+Convert miniprogram_npm/vant-weapp/goods-action/index.vue success!
+Convert miniprogram_npm/vant-weapp/goods-action-button/index.vue success!
+Convert miniprogram_npm/vant-weapp/goods-action-icon/index.vue success!
+Convert miniprogram_npm/vant-weapp/icon/index.vue success!
+Convert miniprogram_npm/vant-weapp/info/index.vue success!
+Convert miniprogram_npm/vant-weapp/loading/index.vue success!
+Convert component miniprogram_npm/vant-weapp/mixins/basic.js success!
+Convert component miniprogram_npm/vant-weapp/mixins/button.js success!
+Convert component miniprogram_npm/vant-weapp/mixins/link.js success!
+Convert component miniprogram_npm/vant-weapp/mixins/open-type.js success!
+Convert component miniprogram_npm/vant-weapp/mixins/safe-area.js success!
+Convert component miniprogram_npm/vant-weapp/mixins/touch.js success!
+Convert component miniprogram_npm/vant-weapp/mixins/transition.js success!
+Convert miniprogram_npm/vant-weapp/nav-bar/index.vue success!
+Convert miniprogram_npm/vant-weapp/notice-bar/index.vue success!
+Convert miniprogram_npm/vant-weapp/notify/index.vue success!
+Convert component miniprogram_npm/vant-weapp/notify/notify.js success!
+Convert miniprogram_npm/vant-weapp/overlay/index.vue success!
+Convert miniprogram_npm/vant-weapp/panel/index.vue success!
+Convert miniprogram_npm/vant-weapp/picker/index.vue success!
+Convert component miniprogram_npm/vant-weapp/picker/shared.js success!
+Convert miniprogram_npm/vant-weapp/picker-column/index.vue success!
+Convert miniprogram_npm/vant-weapp/popup/index.vue success!
+Convert miniprogram_npm/vant-weapp/progress/index.vue success!
+Convert miniprogram_npm/vant-weapp/radio/index.vue success!
+Convert miniprogram_npm/vant-weapp/radio-group/index.vue success!
+Convert miniprogram_npm/vant-weapp/rate/index.vue success!
+Convert miniprogram_npm/vant-weapp/row/index.vue success!
+Convert miniprogram_npm/vant-weapp/search/index.vue success!
+Convert miniprogram_npm/vant-weapp/slider/index.vue success!
+Convert miniprogram_npm/vant-weapp/stepper/index.vue success!
+Convert miniprogram_npm/vant-weapp/steps/index.vue success!
+Convert miniprogram_npm/vant-weapp/submit-bar/index.vue success!
+Convert miniprogram_npm/vant-weapp/swipe-cell/index.vue success!
+Convert miniprogram_npm/vant-weapp/switch/index.vue success!
+Convert miniprogram_npm/vant-weapp/switch-cell/index.vue success!
+Convert miniprogram_npm/vant-weapp/tab/index.vue success!
+Convert miniprogram_npm/vant-weapp/tabbar/index.vue success!
+Convert miniprogram_npm/vant-weapp/tabbar-item/index.vue success!
+Convert miniprogram_npm/vant-weapp/tabs/index.vue success!
+Convert miniprogram_npm/vant-weapp/tag/index.vue success!
+Convert miniprogram_npm/vant-weapp/toast/index.vue success!
+Convert component miniprogram_npm/vant-weapp/toast/toast.js success!
+Convert miniprogram_npm/vant-weapp/transition/index.vue success!
+Convert miniprogram_npm/vant-weapp/tree-select/index.vue success!
+Convert pages/account/login/login.vue success!
+Convert pages/account/loginVerify/loginVerify.vue success!
+Convert pages/home/contract/contract.vue success!
+Convert pages/home/costManage/costManage.vue success!
+Convert pages/home/fill/fill.vue success!
+Convert pages/home/invoice/invoice.vue success!
+Convert pages/home/receipt/receipt.vue success!
+Convert pages/home/searchResult/searchResult.vue success!
+Convert pages/home/stamp/stampManager.vue success!
+Convert pages/home/templateReceipt/templateReceipt.vue success!
+Convert component pages/newEvidence/certificateDetail/certificateDetail.vue.wxml success!
+Convert pages/template/addCompany/index.vue success!
+Convert pages/template/addPerson/index.vue success!
+Convert pages/template/contractTemplate/contractTemplate.vue success!
+Convert pages/template/preview/index.vue success!
+Convert pages/template/useTemplate/index.vue success!
+Convert wxApp_uni/pages/authentication/auth-type/index.vue success!
+Convert wxApp_uni/components/avatar/avatar.vue success!
+Convert wxApp_uni/components/backHomeBtn/backHomeBtn.vue success!
+Convert wxApp_uni/components/fuzzySearch/suzzySearch.vue success!
+Convert wxApp_uni/components/half-screen-dialog/half-screen-dialog.vue success!
+Convert wxApp_uni/components/halfSlideItem/halfSlideItem.vue success!
+Convert wxApp_uni/components/home-add-dataStorge/home-add-dataStorge.vue success!
+Convert wxApp_uni/components/home-half-screen-dialog /home-half-screen-dialog .vue success!
+Convert wxApp_uni/components/icon/icon.vue success!
+Convert wxApp_uni/components/inputAlert/inputAlert.vue success!
+Convert wxApp_uni/components/messageBox/messageBox.vue success!
+Convert wxApp_uni/components/modal/modal.vue success!
+Convert wxApp_uni/components/rejectAlert/rejectAlert.vue success!
+Convert wxApp_uni/components/search/search.vue success!
+Convert wxApp_uni/components/searchInput/searchInput.vue success!
+Convert wxApp_uni/components/slideitem/slideitem.vue success!
+Convert wxApp_uni/components/searchHighlightTextView/searchHighlightTextView.vue success!
+Convert wxApp_uni/components/sliderPicker/sliderPicker.vue success!
+Convert wxApp_uni/components/verifycode/verifycode.vue success!
+Convert wxApp_uni/components/videoPlay/videoPlay.vue success!
+Convert wxApp_uni/components/videoPlayer/videoPlayer.vue success!
+Convert wxApp_uni/components/wechatUserInfo/wechatUserInfo.vue success!
+Convert wxApp_uni/newEvidence/addCertificate/addCertificate.vue success!
+Convert wxApp_uni/newEvidence/certificateDetail/certificateDetail.vue success!
+Convert wxApp_uni/newEvidence/signCertificate/signCertificate.vue success!
+Convert wxApp_uni/newEvidence/videoRecord/videoRecord.vue success!
+Convert wxApp_uni/pages/contract/index.vue success!
+Convert wxApp_uni/pages/evidence/index.vue success!
+Convert wxApp_uni/pages/home/home.vue success!
+Convert wxApp_uni/pages/pm/pmHome.vue success!
+Convert wxApp_uni/pages/root/root.vue success!
+Convert component miniprogram_npm/vant-weapp/mixins/observer/behavior.js success!
+Convert component miniprogram_npm/vant-weapp/mixins/observer/index.js success!
+Convert component miniprogram_npm/vant-weapp/mixins/observer/props.js success!
+Convert node_modules/vant-weapp/dist/action-sheet/index.vue success!
+Convert node_modules/vant-weapp/dist/area/index.vue success!
+Convert node_modules/vant-weapp/dist/badge/index.vue success!
+Convert node_modules/vant-weapp/dist/badge-group/index.vue success!
+Convert node_modules/vant-weapp/dist/button/index.vue success!
+Convert node_modules/vant-weapp/dist/card/index.vue success!
+Convert node_modules/vant-weapp/dist/cell/index.vue success!
+Convert node_modules/vant-weapp/dist/cell-group/index.vue success!
+Convert node_modules/vant-weapp/dist/checkbox/index.vue success!
+Convert node_modules/vant-weapp/dist/checkbox-group/index.vue success!
+Convert node_modules/vant-weapp/dist/col/index.vue success!
+Convert node_modules/vant-weapp/dist/collapse/index.vue success!
+Convert node_modules/vant-weapp/dist/collapse-item/index.vue success!
+Convert component node_modules/vant-weapp/dist/common/color.js success!
+Convert component node_modules/vant-weapp/dist/common/component.js success!
+Convert component node_modules/vant-weapp/dist/common/utils.js success!
+Convert node_modules/vant-weapp/dist/datetime-picker/index.vue success!
+Convert node_modules/vant-weapp/dist/definitions/index.js success!
+[Error] targetFilePath: /Users/icourt/Desktop/code/wxApp_uni/node_modules/vant-weapp/dist/definitions/index.js 内容为空！！！ r
+
+Convert node_modules/vant-weapp/dist/definitions/weapp.js success!
+[Error] targetFilePath: /Users/icourt/Desktop/code/wxApp_uni/node_modules/vant-weapp/dist/definitions/weapp.js 内容为空！！！ r
+
+Convert component node_modules/vant-weapp/dist/dialog/dialog.js success!
+Convert node_modules/vant-weapp/dist/dialog/index.vue success!
+Convert node_modules/vant-weapp/dist/field/index.vue success!
+Convert node_modules/vant-weapp/dist/goods-action/index.vue success!
+Convert node_modules/vant-weapp/dist/goods-action-button/index.vue success!
+Convert node_modules/vant-weapp/dist/goods-action-icon/index.vue success!
+Convert node_modules/vant-weapp/dist/icon/index.vue success!
+Convert node_modules/vant-weapp/dist/info/index.vue success!
+Convert node_modules/vant-weapp/dist/loading/index.vue success!
+Convert component node_modules/vant-weapp/dist/mixins/basic.js success!
+Convert component node_modules/vant-weapp/dist/mixins/button.js success!
+Convert component node_modules/vant-weapp/dist/mixins/link.js success!
+Convert component node_modules/vant-weapp/dist/mixins/open-type.js success!
+Convert component node_modules/vant-weapp/dist/mixins/safe-area.js success!
+Convert component node_modules/vant-weapp/dist/mixins/touch.js success!
+Convert component node_modules/vant-weapp/dist/mixins/transition.js success!
+Convert node_modules/vant-weapp/dist/nav-bar/index.vue success!
+Convert node_modules/vant-weapp/dist/notice-bar/index.vue success!
+Convert node_modules/vant-weapp/dist/notify/index.vue success!
+Convert component node_modules/vant-weapp/dist/notify/notify.js success!
+Convert node_modules/vant-weapp/dist/overlay/index.vue success!
+Convert node_modules/vant-weapp/dist/panel/index.vue success!
+Convert node_modules/vant-weapp/dist/picker/index.vue success!
+Convert component node_modules/vant-weapp/dist/picker/shared.js success!
+Convert node_modules/vant-weapp/dist/picker-column/index.vue success!
+Convert node_modules/vant-weapp/dist/popup/index.vue success!
+Convert node_modules/vant-weapp/dist/progress/index.vue success!
+Convert node_modules/vant-weapp/dist/radio/index.vue success!
+Convert node_modules/vant-weapp/dist/radio-group/index.vue success!
+Convert node_modules/vant-weapp/dist/rate/index.vue success!
+Convert node_modules/vant-weapp/dist/row/index.vue success!
+Convert node_modules/vant-weapp/dist/search/index.vue success!
+Convert node_modules/vant-weapp/dist/slider/index.vue success!
+Convert node_modules/vant-weapp/dist/stepper/index.vue success!
+Convert node_modules/vant-weapp/dist/steps/index.vue success!
+Convert node_modules/vant-weapp/dist/submit-bar/index.vue success!
+Convert node_modules/vant-weapp/dist/swipe-cell/index.vue success!
+Convert node_modules/vant-weapp/dist/switch/index.vue success!
+Convert node_modules/vant-weapp/dist/switch-cell/index.vue success!
+Convert node_modules/vant-weapp/dist/tab/index.vue success!
+Convert node_modules/vant-weapp/dist/tabbar/index.vue success!
+Convert node_modules/vant-weapp/dist/tabbar-item/index.vue success!
+Convert node_modules/vant-weapp/dist/tabs/index.vue success!
+Convert node_modules/vant-weapp/dist/tag/index.vue success!
+Convert node_modules/vant-weapp/dist/toast/index.vue success!
+Convert component node_modules/vant-weapp/dist/toast/toast.js success!
+Convert node_modules/vant-weapp/dist/transition/index.vue success!
+Convert node_modules/vant-weapp/dist/tree-select/index.vue success!
+Convert node_modules/vant-weapp/lib/action-sheet/index.vue success!
+Convert node_modules/vant-weapp/lib/area/index.vue success!
+Convert node_modules/vant-weapp/lib/badge/index.vue success!
+Convert node_modules/vant-weapp/lib/badge-group/index.vue success!
+Convert node_modules/vant-weapp/lib/button/index.vue success!
+Convert node_modules/vant-weapp/lib/card/index.vue success!
+Convert node_modules/vant-weapp/lib/cell/index.vue success!
+Convert node_modules/vant-weapp/lib/cell-group/index.vue success!
+Convert node_modules/vant-weapp/lib/checkbox/index.vue success!
+Convert node_modules/vant-weapp/lib/checkbox-group/index.vue success!
+Convert node_modules/vant-weapp/lib/col/index.vue success!
+Convert node_modules/vant-weapp/lib/collapse/index.vue success!
+Convert node_modules/vant-weapp/lib/collapse-item/index.vue success!
+Convert component node_modules/vant-weapp/lib/common/color.js success!
+Convert component node_modules/vant-weapp/lib/common/component.js success!
+Convert component node_modules/vant-weapp/lib/common/utils.js success!
+Convert node_modules/vant-weapp/lib/datetime-picker/index.vue success!
+Convert component node_modules/vant-weapp/lib/definitions/index.js success!
+Convert component node_modules/vant-weapp/lib/definitions/weapp.js success!
+Convert component node_modules/vant-weapp/lib/dialog/dialog.js success!
+Convert node_modules/vant-weapp/lib/dialog/index.vue success!
+Convert node_modules/vant-weapp/lib/field/index.vue success!
+Convert node_modules/vant-weapp/lib/goods-action/index.vue success!
+Convert node_modules/vant-weapp/lib/goods-action-button/index.vue success!
+Convert node_modules/vant-weapp/lib/goods-action-icon/index.vue success!
+Convert node_modules/vant-weapp/lib/icon/index.vue success!
+Convert node_modules/vant-weapp/lib/info/index.vue success!
+Convert node_modules/vant-weapp/lib/loading/index.vue success!
+Convert component node_modules/vant-weapp/lib/mixins/basic.js success!
+Convert component node_modules/vant-weapp/lib/mixins/button.js success!
+Convert component node_modules/vant-weapp/lib/mixins/link.js success!
+Convert component node_modules/vant-weapp/lib/mixins/open-type.js success!
+Convert component node_modules/vant-weapp/lib/mixins/safe-area.js success!
+Convert component node_modules/vant-weapp/lib/mixins/touch.js success!
+Convert component node_modules/vant-weapp/lib/mixins/transition.js success!
+Convert node_modules/vant-weapp/lib/nav-bar/index.vue success!
+Convert node_modules/vant-weapp/lib/notice-bar/index.vue success!
+Convert node_modules/vant-weapp/lib/notify/index.vue success!
+Convert component node_modules/vant-weapp/lib/notify/notify.js success!
+Convert node_modules/vant-weapp/lib/overlay/index.vue success!
+Convert node_modules/vant-weapp/lib/panel/index.vue success!
+Convert node_modules/vant-weapp/lib/picker/index.vue success!
+Convert component node_modules/vant-weapp/lib/picker/shared.js success!
+Convert node_modules/vant-weapp/lib/picker-column/index.vue success!
+Convert node_modules/vant-weapp/lib/popup/index.vue success!
+Convert node_modules/vant-weapp/lib/progress/index.vue success!
+Convert node_modules/vant-weapp/lib/radio/index.vue success!
+Convert node_modules/vant-weapp/lib/radio-group/index.vue success!
+Convert node_modules/vant-weapp/lib/rate/index.vue success!
+Convert node_modules/vant-weapp/lib/row/index.vue success!
+Convert node_modules/vant-weapp/lib/search/index.vue success!
+Convert node_modules/vant-weapp/lib/slider/index.vue success!
+Convert node_modules/vant-weapp/lib/stepper/index.vue success!
+Convert node_modules/vant-weapp/lib/steps/index.vue success!
+Convert node_modules/vant-weapp/lib/submit-bar/index.vue success!
+Convert node_modules/vant-weapp/lib/swipe-cell/index.vue success!
+Convert node_modules/vant-weapp/lib/switch/index.vue success!
+Convert node_modules/vant-weapp/lib/switch-cell/index.vue success!
+Convert node_modules/vant-weapp/lib/tab/index.vue success!
+Convert node_modules/vant-weapp/lib/tabbar/index.vue success!
+Convert node_modules/vant-weapp/lib/tabbar-item/index.vue success!
+Convert node_modules/vant-weapp/lib/tabs/index.vue success!
+Convert node_modules/vant-weapp/lib/tag/index.vue success!
+Convert node_modules/vant-weapp/lib/toast/index.vue success!
+Convert component node_modules/vant-weapp/lib/toast/toast.js success!
+Convert node_modules/vant-weapp/lib/transition/index.vue success!
+Convert node_modules/vant-weapp/lib/tree-select/index.vue success!
+Convert pages/home/contract/addContractList/addContractList.vue success!
+Convert pages/home/contract/chainList/chainList.vue success!
+Convert pages/home/contract/chains/chains.vue success!
+Convert pages/home/costManage/accountBalance/accountBalance.vue success!
+Convert pages/home/costManage/accountCard/accountCard.vue success!
+Convert pages/home/costManage/buyCard/buyCard.vue success!
+Convert pages/home/costManage/cardDetail/cardDetail.vue success!
+Convert pages/home/costManage/giveSettings/giveSettings.vue success!
+Convert pages/home/costManage/giveWay/giveWay.vue success!
+Convert pages/home/costManage/giving/giving.vue success!
+Convert pages/home/costManage/receiveCard/receiveCard.vue success!
+Convert pages/home/costManage/receiveResult/receiveResult.vue success!
+Convert pages/home/costManage/recharge/recharge.vue success!
+Convert pages/home/costManage/sendResult/sendResult.vue success!
+Convert pages/home/invoice/applyInvoice/applyInvoice.vue success!
+Convert pages/home/invoice/nuonuoPay/nuonuoPay.vue success!
+Convert pages/home/invoice/payContract/payContract.vue success!
+Convert pages/home/invoice/payDetail/payDetail.vue success!
+Convert pages/home/invoice/payResult/payResult.vue success!
+Convert pages/home/receipt/receiptLaunch/receiptLaunch.vue success!
+Convert pages/home/sign/launchSign/launchSign.vue success!
+Convert pages/home/sign/next/next.vue success!
+Convert pages/home/sign/submitSign/submitSign.vue success!
+Convert pages/home/stamp/add/addStamp.vue success!
+Convert pages/home/stamp/addCachet/addCachet.vue success!
+Convert wxApp_uni/pages/authentication/company/account-info/index.vue success!
+Convert wxApp_uni/pages/authentication/company/auth-result/index.vue success!
+Convert wxApp_uni/pages/authentication/company/company-auth-type/index.vue success!
+Convert wxApp_uni/pages/authentication/company/company-create/index.vue success!
+Convert wxApp_uni/pages/authentication/company/company-info/index.vue success!
+Convert wxApp_uni/pages/authentication/company/company-pay-info/index.vue success!
+Convert wxApp_uni/pages/authentication/personal/auth-result/index.vue success!
+Convert wxApp_uni/pages/authentication/personal/personal-auth-type/index.vue success!
+Convert wxApp_uni/pages/authentication/personal/personal-face-auth/index.vue success!
+Convert wxApp_uni/pages/authentication/personal/personal-phone-auth/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/action-sheet/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/area/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/badge/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/badge-group/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/button/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/card/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/cell/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/cell-group/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/checkbox/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/checkbox-group/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/col/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/collapse/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/collapse-item/index.vue success!
+Convert component wxApp_uni/miniprogram_npm/vant-weapp/common/color.js success!
+Convert component wxApp_uni/miniprogram_npm/vant-weapp/common/component.js success!
+Convert component wxApp_uni/miniprogram_npm/vant-weapp/common/utils.js success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/datetime-picker/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/definitions/index.js success!
+[Error] targetFilePath: /Users/icourt/Desktop/code/wxApp_uni/wxApp_uni/miniprogram_npm/vant-weapp/definitions/index.js 内容为空！！！ r
+
+Convert wxApp_uni/miniprogram_npm/vant-weapp/definitions/weapp.js success!
+[Error] targetFilePath: /Users/icourt/Desktop/code/wxApp_uni/wxApp_uni/miniprogram_npm/vant-weapp/definitions/weapp.js 内容为空！！！ r
+
+Convert component wxApp_uni/miniprogram_npm/vant-weapp/dialog/dialog.js success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/dialog/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/field/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/goods-action/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/goods-action-button/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/goods-action-icon/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/icon/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/info/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/loading/index.vue success!
+Convert component wxApp_uni/miniprogram_npm/vant-weapp/mixins/basic.js success!
+Convert component wxApp_uni/miniprogram_npm/vant-weapp/mixins/button.js success!
+Convert component wxApp_uni/miniprogram_npm/vant-weapp/mixins/link.js success!
+Convert component wxApp_uni/miniprogram_npm/vant-weapp/mixins/open-type.js success!
+Convert component wxApp_uni/miniprogram_npm/vant-weapp/mixins/safe-area.js success!
+Convert component wxApp_uni/miniprogram_npm/vant-weapp/mixins/touch.js success!
+Convert component wxApp_uni/miniprogram_npm/vant-weapp/mixins/transition.js success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/nav-bar/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/notice-bar/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/notify/index.vue success!
+Convert component wxApp_uni/miniprogram_npm/vant-weapp/notify/notify.js success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/overlay/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/panel/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/picker/index.vue success!
+Convert component wxApp_uni/miniprogram_npm/vant-weapp/picker/shared.js success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/picker-column/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/popup/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/progress/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/radio/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/radio-group/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/rate/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/row/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/search/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/slider/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/stepper/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/steps/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/submit-bar/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/swipe-cell/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/switch/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/switch-cell/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/tab/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/tabbar/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/tabbar-item/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/tabs/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/tag/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/toast/index.vue success!
+Convert component wxApp_uni/miniprogram_npm/vant-weapp/toast/toast.js success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/transition/index.vue success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/tree-select/index.vue success!
+Convert wxApp_uni/pages/account/login/login.vue success!
+Convert wxApp_uni/pages/account/loginVerify/loginVerify.vue success!
+Convert wxApp_uni/pages/home/contract/contract.vue success!
+Convert wxApp_uni/pages/home/costManage/costManage.vue success!
+Convert wxApp_uni/pages/home/fill/fill.vue success!
+Convert wxApp_uni/pages/home/invoice/invoice.vue success!
+Convert wxApp_uni/pages/home/receipt/receipt.vue success!
+Convert wxApp_uni/pages/home/searchResult/searchResult.vue success!
+Convert wxApp_uni/pages/home/stamp/stampManager.vue success!
+Convert wxApp_uni/pages/home/templateReceipt/templateReceipt.vue success!
+Convert component wxApp_uni/pages/newEvidence/certificateDetail/certificateDetail.vue.wxml success!
+Convert wxApp_uni/pages/template/addCompany/index.vue success!
+Convert wxApp_uni/pages/template/addPerson/index.vue success!
+Convert wxApp_uni/pages/template/contractTemplate/contractTemplate.vue success!
+Convert wxApp_uni/pages/template/preview/index.vue success!
+Convert wxApp_uni/pages/template/useTemplate/index.vue success!
+Convert component node_modules/vant-weapp/dist/mixins/observer/behavior.js success!
+Convert component node_modules/vant-weapp/dist/mixins/observer/index.js success!
+Convert component node_modules/vant-weapp/dist/mixins/observer/props.js success!
+Convert component node_modules/vant-weapp/lib/mixins/observer/behavior.js success!
+Convert component node_modules/vant-weapp/lib/mixins/observer/index.js success!
+Convert component node_modules/vant-weapp/lib/mixins/observer/props.js success!
+Convert pages/home/sign/next/companyLink/companyLink.vue success!
+Convert pages/home/sign/next/companySign/companySign.vue success!
+Convert pages/home/sign/next/contractDetail/contractDetail.vue success!
+Convert pages/home/sign/next/personLink/personLink.vue success!
+Convert pages/home/sign/next/personSign/personSign.vue success!
+Convert pages/home/sign/next/signConfirm/signConfirm.vue success!
+Convert component wxApp_uni/miniprogram_npm/vant-weapp/mixins/observer/behavior.js success!
+Convert component wxApp_uni/miniprogram_npm/vant-weapp/mixins/observer/index.js success!
+Convert component wxApp_uni/miniprogram_npm/vant-weapp/mixins/observer/props.js success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/action-sheet/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/area/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/badge/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/badge-group/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/button/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/card/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/cell/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/cell-group/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/checkbox/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/checkbox-group/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/col/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/collapse/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/collapse-item/index.vue success!
+Convert component wxApp_uni/node_modules/vant-weapp/dist/common/color.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/dist/common/component.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/dist/common/utils.js success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/datetime-picker/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/definitions/index.js success!
+[Error] targetFilePath: /Users/icourt/Desktop/code/wxApp_uni/wxApp_uni/node_modules/vant-weapp/dist/definitions/index.js 内容为空！！！ r
+
+Convert wxApp_uni/node_modules/vant-weapp/dist/definitions/weapp.js success!
+[Error] targetFilePath: /Users/icourt/Desktop/code/wxApp_uni/wxApp_uni/node_modules/vant-weapp/dist/definitions/weapp.js 内容为空！！！ r
+
+Convert component wxApp_uni/node_modules/vant-weapp/dist/dialog/dialog.js success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/dialog/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/field/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/goods-action/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/goods-action-button/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/goods-action-icon/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/icon/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/info/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/loading/index.vue success!
+Convert component wxApp_uni/node_modules/vant-weapp/dist/mixins/basic.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/dist/mixins/button.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/dist/mixins/link.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/dist/mixins/open-type.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/dist/mixins/safe-area.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/dist/mixins/touch.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/dist/mixins/transition.js success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/nav-bar/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/notice-bar/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/notify/index.vue success!
+Convert component wxApp_uni/node_modules/vant-weapp/dist/notify/notify.js success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/overlay/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/panel/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/picker-column/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/picker/index.vue success!
+Convert component wxApp_uni/node_modules/vant-weapp/dist/picker/shared.js success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/popup/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/progress/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/radio/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/radio-group/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/rate/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/row/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/search/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/slider/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/stepper/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/steps/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/submit-bar/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/swipe-cell/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/switch/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/switch-cell/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/tab/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/tabbar/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/tabbar-item/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/tag/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/tabs/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/toast/index.vue success!
+Convert component wxApp_uni/node_modules/vant-weapp/dist/toast/toast.js success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/transition/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/tree-select/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/action-sheet/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/area/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/badge/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/badge-group/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/button/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/card/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/cell/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/cell-group/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/checkbox/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/checkbox-group/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/col/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/collapse/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/collapse-item/index.vue success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/common/color.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/common/component.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/common/utils.js success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/datetime-picker/index.vue success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/definitions/index.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/definitions/weapp.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/dialog/dialog.js success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/dialog/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/field/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/goods-action/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/goods-action-button/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/goods-action-icon/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/icon/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/info/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/loading/index.vue success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/mixins/basic.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/mixins/button.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/mixins/link.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/mixins/open-type.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/mixins/safe-area.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/mixins/touch.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/mixins/transition.js success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/nav-bar/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/notice-bar/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/notify/index.vue success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/notify/notify.js success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/overlay/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/panel/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/picker/index.vue success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/picker/shared.js success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/picker-column/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/popup/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/progress/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/radio/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/radio-group/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/rate/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/row/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/search/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/slider/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/stepper/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/steps/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/submit-bar/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/swipe-cell/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/switch/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/switch-cell/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/tab/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/tabbar/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/tabbar-item/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/tabs/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/tag/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/toast/index.vue success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/toast/toast.js success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/transition/index.vue success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/tree-select/index.vue success!
+Convert wxApp_uni/pages/home/contract/addContractList/addContractList.vue success!
+Convert wxApp_uni/pages/home/contract/chainList/chainList.vue success!
+Convert wxApp_uni/pages/home/contract/chains/chains.vue success!
+Convert wxApp_uni/pages/home/costManage/accountBalance/accountBalance.vue success!
+Convert wxApp_uni/pages/home/costManage/accountCard/accountCard.vue success!
+Convert wxApp_uni/pages/home/costManage/buyCard/buyCard.vue success!
+Convert wxApp_uni/pages/home/costManage/cardDetail/cardDetail.vue success!
+Convert wxApp_uni/pages/home/costManage/giveSettings/giveSettings.vue success!
+Convert wxApp_uni/pages/home/costManage/giveWay/giveWay.vue success!
+Convert wxApp_uni/pages/home/costManage/giving/giving.vue success!
+Convert wxApp_uni/pages/home/costManage/receiveCard/receiveCard.vue success!
+Convert wxApp_uni/pages/home/costManage/receiveResult/receiveResult.vue success!
+Convert wxApp_uni/pages/home/costManage/recharge/recharge.vue success!
+Convert wxApp_uni/pages/home/costManage/sendResult/sendResult.vue success!
+Convert wxApp_uni/pages/home/invoice/applyInvoice/applyInvoice.vue success!
+Convert wxApp_uni/pages/home/invoice/nuonuoPay/nuonuoPay.vue success!
+Convert wxApp_uni/pages/home/invoice/payContract/payContract.vue success!
+Convert wxApp_uni/pages/home/invoice/payDetail/payDetail.vue success!
+Convert wxApp_uni/pages/home/invoice/payResult/payResult.vue success!
+Convert wxApp_uni/pages/home/receipt/receiptLaunch/receiptLaunch.vue success!
+Convert wxApp_uni/pages/home/sign/launchSign/launchSign.vue success!
+Convert wxApp_uni/pages/home/sign/next/next.vue success!
+Convert wxApp_uni/pages/home/sign/submitSign/submitSign.vue success!
+Convert wxApp_uni/pages/home/stamp/add/addStamp.vue success!
+Convert wxApp_uni/pages/home/stamp/addCachet/addCachet.vue success!
+Convert component wxApp_uni/node_modules/vant-weapp/dist/mixins/observer/behavior.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/dist/mixins/observer/index.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/dist/mixins/observer/props.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/mixins/observer/behavior.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/mixins/observer/index.js success!
+Convert component wxApp_uni/node_modules/vant-weapp/lib/mixins/observer/props.js success!
+Convert wxApp_uni/pages/home/sign/next/companyLink/companyLink.vue success!
+Convert wxApp_uni/pages/home/sign/next/companySign/companySign.vue success!
+Convert wxApp_uni/pages/home/sign/next/contractDetail/contractDetail.vue success!
+Convert wxApp_uni/pages/home/sign/next/personLink/personLink.vue success!
+Convert wxApp_uni/pages/home/sign/next/personSign/personSign.vue success!
+Convert wxApp_uni/pages/home/sign/next/signConfirm/signConfirm.vue success!
+Convert font.css.wxss success!
+Convert weui.css.wxss success!
+Convert wxApp_uni/font.css.wxss success!
+Convert wxApp_uni/weui.css.wxss success!
+Convert miniprogram_npm/vant-weapp/common/index.css.wxss success!
+Convert miniprogram_npm/vant-weapp/common/style/clearfix.css.wxss success!
+Convert miniprogram_npm/vant-weapp/common/style/ellipsis.css.wxss success!
+Convert miniprogram_npm/vant-weapp/common/style/hairline.css.wxss success!
+Convert node_modules/vant-weapp/dist/common/index.css.wxss success!
+Convert node_modules/vant-weapp/lib/common/index.css.wxss success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/common/index.css.wxss success!
+Convert node_modules/vant-weapp/dist/common/style/clearfix.css.wxss success!
+Convert node_modules/vant-weapp/dist/common/style/ellipsis.css.wxss success!
+Convert node_modules/vant-weapp/dist/common/style/hairline.css.wxss success!
+Convert node_modules/vant-weapp/lib/common/style/clearfix.css.wxss success!
+Convert node_modules/vant-weapp/lib/common/style/ellipsis.css.wxss success!
+Convert node_modules/vant-weapp/lib/common/style/hairline.css.wxss success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/common/style/clearfix.css.wxss success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/common/style/ellipsis.css.wxss success!
+Convert wxApp_uni/miniprogram_npm/vant-weapp/common/style/hairline.css.wxss success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/common/index.css.wxss success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/common/index.css.wxss success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/common/style/clearfix.css.wxss success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/common/style/ellipsis.css.wxss success!
+Convert wxApp_uni/node_modules/vant-weapp/dist/common/style/hairline.css.wxss success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/common/style/clearfix.css.wxss success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/common/style/ellipsis.css.wxss success!
+Convert wxApp_uni/node_modules/vant-weapp/lib/common/style/hairline.css.wxss success!
+[命名替换]:  $emit  -->  emitFun    file: miniprogram_npm/vant-weapp/mixins/basic.js
+[命名替换]:  $emit  -->  emitFun    file: node_modules/vant-weapp/dist/mixins/basic.js
+[命名替换]:  $emit  -->  emitFun    file: wxApp_uni/miniprogram_npm/vant-weapp/mixins/basic.js
+[命名替换]:  $emit  -->  emitFun    file: wxApp_uni/node_modules/vant-weapp/dist/mixins/basic.js
+[命名替换]:  _getGiftCardStatus  -->  getGiftCardStatusFun    file: pages/account/loginVerify/loginVerify.js
+[命名替换]:  _getGiftCard  -->  getGiftCardFun    file: pages/account/loginVerify/loginVerify.js
+[命名替换]:  _sendPhoneCode  -->  sendPhoneCodeFun    file: pages/account/loginVerify/loginVerify.js
+[命名替换]:  _login  -->  loginFun    file: pages/account/loginVerify/loginVerify.js
+[命名替换]:  _sendPhoneCode  -->  sendPhoneCodeFun    file: pages/account/loginVerify/loginVerify.js
+[命名替换]:  _submitSign  -->  submitSignFun    file: pages/home/sign/submitSign/submitSign.js
+[命名替换]:  _submitSign  -->  submitSignFun    file: pages/home/sign/submitSign/submitSign.js
+[命名替换]:  _getGiftCardStatus  -->  getGiftCardStatusFun    file: wxApp_uni/pages/account/loginVerify/loginVerify.js
+[命名替换]:  _getGiftCard  -->  getGiftCardFun    file: wxApp_uni/pages/account/loginVerify/loginVerify.js
+[命名替换]:  _sendPhoneCode  -->  sendPhoneCodeFun    file: wxApp_uni/pages/account/loginVerify/loginVerify.js
+[命名替换]:  _login  -->  loginFun    file: wxApp_uni/pages/account/loginVerify/loginVerify.js
+[命名替换]:  _sendPhoneCode  -->  sendPhoneCodeFun    file: wxApp_uni/pages/account/loginVerify/loginVerify.js
+[命名替换]:  _submitSign  -->  submitSignFun    file: wxApp_uni/pages/home/sign/submitSign/submitSign.js
+[命名替换]:  _submitSign  -->  submitSignFun    file: wxApp_uni/pages/home/sign/submitSign/submitSign.js
+[命名替换]:  _loginWx  -->  loginWxFun    file: pages/account/login/login.js
+[命名替换]:  _getUserRegisterInfo  -->  getUserRegisterInfoFun    file: pages/account/login/login.js
+[命名替换]:  _loginWx  -->  loginWxFun    file: pages/account/login/login.js
+[命名替换]:  _getUserRegisterInfo  -->  getUserRegisterInfoFun    file: pages/account/login/login.js
+[命名替换]:  _loginWx  -->  loginWxFun    file: pages/account/login/login.js
+[命名替换]:  _getPhone  -->  getPhoneFun    file: pages/account/login/login.js
+[命名替换]:  _loginWx  -->  loginWxFun    file: pages/account/login/login.js
+[命名替换]:  _getPhone  -->  getPhoneFun    file: pages/account/login/login.js
+[命名替换]:  _getRegisterStatus  -->  getRegisterStatusFun    file: pages/account/login/login.js
+[命名替换]:  _loginWx  -->  loginWxFun    file: wxApp_uni/pages/account/login/login.js
+[命名替换]:  _getUserRegisterInfo  -->  getUserRegisterInfoFun    file: wxApp_uni/pages/account/login/login.js
+[命名替换]:  _loginWx  -->  loginWxFun    file: wxApp_uni/pages/account/login/login.js
+[命名替换]:  _getUserRegisterInfo  -->  getUserRegisterInfoFun    file: wxApp_uni/pages/account/login/login.js
+[命名替换]:  _loginWx  -->  loginWxFun    file: wxApp_uni/pages/account/login/login.js
+[命名替换]:  _getPhone  -->  getPhoneFun    file: wxApp_uni/pages/account/login/login.js
+[命名替换]:  _loginWx  -->  loginWxFun    file: wxApp_uni/pages/account/login/login.js
+[命名替换]:  _getPhone  -->  getPhoneFun    file: wxApp_uni/pages/account/login/login.js
+[命名替换]:  _getRegisterStatus  -->  getRegisterStatusFun    file: wxApp_uni/pages/account/login/login.js
+[命名替换]:  _cancelShare  -->  cancelShareFun    file: pages/home/costManage/giveWay/giveWay.js
+[命名替换]:  _shareCard  -->  shareCardFun    file: pages/home/costManage/giveWay/giveWay.js
+[命名替换]:  _cancelShare  -->  cancelShareFun    file: pages/home/costManage/giveWay/giveWay.js
+[命名替换]:  _cancelShare  -->  cancelShareFun    file: pages/home/costManage/giveWay/giveWay.js
+[命名替换]:  _cancelShare  -->  cancelShareFun    file: wxApp_uni/pages/home/costManage/giveWay/giveWay.js
+[命名替换]:  _shareCard  -->  shareCardFun    file: wxApp_uni/pages/home/costManage/giveWay/giveWay.js
+[命名替换]:  _cancelShare  -->  cancelShareFun    file: wxApp_uni/pages/home/costManage/giveWay/giveWay.js
+[命名替换]:  _cancelShare  -->  cancelShareFun    file: wxApp_uni/pages/home/costManage/giveWay/giveWay.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/home/costManage/cardDetail/cardDetail.js
+[命名替换]:  _getDetailData  -->  getDetailDataFun    file: pages/home/costManage/cardDetail/cardDetail.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/home/costManage/cardDetail/cardDetail.js
+[命名替换]:  _getDetailData  -->  getDetailDataFun    file: wxApp_uni/pages/home/costManage/cardDetail/cardDetail.js
+[命名替换]:  _getGiftCardStatus  -->  getGiftCardStatusFun    file: pages/home/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getGiftCard  -->  getGiftCardFun    file: pages/home/costManage/receiveCard/receiveCard.js
+[命名替换]:  _loginWx  -->  loginWxFun    file: pages/home/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getUserRegisterInfo  -->  getUserRegisterInfoFun    file: pages/home/costManage/receiveCard/receiveCard.js
+[命名替换]:  _loginWx  -->  loginWxFun    file: pages/home/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getPhone  -->  getPhoneFun    file: pages/home/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getGiftCardStatus  -->  getGiftCardStatusFun    file: pages/home/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getGiftCard  -->  getGiftCardFun    file: pages/home/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getGiftCardStatus  -->  getGiftCardStatusFun    file: wxApp_uni/pages/home/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getGiftCard  -->  getGiftCardFun    file: wxApp_uni/pages/home/costManage/receiveCard/receiveCard.js
+[命名替换]:  _loginWx  -->  loginWxFun    file: wxApp_uni/pages/home/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getUserRegisterInfo  -->  getUserRegisterInfoFun    file: wxApp_uni/pages/home/costManage/receiveCard/receiveCard.js
+[命名替换]:  _loginWx  -->  loginWxFun    file: wxApp_uni/pages/home/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getPhone  -->  getPhoneFun    file: wxApp_uni/pages/home/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getGiftCardStatus  -->  getGiftCardStatusFun    file: wxApp_uni/pages/home/costManage/receiveCard/receiveCard.js
+[命名替换]:  _getGiftCard  -->  getGiftCardFun    file: wxApp_uni/pages/home/costManage/receiveCard/receiveCard.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/home/invoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: pages/home/invoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: pages/home/invoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: pages/home/invoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: pages/home/invoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: pages/home/invoice/invoice.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: pages/home/searchResult/searchResult.js
+[命名替换]:  _parseData  -->  parseDataFun    file: pages/home/searchResult/searchResult.js
+[命名替换]:  _getCurrentContractStatus  -->  getCurrentContractStatusFun    file: pages/home/searchResult/searchResult.js
+[命名替换]:  _handleBackToCost  -->  handleBackToCostFun    file: pages/home/costManage/sendResult/sendResult.js
+[命名替换]:  _getPayInfo  -->  getPayInfoFun    file: pages/home/invoice/payContract/payContract.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/home/invoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: wxApp_uni/pages/home/invoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: wxApp_uni/pages/home/invoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: wxApp_uni/pages/home/invoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: wxApp_uni/pages/home/invoice/invoice.js
+[命名替换]:  _getInvoiceData  -->  getInvoiceDataFun    file: wxApp_uni/pages/home/invoice/invoice.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/home/searchResult/searchResult.js
+[命名替换]:  _parseData  -->  parseDataFun    file: wxApp_uni/pages/home/searchResult/searchResult.js
+[命名替换]:  _getCurrentContractStatus  -->  getCurrentContractStatusFun    file: wxApp_uni/pages/home/searchResult/searchResult.js
+[命名替换]:  _handleBackToCost  -->  handleBackToCostFun    file: wxApp_uni/pages/home/costManage/sendResult/sendResult.js
+[命名替换]:  _getPayInfo  -->  getPayInfoFun    file: wxApp_uni/pages/home/invoice/payContract/payContract.js
+[命名替换]:  _payByWx  -->  payByWxFun    file: pages/home/costManage/recharge/recharge.js
+[命名替换]:  _getWxPayParams  -->  getWxPayParamsFun    file: pages/home/costManage/recharge/recharge.js
+[命名替换]:  _getCurrentUserName  -->  getCurrentUserNameFun    file: pages/home/costManage/recharge/recharge.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/personLink/personLink.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/personLink/personLink.js
+[命名替换]:  _payByWx  -->  payByWxFun    file: wxApp_uni/pages/home/costManage/recharge/recharge.js
+[命名替换]:  _getWxPayParams  -->  getWxPayParamsFun    file: wxApp_uni/pages/home/costManage/recharge/recharge.js
+[命名替换]:  _getCurrentUserName  -->  getCurrentUserNameFun    file: wxApp_uni/pages/home/costManage/recharge/recharge.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/personLink/personLink.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/personLink/personLink.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/chainList/chainList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/chainList/chainList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/chainList/chainList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/chainList/chainList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/chainList/chainList.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/home/invoice/payDetail/payDetail.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/home/invoice/payDetail/payDetail.js
+[命名替换]:  _getPayDetail  -->  getPayDetailFun    file: pages/home/invoice/payDetail/payDetail.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/chainList/chainList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/chainList/chainList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/chainList/chainList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/chainList/chainList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/chainList/chainList.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/home/invoice/payDetail/payDetail.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/home/invoice/payDetail/payDetail.js
+[命名替换]:  _getPayDetail  -->  getPayDetailFun    file: wxApp_uni/pages/home/invoice/payDetail/payDetail.js
+[命名替换]:  _setDefaultSeal  -->  setDefaultSealFun    file: pages/home/stamp/stampManager.js
+[命名替换]:  _setDefaultSeal  -->  setDefaultSealFun    file: wxApp_uni/pages/home/stamp/stampManager.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/companyLink/companyLink.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/companyLink/companyLink.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/companyLink/companyLink.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/companyLink/companyLink.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/companyLink/companyLink.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/companyLink/companyLink.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/addContractList/addContractList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/addContractList/addContractList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/addContractList/addContractList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/addContractList/addContractList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/addContractList/addContractList.js
+[命名替换]:  _getWxPayParams  -->  getWxPayParamsFun    file: pages/home/costManage/buyCard/buyCard.js
+[命名替换]:  _payByWx  -->  payByWxFun    file: pages/home/costManage/buyCard/buyCard.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/addContractList/addContractList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/addContractList/addContractList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/addContractList/addContractList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/addContractList/addContractList.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/addContractList/addContractList.js
+[命名替换]:  _getWxPayParams  -->  getWxPayParamsFun    file: wxApp_uni/pages/home/costManage/buyCard/buyCard.js
+[命名替换]:  _payByWx  -->  payByWxFun    file: wxApp_uni/pages/home/costManage/buyCard/buyCard.js
+[命名替换]:  _getUserAccountInfo  -->  getUserAccountInfoFun    file: pages/home/costManage/costManage.js
+[命名替换]:  _getUserAccountInfo  -->  getUserAccountInfoFun    file: pages/home/costManage/costManage.js
+[命名替换]:  _getUserAccountInfo  -->  getUserAccountInfoFun    file: wxApp_uni/pages/home/costManage/costManage.js
+[命名替换]:  _getUserAccountInfo  -->  getUserAccountInfoFun    file: wxApp_uni/pages/home/costManage/costManage.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/personSign/personSign.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/personSign/personSign.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/personSign/personSign.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/personSign/personSign.js
+[命名替换]:  _getSealBase64  -->  getSealBase64Fun    file: authentication/company/company-info/index.js
+[命名替换]:  _createSeal  -->  createSealFun    file: authentication/company/company-info/index.js
+[命名替换]:  _uploadCompanySeal  -->  uploadCompanySealFun    file: authentication/company/company-info/index.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/home/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: pages/home/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: pages/home/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: pages/home/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: pages/home/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: pages/home/costManage/accountBalance/accountBalance.js
+[命名替换]:  _personalIsAuth  -->  personalIsAuthFun    file: pages/home/costManage/giving/giving.js
+[命名替换]:  _personalIsAuth  -->  personalIsAuthFun    file: pages/home/costManage/giving/giving.js
+[命名替换]:  _comapnyIsAuth  -->  comapnyIsAuthFun    file: pages/home/costManage/giving/giving.js
+[命名替换]:  _sendByGive  -->  sendByGiveFun    file: pages/home/costManage/giving/giving.js
+[命名替换]:  _sendByCard  -->  sendByCardFun    file: pages/home/costManage/giving/giving.js
+[命名替换]:  _getSealBase64  -->  getSealBase64Fun    file: wxApp_uni/pages/authentication/company/company-info/index.js
+[命名替换]:  _createSeal  -->  createSealFun    file: wxApp_uni/pages/authentication/company/company-info/index.js
+[命名替换]:  _uploadCompanySeal  -->  uploadCompanySealFun    file: wxApp_uni/pages/authentication/company/company-info/index.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/home/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: wxApp_uni/pages/home/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: wxApp_uni/pages/home/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: wxApp_uni/pages/home/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: wxApp_uni/pages/home/costManage/accountBalance/accountBalance.js
+[命名替换]:  _getBalanceList  -->  getBalanceListFun    file: wxApp_uni/pages/home/costManage/accountBalance/accountBalance.js
+[命名替换]:  _personalIsAuth  -->  personalIsAuthFun    file: wxApp_uni/pages/home/costManage/giving/giving.js
+[命名替换]:  _personalIsAuth  -->  personalIsAuthFun    file: wxApp_uni/pages/home/costManage/giving/giving.js
+[命名替换]:  _comapnyIsAuth  -->  comapnyIsAuthFun    file: wxApp_uni/pages/home/costManage/giving/giving.js
+[命名替换]:  _sendByGive  -->  sendByGiveFun    file: wxApp_uni/pages/home/costManage/giving/giving.js
+[命名替换]:  _sendByCard  -->  sendByCardFun    file: wxApp_uni/pages/home/costManage/giving/giving.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/chains/chains.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/chains/chains.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/chains/chains.js
+[命名替换]:  _getChains  -->  getChainsFun    file: pages/home/contract/chains/chains.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/chains/chains.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/chains/chains.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/chains/chains.js
+[命名替换]:  _getChains  -->  getChainsFun    file: wxApp_uni/pages/home/contract/chains/chains.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/companySign/companySign.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/companySign/companySign.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: pages/home/sign/next/companySign/companySign.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/companySign/companySign.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/companySign/companySign.js
+[命名替换]:  _setCanNext  -->  setCanNextFun    file: wxApp_uni/pages/home/sign/next/companySign/companySign.js
+[命名替换]:  _getCompanyUserInfo  -->  getCompanyUserInfoFun    file: pages/home/home.js
+[命名替换]:  _getContractCount  -->  getContractCountFun    file: pages/home/home.js
+[命名替换]:  _getSignalUsersInfo  -->  getSignalUsersInfoFun    file: pages/home/home.js
+[命名替换]:  _handleGetUserLoginStatus  -->  handleGetUserLoginStatusFun    file: pages/home/home.js
+[命名替换]:  _handleGetUserLoginStatus  -->  handleGetUserLoginStatusFun    file: pages/home/home.js
+[命名替换]:  _getContractCount  -->  getContractCountFun    file: pages/home/home.js
+[命名替换]:  _handleGetUserLoginStatus  -->  handleGetUserLoginStatusFun    file: pages/home/home.js
+[命名替换]:  _handleGetUserLoginStatus  -->  handleGetUserLoginStatusFun    file: pages/home/home.js
+[命名替换]:  _handleGetUserLoginStatus  -->  handleGetUserLoginStatusFun    file: pages/home/home.js
+[命名替换]:  _handleGetUserLoginStatus  -->  handleGetUserLoginStatusFun    file: pages/home/home.js
+[命名替换]:  _handleLaunchByfile  -->  handleLaunchByfileFun    file: pages/home/home.js
+[命名替换]:  _handleLaunchByTemplate  -->  handleLaunchByTemplateFun    file: pages/home/home.js
+[命名替换]:  _initUserStatusOnLoading  -->  initUserStatusOnLoadingFun    file: pages/home/home.js
+[命名替换]:  _createSeal  -->  createSealFun    file: authentication/personal/auth-result/index.js
+[命名替换]:  _uploadPersonalSeal  -->  uploadPersonalSealFun    file: authentication/personal/auth-result/index.js
+[命名替换]:  _getSealBase64  -->  getSealBase64Fun    file: authentication/personal/auth-result/index.js
+[命名替换]:  _getCompanyUserInfo  -->  getCompanyUserInfoFun    file: wxApp_uni/pages/home/home.js
+[命名替换]:  _getContractCount  -->  getContractCountFun    file: wxApp_uni/pages/home/home.js
+[命名替换]:  _getSignalUsersInfo  -->  getSignalUsersInfoFun    file: wxApp_uni/pages/home/home.js
+[命名替换]:  _handleGetUserLoginStatus  -->  handleGetUserLoginStatusFun    file: wxApp_uni/pages/home/home.js
+[命名替换]:  _handleGetUserLoginStatus  -->  handleGetUserLoginStatusFun    file: wxApp_uni/pages/home/home.js
+[命名替换]:  _getContractCount  -->  getContractCountFun    file: wxApp_uni/pages/home/home.js
+[命名替换]:  _handleGetUserLoginStatus  -->  handleGetUserLoginStatusFun    file: wxApp_uni/pages/home/home.js
+[命名替换]:  _handleGetUserLoginStatus  -->  handleGetUserLoginStatusFun    file: wxApp_uni/pages/home/home.js
+[命名替换]:  _handleGetUserLoginStatus  -->  handleGetUserLoginStatusFun    file: wxApp_uni/pages/home/home.js
+[命名替换]:  _handleGetUserLoginStatus  -->  handleGetUserLoginStatusFun    file: wxApp_uni/pages/home/home.js
+[命名替换]:  _handleLaunchByfile  -->  handleLaunchByfileFun    file: wxApp_uni/pages/home/home.js
+[命名替换]:  _handleLaunchByTemplate  -->  handleLaunchByTemplateFun    file: wxApp_uni/pages/home/home.js
+[命名替换]:  _initUserStatusOnLoading  -->  initUserStatusOnLoadingFun    file: wxApp_uni/pages/home/home.js
+[命名替换]:  _createSeal  -->  createSealFun    file: wxApp_uni/pages/authentication/personal/auth-result/index.js
+[命名替换]:  _uploadPersonalSeal  -->  uploadPersonalSealFun    file: wxApp_uni/pages/authentication/personal/auth-result/index.js
+[命名替换]:  _getSealBase64  -->  getSealBase64Fun    file: wxApp_uni/pages/authentication/personal/auth-result/index.js
+[命名替换]:  _getPageData  -->  getPageDataFun    file: pages/evidence/index.js
+[命名替换]:  _getPageData  -->  getPageDataFun    file: pages/evidence/index.js
+[命名替换]:  _getPageData  -->  getPageDataFun    file: pages/evidence/index.js
+[命名替换]:  _getPageData  -->  getPageDataFun    file: pages/evidence/index.js
+[命名替换]:  _getPageData  -->  getPageDataFun    file: pages/evidence/index.js
+[命名替换]:  _downloadPdf  -->  downloadPdfFun    file: pages/evidence/index.js
+[命名替换]:  _openPdf  -->  openPdfFun    file: pages/evidence/index.js
+[命名替换]:  _getPageData  -->  getPageDataFun    file: pages/evidence/index.js
+[命名替换]:  _getPageData  -->  getPageDataFun    file: pages/evidence/index.js
+[命名替换]:  _getPageData  -->  getPageDataFun    file: pages/evidence/index.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: pages/home/contract/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: pages/home/contract/contract.js
+[命名替换]:  _getCurrentContractStatus  -->  getCurrentContractStatusFun    file: pages/home/contract/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: pages/home/contract/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: pages/home/contract/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: pages/home/contract/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: pages/home/contract/contract.js
+[命名替换]:  _getPageData  -->  getPageDataFun    file: wxApp_uni/pages/evidence/index.js
+[命名替换]:  _getPageData  -->  getPageDataFun    file: wxApp_uni/pages/evidence/index.js
+[命名替换]:  _getPageData  -->  getPageDataFun    file: wxApp_uni/pages/evidence/index.js
+[命名替换]:  _getPageData  -->  getPageDataFun    file: wxApp_uni/pages/evidence/index.js
+[命名替换]:  _getPageData  -->  getPageDataFun    file: wxApp_uni/pages/evidence/index.js
+[命名替换]:  _downloadPdf  -->  downloadPdfFun    file: wxApp_uni/pages/evidence/index.js
+[命名替换]:  _openPdf  -->  openPdfFun    file: wxApp_uni/pages/evidence/index.js
+[命名替换]:  _getPageData  -->  getPageDataFun    file: wxApp_uni/pages/evidence/index.js
+[命名替换]:  _getPageData  -->  getPageDataFun    file: wxApp_uni/pages/evidence/index.js
+[命名替换]:  _getPageData  -->  getPageDataFun    file: wxApp_uni/pages/evidence/index.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/home/contract/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/home/contract/contract.js
+[命名替换]:  _getCurrentContractStatus  -->  getCurrentContractStatusFun    file: wxApp_uni/pages/home/contract/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/home/contract/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/home/contract/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/home/contract/contract.js
+[命名替换]:  _getContracts  -->  getContractsFun    file: wxApp_uni/pages/home/contract/contract.js
+[命名替换]:  _getDetailData  -->  getDetailDataFun    file: pages/home/sign/next/contractDetail/contractDetail.js
+[命名替换]:  _getDetailData  -->  getDetailDataFun    file: wxApp_uni/pages/home/sign/next/contractDetail/contractDetail.js
+[命名替换]:  _getSellerName  -->  getSellerNameFun    file: pages/home/invoice/applyInvoice/applyInvoice.js
+[命名替换]:  _getInvoiceInfo  -->  getInvoiceInfoFun    file: pages/home/invoice/applyInvoice/applyInvoice.js
+[命名替换]:  _getSellerName  -->  getSellerNameFun    file: wxApp_uni/pages/home/invoice/applyInvoice/applyInvoice.js
+[命名替换]:  _getInvoiceInfo  -->  getInvoiceInfoFun    file: wxApp_uni/pages/home/invoice/applyInvoice/applyInvoice.js
+[命名替换]:  _checkAllowUpload  -->  checkAllowUploadFun    file: newEvidence/addCertificate/addCertificate.js
+[命名替换]:  showTime  -->  showTimeFun    file: newEvidence/addCertificate/addCertificate.js
+[命名替换]:  _switchTabBar  -->  switchTabBarFun    file: newEvidence/addCertificate/addCertificate.js
+[命名替换]:  _switchTabBar  -->  switchTabBarFun    file: newEvidence/addCertificate/addCertificate.js
+[命名替换]:  _checkAllowUpload  -->  checkAllowUploadFun    file: wxApp_uni/newEvidence/addCertificate/addCertificate.js
+[命名替换]:  showTime  -->  showTimeFun    file: wxApp_uni/newEvidence/addCertificate/addCertificate.js
+[命名替换]:  _switchTabBar  -->  switchTabBarFun    file: wxApp_uni/newEvidence/addCertificate/addCertificate.js
+[命名替换]:  _switchTabBar  -->  switchTabBarFun    file: wxApp_uni/newEvidence/addCertificate/addCertificate.js
+[命名替换]:  _downloadPdf  -->  downloadPdfFun    file: newEvidence/certificateDetail/certificateDetail.js
+[命名替换]:  _downloadPdf  -->  downloadPdfFun    file: newEvidence/certificateDetail/certificateDetail.js
+[命名替换]:  _openPdf  -->  openPdfFun    file: newEvidence/certificateDetail/certificateDetail.js
+[命名替换]:  _downloadPdf  -->  downloadPdfFun    file: wxApp_uni/newEvidence/certificateDetail/certificateDetail.js
+[命名替换]:  _downloadPdf  -->  downloadPdfFun    file: wxApp_uni/newEvidence/certificateDetail/certificateDetail.js
+[命名替换]:  _openPdf  -->  openPdfFun    file: wxApp_uni/newEvidence/certificateDetail/certificateDetail.js
+[命名替换]:  _conversionSeals  -->  conversionSealsFun    file: pages/template/useTemplate/index.js
+[命名替换]:  _checkSubmitInfos  -->  checkSubmitInfosFun    file: pages/template/useTemplate/index.js
+[命名替换]:  _checkSignRepeat  -->  checkSignRepeatFun    file: pages/template/useTemplate/index.js
+[命名替换]:  _checkCcRepeat  -->  checkCcRepeatFun    file: pages/template/useTemplate/index.js
+[命名替换]:  _getTemplateDetail  -->  getTemplateDetailFun    file: pages/template/useTemplate/index.js
+[命名替换]:  _conversionSeals  -->  conversionSealsFun    file: wxApp_uni/pages/template/useTemplate/index.js
+[命名替换]:  _checkSubmitInfos  -->  checkSubmitInfosFun    file: wxApp_uni/pages/template/useTemplate/index.js
+[命名替换]:  _checkSignRepeat  -->  checkSignRepeatFun    file: wxApp_uni/pages/template/useTemplate/index.js
+[命名替换]:  _checkCcRepeat  -->  checkCcRepeatFun    file: wxApp_uni/pages/template/useTemplate/index.js
+[命名替换]:  _getTemplateDetail  -->  getTemplateDetailFun    file: wxApp_uni/pages/template/useTemplate/index.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: pages/home/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: pages/home/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: pages/home/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: pages/home/costManage/accountCard/accountCard.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/home/costManage/accountCard/accountCard.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: pages/home/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: pages/home/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: pages/home/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: wxApp_uni/pages/home/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: wxApp_uni/pages/home/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: wxApp_uni/pages/home/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: wxApp_uni/pages/home/costManage/accountCard/accountCard.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/home/costManage/accountCard/accountCard.js
+[命名替换]:  _formatTimeConvert  -->  formatTimeConvertFun    file: wxApp_uni/pages/home/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: wxApp_uni/pages/home/costManage/accountCard/accountCard.js
+[命名替换]:  _getCardListData  -->  getCardListDataFun    file: wxApp_uni/pages/home/costManage/accountCard/accountCard.js
+[命名替换]:  ishighLight  -->  ishighLightFun    file: pages/home/sign/next/next.js
+[命名替换]:  _checkAuth  -->  checkAuthFun    file: pages/home/sign/next/next.js
+[命名替换]:  _getSealName  -->  getSealNameFun    file: pages/home/sign/next/next.js
+[命名替换]:  _checkAuth  -->  checkAuthFun    file: pages/home/sign/next/next.js
+[命名替换]:  _getSealName  -->  getSealNameFun    file: pages/home/sign/next/next.js
+[命名替换]:  _checkAuth  -->  checkAuthFun    file: pages/home/sign/next/next.js
+[命名替换]:  _getSealName  -->  getSealNameFun    file: pages/home/sign/next/next.js
+[命名替换]:  _checkAuth  -->  checkAuthFun    file: pages/home/sign/next/next.js
+[命名替换]:  _getSealName  -->  getSealNameFun    file: pages/home/sign/next/next.js
+[命名替换]:  ishighLight  -->  ishighLightFun    file: pages/home/sign/next/next.js
+[命名替换]:  _getDetailData  -->  getDetailDataFun    file: pages/home/sign/next/next.js
+[命名替换]:  ishighLight  -->  ishighLightFun    file: pages/home/sign/next/next.js
+[命名替换]:  ishighLight  -->  ishighLightFun    file: wxApp_uni/pages/home/sign/next/next.js
+[命名替换]:  _checkAuth  -->  checkAuthFun    file: wxApp_uni/pages/home/sign/next/next.js
+[命名替换]:  _getSealName  -->  getSealNameFun    file: wxApp_uni/pages/home/sign/next/next.js
+[命名替换]:  _checkAuth  -->  checkAuthFun    file: wxApp_uni/pages/home/sign/next/next.js
+[命名替换]:  _getSealName  -->  getSealNameFun    file: wxApp_uni/pages/home/sign/next/next.js
+[命名替换]:  _checkAuth  -->  checkAuthFun    file: wxApp_uni/pages/home/sign/next/next.js
+[命名替换]:  _getSealName  -->  getSealNameFun    file: wxApp_uni/pages/home/sign/next/next.js
+[命名替换]:  _checkAuth  -->  checkAuthFun    file: wxApp_uni/pages/home/sign/next/next.js
+[命名替换]:  _getSealName  -->  getSealNameFun    file: wxApp_uni/pages/home/sign/next/next.js
+[命名替换]:  ishighLight  -->  ishighLightFun    file: wxApp_uni/pages/home/sign/next/next.js
+[命名替换]:  _getDetailData  -->  getDetailDataFun    file: wxApp_uni/pages/home/sign/next/next.js
+[命名替换]:  ishighLight  -->  ishighLightFun    file: wxApp_uni/pages/home/sign/next/next.js
+
+转换完成: 
+耗时：17364ms
+当前转换模式：【Hbuilder X】，生成HbuilderX项目。
+优点：上手快，项目结构较简单；
+缺点：资源路径会因为表达式而无法全部被修复(“可能”需手动修复)
+
+注意：
+1.当看到"image漏网之鱼"，意味着您"可能"，“可能”，记住是“可能”，但不一定需要手动调整对应代码(以实际编译运行为准)，当image标签的src属性是含变量或表达式，工具还无法做到100%转换，需要手动修改为相对/static目录的路径
+
+
+日志说明：
+1. image漏网之鱼 --> 为HbuilderX模式时，需要将资源移动到static，并且修复相应文件路径，有可能src为网络文件，有可能为变量或表达式，可能会导致转换后文件找不到，因此提示一下
+修复提示：编译时，如有报错就将对应位置修复即可(虽然目前uni-app有类似的支持，似乎并不完善)
+
+2. 命名替换 --> 小程序里对于属性名基本没什么限制，如id能做属性名，data下面的变量和函数名还能重名，但这些在uni-app里是不支持的，因此做了相关替换，并记录日志，也许组件在外部调用时，函数名被改而因此报错时，请查看答疑文档

@@ -1,0 +1,72 @@
+/* components/rejectAlert/rejectAlert.wxss */
+.reject-mask {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.reject-box {
+  background-color: white;
+  width: 560rpx;
+  border-radius: 8rpx;
+  margin: 250rpx auto 0;
+  padding-top: 30rpx;
+}
+.reject-box .reject-title {
+  text-align: center;
+}
+.reject-box .reject-input {
+  margin: 36rpx;
+  border:1rpx solid #E5E5E5;
+  height:264rpx;
+  padding:15rpx;
+  width: 458rpx;
+  font-size: 30rpx;
+  display: block;
+  background-color: #F9F9F9;
+}
+.reject-box .button-box {
+  margin-top: 10rpx;
+  border-top: 1rpx solid #E5E5E5;
+}
+.reject-box .button-box .button {
+  height: 88rpx;
+  line-height: 88rpx;
+  font-size: 34rpx;
+  float: left;
+  border-radius: 8rpx; 
+  background-color: white;
+}
+
+.reject-box .button-box .button::after {
+  border: 0
+}
+
+.reject-box .button-box .button-cancel {
+  width: 278rpx;
+}
+.reject-box .button-box .button-reject {
+  width: 280rpx;
+  color: #FF9F3D;
+}
+
+.button-line {
+  width:2rpx;
+  background-color:#E5E5E5;
+  height:88rpx;
+  float:left;
+}
+
+.clearfix:after {
+  visibility:hidden;
+  display:block;
+  font-size:0;
+  content:" ";
+  clear:both;
+  height:0;
+}
+.clearfix {
+  zoom:1;
+}

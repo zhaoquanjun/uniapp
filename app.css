@@ -1,0 +1,160 @@
+@import "./weui.css";
+@import "./font.css";
+@import "./components/searchHighlightTextView/searchHighlightTextView.css";
+page {
+  width: 100%;
+  min-height: 100%;
+  background-color: white;
+  font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB",
+		"Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+view, text, input {
+  font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB",
+  "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+/* 未选中的样式 */
+radio .wx-radio-input {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+}
+
+/* 选中后 背景及勾 的样式 */
+radio .wx-radio-input.wx-radio-input-checked::before {
+  width: 34rpx;
+  height: 34rpx;
+  border-radius: 50%;
+  line-height: 34rpx;
+  text-align: center;
+  font-size: 20rpx; /* 勾大小 */
+  color: #fff; /* 白色勾  */
+  background: #EE7005;
+  border-color: #EE7005;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+/*全局主色调 */
+.global-orange-color {
+  background-color: #464646;
+}
+
+/*全局辅色调 */
+.global-yellow-color {
+  background-color: #ed6c00;
+}
+
+/*全局标题字体色 */
+.global-title-color {
+  color: #202020;
+}
+
+/*全局内容字体色 */
+.global-content-color {
+  color: #606060;
+}
+.text-normal {
+  color: #606060;
+}
+
+/* 全局阴影 */
+.global-shadow {
+  box-shadow: 0 0 16rpx #e5e5e5;
+}
+
+/*占位文字颜色*/
+.placeholder-color {
+  color: #b2b2b2;
+}
+
+/*灰色字体  */
+.text-grey {
+  color: #b2b2b2;
+}
+
+/*灰色字体  */
+.text-normal {
+  color: rgba(102, 102, 102, 1);
+}
+
+/*button*/
+.button-disable {
+  color: #b2b2b2;
+}
+
+.button-normal {
+  color: #576071;
+}
+
+/*全局线条色 */
+.global-line-color {
+  background-color: #e5e5e5;
+}
+
+/* text组件超出显示省略号 */
+.text-apostrophe {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.empty-data {
+  font-size: 34rpx;
+  font-weight: 300;
+  text-align: center;
+  height: 34rpx;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+}
+@import "./font.css";
+.middle_box:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.boxShadow {
+  border: 1rpx solid #e5e5e5;
+  border-radius: 8rpx;
+  box-shadow: 0 0 16rpx #e5e5e5;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.slide-menu_list {
+  width: 100%;
+  background: #fff;
+  border-radius: 16rpx;
+}
+  

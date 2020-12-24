@@ -1,0 +1,612 @@
+{
+	"pages": [
+		{
+			"path": "pages/home/home",
+			"style": {
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#333333",
+				"navigationBarTitleText": "闪签",
+				"navigationBarTextStyle": "white",
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 50
+			}
+		},
+		{
+			"path": "pages/contract/index",
+			"style": {
+				"navigationBarTitleText": "合同管理",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/evidence/index",
+			"style": {
+				"navigationBarTitleText": "证据管理",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/pm/pmHome",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#333333",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/root/root",
+			"style": {
+				"navigationBarTitleText": "闪签"
+			}
+		},
+		{
+			"path": "pages/account/login/login",
+			"style": {
+				"navigationBarTitleText": "闪签"
+			}
+		},
+		{
+			"path": "pages/account/loginVerify/loginVerify",
+			"style": {}
+		},
+		{
+			"path": "pages/home/searchResult/searchResult",
+			"style": {
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTitleText": "搜索页",
+				"navigationBarTextStyle": "black",
+				"backgroundColorTop": "#ffffff"
+			}
+		},
+		{
+			"path": "pages/home/stamp/stampManager",
+			"style": {
+				"navigationBarTitleText": "我的印章",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/home/stamp/add/addStamp",
+			"style": {
+				"navigationBarTitleText": "手绘签名",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/home/stamp/addCachet/addCachet",
+			"style": {
+				"navigationBarTitleText": "创建公章"
+			}
+		},
+		{
+			"path": "pages/home/contract/contract",
+			"style": {
+				"navigationBarTitleText": "合同管理",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"backgroundColorTop": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/home/sign/next/signConfirm/signConfirm",
+			"style": {
+				"navigationBarTitleText": "签署合同",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/home/sign/next/contractDetail/contractDetail",
+			"style": {
+				"navigationBarTitleText": "合同详情",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/home/sign/launchSign/launchSign",
+			"style": {
+				"navigationBarTitleText": "发起签署",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/home/sign/next/next",
+			"style": {
+				"navigationBarTitleText": "发起签署",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/home/sign/next/personSign/personSign",
+			"style": {
+				"navigationBarTitleText": "添加个人签署方",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/home/sign/next/companySign/companySign",
+			"style": {
+				"navigationBarTitleText": "添加企业签署方",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/home/sign/next/personLink/personLink",
+			"style": {
+				"navigationBarTitleText": "添加个人抄送方",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/home/sign/next/companyLink/companyLink",
+			"style": {
+				"navigationBarTitleText": "添加企业抄送方",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/home/sign/submitSign/submitSign",
+			"style": {
+				"navigationBarTitleText": "签署验证"
+			}
+		},
+		{
+			"path": "pages/home/costManage/costManage",
+			"style": {
+				"navigationBarTitleText": "费用管理",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"backgroundColorTop": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/home/contract/chains/chains",
+			"style": {
+				"navigationBarTitleText": "证据链管理",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"backgroundColorTop": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/home/contract/chainList/chainList",
+			"style": {
+				"navigationBarTitleText": "证据管理",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"backgroundColorTop": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/home/contract/addContractList/addContractList",
+			"style": {
+				"navigationBarTitleText": "合同管理",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"backgroundColorTop": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/home/costManage/accountBalance/accountBalance",
+			"style": {
+				"navigationBarTitleText": "收支明细",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"backgroundColorTop": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/home/costManage/accountCard/accountCard",
+			"style": {
+				"navigationBarTitleText": "礼品卡",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"backgroundColorTop": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/home/costManage/recharge/recharge",
+			"style": {
+				"navigationBarTitleText": "充值",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"backgroundColorTop": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/home/costManage/buyCard/buyCard",
+			"style": {
+				"navigationBarTitleText": "购买礼品卡",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"backgroundColorTop": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/home/costManage/receiveCard/receiveCard",
+			"style": {
+				"navigationBarTitleText": "领取礼品卡",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"backgroundColorTop": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/home/costManage/receiveResult/receiveResult",
+			"style": {}
+		},
+		{
+			"path": "pages/home/costManage/giving/giving",
+			"style": {
+				"navigationBarTitleText": "赠送闪签用户",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"backgroundColorTop": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/home/costManage/giveWay/giveWay",
+			"style": {
+				"navigationBarTitleText": "赠送方式",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"backgroundColorTop": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/home/costManage/giveSettings/giveSettings",
+			"style": {
+				"navigationBarTitleText": "赠送设置",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"backgroundColorTop": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/home/costManage/sendResult/sendResult",
+			"style": {
+				"navigationBarTitleText": "赠送结果",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"backgroundColorTop": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/home/costManage/cardDetail/cardDetail",
+			"style": {
+				"navigationBarTitleText": "消费明细",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"backgroundColorTop": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/home/fill/fill",
+			"style": {}
+		},
+		{
+			"path": "pages/home/invoice/invoice",
+			"style": {
+				"onReachBottomDistance": 50,
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#333333",
+				"navigationBarTitleText": "发票申请",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/home/invoice/payResult/payResult",
+			"style": {
+				"onReachBottomDistance": 50,
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#333333",
+				"navigationBarTitleText": "支付结果",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/home/invoice/payContract/payContract",
+			"style": {
+				"onReachBottomDistance": 50,
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#333333",
+				"navigationBarTitleText": "合同付款",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/home/invoice/applyInvoice/applyInvoice",
+			"style": {
+				"onReachBottomDistance": 50,
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#333333",
+				"navigationBarTitleText": "申请开票",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/home/invoice/payDetail/payDetail",
+			"style": {
+				"onReachBottomDistance": 50,
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#333333",
+				"navigationBarTitleText": "付款详情",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/home/invoice/nuonuoPay/nuonuoPay",
+			"style": {
+				"onReachBottomDistance": 50,
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#333333",
+				"navigationBarTitleText": "付款",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/home/receipt/receipt",
+			"style": {
+				"enablePullDownRefresh": false,
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#F7F8F9",
+				"navigationBarTitleText": "发起收款",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/home/templateReceipt/templateReceipt",
+			"style": {
+				"navigationBarTitleText": "销售模版",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/home/receipt/receiptLaunch/receiptLaunch",
+			"style": {
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#464646",
+				"navigationBarTitleText": "合同收款",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/template/useTemplate/index",
+			"style": {}
+		},
+		{
+			"path": "pages/template/contractTemplate/contractTemplate",
+			"style": {
+				"navigationBarTitleText": "模版选择",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/template/addPerson/index",
+			"style": {}
+		},
+		{
+			"path": "pages/template/addCompany/index",
+			"style": {}
+		},
+		{
+			"path": "pages/template/preview/index",
+			"style": {}
+		}
+	],
+	"permission": {
+		"scope.userLocation": {
+			"desc": "您的位置信息将用于认证服务"
+		}
+	},
+	"subpackages": [
+		{
+			"root": "authentication",
+			"name": "authentication",
+			"pages": [
+				"company/company-create/index",
+				"company/company-auth-type/index",
+				"company/company-info/index",
+				"company/company-pay-info/index",
+				"company/auth-result/index",
+				"company/account-info/index",
+				"personal/personal-phone-auth/index",
+				"personal/personal-face-auth/index",
+				"personal/personal-auth-type/index",
+				"personal/auth-result/index"
+			]
+		},
+		{
+			"root": "newEvidence",
+			"name": "newEvidence",
+			"pages": [
+				"signCertificate/signCertificate",
+				"addCertificate/addCertificate",
+				"certificateDetail/certificateDetail",
+				"videoRecord/videoRecord"
+			]
+		}
+	],
+	"tabBar": {
+		"color": "#C5C5C5",
+		"selectedColor": "#464646",
+		"backgroundColor": "#FFFFFF",
+		"list": [
+			{
+				"pagePath": "pages/home/home",
+				"text": "首页",
+				"iconPath": "/static/images/tabbar/home.png",
+				"selectedIconPath": "/static/images/tabbar/home_selected.png"
+			},
+			{
+				"pagePath": "pages/contract/index",
+				"text": "合同",
+				"iconPath": "/static/images/tabbar/assignment.png",
+				"selectedIconPath": "/static/images/tabbar/assignment_selected.png"
+			},
+			{
+				"pagePath": "pages/evidence/index",
+				"text": "证据",
+				"iconPath": "/static/images/tabbar/proof.png",
+				"selectedIconPath": "/static/images/tabbar/proof_selected.png"
+			},
+			{
+				"pagePath": "pages/pm/pmHome",
+				"text": "我的",
+				"iconPath": "/static/images/tabbar/mine.png",
+				"selectedIconPath": "/static/images/tabbar/mine_selected.png"
+			}
+		]
+	},
+	"networkTimeout": {
+		"request": 10000,
+		"downloadFile": 100000,
+		"uploadFile": 100000
+	},
+	"debug": true,
+	"sitemapLocation": "sitemap.json",
+	"globalStyle": {
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#333333",
+		"backgroundColorTop": "#333333",
+		"navigationBarTitleText": "闪签",
+		"navigationBarTextStyle": "white",
+		"enablePullDownRefresh": false,
+		"onReachBottomDistance": 50
+	},
+	"subPackages": [
+		{
+			"root": "authentication",
+			"pages": [
+				{
+					"path": "company/company-create/index",
+					"style": {}
+				},
+				{
+					"path": "company/company-auth-type/index",
+					"style": {}
+				},
+				{
+					"path": "company/company-info/index",
+					"style": {}
+				},
+				{
+					"path": "company/company-pay-info/index",
+					"style": {}
+				},
+				{
+					"path": "company/auth-result/index",
+					"style": {}
+				},
+				{
+					"path": "company/account-info/index",
+					"style": {}
+				},
+				{
+					"path": "personal/personal-phone-auth/index",
+					"style": {}
+				},
+				{
+					"path": "personal/personal-face-auth/index",
+					"style": {}
+				},
+				{
+					"path": "personal/personal-auth-type/index",
+					"style": {}
+				},
+				{
+					"path": "personal/auth-result/index",
+					"style": {}
+				}
+			]
+		},
+		{
+			"root": "newEvidence",
+			"pages": [
+				{
+					"path": "signCertificate/signCertificate",
+					"style": {}
+				},
+				{
+					"path": "addCertificate/addCertificate",
+					"style": {}
+				},
+				{
+					"path": "certificateDetail/certificateDetail",
+					"style": {}
+				},
+				{
+					"path": "videoRecord/videoRecord",
+					"style": {}
+				}
+			]
+		}
+	]
+}

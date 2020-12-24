@@ -1,0 +1,13 @@
+{
+  "onReachBottomDistance": 50,
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#333333",
+  "navigationBarTitleText": "发票申请",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "search": "/components/search/search",
+    "slider-picker": "/components/sliderPicker/sliderPicker",
+    "message-box": "/components/messageBox/messageBox"
+  }
+}

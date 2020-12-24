@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "签署验证",
+  "usingComponents": {
+    "verifycode": "/components/verifycode/verifycode"
+  }
+}
