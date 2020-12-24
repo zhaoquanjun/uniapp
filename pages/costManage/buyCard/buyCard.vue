@@ -4,7 +4,7 @@
 		<view class="amount-list">
 			<view class="label">面值金额</view>
 			<view class="list-area">
-				<view v-for="(item, index) in amountList" :key="index" :class="'list-item ' + (selectActive == item.value && valueStatus == 'select' ? 'active' : '')" :data-value="item.value" ontap="_handleSelectValue">{{item.label}}元
+				<view v-for="(item, index) in amountList" :key="index" :class="'list-item ' + (selectActive == item.value && valueStatus == 'select' ? 'active' : '')" :data-value="item.value" @tap="handleSelectValueFun">{{item.label}}元
 				</view>
 			</view>
 		</view>
@@ -17,9 +17,6 @@
 		<view class="select-count--area item">
 			<view class="label">购买数量</view>
 			<view class="count-area">
-				<!-- <view class="minus" ontap="_handleMius">-</view>
-				<view class="count">{{count}}</view>
-				<view class="incres" ontap="_handleIncres">+</view> -->
 				<input placeholder="请输入礼品卡个数" type="number" :value="count" @input="handleCountValueFun" @blur="handleBlurCountFun"></input>
 				<view class="prefix">个</view>
 			</view>
@@ -30,14 +27,14 @@
 		</view>
 		<view class="way-select--area item">
 			<view class="label">购买方式</view>
-			<view class="way-select--area" ontap="_handleSelectWay">
+			<view class="way-select--area" @tap="handleSelectWayFun">
 				<view class="select-value">{{selectList[activeIndex].label}}</view>
 				<view class="trangle"></view>
 			</view>
 		</view>
 	</view>
 	<slider-picker id="sliderPicker" :sliderList="selectList" @selectWay="handleSelectPayWayFun"></slider-picker>
-	<view class="confirm-btn" ontap="_handleConfirmBuy">确认购买</view>
+	<view class="confirm-btn" @tap="handleConfirmBuyFun">确认购买</view>
 </view>
 </template>
 

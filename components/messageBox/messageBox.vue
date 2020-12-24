@@ -8,7 +8,7 @@
         <view class="item">{{messageInfo.content}}</view>
       </scroll-view>
     </view>
-    <view class="footer" ontap="hide">{{messageInfo.btnWords}}</view>
+    <view class="footer" @tap="hide">{{messageInfo.btnWords}}</view>
   </view>
 </view>
 </template>

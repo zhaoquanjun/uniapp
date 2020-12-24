@@ -2,7 +2,7 @@
 <view class="card-list-page">
 	<view class="header-tab">
 		<view class="tab-wrapper">
-			<view v-for="(item, index) in tabs" :key="index" :class="'tab-item ' + (activeName == item.type ? active : '')" :data-type="item.type" ontap="_handleSwitchTab">{{item.label}}</view>
+			<view v-for="(item, index) in tabs" :key="index" :class="'tab-item ' + (activeName == item.type ? active : '')" :data-type="item.type" @tap="handleSwitchTabFun">{{item.label}}</view>
 			<view :class="'active-bg ' + (activeName == 1 ? 'active1' : activeName == 2 ? 'active2' : activeName == 3 ? 'active3' : activeName == 4 ? 'active4' : '')"></view>
 		</view>
 	</view>
@@ -32,8 +32,8 @@
 						<view class="desc">{{item.couponType == 1 ? '适用于闪签平台全部服务，不可转赠' : item.couponType == 2 ? '适用于闪签平台全部服务、法律咨询服务，可转赠' : item.couponType == 3 ? '适用于法律咨询服务，不可转赠' : ''}}</view>
 					</view>
 					<view class="btns">
-						<view class="view-detail-btn btn" :data-item="item" ontap="_handleViewDetail">消费明细</view>
-						<view class="send-btn btn" :data-item="item" ontap="_handleSend">
+						<view class="view-detail-btn btn" :data-item="item" @tap="handleViewDetailFun">消费明细</view>
+						<view class="send-btn btn" :data-item="item" @tap="handleSendFun">
 							<image class="icon" :src="sendIcon" mode="aspectFit"></image>
 							<text>赠送好友</text>
 						</view>
@@ -97,7 +97,7 @@
 						<view class="desc">{{item.couponType == 1 ? '适用于闪签平台全部服务，不可转赠' : item.couponType == 2 ? '适用于闪签平台全部服务、法律咨询服务，可转赠' : item.couponType == 3 ? '适用于法律咨询服务，不可转赠' : ''}}</view>
 					</view>
 					<view class="btns">
-						<view class="view-detail-btn btn" :data-item="item" ontap="_handleViewDetail">消费明细</view>
+						<view class="view-detail-btn btn" :data-item="item" @tap="handleViewDetailFun">消费明细</view>
 						<view class="send-btn btn hidden">
 							<image class="icon" :src="sendIcon" mode="aspectFit"></image>
 							<text>赠送好友</text>
@@ -132,7 +132,7 @@
 						<view class="desc">{{item.couponType == 1 ? '适用于闪签平台全部服务，不可转赠' : item.couponType == 2 ? '适用于闪签平台全部服务、法律咨询服务，可转赠' : item.couponType == 3 ? '适用于法律咨询服务，不可转赠' : ''}}</view>
 					</view>
 					<view class="btns">
-						<view class="view-detail-btn btn" :data-item="item" ontap="_handleViewDetail">消费明细</view>
+						<view class="view-detail-btn btn" :data-item="item" @tap="handleViewDetailFun">消费明细</view>
 						<view class="send-btn btn hidden">
 							<image class="icon" :src="sendIcon" mode="aspectFit"></image>
 							<text>赠送好友</text>

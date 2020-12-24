@@ -30,9 +30,6 @@
 			<view class="label">赠送个数</view>
 			<view class="value">
 				<view class="count-area">
-					<!-- <view class="minus" ontap="_handleMius">-</view>
-					<view class="count">{{count}}</view>
-					<view class="incres" ontap="_handleIncres">+</view> -->
 					<input placeholder="请输入礼品卡个数" type="number" :value="count" @input="handleCountValueFun" @blur="handleBlurCountFun"></input>
 					<view class="prefix">个</view>
 				</view>
@@ -43,7 +40,7 @@
 			<view class="value">¥{{total}}元</view>
 		</view>
 	</view>
-	<view class="confirm-btn" ontap="_handleConfirmSend">赠送</view>
+	<view class="confirm-btn" @tap="handleConfirmSendFun">赠送</view>
 </view>
 </template>
 

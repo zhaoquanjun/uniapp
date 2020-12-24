@@ -30,7 +30,7 @@
         </view>
     </view>
     <view class="bottom-btn-container">
-        <text class="next" ontap="_handleCompletePay">已完成汇款</text>
+        <text class="next" @tap="handleCompletePayFun">已完成汇款</text>
     </view>
 </view>
 </template>

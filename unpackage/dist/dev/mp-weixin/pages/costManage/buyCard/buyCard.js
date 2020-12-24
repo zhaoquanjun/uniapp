@@ -170,9 +170,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 // pages/costManage/buyCard/buyCard.js
 var api = __webpack_require__(/*! ../../../api/request */ 8);var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../../components/sliderPicker/sliderPicker */ 530));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =

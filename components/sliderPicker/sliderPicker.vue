@@ -3,7 +3,7 @@
 <view :class="'slider-picker--area ' + (wrapperShow ? 'wrapper-show' : '')">
   <view class="mask" @tap="hide"></view>
   <view :class="'slider-box ' + (contentShow ? 'content-show' : '')">
-    <view v-for="(item, index) in sliderList" :key="index" class="slider-item" ontap="_handleSelectSliderValue" :data-value="item.value" :data-index="index">{{item.label}}</view>
+    <view v-for="(item, index) in sliderList" :key="index" class="slider-item" @tap="handleSelectSliderValueFun" :data-value="item.value" :data-index="index">{{item.label}}</view>
   </view>
 </view>
 </template>

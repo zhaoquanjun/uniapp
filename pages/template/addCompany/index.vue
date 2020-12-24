@@ -22,8 +22,8 @@
     </view>
   </view>
   <view class="btn-group">
-    <view class="cancel" ontap="_handleBack">撤回</view>
-    <view :class="'confirm ' + (canNext ? 'canNext' : '')" ontap="_handleConfirm">确定</view>
+    <view class="cancel" @tap="handleBackFun">撤回</view>
+    <view :class="'confirm ' + (canNext ? 'canNext' : '')" @tap="handleConfirmFun">确定</view>
   </view>
 </view>
 </template>

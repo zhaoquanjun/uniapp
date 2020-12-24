@@ -5,7 +5,7 @@
 			<image :src="shanqian_icon" mode="aspectFit"></image>
 			<text>闪签用户</text>
 		</view>
-		<view class="type-select flex-box" ontap="_handleSelectWay">
+		<view class="type-select flex-box" @tap="handleSelectWayFun">
 			<view class="label">账户类型</view>
 			<view class="value">{{accountList[activeIndex].label}}</view>
 			<view class="trangle"></view>
@@ -39,7 +39,7 @@
 			</view>
 		</view>
 	</view>
-  <view class="confirm-btn" ontap="_handleConfirmSend">确认赠送</view>
+  <view class="confirm-btn" @tap="handleConfirmSendFun">确认赠送</view>
 	<slider-picker id="sliderPicker" :sliderList="accountList" @selectWay="handleSelectAccoutFun"></slider-picker>
 </view>
 </template>

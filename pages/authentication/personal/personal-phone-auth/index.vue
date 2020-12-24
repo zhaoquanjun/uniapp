@@ -45,7 +45,7 @@
       <radio value="r1" :checked="checked"></radio>
       </label>
       <view style="color:#999999;margin-top:4rpx">我已阅读并同意</view>
-      <view style="color:#6E87B8;margin-top:4rpx" ontap="_handleShowSecret">《隐私保护协议》</view>
+      <view style="color:#6E87B8;margin-top:4rpx" @tap="handleShowSecretFun">《隐私保护协议》</view>
     </view>
     <view class="bottom-btn-container">
         <text class="back" @tap="back">返回</text>

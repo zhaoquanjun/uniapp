@@ -9,11 +9,11 @@
         <view class="amount">{{balance}}</view>
       </view>
       <view class="btn-group">
-        <view class="btn" ontap="_handleRecharge">充值</view>
-        <view class="btn black" ontap="_handleGiving">赠送</view>
+        <view class="btn" @tap="handleRechargeFun">充值</view>
+        <view class="btn black" @tap="handleGivingFun">赠送</view>
       </view>
      </view>
-     <view class="detail" ontap="_handleShowBalance">
+     <view class="detail" @tap="handleShowBalanceFun">
       <view class="detail-word">收支明细</view>
       <view class="one one-apparrow-right icon"></view>
      </view>
@@ -26,10 +26,10 @@
         <view class="prefix">张</view>
       </view>
       <view class="btn-group">
-        <view class="btn primary" ontap="_handleBuy">购买礼品卡</view>
+        <view class="btn primary" @tap="handleBuyFun">购买礼品卡</view>
       </view>
      </view>
-     <view class="detail" ontap="_handleShowCard">
+     <view class="detail" @tap="handleShowCardFun">
       <view class="detail-word">查看全部</view>
       <view class="one one-apparrow-right icon"></view>
      </view>

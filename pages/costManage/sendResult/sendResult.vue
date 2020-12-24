@@ -6,7 +6,7 @@
     </view>
     <view class="result-title">已赠送至对方用户</view>
     <view class="result-desc">等待对方确认（{{time}}s后自动返回至费用管理页）</view>
-    <view class="back-btn" ontap="_handleBackToCost">返回至费用管理页</view>
+    <view class="back-btn" @tap="handleBackToCostFun">返回至费用管理页</view>
   </view>
   <view class="fail-result" v-if="result == 'f'">
     <view class="result-icon">
@@ -15,8 +15,8 @@
     <view class="result-title">赠送失败</view>
     <view class="result-desc">赠送失败，请检查后重试</view>
     <view class="btn-groups">
-      <view class="btn" ontap="_handleBackToCost">返回</view>
-      <view class="btn buy-again black" ontap="_handleReBuy">重新购买</view>
+      <view class="btn" @tap="handleBackToCostFun">返回</view>
+      <view class="btn buy-again black" @tap="handleReBuyFun">重新购买</view>
     </view>
   </view>
 </view>

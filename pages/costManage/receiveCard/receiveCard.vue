@@ -7,9 +7,9 @@
     <view class="label">验证码</view>
     <view class="input-area">
       <input placeholder="请输入验证码" maxlength="6" class="yzm-input" type="number" @input="handleInputYzmFun"></input>
-      <view class="get-code" ontap="_handleGetCode">{{btnWords}}</view>
+      <view class="get-code" @tap="handleGetCodeFun">{{btnWords}}</view>
     </view>
-    <view class="get-card-btn" ontap="_handlePcLogin">手机号登录领取</view>
+    <view class="get-card-btn" @tap="handlePcLoginFun">手机号登录领取</view>
     <view class="divider">
       <view class="line"></view>
       <view class="tips">其他方式登录</view>

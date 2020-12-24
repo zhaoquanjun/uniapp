@@ -3,7 +3,7 @@
   <view class="title">合同主题</view>
   <view class="input-area">
     <input type="text" maxlength="100" :value="templateData.name" @input="handleChangeContractTitleFun"></input>
-    <text class="delete one one-close" ontap="_handleClearContractTitle"></text>
+    <text class="delete one one-close" @tap="handleClearContractTitleFun"></text>
   </view>
   <view class="title">合同文件</view>
   <view class="file-list">
@@ -43,7 +43,7 @@
           </view>
           <view class="seals">{{item.sealWords}}</view>
         </view>
-        <view class="edit" v-if="item.templateUserType == 2" :data-item="item" :data-index="index" ontap="_handleEditItem">
+        <view class="edit" v-if="item.templateUserType == 2" :data-item="item" :data-index="index" @tap="handleEditItemFun">
           <text>编辑</text><text class="one one-apparrow-right arrow"></text>
         </view>
       </view>
@@ -64,11 +64,11 @@
   </view>
   <view class="title">抄送方</view>
   <view class="add-cc">
-    <view class="add-btn" ontap="_handleAddCompany">
+    <view class="add-btn" @tap="handleAddCompanyFun">
       <image class="addSign" mode="aspectFit" :src="addIcon"></image>
       添加企业
     </view>
-    <view class="add-btn" ontap="_handleAddPerson">
+    <view class="add-btn" @tap="handleAddPersonFun">
       <image class="addSign" mode="aspectFit" :src="addIcon"></image>
       添加个人
     </view>
@@ -80,7 +80,7 @@
         <!-- <view class="auth-status {{(item.relationType == 2 && item.companyAuthStatus) || (item.relationType == 1 && item.personAuthStatus) ? 'authed' : 'unauth'}}">{{(item.relationType == 2 && item.companyAuthStatus) || (item.relationType == 1 && item.personAuthStatus) ? '已认证' : '未认证'}}</view> -->
       </view>
       <view class="phone"><text v-if="item.relationType == 2">{{item.userName}}</text> {{item.userPhone}}</view>
-      <text class="delete one one-close" v-if="item.isNew" :data-index="index" ontap="_handleDeleteCcs"></text>
+      <text class="delete one one-close" v-if="item.isNew" :data-index="index" @tap="handleDeleteCcsFun"></text>
     </view>
   </view>
   <view class="title">其他设置</view>
@@ -108,7 +108,7 @@
       </view>
     </view>
   </view>
-  <view class="launch-btn" ontap="_handleLaunchConfirm">发起签署</view>
+  <view class="launch-btn" @tap="handleLaunchConfirmFun">发起签署</view>
 </view>
 </template>
 

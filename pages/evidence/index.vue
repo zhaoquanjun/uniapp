@@ -1,17 +1,13 @@
 <template>
 <view>
 <view class="evidence-manager--area">
-	<!-- <view class="header">
-		<view wx:for="{{tabs}}" wx:key="index" class="tab-item {{activeName == item.type ? 'active' : ''}}" data-name="{{item.type}}" ontap="_changeTabs">{{item.name}}</view>
-		<view class="line {{activeName == 'data' ? 'active' : ''}}"></view>
-	</view> -->
 	<view class="content">
 		<view class="search">
 			<search @inputChanged="changeSearchParamsFun" @cancelClicked="clearSearchParamsFun" isShowCancel="true" onTimeSearch="true"></search>
 		</view>
 		<scroll-view class="scroll-area" scroll-y="true" scroll-anchoring="true" refresher-enabled="true" :refresher-triggered="isTriggered" @refresherrefresh="pullDownRefreshFun" @scrolltolower="getMoreDataFun">
 			<view class="sign-area list-area" v-if="activeName == 'sign' && signs.length > 0">
-				<view v-for="(item, index) in signs" :key="index" class="list-item" :data-type="item.evidenceType == 1 ? 'sign' : 'data'" :data-id="item.id" ontap="_viewDetail">
+				<view v-for="(item, index) in signs" :key="index" class="list-item" :data-type="item.evidenceType == 1 ? 'sign' : 'data'" :data-id="item.id" @tap="viewDetailFun">
 					<view class="item-detail">
 						<view class="title">{{item.name}}</view>
 						<view class="type">存证类型：{{ item.evidenceType==2 ? '数据存证' : '签署存证' }}</view>
@@ -29,7 +25,7 @@
 				</view>
 			</view>
 			<view class="data-area list-area" v-else-if="activeName == 'data' && datas.length > 0">
-				<view v-for="(item, index) in datas" :key="index" class="list-item" data-type="data" :data-id="item.id" ontap="_viewDetail">
+				<view v-for="(item, index) in datas" :key="index" class="list-item" data-type="data" :data-id="item.id" @tap="viewDetailFun">
 					<view class="item-detail">
 						<view class="title">{{item.name}}</view>
 						<view class="type">存证类型：{{item.fileType == 1 ? '文本' : item.fileType == 2 ? '图片' : item.fileType == 3 ? '语音' : item.fileType == 4 ? '视频' : item.fileType == 5 ? '文件' : ''}}</view>

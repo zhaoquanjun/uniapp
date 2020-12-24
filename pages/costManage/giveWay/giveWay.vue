@@ -1,7 +1,7 @@
 <template>
 <view class="give-way--page">
 	<view class="way-list">
-		<view v-for="(item, index) in ways" :key="index" class="list-item" :data-type="item.type" ontap="_handleSelectShareWay">
+		<view v-for="(item, index) in ways" :key="index" class="list-item" :data-type="item.type" @tap="handleSelectShareWayFun">
 			<view class="l-part">
 				<view class="icon">
 					<image :src="item.icon"></image>

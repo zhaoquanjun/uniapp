@@ -7,7 +7,7 @@
         <view v-for="(item, index) in content" :key="index" class="item">{{item}}</view>
       </scroll-view>
     </view>
-    <view class="footer" ontap="_handleClose">知道了</view>
+    <view class="footer" @tap="handleCloseFun">知道了</view>
   </view>
 </view>
 </template>

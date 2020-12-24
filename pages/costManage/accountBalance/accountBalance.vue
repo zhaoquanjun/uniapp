@@ -1,7 +1,7 @@
 <template>
 <view class="balance-list--page">
 	<view class="header-tab">
-		<view v-for="(item, index) in tabs" :key="index" :class="'tab-item ' + ( activeName == item.type ? 'active' : '' )" ontap="_handleSwitchTab" :data-type="item.type">{{item.name}}</view>
+		<view v-for="(item, index) in tabs" :key="index" :class="'tab-item ' + ( activeName == item.type ? 'active' : '' )" @tap="handleSwitchTabFun" :data-type="item.type">{{item.name}}</view>
 		<view :class="'active-bg ' + (activeName == 2 ? 'focus' : '')"></view>
 	</view>
 	<view class="content">
@@ -34,8 +34,8 @@
 		</scroll-view>
 	</view>
   <view class="btn-groups">
-    <view class="recharge btn" ontap="_handleReadyToCharge">账户充值</view>
-    <view class="send btn" ontap="_handleReadyToSend">赠送好友</view>
+    <view class="recharge btn" @tap="handleReadyToChargeFun">账户充值</view>
+    <view class="send btn" @tap="handleReadyToSendFun">赠送好友</view>
   </view>
 </view>
 </template>

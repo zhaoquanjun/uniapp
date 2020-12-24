@@ -8,7 +8,7 @@
     <view class="amount-list">
       <view class="label">面值金额</view>
       <view class="list-area">
-        <view v-for="(item, index) in amountList" :key="index" :class="'list-item ' + (selectActive == item.value && valueStatus == 'select' ? 'active' : '')" :data-value="item.value" ontap="_handleSelectValue">{{item.label}}</view>
+        <view v-for="(item, index) in amountList" :key="index" :class="'list-item ' + (selectActive == item.value && valueStatus == 'select' ? 'active' : '')" :data-value="item.value" @tap="handleSelectValueFun">{{item.label}}</view>
       </view>
     </view>
     <view class="amount-input--area">
@@ -21,7 +21,7 @@
       <view class="value">¥ {{total}}</view>
     </view>
   </view>
-  <view class="confirm-btn" ontap="_handleConfirmRecharge">确认充值</view>
+  <view class="confirm-btn" @tap="handleConfirmRechargeFun">确认充值</view>
 </view>
 </template>
 

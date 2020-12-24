@@ -40,10 +40,10 @@
        <view v-if="dataList.fileType === 1" class="certificate-detail-file-text">{{textContext}}</view>
       <image @tap.stop="checkImage" mode="aspectFit" v-if="dataList.fileType === 2" class="certificate-detail-file-content-picture" :data-src="dataList.filePath" :src="dataList.filePath"></image>
        <view v-if="dataList.fileType === 3" class="add-certificate-voice">
-          <audio :src="dataList.filePath" :name="dataList.name" author id="myAudio" ontap="_handlePlay" @ended="playToEndFun" controls></audio>
+          <audio :src="dataList.filePath" :name="dataList.name" author id="myAudio" @tap="handlePlayFun" @ended="playToEndFun" controls></audio>
         </view>
        <video @tap.stop="checkVideo" v-if="dataList.fileType === 4" id="videoBox" class="certificate-detail-file-content-video" :src="dataList.filePath" @Error="videoError"></video>
-       <view class="pdf-file" v-if="dataList.fileType === 5" ontap="_handleViewDetail">
+       <view class="pdf-file" v-if="dataList.fileType === 5" @tap="handleViewDetailFun">
         <image src="https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/certificate/file.png" class="file-image"></image>
         <text>{{dataList.fileName}}</text>
       </view>
