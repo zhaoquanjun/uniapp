@@ -31,8 +31,8 @@
 </template>
 
 <script>
-// pages/pm/stamp/add/addStamp.js
-var api = require("../../../../api/request.js");
+import { postBody, upload } from '../../../../api/request.js'
+import { upload_painted_wx_url, save_personnal_seal } from '../../../../api/seal.js'
 const app = getApp();
 
 export default {
@@ -151,8 +151,8 @@ export default {
                     title: '',
                     mask: true
                   });
-                  api.uploadFile({
-                    url: api.upload_painted_wx_url,
+                  upload({
+                    url: upload_painted_wx_url,
                     filePath: res.tempFilePath,
                     key: 'file',
                     // formData: {
@@ -165,8 +165,8 @@ export default {
                         "token": userToken,
                         "Content-Type": "application/json"
                       };
-                      api.sendPostBody({
-                        url: api.save_personnal_seal,
+                      postBody({
+                        url: save_personnal_seal,
                         header: header,
                         params: {
                           "name": "印章",

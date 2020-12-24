@@ -130,64 +130,66 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-// authentication/auth-type/index.js
-var api = __webpack_require__(/*! ../../../../api/request.js */ 8);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../../api/request.js */ 8);
+var _authen = __webpack_require__(/*! ../../../../api/authen.js */ 725);
+var _seal = __webpack_require__(/*! ../../../../api/seal.js */ 726);function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
 var FXQ = __webpack_require__(/*! ../../../../utils/FXQ */ 428);var _default =
 
 {
@@ -266,8 +268,8 @@ var FXQ = __webpack_require__(/*! ../../../../utils/FXQ */ 428);var _default =
       uni.showLoading({
         title: '识别中...' });
 
-      api.uploadFile({
-        url: api.businessLicenseUpload,
+      (0, _request.upload)({
+        url: _authen.businessLicenseUpload,
         filePath: tmpUrl,
         key: 'businessImage',
         success: function success(res) {
@@ -384,8 +386,8 @@ var FXQ = __webpack_require__(/*! ../../../../utils/FXQ */ 428);var _default =
       // 法人
 
       if (query.type == 'legent') {
-        api.sendPostBody({
-          url: api.companyAuth,
+        (0, _request.postBody)({
+          url: _authen.companyAuth,
           params: params,
           success: function success() {
             var newUser = Object.assign({}, currentUser, params);
@@ -407,8 +409,8 @@ var FXQ = __webpack_require__(/*! ../../../../utils/FXQ */ 428);var _default =
           } });
 
       } else {
-        api.sendPostBody({
-          url: api.companyHandle,
+        (0, _request.postBody)({
+          url: _authen.companyHandle,
           params: params,
           success: function success() {
             uni.hideLoading();
@@ -473,8 +475,8 @@ var FXQ = __webpack_require__(/*! ../../../../utils/FXQ */ 428);var _default =
         * @name 生成印章
         */
     createSealFun: function createSealFun(base64) {var _this2 = this;
-      api.sendPostBody({
-        url: api.create_seal,
+      (0, _request.postBody)({
+        url: _seal.create_seal,
         params: {
           base64String: base64 },
 
@@ -497,8 +499,8 @@ var FXQ = __webpack_require__(/*! ../../../../utils/FXQ */ 428);var _default =
         url: data.url,
         auto: true };
 
-      api.sendPostBody({
-        url: api.upload_company_seal + '?auto=' + true,
+      (0, _request.postBody)({
+        url: _seal.upload_company_seal + '?auto=' + true,
         params: options,
         success: function success() {
           console.log('印章制作完成');

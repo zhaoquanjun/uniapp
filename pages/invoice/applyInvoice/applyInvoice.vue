@@ -76,9 +76,9 @@
 </template>
 
 <script>
-// pages/invvoice/applyInvoice/applyInvoice.js
+import { get, postBody } from '../../../api/request.js'
+import { get_invouce_info, get_seller_companyName, apply_invoice } from '../../../api/invoice.js'
 const util = require("../../../utils/utils");
-const api = require("../../../api/request");
 import sliderPicker from "../../../components/sliderPicker/sliderPicker";
 
 export default {
@@ -330,8 +330,8 @@ export default {
       uni.showLoading({
         title: '加载中'
       });
-      api.sendGet({
-        url: api.get_seller_companyName + '/' + this.id,
+      get({
+        url: get_seller_companyName + '/' + this.id,
         success: res => {
           let sellerInfo = JSON.parse(JSON.stringify(this.companyInfo));
           sellerInfo.sellerCompanyName = res;
@@ -356,8 +356,8 @@ export default {
       uni.showLoading({
         title: '加载中'
       });
-      api.sendGet({
-        url: api.get_invouce_info,
+      get({
+        url: get_invouce_info,
         success: res => {
           if (res) {
             let companyInfo = JSON.parse(JSON.stringify(this.companyInfo));
@@ -556,8 +556,8 @@ export default {
         options.pushPhone = this.postvalue.pushPhone;
       }
 
-      api.sendPostBody({
-        url: api.apply_invoice,
+      postBody({
+        url: apply_invoice,
         params: options,
         success: res => {
           console.log(res);

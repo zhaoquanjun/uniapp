@@ -130,95 +130,95 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-// pages/costManage/buyCard/buyCard.js
-var api = __webpack_require__(/*! ../../../api/request */ 8);var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../../components/sliderPicker/sliderPicker */ 522));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
-{
-  data: function data() {
-    return {
-      amountList: [{
-        // 选择金额列表
-        label: 100,
-        value: 100 },
-      {
-        label: 500,
-        value: 500 },
-      {
-        label: 1000,
-        value: 1000 }],
 
-      selectList: [{
-        label: '账户余额',
-        value: 'account' },
-      {
-        label: '微信支付',
-        value: 'wx' },
-      {
-        label: '取消',
-        value: 'cancel' }],
 
-      origin: 'buy',
-      activeIndex: 0,
-      valueStatus: 'select',
-      // 金额填写方式
-      rechargeValue: 100,
-      // 实时金额
-      total: Number(100).toFixed(2),
-      // 总额
-      selectActive: 100,
-      // 面值数值选择
-      count: 1,
-      // 购买数量
-      timer: null,
-      placeholders: ['请输入10或10以上的金额', '请输入10～1000整数'] };
 
-  },
 
-  components: {
-    sliderPicker: sliderPicker },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
+var _cost = __webpack_require__(/*! ../../../api/cost.js */ 18); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../../components/sliderPicker/sliderPicker */ 522));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { amountList: [{ // 选择金额列表
+        label: 100, value: 100 }, { label: 500, value: 500 }, { label: 1000, value: 1000 }], selectList: [{ label: '账户余额', value: 'account' }, { label: '微信支付', value: 'wx' }, { label: '取消', value: 'cancel' }], origin: 'buy', activeIndex: 0, valueStatus: 'select', // 金额填写方式
+      rechargeValue: 100, // 实时金额
+      total: Number(100).toFixed(2), // 总额
+      selectActive: 100, // 面值数值选择
+      count: 1, // 购买数量
+      timer: null, placeholders: ['请输入10或10以上的金额', '请输入10～1000整数'] };}, components: { sliderPicker: sliderPicker },
   props: {},
 
   /**
@@ -357,8 +357,8 @@ var api = __webpack_require__(/*! ../../../api/request */ 8);var sliderPicker = 
 
 
         if (this.activeIndex == 0) {
-          api.sendGet({
-            url: api.buy_card_by_account + "?amount=".concat(this.total, "&goods=").concat(this.rechargeValue, "&goodsNum=").concat(this.count),
+          (0, _request.get)({
+            url: _cost.buy_card_by_account + "?amount=".concat(this.total, "&goods=").concat(this.rechargeValue, "&goodsNum=").concat(this.count),
             success: function success(res) {
               console.log(res);
               setTimeout(function () {
@@ -419,8 +419,8 @@ var api = __webpack_require__(/*! ../../../api/request */ 8);var sliderPicker = 
       uni.showLoading({
         title: '创建订单中' });
 
-      api.sendGet({
-        url: api.get_wx_pay_params + '?amount=' + this.total + '&body=微信支付&rechargeType=0&goods=' + this.rechargeValue + '&goodsNum=' + this.count,
+      (0, _request.get)({
+        url: _cost.get_wx_pay_params + '?amount=' + this.total + '&body=微信支付&rechargeType=0&goods=' + this.rechargeValue + '&goodsNum=' + this.count,
         success: function success(res) {
           console.log(res);
           _this2.payByWxFun(res);

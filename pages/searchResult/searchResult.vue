@@ -31,8 +31,8 @@
 </template>
 
 <script>
-// pages/searchResult/searchResult.js
-var api = require("../../api/request.js");
+import { get } from '../../api/request.js'
+import { get_contract_list } from '../../api/contract.js'
 var utils = require("../../utils/utils.js");
 import search from "../../components/search/search";
 import searchHighlightTextView from "../../components/searchHighlightTextView/searchHighlightTextView";
@@ -192,14 +192,14 @@ export default {
      */
     getContractsFun: function (title) {
       var self = this;
-      var url = api.get_contract_list;
+      var url = get_contract_list;
       var params = {
         searchType: 0,
         contractTitle: title ? title : '',
         pageIndex: 0,
         pageSize: 10
       };
-      api.sendGet({
+      get({
         url: url,
         params: params,
         success: function (res) {

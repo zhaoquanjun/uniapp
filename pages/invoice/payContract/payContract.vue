@@ -18,8 +18,8 @@
 </template>
 
 <script>
-// pages/invvoice/payContract/payContract.js
-var api = require("../../../api/request");
+import { get } from '../../../api/request.js'
+import { get_pay_info } from '../../../api/invoice.js'
 
 export default {
   data() {
@@ -86,8 +86,8 @@ export default {
       uni.showLoading({
         title: '加载中'
       });
-      api.sendGet({
-        url: api.get_pay_info + '/' + id,
+      get({
+        url: get_pay_info + '/' + id,
         success: res => {
           let curAmount = (res.amount / 100).toFixed(2);
           this.setData({

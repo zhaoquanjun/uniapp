@@ -6,7 +6,9 @@
 
 <script>
 // pages/account/loginVerify/loginVerify.js
-var api = require("../../../api/request.js");
+import { get, post } from '../../../api/request.js'
+import { login_url, get_register_sms_code_url } from '../../../api/account.js'
+import { get_gift_card_from_wx, get_gift_card_status } from '../../../api/cost.js'
 
 export default {
   data() {
@@ -86,8 +88,8 @@ export default {
 
       var _this = this;
 
-      api.sendPost({
-        url: api.login_url,
+      post({
+        url: login_url,
         params: {
           phone: phone,
           phoneCode: code,
@@ -111,7 +113,7 @@ export default {
               delta: 3
             });
           } else {
-            // 进入首页
+            // 进入首页
             uni.reLaunch({
               url: '/pages/home/home'
             });
@@ -140,8 +142,8 @@ export default {
       uni.showLoading({
         title: '验证码发送中'
       });
-      api.sendGet({
-        url: api.get_register_sms_code_url + '/' + userPhone,
+      get({
+        url: get_register_sms_code_url + '/' + userPhone,
         success: function (data) {
           uni.hideLoading();
           setTimeout(() => {
@@ -174,8 +176,8 @@ export default {
       uni.showLoading({
         title: '领取中'
       });
-      api.sendGet({
-        url: api.get_gift_card_from_wx + this.cardId,
+      get({
+        url: get_gift_card_from_wx + this.cardId,
         success: () => {
           setTimeout(() => {
             uni.showToast({
@@ -212,8 +214,8 @@ export default {
      * @name 获取礼品卡状态
      */
     getGiftCardStatusFun(callback) {
-      api.sendGet({
-        url: api.get_gift_card_status + this.cardId,
+      get({
+        url: get_gift_card_status + this.cardId,
         success: res => {
           console.log(res);
 

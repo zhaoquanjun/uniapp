@@ -26,8 +26,8 @@
 </template>
 
 <script>
-// pages/costManage/recharge/recharge.js
-var api = require("../../../api/request");
+import { get } from '../../../api/request.js'
+import { get_wx_pay_params } from '../../../api/cost.js'
 
 export default {
   data() {
@@ -159,8 +159,8 @@ export default {
       uni.showLoading({
         title: '创建订单中'
       });
-      api.sendGet({
-        url: api.get_wx_pay_params + '?amount=' + this.rechargeValue + '&body=微信支付&rechargeType=1&goods=' + this.rechargeValue + '&goodsNum=1',
+     get({
+        url: get_wx_pay_params + '?amount=' + this.rechargeValue + '&body=微信支付&rechargeType=1&goods=' + this.rechargeValue + '&goodsNum=1',
         success: res => {
           console.log(res);
           this.payByWxFun(res);

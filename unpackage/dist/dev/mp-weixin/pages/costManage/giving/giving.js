@@ -130,103 +130,103 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-// pages/costManage/giving/giving.js
-var api = __webpack_require__(/*! ../../../api/request */ 8);
-var utils = __webpack_require__(/*! ../../../utils/utils */ 35);var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../../components/sliderPicker/sliderPicker */ 522));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
-{
-  data: function data() {
-    return {
-      shanqian_icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/shanqian_icon.png',
-      accountList: [{
-        label: '个人账户',
-        type: 'signal' },
-      {
-        label: '企业账户',
-        type: 'company' },
-      {
-        label: '取消',
-        type: 'cancel' }],
 
-      origin: 'give',
-      id: '',
-      money: 0,
-      activeIndex: 0,
-      userName: '',
-      companyUserName: '',
-      personPhone: '',
-      companyPhone: '',
-      companyName: '',
-      personalAuthStatus: -1,
-      companyPersonAuthStatus: -1,
-      companyAuthStatus: -1 };
 
-  },
 
-  components: {
-    sliderPicker: sliderPicker },
 
-  props: {},
 
-  /**
-              * 生命周期函数--监听页面加载
-              */
-  onLoad: function onLoad(options) {
-    if (options.origin) {
-      this.setData({
-        origin: options.origin });
 
-    }
 
-    if (options.id) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
+var _cost = __webpack_require__(/*! ../../../api/cost.js */ 18); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var utils = __webpack_require__(/*! ../../../utils/utils */ 35);var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../../components/sliderPicker/sliderPicker */ 522));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { shanqian_icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/shanqian_icon.png', accountList: [{ label: '个人账户', type: 'signal' }, { label: '企业账户', type: 'company' }, { label: '取消', type: 'cancel' }], origin: 'give', id: '', money: 0, activeIndex: 0, userName: '', companyUserName: '', personPhone: '', companyPhone: '', companyName: '', personalAuthStatus: -1, companyPersonAuthStatus: -1, companyAuthStatus: -1 };}, components: { sliderPicker: sliderPicker }, props: {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  * 生命周期函数--监听页面加载
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  */onLoad: function onLoad(options) {if (options.origin) {this.setData({ origin: options.origin });}if (options.id) {
       this.setData({
         id: options.id });
 
@@ -359,8 +359,8 @@ var utils = __webpack_require__(/*! ../../../utils/utils */ 35);var sliderPicker
       uni.showLoading({
         title: '查询中' });
 
-      api.sendGet({
-        url: api.get_personal_auth_status + '?phone=' + phone,
+      (0, _request.get)({
+        url: _cost.get_personal_auth_status + '?phone=' + phone,
         success: function success(res) {
           if (type == 'signal') {
             if (res == 0 || res == 2) {
@@ -407,8 +407,8 @@ var utils = __webpack_require__(/*! ../../../utils/utils */ 35);var sliderPicker
       uni.showLoading({
         title: '查询中' });
 
-      api.sendGet({
-        url: api.get_company_auth_status + '?companyName=' + name,
+      (0, _request.get)({
+        url: _cost.get_company_auth_status + '?companyName=' + name,
         success: function success(res) {
           _this2.setData({
             companyAuthStatus: res });
@@ -459,8 +459,8 @@ var utils = __webpack_require__(/*! ../../../utils/utils */ 35);var sliderPicker
       uni.showLoading({
         title: '赠送中' });
 
-      api.sendPostBody({
-        url: api.send_by_buy,
+      (0, _request.postBody)({
+        url: _cost.send_by_buy,
         params: buyOptions,
         success: function success(res) {
           console.log(res);
@@ -502,8 +502,8 @@ var utils = __webpack_require__(/*! ../../../utils/utils */ 35);var sliderPicker
       uni.showLoading({
         title: '赠送中' });
 
-      api.sendPostBody({
-        url: api.send_card_directive,
+      (0, _request.postBody)({
+        url: _cost.send_card_directive,
         params: cardOptions,
         success: function success(res) {
           setTimeout(function () {

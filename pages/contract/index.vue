@@ -21,8 +21,8 @@
 </template>
 
 <script>
-// authentication/auth-type/index.js
-var api = require("../../api/request");
+import { get } from '../../api/request.js'
+import { get_all_contract_list } from '../../api/contract.js'
 const app = getApp();
 
 export default {
@@ -125,8 +125,8 @@ export default {
     },
 
     getContractDataAndCount() {
-      api.sendGet({
-        url: api.get_all_contract_list,
+      get({
+        url: get_all_contract_list,
         success: res => {
           this.setData({
             items: res

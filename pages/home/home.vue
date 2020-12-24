@@ -76,7 +76,7 @@
 <script>
 const app = getApp();
 import { get, upload } from '../../api/request';
-import { get_user_info, companyList, get_contract_uploadFile, update_count } from '../../api/home';
+import { get_user_info, companyList, get_contract_uploadFile, update_count } from '../../api/account';
 import homeAddDataStorge from "../../components/home-add-dataStorge/home-add-dataStorge";
 import sliderPicker from "../../components/sliderPicker/sliderPicker";
 

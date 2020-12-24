@@ -5,7 +5,6 @@
 </template>
 
 <script>
-// newEvidence/videoRecord/videoRecord.js
 const app = getApp();
 
 export default {

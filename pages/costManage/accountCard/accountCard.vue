@@ -148,8 +148,9 @@
 </template>
 
 <script>
-// pages/costManage/accountCard/accountCard.js
-var api = require("../../../api/request.js");
+
+import { get } from '../../../api/request.js'
+import { get_card_list } from '../../../api/cost.js'
 
 export default {
   data() {
@@ -323,8 +324,8 @@ export default {
       uni.showLoading({
         title: '加载中'
       });
-      api.sendGet({
-        url: api.get_card_list + '?searchType=' + this.activeName + '&currentPage=' + this['paginations' + this.activeName].pageIndex + '&pageSize=' + this['paginations' + this.activeName].pageSize,
+      get({
+        url: get_card_list + '?searchType=' + this.activeName + '&currentPage=' + this['paginations' + this.activeName].pageIndex + '&pageSize=' + this['paginations' + this.activeName].pageSize,
         success: res => {
           console.log(res);
           res.results.map(it => {

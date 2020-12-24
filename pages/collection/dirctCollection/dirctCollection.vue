@@ -37,8 +37,8 @@
 </template>
 
 <script>
-// pages/collection/dirctCollection/receipt.js
-var api = require("../../../api/request.js");
+import { postBody } from '../../../api/request.js'
+import { get_sell_pay_QrCode, get_pay_QrCode } from '../../../api/collection.js'
 var utils = require("../../../utils/utils.js");
 var app = getApp();
 
@@ -212,8 +212,8 @@ export default {
         payerName: this.payerName,
         remark: this.remark
       };
-      const url = isTemplate == 1 ? api.get_sell_pay_QrCode : api.get_pay_QrCode;
-      api.sendPostBody({
+      const url = isTemplate == 1 ? get_sell_pay_QrCode : get_pay_QrCode;
+      postBody({
         url: url,
         params: params,
         success: res => {

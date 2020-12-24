@@ -94,7 +94,8 @@
 <script module="tools" lang="wxs" src="../../../utils/tools.wxs"></script>
 
 <script>
-let api = require("../../../api/request.js");
+import { get } from '../../../api/request.js'
+import { evidence_detail, get_certificate_address, findContractSubject } from '../../../api/evidence.js'
 let utils = require("../../../utils/utils.js");
 let app = getApp();
 let timer = null;
@@ -183,8 +184,8 @@ export default {
       uni.showLoading({
         title: '加载中'
       });
-      var url = api.evidence_detail + '?id=' + this.id;
-      api.sendGet({
+      var url = evidence_detail + '?id=' + this.id;
+      get({
         // get请求
         url: url,
         success: res => {
@@ -207,11 +208,11 @@ export default {
           if (res.fileType === 3) {}
 
           if (res.fileType === 5) {
-            const url = api.get_certificate_address + "/" + this.dataList.id;
+            const url = get_certificate_address + "/" + this.dataList.id;
             uni.showLoading({
               title: '加载中'
             });
-            api.sendGet({
+            get({
               url: url,
               success: res => {
                 this.downloadPdfFun(res, 0);
@@ -378,12 +379,12 @@ export default {
 
       var hash = this.dataList.hash;
       if (!hash) return;
-      var url = api.get_certificate_address + "/" + this.dataList.id;
+      var url = get_certificate_address + "/" + this.dataList.id;
       uni.showLoading({
         title: '加载中'
       }); // 下载成功 打开pdf
 
-      api.sendGet({
+      get({
         url: url,
         success: function (res) {
           that.downloadPdfFun(res, 1);
@@ -443,8 +444,8 @@ export default {
         pageIndex: 0,
         pageSize: 1000
       };
-      api.sendGet({
-        url: api.findContractSubject,
+      get({
+        url: findContractSubject,
         params: params,
         success: res => {
           this.setData({

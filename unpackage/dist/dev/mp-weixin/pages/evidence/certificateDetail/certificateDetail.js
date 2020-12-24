@@ -139,220 +139,221 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-var api = __webpack_require__(/*! ../../../api/request.js */ 8);
-var utils = __webpack_require__(/*! ../../../utils/utils.js */ 35);
-var app = getApp();
-var timer = null;
-var innerAudioContext = uni.createInnerAudioContext();
-var videoBox = null; // 存证类型icon的MAP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
+var _evidence = __webpack_require__(/*! ../../../api/evidence.js */ 728); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var utils = __webpack_require__(/*! ../../../utils/utils.js */ 35);var app = getApp();var timer = null;var innerAudioContext = uni.createInnerAudioContext();var videoBox = null; // 存证类型icon的MAP
 // 存证类型icon的MAP
-var iconMap = {
-  1: 'one-filetype-doc',
-  2: 'one-filetype-image',
-  3: 'one-filetype-music',
-  4: 'one-filetype-video',
-  5: 'one-contract' };var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../../components/halfSlideItem/halfSlideItem */ 536));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
-
-
-
-{
-  data: function data() {
-    return {
-      imageSrc: '',
-      // 图像src
-      id: '',
-      // 存证id，路由获取
-      dataList: {},
-      // 存证详情数据
-      icon: 'one-filetype-image',
-      // 存证类型icon
-      duration: 0,
-      //声音类型音频时长
-      isPlay: false,
-      // 声音是否播放
-      videoPlayTime: 0,
-      // 音频播放时间time
-      showVideoPlayTime: '00:00:00',
-      //音频播放显示时间
-      textContext: '',
-      // 文本内容
-      pdfUrl: '',
-      contractId: "",
-      type: 'sign',
-      audioContext: null,
-      contractList: [],
-      evidenceMenuShow: false,
-      durationShow: "" };
-
-  },
-
-  components: {
-    halfSlideItem: halfSlideItem },
-
-  props: {},
-  // 页面load加载数据
-  onLoad: function onLoad(options) {
-    this.setData({
-      id: options.id,
-      type: options.type });
-
-    this.fetchRecords();
-
-    if (options.type == 'data') {
-      this.getContractList();
-    }
-  },
-
-  onReady: function onReady() {
-    this.setData({
-      audioContext: uni.createAudioContext('myAudio') });
-
-  },
-
-  methods: {
-    handlePlayFun: function handlePlayFun(e) {
-      console.log(this.audioContext, this.audioContext._getAppStatus());
-      this.audioContext.play();
-      console.log(this.audioContext._getAppStatus());
-    },
-
-    playToEndFun: function playToEndFun(e) {
-      this.audioContext.pause();
-      this.audioContext.seek(0);
-      this.audioContext.pause();
-    },
-
-    // 获取存证详情
-    fetchRecords: function fetchRecords() {var _this = this;
-      var that = this;
-      uni.showLoading({
-        title: '加载中' });
-
-      var url = api.evidence_detail + '?id=' + this.id;
-      api.sendGet({
-        // get请求
-        url: url,
-        success: function success(res) {
-          uni.hideLoading();
-          var icon = iconMap[res.fileType];
-          that.setData({
-            dataList: res || {},
-            icon: icon,
-            contractId: res.filePath });
-          // 存证类型为文件时（1为txt）
-
-          if (res.fileType === 1) {
-            that.openTxt();
-          } // 存证类型为图像 
-
-
+var iconMap = { 1: 'one-filetype-doc', 2: 'one-filetype-image', 3: 'one-filetype-music', 4: 'one-filetype-video', 5: 'one-contract' };var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../../components/halfSlideItem/halfSlideItem */ 536));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { imageSrc: '', // 图像src
+      id: '', // 存证id，路由获取
+      dataList: {}, // 存证详情数据
+      icon: 'one-filetype-image', // 存证类型icon
+      duration: 0, //声音类型音频时长
+      isPlay: false, // 声音是否播放
+      videoPlayTime: 0, // 音频播放时间time
+      showVideoPlayTime: '00:00:00', //音频播放显示时间
+      textContext: '', // 文本内容
+      pdfUrl: '', contractId: "", type: 'sign', audioContext: null, contractList: [], evidenceMenuShow: false, durationShow: "" };}, components: { halfSlideItem: halfSlideItem }, props: {}, // 页面load加载数据
+  onLoad: function onLoad(options) {this.setData({ id: options.id, type: options.type });this.fetchRecords();if (options.type == 'data') {this.getContractList();}}, onReady: function onReady() {this.setData({ audioContext: uni.createAudioContext('myAudio') });}, methods: { handlePlayFun: function handlePlayFun(e) {console.log(this.audioContext, this.audioContext._getAppStatus());this.audioContext.play();console.log(this.audioContext._getAppStatus());}, playToEndFun: function playToEndFun(e) {this.audioContext.pause();this.audioContext.seek(0);this.audioContext.pause();}, // 获取存证详情
+    fetchRecords: function fetchRecords() {var _this = this;var that = this;uni.showLoading({ title: '加载中' });var url = _evidence.evidence_detail + '?id=' + this.id;(0, _request.get)({ // get请求
+        url: url, success: function success(res) {uni.hideLoading();var icon = iconMap[res.fileType];that.setData({ dataList: res || {}, icon: icon, contractId: res.filePath }); // 存证类型为文件时（1为txt）
+          if (res.fileType === 1) {that.openTxt();} // 存证类型为图像 
           if (res.fileType === 2) {} // 存证类型为音频（fileType为3）
-
-
-          if (res.fileType === 3) {}
-
-          if (res.fileType === 5) {
-            var _url = api.get_certificate_address + "/" + _this.dataList.id;
+          if (res.fileType === 3) {}if (res.fileType === 5) {
+            var _url = _evidence.get_certificate_address + "/" + _this.dataList.id;
             uni.showLoading({
               title: '加载中' });
 
-            api.sendGet({
+            (0, _request.get)({
               url: _url,
               success: function success(res) {
                 _this.downloadPdfFun(res, 0);
@@ -519,12 +520,12 @@ var iconMap = {
 
       var hash = this.dataList.hash;
       if (!hash) return;
-      var url = api.get_certificate_address + "/" + this.dataList.id;
+      var url = _evidence.get_certificate_address + "/" + this.dataList.id;
       uni.showLoading({
         title: '加载中' });
       // 下载成功 打开pdf
 
-      api.sendGet({
+      (0, _request.get)({
         url: url,
         success: function success(res) {
           that.downloadPdfFun(res, 1);
@@ -584,8 +585,8 @@ var iconMap = {
         pageIndex: 0,
         pageSize: 1000 };
 
-      api.sendGet({
-        url: api.findContractSubject,
+      (0, _request.get)({
+        url: _evidence.findContractSubject,
         params: params,
         success: function success(res) {
           _this4.setData({

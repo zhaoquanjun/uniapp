@@ -135,240 +135,241 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-var api = __webpack_require__(/*! ../../../api/request.js */ 8);
-var utils = __webpack_require__(/*! ../../../utils/utils.js */ 35);
-var recorderManager = uni.getRecorderManager();
-var innerAudioContext = uni.createInnerAudioContext();
-var timer = null;
-var titleMap = {
-  text: {
-    title: '文字存证',
-    value: 1 },
 
-  image: {
-    title: '图片存证',
-    value: 2 },
 
-  voice: {
-    title: '语音存证',
-    value: 3 },
 
-  video: {
-    title: '视频存证',
-    value: 4 },
 
-  file: {
-    title: '文件存证',
-    value: 5 } };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
+var _evidence = __webpack_require__(/*! ../../../api/evidence.js */ 728); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var utils = __webpack_require__(/*! ../../../utils/utils.js */ 35);var recorderManager = uni.getRecorderManager();var innerAudioContext = uni.createInnerAudioContext();var timer = null;var titleMap = { text: { title: '文字存证', value: 1 }, image: { title: '图片存证', value: 2 }, voice: { title: '语音存证', value: 3 }, video: { title: '视频存证', value: 4 }, file: { title: '文件存证', value: 5 } }; // 类型map
 // 类型map
-// 类型map
-var typeMap = {
-  image: 'addCertificateImageUrl',
-  video: 'addCertificateVideo',
-  voice: 'addCertificateVoice',
-  file: 'addCertificateFile' };var _default =
-
-
-{
-  data: function data() {
-    return {
-      ishighLight: false,
-      //
-      type: '',
-      //页面存证
-      fileType: '',
-      // 文件类型
-      nameValue: '',
-      // 存证名称
-      typeValue: 2,
-      //存证类型
-      addCertificateImageUrl: '',
-      // 图片存证url
-      addCertificateText: '',
-      // 文字存证文本
-      addCertificateVoice: '',
-      // 语音存证url
-      addCertificateVideo: '',
-      //视频存证url
-      addCertificateFile: '',
-      //新增文件url
-      isVoiceRecord: false,
-      // 是否是录制音频页面
-      time: 0,
-      // 录音时长
-      showTime: 0,
-      //录制音频的显示时间
-      recording: false,
-      // 音频是否正在录制
-      duration: 0,
-      // 音频录制时长
-      isPlay: false,
-      // 音频是否在播放
-      videoPlayTime: 0,
-      // 音频播放时间 number
-      showVideoPlayTime: '00:00:00',
-      // 音频播放显示时间
-      showDurationTime: '00:00:00',
-      // 音频总时长显示
-      isLoading: false,
-      // loading
-      uploadMethod: 2,
-      //上传方式
-      addFileInfo: null,
-      formId: null // 添加数据链的id,如果存证，则是添加数据链
-    };
-
-  },
-
-  components: {},
-  props: {},
-  //页面加载函数
-  onLoad: function onLoad(options) {
-    var type = options.type;
-    var formId = options.fromId;
-    this.setData({
-      type: type,
-      fileType: titleMap[type].value,
-      formId: formId });
-
-    uni.setNavigationBarTitle({
-      title: titleMap[type].title });
-
-  },
-
-  onReady: function onReady() {},
-
-  methods: {
-    // 名称输入函数
-    nameInput: function nameInput(event) {
-      var value = event.detail.value;
-      this.setData({
-        nameValue: value });
-
-      this.getHighLight();
-    },
-    //添加图片
-    tapAddImage: function tapAddImage() {
-      var that = this;
-      uni.showActionSheet({
-        itemList: ['拍照', '从相册选择'],
-        success: function success(res) {
-          console.log(res.tapIndex); // if(this)
-
-          that.chooseImage(res.tapIndex == 0 ? 'camera' : 'album');
-
-          if (res.tapIndex == 0) {
-            that.setData({
-              uploadMethod: 2 });
-
-          } else {
-            that.setData({
-              uploadMethod: 1 });
-
+var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', voice: 'addCertificateVoice', file: 'addCertificateFile' };var _default = { data: function data() {return { ishighLight: false, //
+      type: '', //页面存证
+      fileType: '', // 文件类型
+      nameValue: '', // 存证名称
+      typeValue: 2, //存证类型
+      addCertificateImageUrl: '', // 图片存证url
+      addCertificateText: '', // 文字存证文本
+      addCertificateVoice: '', // 语音存证url
+      addCertificateVideo: '', //视频存证url
+      addCertificateFile: '', //新增文件url
+      isVoiceRecord: false, // 是否是录制音频页面
+      time: 0, // 录音时长
+      showTime: 0, //录制音频的显示时间
+      recording: false, // 音频是否正在录制
+      duration: 0, // 音频录制时长
+      isPlay: false, // 音频是否在播放
+      videoPlayTime: 0, // 音频播放时间 number
+      showVideoPlayTime: '00:00:00', // 音频播放显示时间
+      showDurationTime: '00:00:00', // 音频总时长显示
+      isLoading: false, // loading
+      uploadMethod: 2, //上传方式
+      addFileInfo: null, formId: null // 添加数据链的id,如果存证，则是添加数据链
+    };}, components: {}, props: {}, //页面加载函数
+  onLoad: function onLoad(options) {var type = options.type;var formId = options.fromId;this.setData({ type: type, fileType: titleMap[type].value, formId: formId });uni.setNavigationBarTitle({ title: titleMap[type].title });}, onReady: function onReady() {}, methods: { // 名称输入函数
+    nameInput: function nameInput(event) {var value = event.detail.value;this.setData({ nameValue: value });this.getHighLight();}, //添加图片
+    tapAddImage: function tapAddImage() {var that = this;uni.showActionSheet({ itemList: ['拍照', '从相册选择'], success: function success(res) {console.log(res.tapIndex); // if(this)
+          that.chooseImage(res.tapIndex == 0 ? 'camera' : 'album');if (res.tapIndex == 0) {that.setData({ uploadMethod: 2 });} else {that.setData({ uploadMethod: 1 });
           }
         } });
 
@@ -720,13 +721,13 @@ var typeMap = {
       }
 
       var filePath = this[typeMapName] || '';
-      api.sendGet({
-        url: api.get_upload_policy + '?ossPrefixKey=' + "blockchain/",
+      (0, _request.get)({
+        url: _evidence.get_upload_policy + '?ossPrefixKey=' + "blockchain/",
         success: function success(res) {
           uni.showLoading({
             title: '上传中' });
 
-          api.uploadFile({
+          (0, _request.upload)({
             url: res.host,
             //url
             filePath: filePath,
@@ -760,8 +761,8 @@ var typeMap = {
               if (that.formId) {
                 that.saveChain(formDataParmas);
               } else {
-                api.uploadFile({
-                  url: api.add_certificate_file,
+                (0, _request.upload)({
+                  url: _evidence.add_certificate_file,
                   //url
                   filePath: filePath,
                   // filePath
@@ -847,8 +848,8 @@ var typeMap = {
         * @desc 数据链存证保存
         */
     saveChain: function saveChain(params) {
-      api.sendPost({
-        url: api.saveChainToContract + '?contractSubjectId=' + this.formId + '&fileName=' + params.name + '&filePath=' + params.filePath + '&uploadMethod=' + params.uploadMethod + '&type=2&uploadChannel=2',
+      (0, _request.post)({
+        url: _evidence.saveChainToContract + '?contractSubjectId=' + this.formId + '&fileName=' + params.name + '&filePath=' + params.filePath + '&uploadMethod=' + params.uploadMethod + '&type=2&uploadChannel=2',
         success: function success(res) {
           uni.navigateBack({});
         },

@@ -137,7 +137,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
-// pages/contract/sign/next/signConfirm/signConfirm.js
 var app = getApp();var _default =
 
 {

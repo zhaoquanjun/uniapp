@@ -134,22 +134,24 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
+var _account = __webpack_require__(/*! ../../../api/account.js */ 58);
+var _cost = __webpack_require__(/*! ../../../api/cost.js */ 18); //
+//
+//
+//
+//
+//
 // pages/account/loginVerify/loginVerify.js
-var api = __webpack_require__(/*! ../../../api/request.js */ 8);var _default =
-
-{
-  data: function data() {
-    return {
-      openId: '',
-      unionId: '',
-      originType: null,
+var _default = { data: function data() {return { openId: '', unionId: '', originType: null,
       isCard: false,
       cardId: '',
       mode: '' };
@@ -222,8 +224,8 @@ var api = __webpack_require__(/*! ../../../api/request.js */ 8);var _default =
 
       var _this = this;
 
-      api.sendPost({
-        url: api.login_url,
+      (0, _request.post)({
+        url: _account.login_url,
         params: {
           phone: phone,
           phoneCode: code,
@@ -247,7 +249,7 @@ var api = __webpack_require__(/*! ../../../api/request.js */ 8);var _default =
               delta: 3 });
 
           } else {
-            // 进入首页
+            // 进入首页
             uni.reLaunch({
               url: '/pages/home/home' });
 
@@ -276,8 +278,8 @@ var api = __webpack_require__(/*! ../../../api/request.js */ 8);var _default =
       uni.showLoading({
         title: '验证码发送中' });
 
-      api.sendGet({
-        url: api.get_register_sms_code_url + '/' + userPhone,
+      (0, _request.get)({
+        url: _account.get_register_sms_code_url + '/' + userPhone,
         success: function success(data) {
           uni.hideLoading();
           setTimeout(function () {
@@ -310,8 +312,8 @@ var api = __webpack_require__(/*! ../../../api/request.js */ 8);var _default =
       uni.showLoading({
         title: '领取中' });
 
-      api.sendGet({
-        url: api.get_gift_card_from_wx + this.cardId,
+      (0, _request.get)({
+        url: _cost.get_gift_card_from_wx + this.cardId,
         success: function success() {
           setTimeout(function () {
             uni.showToast({
@@ -348,8 +350,8 @@ var api = __webpack_require__(/*! ../../../api/request.js */ 8);var _default =
         * @name 获取礼品卡状态
         */
     getGiftCardStatusFun: function getGiftCardStatusFun(callback) {
-      api.sendGet({
-        url: api.get_gift_card_status + this.cardId,
+      (0, _request.get)({
+        url: _cost.get_gift_card_status + this.cardId,
         success: function success(res) {
           console.log(res);
 

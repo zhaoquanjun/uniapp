@@ -130,30 +130,31 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-// authentication/auth-type/index.js
-var api = __webpack_require__(/*! ../../../../api/request.js */ 8);var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../../api/request.js */ 8);
+var _authen = __webpack_require__(/*! ../../../../api/authen.js */ 725);function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
 
 {
   data: function data() {
@@ -218,8 +219,8 @@ var api = __webpack_require__(/*! ../../../../api/request.js */ 8);var _default 
       uni.showLoading({
         title: '加载中' });
 
-      api.sendGet({
-        url: "".concat(api.createCompany, "?companyName=").concat(companyName),
+      (0, _request.get)({
+        url: "".concat(_authen.createCompany, "?companyName=").concat(companyName),
         success: function success(res) {
           console.log(res);
           uni.hideLoading();

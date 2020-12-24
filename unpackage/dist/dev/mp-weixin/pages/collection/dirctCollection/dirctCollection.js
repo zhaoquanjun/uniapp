@@ -130,89 +130,89 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-// pages/collection/dirctCollection/receipt.js
-var api = __webpack_require__(/*! ../../../api/request.js */ 8);
-var utils = __webpack_require__(/*! ../../../utils/utils.js */ 35);
-var app = getApp();var _default =
 
-{
-  data: function data() {
-    return {
-      buttonClicked: true,
-      title1: "收款金额",
-      title2: "收款信息",
-      receiptMessage: '',
-      ishighLight: false,
-      inputAmount: '',
-      nextText: "生成收款码",
-      hour: " ",
-      minute: " ",
-      isTemplate: 0,
-      templateId: '',
-      payerName: '',
-      // 付款方名称
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
+var _collection = __webpack_require__(/*! ../../../api/collection.js */ 727); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var utils = __webpack_require__(/*! ../../../utils/utils.js */ 35);var app = getApp();var _default = { data: function data() {return { buttonClicked: true, title1: "收款金额", title2: "收款信息", receiptMessage: '', ishighLight: false, inputAmount: '', nextText: "生成收款码", hour: " ", minute: " ", isTemplate: 0, templateId: '', payerName: '', // 付款方名称
       remark: '' // 备注
-    };
-
-  },
-
-  components: {},
-  props: {},
-
-  /**
-              * 生命周期函数--监听页面加载
-              */
-  onLoad: function onLoad(options) {
-    if (options.isTemplate) {
-      this.setData({
-        isTemplate: options.isTemplate });
-
-    }
-
-    if (options.templateId) {
-      this.setData({
-        templateId: options.templateId });
-
-    }
+    };}, components: {}, props: {}, /**
+                                     * 生命周期函数--监听页面加载
+                                     */onLoad: function onLoad(options) {if (options.isTemplate) {this.setData({ isTemplate: options.isTemplate });}if (options.templateId) {this.setData({ templateId: options.templateId });}
 
     this.setData({
       inputAmount: options.templateAmount,
@@ -344,8 +344,8 @@ var app = getApp();var _default =
         payerName: this.payerName,
         remark: this.remark };
 
-      var url = isTemplate == 1 ? api.get_sell_pay_QrCode : api.get_pay_QrCode;
-      api.sendPostBody({
+      var url = isTemplate == 1 ? _collection.get_sell_pay_QrCode : _collection.get_pay_QrCode;
+      (0, _request.postBody)({
         url: url,
         params: params,
         success: function success(res) {

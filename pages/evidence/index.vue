@@ -69,8 +69,8 @@
 </template>
 
 <script>
-// authentication/auth-type/index.js
-var api = require("../../api/request.js");
+import { get } from '../../api/request.js'
+import { certificate_record_list } from '../../api/evidence.js'
 var util = require("../../utils/utils");
 const app = getApp();
 import search from "../../components/search/search";
@@ -177,11 +177,11 @@ export default {
      */
     getPageDataFun(name, type, callback) {
       if (!app.globalData.isLoginIn()) return;
-      const url = api.certificate_record_list + '?currentPage=' + (name == 'sign' ? this.signPageIndex : this.dataPageIndex) + '&pageSize=' + this.pageSize + (this.searchParams ? '&name=' + this.searchParams : '');
+      const url = certificate_record_list + '?currentPage=' + (name == 'sign' ? this.signPageIndex : this.dataPageIndex) + '&pageSize=' + this.pageSize + (this.searchParams ? '&name=' + this.searchParams : '');
       uni.showLoading({
         title: '加载中...'
       });
-      api.sendGet({
+      get({
         url: url,
         success: res => {
           uni.hideLoading({});

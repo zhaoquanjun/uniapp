@@ -130,138 +130,139 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-var FXQ = __webpack_require__(/*! ../../../../utils/FXQ */ 428);
-var api = __webpack_require__(/*! ../../../../api/request */ 8);
-var app = getApp();var _default =
-
-{
-  data: function data() {
-    return {
-      type: '',
-      userInfo: {},
-      result: 's',
-      desc: '' };
-
-  },
-
-  components: {},
-  props: {},
-
-  /**
-              * 生命周期函数--监听页面加载
-              */
-  onLoad: function onLoad(options) {
-    this.setData({
-      type: options.type,
-      result: options.result,
-      userInfo: uni.getStorageSync('personInfo'),
-      desc: options.desc });
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
-    if (options.result == 's') {
-      this.getSealBase64Fun();
-    }
-  },
 
-  onShareAppMessage: function onShareAppMessage() {},
 
-  methods: {
-    showSafeInfo: function showSafeInfo() {
-      uni.showModal({
-        title: '个人身份隐私安全声明',
-        showCancel: false,
-        confirmText: '知道了',
-        content: '您输入的身份信息仅用于个人实名认证和获取CA认证证书' });
 
-    },
 
-    reDo: function reDo() {
-      uni.navigateBack();
-    },
 
-    goSign: function goSign() {
-      app.globalData.updateUserInfo(function () {
-        uni.reLaunch({
-          url: '/pages/home/home' });
 
-      });
-    },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../../api/request.js */ 8);
+var _seal = __webpack_require__(/*! ../../../../api/seal.js */ 726); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var FXQ = __webpack_require__(/*! ../../../../utils/FXQ */ 428);var app = getApp();var _default = { data: function data() {return { type: '', userInfo: {}, result: 's', desc: '' };}, components: {}, props: {}, /**
+                                                                                                                                                                                              * 生命周期函数--监听页面加载
+                                                                                                                                                                                              */onLoad: function onLoad(options) {this.setData({ type: options.type, result: options.result, userInfo: uni.getStorageSync('personInfo'), desc: options.desc });if (options.result == 's') {this.getSealBase64Fun();}}, onShareAppMessage: function onShareAppMessage() {}, methods: { showSafeInfo: function showSafeInfo() {uni.showModal({ title: '个人身份隐私安全声明', showCancel: false, confirmText: '知道了', content: '您输入的身份信息仅用于个人实名认证和获取CA认证证书' });}, reDo: function reDo() {uni.navigateBack();}, goSign: function goSign() {app.globalData.updateUserInfo(function () {uni.reLaunch({ url: '/pages/home/home' });});}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         * @name 生成base
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         */getSealBase64Fun: function getSealBase64Fun() {var selectColor = 0; // 0:红色 1:蓝色 2:黑色
+      FXQ.FXQ.personal(this.userInfo.name || '个人', selectColor, 3, 1, 0, this.createSealFun);},
     /**
-        * @name 生成base
-        */
-    getSealBase64Fun: function getSealBase64Fun() {
-      var selectColor = 0; // 0:红色 1:蓝色 2:黑色
-
-      FXQ.FXQ.personal(this.userInfo.name || '个人', selectColor, 3, 1, 0, this.createSealFun);
-    },
-
-    /**
-        * @name 生成印章
-        */
+                                                                                                 * @name 生成印章
+                                                                                                 */
     createSealFun: function createSealFun(base64) {var _this = this;
-      api.sendPostBody({
-        url: api.create_seal,
+      (0, _request.postBody)({
+        url: _seal.create_seal,
         params: {
           base64String: base64 },
 
@@ -284,8 +285,8 @@ var app = getApp();var _default =
         url: data.url,
         originType: 4 };
 
-      api.sendPostBody({
-        url: api.upload_person_seal,
+      (0, _request.postBody)({
+        url: _seal.upload_person_seal,
         params: options,
         success: function success() {
           console.log('印章制作完成');

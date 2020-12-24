@@ -130,75 +130,75 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-// pages/pm/stamp/add/addStamp.js
-var api = __webpack_require__(/*! ../../../../api/request.js */ 8);
-var app = getApp();var _default =
 
-{
-  data: function data() {
-    return {
-      stampUrl: '',
-      color: '#000',
-      pen: '4',
-      penSizeShow: false };
 
-  },
 
-  components: {},
-  props: {},
-  onShow: function onShow() {
-    setTimeout(function () {
-      uni.showToast({
-        icon: 'none',
-        title: '请将手机横屏' });
 
-    }, 50);
-  },
 
-  /**
-      * 生命周期函数--监听页面加载
-      */
-  onLoad: function onLoad(options) {},
 
-  onShareAppMessage: function onShareAppMessage() {},
 
-  methods: {
-    canvasIdErrorCallback: function canvasIdErrorCallback(e) {
-      console.error('canvas error:' + e.detail.errMsg);
-    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../../api/request.js */ 8);
+var _seal = __webpack_require__(/*! ../../../../api/seal.js */ 726); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var app = getApp();var _default = { data: function data() {return { stampUrl: '', color: '#000', pen: '4', penSizeShow: false };}, components: {}, props: {}, onShow: function onShow() {setTimeout(function () {uni.showToast({ icon: 'none', title: '请将手机横屏' });}, 50);}, /**
+                                                                                                                                                                                                                                                                             * 生命周期函数--监听页面加载
+                                                                                                                                                                                                                                                                             */onLoad: function onLoad(options) {}, onShareAppMessage: function onShareAppMessage() {}, methods: { canvasIdErrorCallback: function canvasIdErrorCallback(e) {console.error('canvas error:' + e.detail.errMsg);},
     //手指触摸动作开始
     touchStart: function touchStart(e) {
       //得到触摸点的坐标
@@ -283,8 +283,8 @@ var app = getApp();var _default =
                     title: '',
                     mask: true });
 
-                  api.uploadFile({
-                    url: api.upload_painted_wx_url,
+                  (0, _request.upload)({
+                    url: _seal.upload_painted_wx_url,
                     filePath: res.tempFilePath,
                     key: 'file',
                     // formData: {
@@ -297,8 +297,8 @@ var app = getApp();var _default =
                         "token": userToken,
                         "Content-Type": "application/json" };
 
-                      api.sendPostBody({
-                        url: api.save_personnal_seal,
+                      (0, _request.postBody)({
+                        url: _seal.save_personnal_seal,
                         header: header,
                         params: {
                           "name": "印章",

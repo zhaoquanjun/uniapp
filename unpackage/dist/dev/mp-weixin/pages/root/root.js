@@ -135,7 +135,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
-// pages/root/root.js
 var app = getApp();var _default =
 
 {

@@ -134,53 +134,54 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-// authentication/auth-type/index.js
-var api = __webpack_require__(/*! ../../../../api/request.js */ 8);var modal = function modal() {__webpack_require__.e(/*! require.ensure | components/modal/modal */ "components/modal/modal").then((function () {return resolve(__webpack_require__(/*! ../../../../components/modal/modal */ 606));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../../api/request.js */ 8);
+var _authen = __webpack_require__(/*! ../../../../api/authen.js */ 725);
+var _account = __webpack_require__(/*! ../../../../api/account.js */ 58);function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var modal = function modal() {__webpack_require__.e(/*! require.ensure | components/modal/modal */ "components/modal/modal").then((function () {return resolve(__webpack_require__(/*! ../../../../components/modal/modal */ 606));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 {
@@ -300,8 +301,8 @@ var api = __webpack_require__(/*! ../../../../api/request.js */ 8);var modal = f
       uni.showLoading({
         title: '认证中' });
 
-      api.uploadFile({
-        url: api.authFace,
+      (0, _request.upload)({
+        url: _authen.authFace,
         filePath: tmpUrl,
         key: 'faceVideo',
         success: function success(res) {
@@ -309,8 +310,8 @@ var api = __webpack_require__(/*! ../../../../api/request.js */ 8);var modal = f
           _this.setData({
             isFinished: true });
 
-          api.sendGet({
-            url: api.get_user_info,
+          (0, _request.get)({
+            url: _account.get_user_info,
             success: function success(res) {
               var currentUser = uni.getStorageSync('currentUser');
               currentUser.name = res.name;
@@ -391,8 +392,8 @@ var api = __webpack_require__(/*! ../../../../api/request.js */ 8);var modal = f
       uni.showLoading({
         title: '加载中' });
 
-      api.sendPostBody({
-        url: api.applyAuth,
+      (0, _request.postBody)({
+        url: _authen.applyAuth,
         params: {
           name: name,
           idCard: idCard },

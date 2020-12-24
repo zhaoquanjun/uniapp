@@ -59,7 +59,8 @@
 
 <script>
 const FXQ = require("../../../../utils/FXQ");
-const api = require("../../../../api/request");
+import { postBody } from '../../../../api/request.js'
+import { create_seal, upload_person_seal } from '../../../../api/seal.js'
 var app = getApp();
 
 export default {
@@ -128,8 +129,8 @@ export default {
      * @name 生成印章
      */
     createSealFun(base64) {
-      api.sendPostBody({
-        url: api.create_seal,
+      postBody({
+        url: create_seal,
         params: {
           base64String: base64
         },
@@ -152,8 +153,8 @@ export default {
         url: data.url,
         originType: 4
       };
-      api.sendPostBody({
-        url: api.upload_person_seal,
+      postBody({
+        url: upload_person_seal,
         params: options,
         success: () => {
           console.log('印章制作完成');

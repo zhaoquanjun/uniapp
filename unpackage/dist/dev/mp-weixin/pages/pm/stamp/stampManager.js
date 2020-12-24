@@ -130,124 +130,125 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-// pages/pm/stamp/stampManager.js
-var api = __webpack_require__(/*! ../../../api/request.js */ 8);
-var app = getApp();var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../../components/sliderPicker/sliderPicker */ 522));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
-{
-  data: function data() {
-    return {
-      isShowAdd: true,
-      showDialog: false,
-      stampArray: [],
-      noStampTitle: '暂无印章',
-      noStampContent: '点击下方按钮生成您的印章',
-      isShowListView: true,
-      isShowNoListView: false,
-      createSignImageText: '',
-      defaultStamp: null,
-      isSelect: false,
-      stampLeft: -1,
-      stampTop: -1,
-      currentPage: -1,
-      currentUser: '',
-      selectedItem: '',
-      userList: [],
-      userList1: [],
-      userList2: [],
-      list: [{
-        label: '设为默认',
-        value: 'default' },
-      {
-        label: '删除印章',
-        value: 'delete' },
-      {
-        label: '取消',
-        value: 'cancel' }],
 
-      // 上拉菜单列表
-      curItem: null,
-      // 当前操作项
-      curIndex: -1,
-      // 当前操作索引
-      currentStorage: null };
 
-  },
 
-  components: {
-    sliderPicker: sliderPicker },
 
-  props: {},
 
-  /**
-              * 生命周期函数--监听页面加载
-              */
-  onLoad: function onLoad(options) {
-    if (options.stampLeft != null) {
-      this.setData({
-        stampLeft: options.stampLeft,
-        stampTop: options.stampTop,
-        currentPage: options.currentPage });
 
-    }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
+var _seal = __webpack_require__(/*! ../../../api/seal.js */ 726);
+var _account = __webpack_require__(/*! ../../../api/account.js */ 58); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var app = getApp();var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../../components/sliderPicker/sliderPicker */ 522));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { isShowAdd: true, showDialog: false, stampArray: [], noStampTitle: '暂无印章', noStampContent: '点击下方按钮生成您的印章', isShowListView: true, isShowNoListView: false, createSignImageText: '', defaultStamp: null, isSelect: false, stampLeft: -1, stampTop: -1, currentPage: -1, currentUser: '', selectedItem: '', userList: [], userList1: [], userList2: [], list: [{ label: '设为默认', value: 'default' }, { label: '删除印章', value: 'delete' }, { label: '取消', value: 'cancel' }], // 上拉菜单列表
+      curItem: null, // 当前操作项
+      curIndex: -1, // 当前操作索引
+      currentStorage: null };}, components: { sliderPicker: sliderPicker }, props: {}, /**
+                                                                                        * 生命周期函数--监听页面加载
+                                                                                        */onLoad: function onLoad(options) {if (options.stampLeft != null) {this.setData({ stampLeft: options.stampLeft, stampTop: options.stampTop, currentPage: options.currentPage });}
     var isSelect = options.style == 'select' ? true : false;
     this.setData({
       isSelect: isSelect });
@@ -259,8 +260,8 @@ var app = getApp();var sliderPicker = function sliderPicker() {__webpack_require
       isShowAdd: true,
       userList2: [] });
 
-    api.sendGet({
-      url: api.get_user_info,
+    (0, _request.get)({
+      url: _account.get_user_info,
       success: function success(res) {
         _this2.userList2.push(res);
         _this2.setData({
@@ -287,11 +288,11 @@ var app = getApp();var sliderPicker = function sliderPicker() {__webpack_require
       if (this.selectedItem.userType == 1) {
         //个人
         console.log("手绘");
-        reuqestUrl = api.person_painted_list;
+        reuqestUrl = _seal.person_painted_list;
         createSignImageText = '创建手绘签名';
       } else {
         //企业
-        reuqestUrl = api.company_painted_list;
+        reuqestUrl = _seal.company_painted_list;
         createSignImageText = '创建企业公章';
       }
 
@@ -311,7 +312,7 @@ var app = getApp();var sliderPicker = function sliderPicker() {__webpack_require
         header.company_id = this.selectedItem.companyId;
       }
 
-      api.sendPostBody({
+      (0, _request.postBody)({
         url: reuqestUrl,
         header: header,
         params: {},
@@ -352,47 +353,7 @@ var app = getApp();var sliderPicker = function sliderPicker() {__webpack_require
 
     },
 
-    /**
-        * 设置默认
-        */
-    setDefaultStamp: function setDefaultStamp(e) {
-      var stamp = e.target.dataset.item;
 
-      var _this = this;
-
-      api.sendPut({
-        url: api.set_default_painted_url + "/" + stamp.signImageId,
-        success: function success() {
-          var dataArray = _this.stampArray; //取消上个
-
-          for (var i = 0; i < dataArray.length; i++) {
-            if (dataArray[i].isDefault == 1) {
-              dataArray[i].isDefault = 0;
-            }
-
-            if (dataArray[i].signImageId == stamp.signImageId) {
-              dataArray[i].isDefault = 1;
-            }
-          }
-
-          _this.setData({
-            defaultStamp: stamp });
-
-
-          _this.updateData(dataArray);
-        },
-
-        fail: function fail(msg) {
-          setTimeout(function () {
-            uni.showToast({
-              icon: 'none',
-              title: msg });
-
-          }, 50);
-        } });
-
-
-    },
     addStampAction: function addStampAction() {
       if (this.selectedItem.userType == '1') {
         uni.navigateTo({
@@ -418,8 +379,8 @@ var app = getApp();var sliderPicker = function sliderPicker() {__webpack_require
         userList1: [] });
 
 
-      api.sendGet({
-        url: api.companyList,
+      (0, _request.get)({
+        url: _account.companyList,
         success: function success(res) {
           console.log(res);
           res.data.forEach(function (item) {
@@ -509,8 +470,8 @@ var app = getApp();var sliderPicker = function sliderPicker() {__webpack_require
       uni.showLoading({
         title: '加载中' });
 
-      api.sendPut({
-        url: api.set_default_seal + '/' + this.curItem.signImageId,
+      (0, _request.put)({
+        url: set_default_seal + '/' + this.curItem.signImageId,
         success: function success() {
           _this3.requestStamp();
           setTimeout(function () {
@@ -564,8 +525,8 @@ var app = getApp();var sliderPicker = function sliderPicker() {__webpack_require
               "token": userToken,
               "Content-Type": "application/json" };
 
-            api.sendPost({
-              url: api.delete_painted_url + '/99?signImageId=' + param.signImageId,
+            (0, _request.post)({
+              url: _seal.delete_painted_url + '/99?signImageId=' + param.signImageId,
               params: param,
               header: header,
               success: function success() {

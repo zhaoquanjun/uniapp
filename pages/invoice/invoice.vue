@@ -29,14 +29,14 @@
 </template>
 
 <script>
-// pages/invvoice/invoice.js
-var api = require("../../api/request");
+import { get } from '../../api/request.js'
+import { get_invoice_data } from '../../api/invoice.js'
 import search from "../../components/search/search";
 import sliderPicker from "../../components/sliderPicker/sliderPicker";
 import messageBox from "../../components/messageBox/messageBox";
 
 export default {
-  data() {
+  data() {ß
     return {
       searchType: 2,
       pageIndex: 1,
@@ -126,8 +126,8 @@ export default {
       this.setData({
         loading: true
       });
-      api.sendGet({
-        url: api.get_invoice_data + '/' + this.searchType + '?pageIndex=' + this.pageIndex + '&pageSize=' + this.pageSize + '&contractSubjectTitle=' + this.searchParams,
+      get({
+        url: get_invoice_data + '/' + this.searchType + '?pageIndex=' + this.pageIndex + '&pageSize=' + this.pageSize + '&contractSubjectTitle=' + this.searchParams,
         success: res => {
           res.results.forEach(it => {
             it.gmtCreate = this.formatTimeConvertFun(it.gmtCreate, 1);

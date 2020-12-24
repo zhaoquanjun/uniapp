@@ -5,7 +5,6 @@
 </template>
 
 <script>
-// pages/contract/sign/next/signConfirm/signConfirm.js
 const app = getApp();
 
 export default {

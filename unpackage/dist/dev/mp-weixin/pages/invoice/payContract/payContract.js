@@ -130,49 +130,49 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-// pages/invvoice/payContract/payContract.js
-var api = __webpack_require__(/*! ../../../api/request */ 8);var _default =
 
-{
-  data: function data() {
-    return {
-      payInfo: null,
-      integer: '',
-      decimal: '',
-      reveive: '' };
 
-  },
 
-  components: {},
-  props: {},
 
-  /**
-              * 生命周期函数--监听页面加载
-              */
-  onLoad: function onLoad(options) {
-    this.setData({
-      reveive: options.receiveName });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
+var _invoice = __webpack_require__(/*! ../../../api/invoice.js */ 731); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = { data: function data() {return { payInfo: null, integer: '', decimal: '', reveive: '' };}, components: {}, props: {}, /**
+                                                                                                                                       * 生命周期函数--监听页面加载
+                                                                                                                                       */onLoad: function onLoad(options) {this.setData({ reveive: options.receiveName });
     this.getPayInfoFun(options.id);
   },
 
@@ -218,8 +218,8 @@ var api = __webpack_require__(/*! ../../../api/request */ 8);var _default =
       uni.showLoading({
         title: '加载中' });
 
-      api.sendGet({
-        url: api.get_pay_info + '/' + id,
+      (0, _request.get)({
+        url: _invoice.get_pay_info + '/' + id,
         success: function success(res) {
           var curAmount = (res.amount / 100).toFixed(2);
           _this.setData({

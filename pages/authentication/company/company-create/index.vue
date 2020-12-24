@@ -21,7 +21,8 @@
 
 <script>
 // authentication/auth-type/index.js
-const api = require("../../../../api/request.js");
+import { get } from '../../../../api/request.js'
+import { createCompany } from '../../../../api/authen.js'
 
 export default {
   data() {
@@ -86,8 +87,8 @@ export default {
       uni.showLoading({
         title: '加载中'
       });
-      api.sendGet({
-        url: `${api.createCompany}?companyName=${companyName}`,
+      get({
+        url: `${createCompany}?companyName=${companyName}`,
         success: function (res) {
           console.log(res);
           uni.hideLoading();

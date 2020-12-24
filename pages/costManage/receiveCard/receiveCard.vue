@@ -25,8 +25,10 @@
 </template>
 
 <script>
+	import {get, post} from '../../../api/request.js'
+	import { get_gift_card_from_wx, get_gift_card_status } from '../../../api/cost.js'
+	import { get_register_sms_code_url, pc_login, get_phone_wx_code, decode_phone } from '../../../api/account.js'
 var utils = require("../../../utils/utils.js");
-var api = require("../../../api/request");
 const app = getApp();
 
 export default {
@@ -133,8 +135,8 @@ export default {
       uni.showLoading({
         title: '获取中'
       });
-      api.sendGet({
-        url: api.get_register_sms_code_url + '/' + this.tel,
+      get({
+        url: get_register_sms_code_url + '/' + this.tel,
         success: () => {
           setTimeout(() => {
             uni.showToast({
@@ -186,8 +188,8 @@ export default {
         phone: this.tel,
         phoneCode: this.yzm
       };
-      api.sendPost({
-        url: api.pc_login,
+      post({
+        url: pc_login,
         params: options,
         success: res => {
           console.log(res);
@@ -248,8 +250,8 @@ export default {
      * 根据code获取用户是否已经注册
      */
     getUserRegisterInfoFun() {
-      api.sendGet({
-        url: api.get_phone_wx_code + '/' + this.wxCode + '?wxAppType=2',
+      get({
+        url: get_phone_wx_code + '/' + this.wxCode + '?wxAppType=2',
         success: data => {
           if (data.isRegister) {
             this.setData({
@@ -312,8 +314,8 @@ export default {
      * @param {*} e 
      */
     getPhoneFun(e) {
-      api.sendPost({
-        url: api.decode_phone,
+      post({
+        url: decode_phone,
         params: {
           encrypted: e.detail.encryptedData,
           iv: e.detail.iv,
@@ -372,8 +374,8 @@ export default {
       uni.showLoading({
         title: '领取中'
       });
-      api.sendGet({
-        url: api.get_gift_card_from_wx + this.cardId,
+      get({
+        url: get_gift_card_from_wx + this.cardId,
         success: res => {
           setTimeout(() => {
             uni.showToast({
@@ -406,8 +408,8 @@ export default {
      * @name 获取礼品卡状态
      */
     getGiftCardStatusFun(callback) {
-      api.sendGet({
-        url: api.get_gift_card_status + this.cardId,
+     get({
+        url: get_gift_card_status + this.cardId,
         success: res => {
           console.log(res);
 

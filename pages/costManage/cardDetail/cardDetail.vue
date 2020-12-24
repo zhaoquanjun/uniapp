@@ -17,8 +17,8 @@
 </template>
 
 <script>
-// pages/costManage/cardDetail/cardDetail.js
-var api = require("../../../api/request");
+import { get } from '../../../api/request.js'
+import { get_balance_list } from '../../../api/cost.js'
 
 export default {
   data() {
@@ -83,8 +83,8 @@ export default {
       uni.showLoading({
         title: '加载中'
       });
-      api.sendGet({
-        url: api.get_balance_list,
+      get({
+        url: get_balance_list,
         params: options,
         success: res => {
           console.log(res);

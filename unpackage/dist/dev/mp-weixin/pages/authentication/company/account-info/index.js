@@ -169,8 +169,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 
 // authentication/auth-type/index.js
-var api = __webpack_require__(/*! ../../../../api/request.js */ 8);var _default =
-
+var _default =
 {
   data: function data() {
     return {};

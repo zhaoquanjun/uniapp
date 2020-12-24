@@ -39,8 +39,8 @@
 </template>
 
 <script>
-// pages/costManage/buyCard/buyCard.js
-var api = require("../../../api/request");
+import { get } from '../../../api/request.js'
+import { buy_card_by_account, get_wx_pay_params  } from '../../../api/cost.js'
 import sliderPicker from "../../../components/sliderPicker/sliderPicker";
 
 export default {
@@ -225,8 +225,8 @@ export default {
         });
 
         if (this.activeIndex == 0) {
-          api.sendGet({
-            url: api.buy_card_by_account + `?amount=${this.total}&goods=${this.rechargeValue}&goodsNum=${this.count}`,
+          get({
+            url: buy_card_by_account + `?amount=${this.total}&goods=${this.rechargeValue}&goodsNum=${this.count}`,
             success: res => {
               console.log(res);
               setTimeout(() => {
@@ -287,8 +287,8 @@ export default {
       uni.showLoading({
         title: '创建订单中'
       });
-      api.sendGet({
-        url: api.get_wx_pay_params + '?amount=' + this.total + '&body=微信支付&rechargeType=0&goods=' + this.rechargeValue + '&goodsNum=' + this.count,
+      get({
+        url: get_wx_pay_params + '?amount=' + this.total + '&body=微信支付&rechargeType=0&goods=' + this.rechargeValue + '&goodsNum=' + this.count,
         success: res => {
           console.log(res);
           this.payByWxFun(res);

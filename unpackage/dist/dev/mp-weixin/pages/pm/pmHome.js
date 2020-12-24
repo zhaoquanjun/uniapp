@@ -134,105 +134,106 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../api/request.js */ 8);
+var _account = __webpack_require__(/*! ../../api/account.js */ 58); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // pages/pm/pmHome.js
-var app = getApp();
-var api = __webpack_require__(/*! ../../api/request.js */ 8);var icon = function icon() {__webpack_require__.e(/*! require.ensure | components/icon/icon */ "components/icon/icon").then((function () {return resolve(__webpack_require__(/*! ../../components/icon/icon */ 557));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var avatar = function avatar() {__webpack_require__.e(/*! require.ensure | components/avatar/avatar */ "components/avatar/avatar").then((function () {return resolve(__webpack_require__(/*! ../../components/avatar/avatar */ 564));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var wechatUserInfo = function wechatUserInfo() {__webpack_require__.e(/*! require.ensure | components/wechatUserInfo/wechatUserInfo */ "components/wechatUserInfo/wechatUserInfo").then((function () {return resolve(__webpack_require__(/*! ../../components/wechatUserInfo/wechatUserInfo */ 550));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../components/halfSlideItem/halfSlideItem */ 536));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../components/sliderPicker/sliderPicker */ 522));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
-
-
-
-
-
-
-{
-  data: function data() {
-    return {
-      items: [{
-        icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/seal_icon.png',
-        name: '印章管理',
-        hasAuth: true },
-      {
-        icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/cost_icon.png',
-        name: '费用管理',
-        hasAuth: true },
-      {
-        icon: "/static/images/invoice/invoice_apply_icon.png",
-        name: '发票申请',
-        hasAuth: true },
-      {
-        icon: "/static/images/invoice/invoice_apply_icon.png",
-        name: '收款',
-        hasAuth: true }],
-
-      sliderList: [{
-        label: '销售模版发起收款',
-        value: 0 },
-      {
-        label: '独立收款',
-        value: 1 },
-      {
-        label: '取消',
-        value: 2 }],
-
-      isShowReceiptMethod: false,
-      isAdmin: false,
-      wechatUserInfoShow: false,
-      waitAffirmCount: 0,
-      unreadContractMessageCount: 0,
-      username: '',
-      userPhone: '',
-      userToken: '',
-      isAuth: false };
-
-  },
-
+var app = getApp();var icon = function icon() {__webpack_require__.e(/*! require.ensure | components/icon/icon */ "components/icon/icon").then((function () {return resolve(__webpack_require__(/*! ../../components/icon/icon */ 557));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var avatar = function avatar() {__webpack_require__.e(/*! require.ensure | components/avatar/avatar */ "components/avatar/avatar").then((function () {return resolve(__webpack_require__(/*! ../../components/avatar/avatar */ 564));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var wechatUserInfo = function wechatUserInfo() {__webpack_require__.e(/*! require.ensure | components/wechatUserInfo/wechatUserInfo */ "components/wechatUserInfo/wechatUserInfo").then((function () {return resolve(__webpack_require__(/*! ../../components/wechatUserInfo/wechatUserInfo */ 550));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../components/halfSlideItem/halfSlideItem */ 536));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../components/sliderPicker/sliderPicker */ 522));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { items: [{ icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/seal_icon.png', name: '印章管理', hasAuth: true }, { icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/cost_icon.png', name: '费用管理', hasAuth: true }, { icon: "/static/images/invoice/invoice_apply_icon.png", name: '发票申请', hasAuth: true }, { icon: "/static/images/invoice/invoice_apply_icon.png", name: '收款', hasAuth: true }], sliderList: [{ label: '销售模版发起收款', value: 0 }, { label: '独立收款', value: 1 }, { label: '取消', value: 2 }], isShowReceiptMethod: false, isAdmin: false, wechatUserInfoShow: false, waitAffirmCount: 0, unreadContractMessageCount: 0, username: '', userPhone: '', userToken: '', isAuth: false };},
   components: {
     icon: icon,
     avatar: avatar,
@@ -384,8 +385,8 @@ var api = __webpack_require__(/*! ../../api/request.js */ 8);var icon = function
       this.setData({
         wechatUserInfoShow: false });
 
-      api.sendPut({
-        url: api.update_usericon,
+      (0, _request.put)({
+        url: _account.update_usericon,
         params: {
           iconUrl: data.detail.avatarUrl,
           nickname: data.detail.nickName },
@@ -395,33 +396,7 @@ var api = __webpack_require__(/*! ../../api/request.js */ 8);var icon = function
         } });
 
     },
-    updateMessageCountFun: function updateMessageCountFun() {
-      //获取等确认个数
-      var _this = this;
 
-      api.sendGet({
-        url: api.get_evidence_affirm_count,
-        params: {
-          status: 1,
-          contractId: '' },
-
-        success: function success(data) {
-          _this.setData({
-            waitAffirmCount: data.count });
-          //变更合同个数
-
-
-          api.sendGet({
-            url: api.get_unread_message_count,
-            success: function success(data) {
-              _this.setData({
-                unreadContractMessageCount: data.contractCount });
-
-            } });
-
-        } });
-
-    },
     authAction: function authAction() {
       if (!this.isAuth) {
         uni.navigateTo({

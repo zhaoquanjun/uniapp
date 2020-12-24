@@ -130,60 +130,62 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-var utils = __webpack_require__(/*! ../../../utils/utils.js */ 35);
-var api = __webpack_require__(/*! ../../../api/request */ 8);
-var app = getApp();var _default =
 
-{
-  data: function data() {
-    return {
-      tel: '',
-      yzm: '',
-      cardId: '',
-      btnWords: "获取验证码",
-      time: 60,
-      timer: null,
-      bg: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/receive_card_bg.png',
-      wx_icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/wx_logo.png',
-      wxCode: '',
-      openId: '',
-      unionId: '',
-      loginPhone: '',
-      isShowMark: false,
-      originType: null,
-      isBindOpenId: true,
-      bandPhone: '' };
 
-  },
 
-  components: {},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
+var _cost = __webpack_require__(/*! ../../../api/cost.js */ 18);
+var _account = __webpack_require__(/*! ../../../api/account.js */ 58); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var utils = __webpack_require__(/*! ../../../utils/utils.js */ 35);var app = getApp();var _default = { data: function data() {return { tel: '', yzm: '', cardId: '', btnWords: "获取验证码", time: 60, timer: null, bg: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/receive_card_bg.png', wx_icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/wx_logo.png', wxCode: '', openId: '', unionId: '', loginPhone: '', isShowMark: false, originType: null, isBindOpenId: true, bandPhone: '' };}, components: {},
   props: {},
 
   /**
@@ -265,8 +267,8 @@ var app = getApp();var _default =
       uni.showLoading({
         title: '获取中' });
 
-      api.sendGet({
-        url: api.get_register_sms_code_url + '/' + this.tel,
+      (0, _request.get)({
+        url: _account.get_register_sms_code_url + '/' + this.tel,
         success: function success() {
           setTimeout(function () {
             uni.showToast({
@@ -318,8 +320,8 @@ var app = getApp();var _default =
         phone: this.tel,
         phoneCode: this.yzm };
 
-      api.sendPost({
-        url: api.pc_login,
+      (0, _request.post)({
+        url: _account.pc_login,
         params: options,
         success: function success(res) {
           console.log(res);
@@ -380,8 +382,8 @@ var app = getApp();var _default =
         * 根据code获取用户是否已经注册
         */
     getUserRegisterInfoFun: function getUserRegisterInfoFun() {var _this5 = this;
-      api.sendGet({
-        url: api.get_phone_wx_code + '/' + this.wxCode + '?wxAppType=2',
+      (0, _request.get)({
+        url: _account.get_phone_wx_code + '/' + this.wxCode + '?wxAppType=2',
         success: function success(data) {
           if (data.isRegister) {
             _this5.setData({
@@ -444,8 +446,8 @@ var app = getApp();var _default =
         * @param {*} e 
         */
     getPhoneFun: function getPhoneFun(e) {var _this7 = this;
-      api.sendPost({
-        url: api.decode_phone,
+      (0, _request.post)({
+        url: _account.decode_phone,
         params: {
           encrypted: e.detail.encryptedData,
           iv: e.detail.iv,
@@ -504,8 +506,8 @@ var app = getApp();var _default =
       uni.showLoading({
         title: '领取中' });
 
-      api.sendGet({
-        url: api.get_gift_card_from_wx + this.cardId,
+      (0, _request.get)({
+        url: _cost.get_gift_card_from_wx + this.cardId,
         success: function success(res) {
           setTimeout(function () {
             uni.showToast({
@@ -538,8 +540,8 @@ var app = getApp();var _default =
         * @name 获取礼品卡状态
         */
     getGiftCardStatusFun: function getGiftCardStatusFun(callback) {
-      api.sendGet({
-        url: api.get_gift_card_status + this.cardId,
+      (0, _request.get)({
+        url: _cost.get_gift_card_status + this.cardId,
         success: function success(res) {
           console.log(res);
 

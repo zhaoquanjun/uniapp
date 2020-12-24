@@ -113,8 +113,8 @@
 </template>
 
 <script>
-// pages/template/useTemplate/index.js
-const api = require("../../../api/request");
+import { get, postBody } from '../../../api/request.js'
+import { get_template_detail, confirm_contract_launch_by_template } from '../../../api/template.js'
 const util = require("../../../utils/utils");
 
 export default {
@@ -224,8 +224,8 @@ export default {
       uni.showLoading({
         title: '加载中'
       });
-      api.sendGet({
-        url: api.get_template_detail + '?contractTemplateId=' + this.id,
+      get({
+        url: get_template_detail + '?contractTemplateId=' + this.id,
         success: res => {
           console.log(res);
           res.templateSigns.forEach(it => {
@@ -462,8 +462,8 @@ export default {
       uni.showLoading({
         title: '发起中'
       });
-      api.sendPostBody({
-        url: api.confirm_contract_launch_by_template,
+      postBody({
+        url: confirm_contract_launch_by_template,
         params: saveParams,
         success: res => {
           setTimeout(() => {

@@ -32,8 +32,8 @@
 </template>
 
 <script>
-// pages/home/templateCollection/templateReceipt.js
-var api = require("../../../api/request.js");
+import { get } from '../../../api/request.js'
+import { get_pay_template_list } from '../../../api/collection.js'
 const utils = require("../../../utils/utils.js");
 import search from "../../../components/search/search";
 import searchHighlightTextView from "../../../components/searchHighlightTextView/searchHighlightTextView";
@@ -104,8 +104,8 @@ export default {
         pageIndex: this.pageIndex,
         pageSize: this.pageSize
       };
-      api.sendGet({
-        url: api.get_pay_template_list,
+      get({
+        url: get_pay_template_list,
         params: params,
         success: res => {
           let templateMessage = res.data;

@@ -28,8 +28,8 @@
 </template>
 
 <script>
-// pages/invvoice/payDetail/payDetail.js
-var api = require("../../../api/request");
+import { get } from '../../../api/request.js'
+import { get_pay_detail } from '../../../api/invoice.js'
 
 export default {
   data() {
@@ -93,8 +93,8 @@ export default {
       uni.showLoading({
         title: '加载中'
       });
-      api.sendGet({
-        url: api.get_pay_detail + '?contractSubjectId=' + title,
+      get({
+        url: get_pay_detail + '?contractSubjectId=' + title,
         success: res => {
           console.log(res);
           res.paidList && res.paidList.forEach(it => {

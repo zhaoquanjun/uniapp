@@ -55,7 +55,9 @@
 
 <script>
 // authentication/auth-type/index.js
-const api = require("../../../../api/request.js");
+import { postBody, upload } from '../../../../api/request.js'
+import { businessLicenseUpload, companyAuth, companyHandle } from '../../../../api/authen.js'
+import { create_seal, upload_company_seal } from '../../../../api/seal.js'
 const FXQ = require("../../../../utils/FXQ");
 
 export default {
@@ -134,8 +136,8 @@ export default {
       uni.showLoading({
         title: '识别中...'
       });
-      api.uploadFile({
-        url: api.businessLicenseUpload,
+      upload({
+        url: businessLicenseUpload,
         filePath: tmpUrl,
         key: 'businessImage',
         success: function (res) {
@@ -252,8 +254,8 @@ export default {
       }); // 法人
 
       if (query.type == 'legent') {
-        api.sendPostBody({
-          url: api.companyAuth,
+        postBody({
+          url: companyAuth,
           params,
           success: () => {
             const newUser = Object.assign({}, currentUser, params);
@@ -275,8 +277,8 @@ export default {
           }
         });
       } else {
-        api.sendPostBody({
-          url: api.companyHandle,
+        postBody({
+          url: companyHandle,
           params,
           success: () => {
             uni.hideLoading();
@@ -341,8 +343,8 @@ export default {
      * @name 生成印章
      */
     createSealFun(base64) {
-      api.sendPostBody({
-        url: api.create_seal,
+      postBody({
+        url: create_seal,
         params: {
           base64String: base64
         },
@@ -365,8 +367,8 @@ export default {
         url: data.url,
         auto: true
       };
-      api.sendPostBody({
-        url: api.upload_company_seal + '?auto=' + true,
+      postBody({
+        url: upload_company_seal + '?auto=' + true,
         params: options,
         success: () => {
           console.log('印章制作完成');

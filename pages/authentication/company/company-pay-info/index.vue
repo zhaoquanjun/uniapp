@@ -29,8 +29,6 @@
 </template>
 
 <script>
-// authentication/auth-type/index.js
-const api = require("../../../../api/request.js");
 
 export default {
   data() {

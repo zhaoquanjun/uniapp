@@ -179,7 +179,6 @@ module.exports.applyAuth = host + "/v1/account/apply/auth"; //发送短信验证
 
 module.exports.smsSend = host + "/v1/sms/"; // 上传营业执照
 
-module.exports.businessLicenseUpload = host + "/v1/account/apply/auth/businessLicense"; //企业认证：创建企业
 
 module.exports.createCompany = host + "/v1/account/create/company"; // 企业法人直接认证
 

@@ -22,8 +22,8 @@
 </template>
 
 <script>
-// pages/pm/stamp/addCachet/addCachet.js
-var api = require("../../../../api/request.js");
+import { post } from '../../../../api/request.js'
+import { create_company_cachet_url } from '../../../../api/seal.js'
 
 export default {
   data() {
@@ -111,8 +111,8 @@ export default {
       uni.showLoading({
         title: '绘制中'
       });
-      api.sendPost({
-        url: api.create_company_cachet_url,
+      post({
+        url: create_company_cachet_url,
         params: {
           head: this.topText,
           center: this.centerText,

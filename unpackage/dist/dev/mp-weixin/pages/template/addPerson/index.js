@@ -130,61 +130,62 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-// pages/template/addPerson/index.js
-var api = __webpack_require__(/*! ../../../api/request */ 8);
-var util = __webpack_require__(/*! ../../../utils/utils */ 35);var _default =
 
-{
-  data: function data() {
-    return {
-      suggests: [],
-      // suggest列表
-      timer: null,
-      // 定时器
-      name: '',
-      phone: '',
-      id: '',
-      // 模版id 
-      canNext: false,
-      index: -1 // 当前编辑的索引
-    };
 
-  },
 
-  components: {},
-  props: {},
 
-  /**
-              * 生命周期函数--监听页面加载
-              */
-  onLoad: function onLoad(options) {
-    this.setData({
-      id: options.id,
-      index: options.index,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
+var _template = __webpack_require__(/*! ../../../api/template.js */ 730);
+var _account = __webpack_require__(/*! ../../../api/account.js */ 58); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var util = __webpack_require__(/*! ../../../utils/utils */ 35);var _default = { data: function data() {return { suggests: [], // suggest列表
+      timer: null, // 定时器
+      name: '', phone: '', id: '', // 模版id 
+      canNext: false, index: -1 // 当前编辑的索引
+    };}, components: {}, props: {}, /**
+                                     * 生命周期函数--监听页面加载
+                                     */onLoad: function onLoad(options) {this.setData({ id: options.id, index: options.index,
       name: options.name || '',
       phone: options.phone || '',
       canNext: options.name && options.phone });
@@ -281,8 +282,8 @@ var util = __webpack_require__(/*! ../../../utils/utils */ 35);var _default =
       if (this.timer) clearTimeout(this.timer);
       this.setData({
         timer: setTimeout(function () {
-          api.sendGet({
-            url: api.get_signal_sign_person_list + '?contactType=1&name=' + name + '&contactType=' + type,
+          (0, _request.get)({
+            url: _template.get_signal_sign_person_list + '?contactType=1&name=' + name + '&contactType=' + type,
             success: function success(res) {
               _this4.setData({
                 suggests: res });
@@ -355,8 +356,8 @@ var util = __webpack_require__(/*! ../../../utils/utils */ 35);var _default =
         uni.showLoading({
           title: '获取认证信息中' });
 
-        api.sendGet({
-          url: api.person_message + '?name=' + this.name + '&phone=' + this.phone,
+        (0, _request.get)({
+          url: _account.person_message + '?name=' + this.name + '&phone=' + this.phone,
           success: function success(res) {
             console.log(res);
             uni.redirectTo({

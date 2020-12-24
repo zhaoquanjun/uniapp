@@ -29,8 +29,9 @@
 </template>
 
 <script>
-// pages/template/addPerson/index.js
-const api = require("../../../api/request");
+import { get } from '../../../api/request.js'
+import { get_signal_sign_person_list } from '../../../api/template.js'
+import { company_message, person_message } from '../../../api/account.js'
 const util = require("../../../utils/utils");
 
 export default {
@@ -186,8 +187,8 @@ export default {
       if (this.timer) clearTimeout(this.timer);
       this.setData({
         timer: setTimeout(() => {
-          api.sendGet({
-            url: api.get_signal_sign_person_list + '?contactType=1&name=' + name + '&contactType=' + type,
+          get({
+            url: get_signal_sign_person_list + '?contactType=1&name=' + name + '&contactType=' + type,
             success: res => {
               if (type == 1) {
                 this.setData({
@@ -292,13 +293,13 @@ export default {
         });
         let companyAuthStatus = -1;
         let personAuthStatus = -1;
-        api.sendGet({
-          url: api.company_message + '?companyName=' + this.companyName,
+				get({
+          url: company_message + '?companyName=' + this.companyName,
           success: res => {
             console.log(res);
             companyAuthStatus = res;
-            api.sendGet({
-              url: api.person_message + '?name=' + this.name + '&phone=' + this.phone,
+            get({
+              url: person_message + '?name=' + this.name + '&phone=' + this.phone,
               success: data => {
                 personAuthStatus = data;
                 uni.redirectTo({

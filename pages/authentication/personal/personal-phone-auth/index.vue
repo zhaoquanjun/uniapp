@@ -58,8 +58,9 @@
 </template>
 
 <script>
-// authentication/auth-type/index.js
-const api = require("../../../../api/request.js");
+import { get, postBody } from '../../../../api/request.js'
+import { smsSend, authPhone } from '../../../../api/authen.js'
+import { get_user_info } from '../../../../api/account.js'
 import modal from "../../../../components/modal/modal";
 
 export default {
@@ -212,8 +213,8 @@ export default {
       uni.showLoading({
         title: '加载中...'
       });
-      api.sendGet({
-        url: api.smsSend + phone,
+      get({
+        url: smsSend + phone,
         success: function () {
           uni.hideLoading();
           setTimeout(() => {
@@ -307,8 +308,8 @@ export default {
         idCard,
         phone
       });
-      api.sendPostBody({
-        url: `${api.authPhone}?phoneCode=${phoneCode}`,
+      postBody({
+        url: `${authPhone}?phoneCode=${phoneCode}`,
         params: {
           name,
           idCard,
@@ -317,8 +318,8 @@ export default {
         success: function (res) {
           console.log(res);
           uni.hideLoading();
-          api.sendGet({
-            url: api.get_user_info,
+          get({
+            url: get_user_info,
             success: function (res) {
               let currentUser = uni.getStorageSync('currentUser');
               currentUser.name = res.name;

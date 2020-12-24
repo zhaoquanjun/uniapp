@@ -137,41 +137,41 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _data$components$prop;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-// pages/searchResult/searchResult.js
-var api = __webpack_require__(/*! ../../api/request.js */ 8);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../api/request.js */ 8);
+var _contract = __webpack_require__(/*! ../../api/contract.js */ 729);var _data$components$prop;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
 var utils = __webpack_require__(/*! ../../utils/utils.js */ 35);var search = function search() {__webpack_require__.e(/*! require.ensure | components/search/search */ "components/search/search").then((function () {return resolve(__webpack_require__(/*! ../../components/search/search */ 529));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var searchHighlightTextView = function searchHighlightTextView() {__webpack_require__.e(/*! require.ensure | components/searchHighlightTextView/searchHighlightTextView */ "components/searchHighlightTextView/searchHighlightTextView").then((function () {return resolve(__webpack_require__(/*! ../../components/searchHighlightTextView/searchHighlightTextView */ 578));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = (_data$components$prop = {
 
 
@@ -331,14 +331,14 @@ var utils = __webpack_require__(/*! ../../utils/utils.js */ 35);var search = fun
       */
   getContractsFun: function getContractsFun(title) {
     var self = this;
-    var url = api.get_contract_list;
+    var url = _contract.get_contract_list;
     var params = {
       searchType: 0,
       contractTitle: title ? title : '',
       pageIndex: 0,
       pageSize: 10 };
 
-    api.sendGet({
+    (0, _request.get)({
       url: url,
       params: params,
       success: function success(res) {

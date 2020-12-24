@@ -130,103 +130,103 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-// pages/costManage/costManage.js
-var api = __webpack_require__(/*! ../../api/request */ 8);var _default =
 
-{
-  data: function data() {
-    return {
-      balance: 0,
-      count: 0 };
 
-  },
 
-  components: {},
-  props: {},
 
-  /**
-              * 生命周期函数--监听页面加载
-              */
-  onLoad: function onLoad(options) {},
 
-  /**
-                                        * 生命周期函数--监听页面初次渲染完成
-                                        */
-  onReady: function onReady() {},
 
-  /**
-                                   * 生命周期函数--监听页面显示
-                                   */
-  onShow: function onShow() {
-    this.getUserAccountInfoFun();
-  },
 
-  /**
-      * 生命周期函数--监听页面隐藏
-      */
-  onHide: function onHide() {},
 
-  /**
-                                 * 生命周期函数--监听页面卸载
-                                 */
-  onUnload: function onUnload() {},
 
-  /**
-                                     * 页面相关事件处理函数--监听用户下拉动作
-                                     */
-  onPullDownRefresh: function onPullDownRefresh() {
-    this.getUserAccountInfoFun();
-  },
 
-  /**
-      * 页面上拉触底事件的处理函数
-      */
-  onReachBottom: function onReachBottom() {},
 
-  /**
-                                               * 用户点击右上角分享
-                                               */
-  onShareAppMessage: function onShareAppMessage() {},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../api/request.js */ 8);
+var _cost = __webpack_require__(/*! ../../api/cost.js */ 18); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = { data: function data() {return { balance: 0, count: 0 };}, components: {}, props: {}, /**
+                                                                                                       * 生命周期函数--监听页面加载
+                                                                                                       */onLoad: function onLoad(options) {}, /**
+                                                                                                                                               * 生命周期函数--监听页面初次渲染完成
+                                                                                                                                               */onReady: function onReady() {}, /**
+                                                                                                                                                                                  * 生命周期函数--监听页面显示
+                                                                                                                                                                                  */onShow: function onShow() {this.getUserAccountInfoFun();}, /**
+                                                                                                                                                                                                                                                * 生命周期函数--监听页面隐藏
+                                                                                                                                                                                                                                                */onHide: function onHide() {}, /**
+                                                                                                                                                                                                                                                                                 * 生命周期函数--监听页面卸载
+                                                                                                                                                                                                                                                                                 */onUnload: function onUnload() {}, /**
+                                                                                                                                                                                                                                                                                                                      * 页面相关事件处理函数--监听用户下拉动作
+                                                                                                                                                                                                                                                                                                                      */onPullDownRefresh: function onPullDownRefresh() {this.getUserAccountInfoFun();}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                          * 页面上拉触底事件的处理函数
+                                                                                                                                                                                                                                                                                                                                                                                                          */onReachBottom: function onReachBottom() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         * 用户点击右上角分享
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         */onShareAppMessage: function onShareAppMessage() {},
   methods: {
     /**
               * @name 获取用户账户信息
@@ -235,8 +235,8 @@ var api = __webpack_require__(/*! ../../api/request */ 8);var _default =
       uni.showLoading({
         title: '加载中' });
 
-      api.sendGet({
-        url: api.get_accout_info,
+      (0, _request.get)({
+        url: _cost.get_accout_info,
         success: function success(res) {
           _this.setData({
             balance: (res.accountFee / 100).toFixed(2),

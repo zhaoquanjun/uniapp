@@ -45,8 +45,8 @@
 </template>
 
 <script>
-// pages/costManage/giving/giving.js
-var api = require("../../../api/request");
+import { get, postBody } from '../../../api/request.js'
+import { get_personal_auth_status, get_company_auth_status, send_by_buy, send_card_directive } from '../../../api/cost.js'
 var utils = require("../../../utils/utils");
 import sliderPicker from "../../../components/sliderPicker/sliderPicker";
 
@@ -227,8 +227,8 @@ export default {
       uni.showLoading({
         title: '查询中'
       });
-      api.sendGet({
-        url: api.get_personal_auth_status + '?phone=' + phone,
+      get({
+        url: get_personal_auth_status + '?phone=' + phone,
         success: res => {
           if (type == 'signal') {
             if (res == 0 || res == 2) {
@@ -275,8 +275,8 @@ export default {
       uni.showLoading({
         title: '查询中'
       });
-      api.sendGet({
-        url: api.get_company_auth_status + '?companyName=' + name,
+      get({
+        url: get_company_auth_status + '?companyName=' + name,
         success: res => {
           this.setData({
             companyAuthStatus: res
@@ -327,8 +327,8 @@ export default {
       uni.showLoading({
         title: '赠送中'
       });
-      api.sendPostBody({
-        url: api.send_by_buy,
+      postBody({
+        url: send_by_buy,
         params: buyOptions,
         success: res => {
           console.log(res);
@@ -370,8 +370,8 @@ export default {
       uni.showLoading({
         title: '赠送中'
       });
-      api.sendPostBody({
-        url: api.send_card_directive,
+      postBody({
+        url: send_card_directive,
         params: cardOptions,
         success: res => {
           setTimeout(() => {

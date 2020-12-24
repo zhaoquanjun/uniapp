@@ -101,7 +101,8 @@
 <script module="tools" lang="wxs" src="../../../utils/tools.wxs"></script>
 
 <script>
-let api = require("../../../api/request.js");
+import { get, post, upload } from '../../../api/request.js'
+import { get_upload_policy, add_certificate_file, saveChainToContract } from '../../../api/evidence.js'
 let utils = require("../../../utils/utils.js");
 const recorderManager = uni.getRecorderManager();
 const innerAudioContext = uni.createInnerAudioContext();
@@ -583,13 +584,13 @@ export default {
       }
 
       let filePath = this[typeMapName] || '';
-      api.sendGet({
-        url: api.get_upload_policy + '?ossPrefixKey=' + "blockchain/",
+      get({
+        url: get_upload_policy + '?ossPrefixKey=' + "blockchain/",
         success: res => {
           uni.showLoading({
             title: '上传中'
           });
-          api.uploadFile({
+          upload({
             url: res.host,
             //url
             filePath: filePath,
@@ -623,8 +624,8 @@ export default {
               if (that.formId) {
                 that.saveChain(formDataParmas);
               } else {
-                api.uploadFile({
-                  url: api.add_certificate_file,
+                upload({
+                  url: add_certificate_file,
                   //url
                   filePath: filePath,
                   // filePath
@@ -710,8 +711,8 @@ export default {
      * @desc 数据链存证保存
      */
     saveChain(params) {
-      api.sendPost({
-        url: api.saveChainToContract + '?contractSubjectId=' + this.formId + '&fileName=' + params.name + '&filePath=' + params.filePath + '&uploadMethod=' + params.uploadMethod + '&type=2&uploadChannel=2',
+      post({
+        url: saveChainToContract + '?contractSubjectId=' + this.formId + '&fileName=' + params.name + '&filePath=' + params.filePath + '&uploadMethod=' + params.uploadMethod + '&type=2&uploadChannel=2',
         success: res => {
           uni.navigateBack({});
         },

@@ -130,81 +130,81 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-// pages/invvoice/payDetail/payDetail.js
-var api = __webpack_require__(/*! ../../../api/request */ 8);var _default =
 
-{
-  data: function data() {
-    return {
-      title: '',
-      paidList: [],
-      unpaidList: [] };
 
-  },
 
-  components: {},
-  props: {},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
+var _invoice = __webpack_require__(/*! ../../../api/invoice.js */ 731); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = { data: function data() {return { title: '', paidList: [], unpaidList: [] };}, components: {}, props: {}, /**
+                                                                                                                          * 生命周期函数--监听页面加载
+                                                                                                                          */onLoad: function onLoad(options) {this.getPayDetailFun(options.id);}, /**
+                                                                                                                                                                                                   * 生命周期函数--监听页面初次渲染完成
+                                                                                                                                                                                                   */onReady: function onReady() {}, /**
+                                                                                                                                                                                                                                      * 生命周期函数--监听页面显示
+                                                                                                                                                                                                                                      */onShow: function onShow() {}, /**
+                                                                                                                                                                                                                                                                       * 生命周期函数--监听页面隐藏
+                                                                                                                                                                                                                                                                       */onHide: function onHide() {}, /**
+                                                                                                                                                                                                                                                                                                        * 生命周期函数--监听页面卸载
+                                                                                                                                                                                                                                                                                                        */onUnload: function onUnload() {},
 
   /**
-              * 生命周期函数--监听页面加载
-              */
-  onLoad: function onLoad(options) {
-    this.getPayDetailFun(options.id);
-  },
-
-  /**
-      * 生命周期函数--监听页面初次渲染完成
-      */
-  onReady: function onReady() {},
-
-  /**
-                                   * 生命周期函数--监听页面显示
-                                   */
-  onShow: function onShow() {},
-
-  /**
-                                 * 生命周期函数--监听页面隐藏
-                                 */
-  onHide: function onHide() {},
-
-  /**
-                                 * 生命周期函数--监听页面卸载
-                                 */
-  onUnload: function onUnload() {},
-
-  /**
-                                     * 页面相关事件处理函数--监听用户下拉动作
-                                     */
+                                                                                                                                                                                                                                                                                                                                             * 页面相关事件处理函数--监听用户下拉动作
+                                                                                                                                                                                                                                                                                                                                             */
   onPullDownRefresh: function onPullDownRefresh() {},
 
   /**
@@ -225,8 +225,8 @@ var api = __webpack_require__(/*! ../../../api/request */ 8);var _default =
       uni.showLoading({
         title: '加载中' });
 
-      api.sendGet({
-        url: api.get_pay_detail + '?contractSubjectId=' + title,
+      (0, _request.get)({
+        url: _invoice.get_pay_detail + '?contractSubjectId=' + title,
         success: function success(res) {
           console.log(res);
           res.paidList && res.paidList.forEach(function (it) {

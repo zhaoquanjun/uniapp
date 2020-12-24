@@ -38,8 +38,8 @@
 </template>
 
 <script>
-// pages/costManage/costManage.js
-var api = require("../../api/request");
+import { get } from '../../api/request.js'
+import { get_accout_info } from '../../api/cost.js'
 
 export default {
   data() {
@@ -103,8 +103,8 @@ export default {
       uni.showLoading({
         title: '加载中'
       });
-      api.sendGet({
-        url: api.get_accout_info,
+      get({
+        url: get_accout_info,
         success: res => {
           this.setData({
             balance: (res.accountFee / 100).toFixed(2),

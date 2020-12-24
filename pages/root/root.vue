@@ -5,7 +5,6 @@
 </template>
 
 <script>
-// pages/root/root.js
 var app = getApp();
 
 export default {

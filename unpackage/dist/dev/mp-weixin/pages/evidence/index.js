@@ -137,79 +137,79 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-// authentication/auth-type/index.js
-var api = __webpack_require__(/*! ../../api/request.js */ 8);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../api/request.js */ 8);
+var _evidence = __webpack_require__(/*! ../../api/evidence.js */ 728);function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
 var util = __webpack_require__(/*! ../../utils/utils */ 35);
 var app = getApp();var search = function search() {__webpack_require__.e(/*! require.ensure | components/search/search */ "components/search/search").then((function () {return resolve(__webpack_require__(/*! ../../components/search/search */ 529));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var mpHalfScreenDialog = function mpHalfScreenDialog() {__webpack_require__.e(/*! require.ensure | components/half-screen-dialog/half-screen-dialog */ "components/half-screen-dialog/half-screen-dialog").then((function () {return resolve(__webpack_require__(/*! ../../components/half-screen-dialog/half-screen-dialog */ 543));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../components/halfSlideItem/halfSlideItem */ 536));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
@@ -316,11 +316,11 @@ var app = getApp();var search = function search() {__webpack_require__.e(/*! req
         */
     getPageDataFun: function getPageDataFun(name, type, callback) {var _this2 = this;
       if (!app.globalData.isLoginIn()) return;
-      var url = api.certificate_record_list + '?currentPage=' + (name == 'sign' ? this.signPageIndex : this.dataPageIndex) + '&pageSize=' + this.pageSize + (this.searchParams ? '&name=' + this.searchParams : '');
+      var url = _evidence.certificate_record_list + '?currentPage=' + (name == 'sign' ? this.signPageIndex : this.dataPageIndex) + '&pageSize=' + this.pageSize + (this.searchParams ? '&name=' + this.searchParams : '');
       uni.showLoading({
         title: '加载中...' });
 
-      api.sendGet({
+      (0, _request.get)({
         url: url,
         success: function success(res) {
           uni.hideLoading({});

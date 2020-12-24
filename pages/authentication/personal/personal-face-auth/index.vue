@@ -43,8 +43,9 @@
 </template>
 
 <script>
-// authentication/auth-type/index.js
-const api = require("../../../../api/request.js");
+import { get, postBody, upload } from '../../../../api/request.js'
+import { authFace, applyAuth } from '../../../../api/authen.js'
+import { get_user_info } from '../../../../api/account.js'
 import modal from "../../../../components/modal/modal";
 
 export default {
@@ -164,8 +165,8 @@ export default {
       uni.showLoading({
         title: '认证中'
       });
-      api.uploadFile({
-        url: api.authFace,
+      upload({
+        url: authFace,
         filePath: tmpUrl,
         key: 'faceVideo',
         success: res => {
@@ -173,8 +174,8 @@ export default {
           this.setData({
             isFinished: true
           });
-          api.sendGet({
-            url: api.get_user_info,
+          get({
+            url: get_user_info,
             success: function (res) {
               let currentUser = uni.getStorageSync('currentUser');
               currentUser.name = res.name;
@@ -255,8 +256,8 @@ export default {
       uni.showLoading({
         title: '加载中'
       });
-      api.sendPostBody({
-        url: api.applyAuth,
+      postBody({
+        url: applyAuth,
         params: {
           name,
           idCard

@@ -22,8 +22,8 @@
 </template>
 
 <script>
-// pages/contract/contractList/contractTemplate/contractTemplate.js
-var api = require("../../../api/request.js");
+import { get } from '../../../api/request.js'
+import { get_templateList } from '../../../api/template.js'
 const utils = require("../../../utils/utils.js");
 import search from "../../../components/search/search";
 import searchHighlightTextView from "../../../components/searchHighlightTextView/searchHighlightTextView";
@@ -114,8 +114,8 @@ export default {
         pageIndex: this.pageIndex,
         pageSize: this.pageSize
       };
-      api.sendGet({
-        url: api.get_templateList,
+      get({
+        url: get_templateList,
         params: params,
         success: res => {
           let templateMessage = res.results;

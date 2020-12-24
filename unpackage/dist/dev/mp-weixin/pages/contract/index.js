@@ -130,53 +130,53 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-// authentication/auth-type/index.js
-var api = __webpack_require__(/*! ../../api/request */ 8);
-var app = getApp();var _default =
 
-{
-  data: function data() {
-    return {
-      items: [],
-      isLogin: true };
 
-  },
 
-  components: {},
-  props: {},
 
-  onLoad: function onLoad() {
-    this.setData({
-      isLogin: app.globalData.isLoginIn() });
 
-    console.log(this.isLogin);
-  },
 
-  onShow: function onShow() {
-    this.getContractDataAndCount();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../api/request.js */ 8);
+var _contract = __webpack_require__(/*! ../../api/contract.js */ 729); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var app = getApp();var _default = { data: function data() {return { items: [], isLogin: true };}, components: {}, props: {}, onLoad: function onLoad() {this.setData({ isLogin: app.globalData.isLoginIn() });console.log(this.isLogin);}, onShow: function onShow() {this.getContractDataAndCount();
   },
 
   onShareAppMessage: function onShareAppMessage() {},
@@ -257,8 +257,8 @@ var app = getApp();var _default =
     },
 
     getContractDataAndCount: function getContractDataAndCount() {var _this = this;
-      api.sendGet({
-        url: api.get_all_contract_list,
+      (0, _request.get)({
+        url: _contract.get_all_contract_list,
         success: function success(res) {
           _this.setData({
             items: res });

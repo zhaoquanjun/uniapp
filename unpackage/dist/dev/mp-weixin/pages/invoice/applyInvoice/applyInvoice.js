@@ -130,87 +130,87 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-// pages/invvoice/applyInvoice/applyInvoice.js
-var util = __webpack_require__(/*! ../../../utils/utils */ 35);
-var api = __webpack_require__(/*! ../../../api/request */ 8);var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../../components/sliderPicker/sliderPicker */ 522));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
+var _invoice = __webpack_require__(/*! ../../../api/invoice.js */ 731);function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+var util = __webpack_require__(/*! ../../../utils/utils */ 35);var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../../components/sliderPicker/sliderPicker */ 522));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 {
@@ -462,8 +462,8 @@ var api = __webpack_require__(/*! ../../../api/request */ 8);var sliderPicker = 
       uni.showLoading({
         title: '加载中' });
 
-      api.sendGet({
-        url: api.get_seller_companyName + '/' + this.id,
+      (0, _request.get)({
+        url: _invoice.get_seller_companyName + '/' + this.id,
         success: function success(res) {
           var sellerInfo = JSON.parse(JSON.stringify(_this.companyInfo));
           sellerInfo.sellerCompanyName = res;
@@ -488,8 +488,8 @@ var api = __webpack_require__(/*! ../../../api/request */ 8);var sliderPicker = 
       uni.showLoading({
         title: '加载中' });
 
-      api.sendGet({
-        url: api.get_invouce_info,
+      (0, _request.get)({
+        url: _invoice.get_invouce_info,
         success: function success(res) {
           if (res) {
             var companyInfo = JSON.parse(JSON.stringify(_this2.companyInfo));
@@ -688,8 +688,8 @@ var api = __webpack_require__(/*! ../../../api/request */ 8);var sliderPicker = 
         options.pushPhone = this.postvalue.pushPhone;
       }
 
-      api.sendPostBody({
-        url: api.apply_invoice,
+      (0, _request.postBody)({
+        url: _invoice.apply_invoice,
         params: options,
         success: function success(res) {
           console.log(res);

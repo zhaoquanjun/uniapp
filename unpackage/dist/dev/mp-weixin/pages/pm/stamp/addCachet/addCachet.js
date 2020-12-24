@@ -143,55 +143,55 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-// pages/pm/stamp/addCachet/addCachet.js
-var api = __webpack_require__(/*! ../../../../api/request.js */ 8);var _default =
 
-{
-  data: function data() {
-    return {
-      cachetColor: '',
-      topText: '',
-      centerText: '',
-      belowText: '',
-      dataMap: [{
-        title: '企业名称',
-        placeholder: '请输入企业名称' },
-      {
-        title: '中联',
-        placeholder: '请输入中联' },
-      {
-        title: '下联',
-        placeholder: '请输入下联' }],
 
-      colors: [{
-        color: '255,0,0',
-        rgb: '#FF0000' },
-      {
-        color: '0,0,0',
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../../api/request.js */ 8);
+var _seal = __webpack_require__(/*! ../../../../api/seal.js */ 726); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = { data: function data() {return { cachetColor: '', topText: '', centerText: '', belowText: '', dataMap: [{ title: '企业名称', placeholder: '请输入企业名称' }, { title: '中联', placeholder: '请输入中联' }, { title: '下联', placeholder: '请输入下联' }], colors: [{ color: '255,0,0', rgb: '#FF0000' }, { color: '0,0,0',
         rgb: '#000' },
       {
         color: '0,122,255',
@@ -256,8 +256,8 @@ var api = __webpack_require__(/*! ../../../../api/request.js */ 8);var _default 
       uni.showLoading({
         title: '绘制中' });
 
-      api.sendPost({
-        url: api.create_company_cachet_url,
+      (0, _request.post)({
+        url: _seal.create_company_cachet_url,
         params: {
           head: this.topText,
           center: this.centerText,

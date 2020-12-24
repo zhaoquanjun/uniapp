@@ -16,8 +16,8 @@
 </template>
 
 <script>
-// pages/costManage/giveWay/giveWay.js
-var api = require("../../../api/request");
+import { get, postBody } from '../../../api/request.js'
+import { share_card, cancel_hare_card } from '../../../api/cost.js'
 
 export default {
   data() {
@@ -195,8 +195,8 @@ export default {
         shareNum: this.count,
         shareMoney: this.money
       };
-      api.sendPostBody({
-        url: api.share_card,
+      postBody({
+        url: share_card,
         params: options,
         success: res => {
           console.log(res);
@@ -218,8 +218,8 @@ export default {
      * @name 取消分享
      */
     cancelShareFun(callback) {
-      api.sendGet({
-        url: api.cancel_hare_card + this.wxShareId,
+      get({
+        url: cancel_hare_card + this.wxShareId,
         success: res => {
           console.log(res);
         },

@@ -130,53 +130,53 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-// pages/costManage/cardDetail/cardDetail.js
-var api = __webpack_require__(/*! ../../../api/request */ 8);var _default =
 
-{
-  data: function data() {
-    return {
-      detailData: null };
 
-  },
 
-  components: {},
-  props: {},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
+var _cost = __webpack_require__(/*! ../../../api/cost.js */ 18); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = { data: function data() {return { detailData: null };}, components: {}, props: {}, /**
+                                                                                                   * 生命周期函数--监听页面加载
+                                                                                                   */onLoad: function onLoad(options) {this.getDetailDataFun(options.id || '');}, /**
+                                                                                                                                                                                   * 生命周期函数--监听页面初次渲染完成
+                                                                                                                                                                                   */onReady: function onReady() {},
 
   /**
-              * 生命周期函数--监听页面加载
-              */
-  onLoad: function onLoad(options) {
-    this.getDetailDataFun(options.id || '');
-  },
-
-  /**
-      * 生命周期函数--监听页面初次渲染完成
-      */
-  onReady: function onReady() {},
-
-  /**
-                                   * 生命周期函数--监听页面显示
-                                   */
+                                                                                                                                                                                                                      * 生命周期函数--监听页面显示
+                                                                                                                                                                                                                      */
   onShow: function onShow() {},
 
   /**
@@ -215,8 +215,8 @@ var api = __webpack_require__(/*! ../../../api/request */ 8);var _default =
       uni.showLoading({
         title: '加载中' });
 
-      api.sendGet({
-        url: api.get_balance_list,
+      (0, _request.get)({
+        url: _cost.get_balance_list,
         params: options,
         success: function success(res) {
           console.log(res);

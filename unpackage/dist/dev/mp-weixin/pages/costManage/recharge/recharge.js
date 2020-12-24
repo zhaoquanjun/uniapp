@@ -130,69 +130,69 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-// pages/costManage/recharge/recharge.js
-var api = __webpack_require__(/*! ../../../api/request */ 8);var _default =
 
-{
-  data: function data() {
-    return {
-      userName: '',
-      amountList: [{
-        label: 100,
-        value: 100 },
-      {
-        label: 500,
-        value: 500 },
-      {
-        label: 1000,
-        value: 1000 }],
 
-      valueStatus: 'select',
-      rechargeValue: 100,
-      total: 100.00,
-      selectActive: 100 };
 
-  },
 
-  components: {},
-  props: {},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
+var _cost = __webpack_require__(/*! ../../../api/cost.js */ 18); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = { data: function data() {return { userName: '', amountList: [{ label: 100, value: 100 }, { label: 500, value: 500 }, { label: 1000, value: 1000 }], valueStatus: 'select', rechargeValue: 100, total: 100.00, selectActive: 100 };}, components: {}, props: {}, /**
+                                                                                                                                                                                                                                                                                * 生命周期函数--监听页面加载
+                                                                                                                                                                                                                                                                                */onLoad: function onLoad(options) {},
 
   /**
-              * 生命周期函数--监听页面加载
-              */
-  onLoad: function onLoad(options) {},
-
-  /**
-                                        * 生命周期函数--监听页面初次渲染完成
-                                        */
+                                                                                                                                                                                                                                                                                                                        * 生命周期函数--监听页面初次渲染完成
+                                                                                                                                                                                                                                                                                                                        */
   onReady: function onReady() {},
 
   /**
@@ -291,8 +291,8 @@ var api = __webpack_require__(/*! ../../../api/request */ 8);var _default =
       uni.showLoading({
         title: '创建订单中' });
 
-      api.sendGet({
-        url: api.get_wx_pay_params + '?amount=' + this.rechargeValue + '&body=微信支付&rechargeType=1&goods=' + this.rechargeValue + '&goodsNum=1',
+      (0, _request.get)({
+        url: _cost.get_wx_pay_params + '?amount=' + this.rechargeValue + '&body=微信支付&rechargeType=1&goods=' + this.rechargeValue + '&goodsNum=1',
         success: function success(res) {
           console.log(res);
           _this.payByWxFun(res);

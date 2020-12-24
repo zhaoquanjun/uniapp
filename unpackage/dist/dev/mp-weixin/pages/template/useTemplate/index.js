@@ -130,264 +130,264 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-// pages/template/useTemplate/index.js
-var api = __webpack_require__(/*! ../../../api/request */ 8);
-var util = __webpack_require__(/*! ../../../utils/utils */ 35);var _default =
 
-{
-  data: function data() {
-    return {
-      addIcon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/contract/addsign.png',
-      fileIcon: "/static/images/template/file_icon.png",
-      templateData: null,
-      fileList: [{
-        name: '12312321' }],
 
-      // 文件列表
-      attachment: [],
-      // 附件列表
-      signEndTime: '',
-      fileEndTime: '',
-      id: '',
-      // 模版id
-      origin: '',
-      //来源
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
+var _template = __webpack_require__(/*! ../../../api/template.js */ 730); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var util = __webpack_require__(/*! ../../../utils/utils */ 35);var _default = { data: function data() {return { addIcon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/contract/addsign.png', fileIcon: "/static/images/template/file_icon.png", templateData: null, fileList: [{ name: '12312321' }], // 文件列表
+      attachment: [], // 附件列表
+      signEndTime: '', fileEndTime: '', id: '', // 模版id
+      origin: '', //来源
       operate: '' // 当前操作类
-      ,
-      index: "" };
-
-  },
-
-  components: {},
-  props: {},
-
-  /**
-              * 生命周期函数--监听页面加载
-              */
-  onLoad: function onLoad(options) {
-    var id = options.id;
-    var arr = [];
-    this.setData({
-      id: id,
-      origin: options.origin || '',
-      operate: options.operate || '',
-      index: options.index || -1 });
-
-
-    if (options.origin == 'person') {
-      arr.push({
-        userName: options.name,
-        userPhone: options.phone,
-        isNew: true,
-        relationType: 1,
-        personAuthStatus: options.personAuthStatus || -1 });
-
-    }
-
-    if (options.origin == 'company') {
-      arr.push({
-        companyName: options.companyName,
-        userName: options.name,
-        userPhone: options.phone,
-        isNew: true,
-        relationType: 2,
-        personAuthStatus: options.personAuthStatus || -1,
-        companyAuthStatus: options.companyAuthStatus || -1 });
-
-    }
-
-    this.getTemplateDetailFun(arr);
-  },
-
-  /**
-      * 生命周期函数--监听页面初次渲染完成
-      */
-  onReady: function onReady() {},
-
-  /**
-                                   * 生命周期函数--监听页面显示
-                                   */
-  onShow: function onShow() {},
-
-  /**
-                                 * 生命周期函数--监听页面隐藏
-                                 */
-  onHide: function onHide() {},
-
-  /**
-                                 * 生命周期函数--监听页面卸载
-                                 */
-  onUnload: function onUnload() {},
-
-  /**
-                                     * 页面相关事件处理函数--监听用户下拉动作
-                                     */
-  onPullDownRefresh: function onPullDownRefresh() {},
-
-  /**
-                                                       * 页面上拉触底事件的处理函数
-                                                       */
-  onReachBottom: function onReachBottom() {},
-
-  /**
-                                               * 用户点击右上角分享
-                                               */
-  onShareAppMessage: function onShareAppMessage() {},
-  methods: {
-    /**
-              * @name 获取模版详情
-              */
-    getTemplateDetailFun: function getTemplateDetailFun(newArr) {var _this = this;
-      uni.showLoading({
-        title: '加载中' });
-
-      api.sendGet({
-        url: api.get_template_detail + '?contractTemplateId=' + this.id,
-        success: function success(res) {
-          console.log(res);
-          res.templateSigns.forEach(function (it) {
-            // 处理印章类型展示 - 转化为文字 - 汉字
-            it.sealWords = _this.conversionSealsFun(it.sealTypes);
-
-            if (it.templateUserType == 1) {
-              var currentUser = uni.getStorageSync('currentUser');
-              var userName = uni.getStorageSync('userName');
-              var userPhone = uni.getStorageSync('userAccount');
-              it.companyName = currentUser.companyName;
-              it.userName = userName;
-              it.userPhone = userPhone;
-            }
-          }); // 拿到缓存的所有抄送方
-
-          if (_this.origin) {
-            var ccs = uni.getStorageSync('templateCcs');
-            var signs = uni.getStorageSync('templateSigns'); // 新增抄送方
-
-            _this.operate == 'add' && ccs.push(newArr[0]);
-            res.templateCcs = ccs; // 编辑参与方
-
-            if (_this.operate == 'edit') {
-              signs[_this.index].userName = newArr[0].userName;
-              signs[_this.index].userPhone = newArr[0].userPhone;
-              signs[_this.index].personAuthStatus = newArr[0].personAuthStatus;
-
-              if (_this.origin == 'company') {
-                signs[_this.index].companyName = newArr[0].companyName;
+      , index: "" };}, components: {}, props: {}, /**
+                                                   * 生命周期函数--监听页面加载
+                                                   */onLoad: function onLoad(options) {var id = options.id;var arr = [];this.setData({ id: id, origin: options.origin || '', operate: options.operate || '', index: options.index || -1 });if (options.origin == 'person') {arr.push({ userName: options.name, userPhone: options.phone, isNew: true, relationType: 1, personAuthStatus: options.personAuthStatus || -1 });}if (options.origin == 'company') {arr.push({ companyName: options.companyName, userName: options.name, userPhone: options.phone, isNew: true, relationType: 2, personAuthStatus: options.personAuthStatus || -1, companyAuthStatus: options.companyAuthStatus || -1 });}this.getTemplateDetailFun(arr);}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * 生命周期函数--监听页面初次渲染完成
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */onReady: function onReady() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * 生命周期函数--监听页面显示
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          */onShow: function onShow() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           * 生命周期函数--监听页面隐藏
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           */onHide: function onHide() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            * 生命周期函数--监听页面卸载
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            */onUnload: function onUnload() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 * 页面相关事件处理函数--监听用户下拉动作
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */onPullDownRefresh: function onPullDownRefresh() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        * 页面上拉触底事件的处理函数
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        */onReachBottom: function onReachBottom() {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * 用户点击右上角分享
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */onShareAppMessage: function onShareAppMessage() {}, methods: { /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         * @name 获取模版详情
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         */getTemplateDetailFun: function getTemplateDetailFun(newArr) {var _this = this;uni.showLoading({ title: '加载中' });(0, _request.get)({ url: _template.get_template_detail + '?contractTemplateId=' + this.id, success: function success(res) {console.log(res);res.templateSigns.forEach(function (it) {// 处理印章类型展示 - 转化为文字 - 汉字
+            it.sealWords = _this.conversionSealsFun(it.sealTypes);if (it.templateUserType == 1) {var currentUser = uni.getStorageSync('currentUser');var userName = uni.getStorageSync('userName');var userPhone = uni.getStorageSync('userAccount');it.companyName = currentUser.companyName;it.userName = userName;it.userPhone = userPhone;}}); // 拿到缓存的所有抄送方
+          if (_this.origin) {var ccs = uni.getStorageSync('templateCcs');var signs = uni.getStorageSync('templateSigns'); // 新增抄送方
+            _this.operate == 'add' && ccs.push(newArr[0]);res.templateCcs = ccs; // 编辑参与方
+            if (_this.operate == 'edit') {signs[_this.index].userName = newArr[0].userName;signs[_this.index].userPhone = newArr[0].userPhone;signs[_this.index].personAuthStatus = newArr[0].personAuthStatus;if (_this.origin == 'company') {signs[_this.index].companyName = newArr[0].companyName;
                 signs[_this.index].companyAuthStatus = newArr[0].companyAuthStatus;
               }
             }
@@ -594,8 +594,8 @@ var util = __webpack_require__(/*! ../../../utils/utils */ 35);var _default =
       uni.showLoading({
         title: '发起中' });
 
-      api.sendPostBody({
-        url: api.confirm_contract_launch_by_template,
+      (0, _request.postBody)({
+        url: _template.confirm_contract_launch_by_template,
         params: saveParams,
         success: function success(res) {
           setTimeout(function () {

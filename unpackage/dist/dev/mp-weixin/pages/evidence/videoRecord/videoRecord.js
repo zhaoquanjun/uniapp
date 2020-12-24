@@ -137,7 +137,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
-// newEvidence/videoRecord/videoRecord.js
 var app = getApp();var _default =
 
 {

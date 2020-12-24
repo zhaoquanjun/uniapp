@@ -48,7 +48,8 @@
 <script>
 // pages/pm/pmHome.js
 var app = getApp();
-var api = require("../../api/request.js");
+import { get, put } from '../../api/request.js'
+import { update_usericon } from '../../api/account.js'
 import icon from "../../components/icon/icon";
 import avatar from "../../components/avatar/avatar";
 import wechatUserInfo from "../../components/wechatUserInfo/wechatUserInfo";
@@ -248,8 +249,8 @@ export default {
       this.setData({
         wechatUserInfoShow: false
       });
-      api.sendPut({
-        url: api.update_usericon,
+      put({
+        url: update_usericon,
         params: {
           iconUrl: data.detail.avatarUrl,
           nickname: data.detail.nickName
@@ -259,33 +260,7 @@ export default {
         }
       });
     },
-    updateMessageCountFun: function () {
-      //获取等确认个数
-      var _this = this;
-
-      api.sendGet({
-        url: api.get_evidence_affirm_count,
-        params: {
-          status: 1,
-          contractId: ''
-        },
-        success: function (data) {
-          _this.setData({
-            waitAffirmCount: data.count
-          }); //变更合同个数
-
-
-          api.sendGet({
-            url: api.get_unread_message_count,
-            success: function (data) {
-              _this.setData({
-                unreadContractMessageCount: data.contractCount
-              });
-            }
-          });
-        }
-      });
-    },
+    
     authAction: function () {
       if (!this.isAuth) {
         uni.navigateTo({

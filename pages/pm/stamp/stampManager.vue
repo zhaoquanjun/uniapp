@@ -54,8 +54,9 @@
 </template>
 
 <script>
-// pages/pm/stamp/stampManager.js
-var api = require("../../../api/request.js");
+import { get, put, post, postBody } from '../../../api/request.js'
+import { person_painted_list, company_painted_list, delete_painted_url } from '../../../api/seal.js'
+import { get_user_info, companyList } from '../../../api/account.js'
 var app = getApp();
 import sliderPicker from "../../../components/sliderPicker/sliderPicker";
 
@@ -127,8 +128,8 @@ export default {
       isShowAdd: true,
       userList2: []
     });
-    api.sendGet({
-      url: api.get_user_info,
+    get({
+      url: get_user_info,
       success: res => {
         this.userList2.push(res);
         this.setData({
@@ -155,11 +156,11 @@ export default {
       if (this.selectedItem.userType == 1) {
         //个人
         console.log("手绘");
-        reuqestUrl = api.person_painted_list;
+        reuqestUrl = person_painted_list;
         createSignImageText = '创建手绘签名';
       } else {
         //企业
-        reuqestUrl = api.company_painted_list;
+        reuqestUrl = company_painted_list;
         createSignImageText = '创建企业公章';
       }
 
@@ -179,7 +180,7 @@ export default {
         header.company_id = this.selectedItem.companyId;
       }
 
-      api.sendPostBody({
+      postBody({
         url: reuqestUrl,
         header: header,
         params: {},
@@ -220,47 +221,7 @@ export default {
       });
     },
 
-    /**
-     * 设置默认
-     */
-    setDefaultStamp: function (e) {
-      var stamp = e.target.dataset.item;
-
-      var _this = this;
-
-      api.sendPut({
-        url: api.set_default_painted_url + "/" + stamp.signImageId,
-        success: function () {
-          var dataArray = _this.stampArray; //取消上个
-
-          for (var i = 0; i < dataArray.length; i++) {
-            if (dataArray[i].isDefault == 1) {
-              dataArray[i].isDefault = 0;
-            }
-
-            if (dataArray[i].signImageId == stamp.signImageId) {
-              dataArray[i].isDefault = 1;
-            }
-          }
-
-          _this.setData({
-            defaultStamp: stamp
-          });
-
-          _this.updateData(dataArray);
-        },
-
-        fail(msg) {
-          setTimeout(() => {
-            uni.showToast({
-              icon: 'none',
-              title: msg
-            });
-          }, 50);
-        }
-
-      });
-    },
+    
     addStampAction: function () {
       if (this.selectedItem.userType == '1') {
         uni.navigateTo({
@@ -286,8 +247,8 @@ export default {
         userList1: []
       });
 
-      api.sendGet({
-        url: api.companyList,
+      get({
+        url: companyList,
         success: function (res) {
           console.log(res);
           res.data.forEach(item => {
@@ -377,8 +338,8 @@ export default {
       uni.showLoading({
         title: '加载中'
       });
-      api.sendPut({
-        url: api.set_default_seal + '/' + this.curItem.signImageId,
+      put({
+        url: set_default_seal + '/' + this.curItem.signImageId,
         success: () => {
           this.requestStamp();
           setTimeout(() => {
@@ -432,8 +393,8 @@ export default {
               "token": userToken,
               "Content-Type": "application/json"
             };
-            api.sendPost({
-              url: api.delete_painted_url + '/99?signImageId=' + param.signImageId,
+            post({
+              url: delete_painted_url + '/99?signImageId=' + param.signImageId,
               params: param,
               header: header,
               success: () => {

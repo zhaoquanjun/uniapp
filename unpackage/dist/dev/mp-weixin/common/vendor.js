@@ -1983,21 +1983,40 @@ String.prototype.firstLogicChar = function () {
 
 /***/ 18:
 /*!****************************************************!*\
-  !*** /Users/icourt/Desktop/mycode/uni/api/home.js ***!
+  !*** /Users/icourt/Desktop/mycode/uni/api/cost.js ***!
   \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.update_count = exports.get_contract_uploadFile = exports.companyList = exports.get_user_info = void 0;var _request = __webpack_require__(/*! ./request */ 8);
-var get_user_info = _request.host + "/v1/account/user/info"; // 获取用户信息
-exports.get_user_info = get_user_info;
-var companyList = _request.host + "/v1/account/apply/auth/company/list"; // 企业列表
-exports.companyList = companyList;
-var get_contract_uploadFile = _request.host + "/v2/contract/uploadFile"; // 上传合同文件
-exports.get_contract_uploadFile = get_contract_uploadFile;
-var update_count = _request.host + "/v1/account/getCurrentUserOrCompanyInfo"; // 更新与自己相关合同数量信息
-exports.update_count = update_count;
+Object.defineProperty(exports, "__esModule", { value: true });exports.send_card_directive = exports.send_by_buy = exports.get_company_auth_status = exports.get_personal_auth_status = exports.cancel_hare_card = exports.share_card = exports.get_wx_pay_params = exports.buy_card_by_account = exports.get_card_list = exports.get_balance_list = exports.get_accout_info = exports.get_gift_card_status = exports.get_gift_card_from_wx = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var get_gift_card_from_wx = _request.host + '/v1/expense/receiveShareGiftCard/'; // 领取礼品卡
+exports.get_gift_card_from_wx = get_gift_card_from_wx;
+var get_gift_card_status = _request.host + '/v1/expense/transferGiftCardTimeout/'; // 获取礼品卡状态
+exports.get_gift_card_status = get_gift_card_status;
+var get_accout_info = _request.host + '/v1/account/getCurrentUserOrCompanyInfo'; // 获取账户信息（余额 礼品卡）
+exports.get_accout_info = get_accout_info;
+var get_balance_list = _request.host + '/v1/expense/consumptionDetailsList'; // 收入支出明细
+exports.get_balance_list = get_balance_list;
+var get_card_list = _request.host + '/v1/expense/couponList'; // 卡片列表
+exports.get_card_list = get_card_list;
+var buy_card_by_account = _request.host + '/v1/pay/account/pay'; // 账户余额购买
+exports.buy_card_by_account = buy_card_by_account;
+var get_wx_pay_params = _request.host + '/v1/pay/create/order'; // 获取微信支付参数
+exports.get_wx_pay_params = get_wx_pay_params;
+var share_card = _request.host + '/v1/expense/shareGiftCard'; // 获取分享礼品卡orderid
+exports.share_card = share_card;
+var cancel_hare_card = _request.host + '/v1/expense/cancelShareGiftCard/'; // 撤销分享
+exports.cancel_hare_card = cancel_hare_card;
+var get_personal_auth_status = _request.host + '/v1/account/user/getAuthUserInfoByNameAndPhone'; // 查询个人/经办人认证状态
+exports.get_personal_auth_status = get_personal_auth_status;
+var get_company_auth_status = _request.host + '/v1/account/company/getOneAuthCompanyByName'; // 查询企业认证状态
+exports.get_company_auth_status = get_company_auth_status;
+var send_by_buy = _request.host + '/v1/expense/batchTransfer'; // 礼品卡购买之后赠送
+exports.send_by_buy = send_by_buy;
+var send_card_directive = _request.host + '/v1/expense/transfer'; // 礼品卡直接赠送
+exports.send_card_directive = send_card_directive;
 
 /***/ }),
 
@@ -8765,11 +8784,34 @@ var FXQ = {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.decode_phone = exports.get_phone_wx_code = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+Object.defineProperty(exports, "__esModule", { value: true });exports.person_message = exports.company_message = exports.get_evidence_affirm_count = exports.update_usericon = exports.pc_login = exports.get_register_sms_code_url = exports.login_url = exports.update_count = exports.get_contract_uploadFile = exports.companyList = exports.get_user_info = exports.decode_phone = exports.get_phone_wx_code = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
 var get_phone_wx_code = _request.host + "/v1/account/get/phone"; // 获取用户注册信息以及手机号openid uniid 等信息
 exports.get_phone_wx_code = get_phone_wx_code;
 var decode_phone = _request.host + "/v1/account/decode/wxapp/phone"; // 获取手机以及微信信息
 exports.decode_phone = decode_phone;
+var get_user_info = _request.host + "/v1/account/user/info"; // 获取用户信息
+exports.get_user_info = get_user_info;
+var companyList = _request.host + "/v1/account/apply/auth/company/list"; // 企业列表
+exports.companyList = companyList;
+var get_contract_uploadFile = _request.host + "/v2/contract/uploadFile"; // 上传合同文件
+exports.get_contract_uploadFile = get_contract_uploadFile;
+var update_count = _request.host + "/v1/account/getCurrentUserOrCompanyInfo"; // 更新与自己相关合同数量信息
+exports.update_count = update_count;
+var login_url = _request.host + "/v1/account/login/wxapp"; // 微信登录
+exports.login_url = login_url;
+var get_register_sms_code_url = _request.host + "/v1/sms"; // 获取验证码
+exports.get_register_sms_code_url = get_register_sms_code_url;
+var pc_login = _request.host + '/v1/account/login'; // pc版登录
+exports.pc_login = pc_login;
+var update_usericon = _request.host + "/v1/account/update/icon";exports.update_usericon = update_usericon;
+
+var get_evidence_affirm_count = _request.host + "/v1/evidence/affirm/count";exports.get_evidence_affirm_count = get_evidence_affirm_count;
+
+var company_message = _request.host + "/v1/account/company/getOneAuthCompanyByName"; // 通过公司名称获取公司认证状态
+exports.company_message = company_message;
+var person_message = _request.host + "/v1/account/user/getAuthUserByNameAndPhone"; // 通过姓名电话获取个人认证状态
+exports.person_message = person_message;
 
 /***/ }),
 
@@ -9115,6 +9157,176 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.pickerProp
 
 /***/ }),
 
+/***/ 725:
+/*!******************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/api/authen.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.authPhone = exports.smsSend = exports.applyAuth = exports.authFace = exports.companyHandle = exports.companyAuth = exports.businessLicenseUpload = exports.createCompany = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var createCompany = _request.host + "/v1/account/create/company"; // 创建企业
+exports.createCompany = createCompany;
+var businessLicenseUpload = _request.host + "/v1/account/apply/auth/businessLicense"; // 上传营业执照解析数据
+exports.businessLicenseUpload = businessLicenseUpload;
+var companyAuth = _request.host + "/v1/account/apply/auth/company"; // 法人认证
+exports.companyAuth = companyAuth;
+var companyHandle = _request.host + "/v1/account/apply/auth/company/handle"; // 经办人认证
+exports.companyHandle = companyHandle;
+var authFace = _request.host + "/v1/account/auth/face"; // 人脸进行实名认证(只小程序用)
+exports.authFace = authFace;
+var applyAuth = _request.host + "/v1/account/apply/auth"; // 人脸进行实名认证(只小程序用)
+exports.applyAuth = applyAuth;
+var smsSend = _request.host + "/v1/sms/"; // 获取验证码
+exports.smsSend = smsSend;
+var authPhone = _request.host + "/v1/account/auth/phone"; // 个人手机号认证
+exports.authPhone = authPhone;
+
+/***/ }),
+
+/***/ 726:
+/*!****************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/api/seal.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.save_personnal_seal = exports.upload_painted_wx_url = exports.delete_painted_url = exports.set_default_seal = exports.company_painted_list = exports.person_painted_list = exports.upload_person_seal = exports.upload_company_seal = exports.create_seal = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var create_seal = _request.host + "/v1/pass/uploadImgByBase64String"; // 生成印章base64
+exports.create_seal = create_seal;
+var upload_company_seal = _request.host + "/v1/file/saveCompanySeal"; // 保存公司印章
+exports.upload_company_seal = upload_company_seal;
+var upload_person_seal = _request.host + "/v1/file/savePersonalSeal"; // 保存个人印章
+exports.upload_person_seal = upload_person_seal;
+var person_painted_list = _request.host + "/v1/file/getPersonalSealList"; // 获取个人印章列表
+exports.person_painted_list = person_painted_list;
+var company_painted_list = _request.host + "/v1/file/getEnterpriseSealList"; // 获取公司印章列表
+exports.company_painted_list = company_painted_list;
+var set_default_seal = _request.host + "/v1/file/painted/default"; // 设置为默认印章
+exports.set_default_seal = set_default_seal;
+var delete_painted_url = _request.host + "/v1/file/handleSignImageStatus"; // 删除印章
+exports.delete_painted_url = delete_painted_url;
+var upload_painted_wx_url = _request.host + "/v1/pass/uploadFile"; // 上传印章
+exports.upload_painted_wx_url = upload_painted_wx_url;
+var save_personnal_seal = _request.host + "/v1/file/savePersonalSeal"; // 保存印章
+exports.save_personnal_seal = save_personnal_seal;
+module.exports.create_company_cachet_url = _request.host + "/v1/file/create/cachet"; // 绘制公司印章
+
+/***/ }),
+
+/***/ 727:
+/*!**********************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/api/collection.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.get_pay_QrCode = exports.get_sell_pay_QrCode = exports.get_pay_template_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var get_pay_template_list = _request.host + '/v1/pay/template/list'; // 获取支付模版列表
+exports.get_pay_template_list = get_pay_template_list;
+var get_sell_pay_QrCode = _request.host + "/v1/pay/template/use"; // 获取模版发起收款码
+exports.get_sell_pay_QrCode = get_sell_pay_QrCode;
+var get_pay_QrCode = _request.host + "/v1/pay/info/createQrCodePost"; // 合同相关支付 - 销售即开票 - 收款
+exports.get_pay_QrCode = get_pay_QrCode;
+
+/***/ }),
+
+/***/ 728:
+/*!********************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/api/evidence.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.findContractSubject = exports.get_certificate_address = exports.evidence_detail = exports.saveChainToContract = exports.add_certificate_file = exports.get_upload_policy = exports.certificate_record_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var certificate_record_list = _request.host + "/v1/blockchain/certificateRecord/list"; // 出证记录列表(数据和签署)
+exports.certificate_record_list = certificate_record_list;
+var get_upload_policy = _request.host + "/v1/common/oss/policy"; // 获取 oss policy
+exports.get_upload_policy = get_upload_policy;
+var add_certificate_file = _request.host + "/v1/blockchain/dataStorage/add"; // 数据存证出证-文件类型
+exports.add_certificate_file = add_certificate_file;
+var saveChainToContract = _request.host + "/v1/contractEvidence/saveContractEvidence"; // 保存证据链关联合同
+exports.saveChainToContract = saveChainToContract;
+var evidence_detail = _request.host + "/v1/blockchain/certificateRecord/detail"; // 获取数据存证详情
+exports.evidence_detail = evidence_detail;
+var get_certificate_address = _request.host + "/v1/blockchain/cert/download"; // 出证下载地址
+exports.get_certificate_address = get_certificate_address;
+var findContractSubject = _request.host + "/v1/contractEvidence/findContractSubject"; // 获取合同关联列表
+exports.findContractSubject = findContractSubject;
+
+/***/ }),
+
+/***/ 729:
+/*!********************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/api/contract.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.get_all_contract_list = exports.get_contract_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var get_contract_list = _request.host + "/v2/contract/list";exports.get_contract_list = get_contract_list;
+
+var get_all_contract_list = _request.host + "/v2/contract/count"; // 获取所有合同列表数据
+exports.get_all_contract_list = get_all_contract_list;
+
+/***/ }),
+
+/***/ 730:
+/*!********************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/api/template.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.confirm_contract_launch_by_template = exports.get_template_detail = exports.get_templateList = exports.get_signal_sign_person_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var get_signal_sign_person_list = _request.host + "/v1/contacts/findContacts"; // 获取签署人列表 个人
+exports.get_signal_sign_person_list = get_signal_sign_person_list;
+var get_templateList = _request.host + '/v1/contract/template/templateList'; // 获取模版列表
+exports.get_templateList = get_templateList;
+var get_template_detail = _request.host + '/v1/contract/template/detail'; // 获取模版详情
+exports.get_template_detail = get_template_detail;
+var confirm_contract_launch_by_template = _request.host + "/v1/contract/template/launch"; // 通过合同模版发起
+exports.confirm_contract_launch_by_template = confirm_contract_launch_by_template;
+
+/***/ }),
+
+/***/ 731:
+/*!*******************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/api/invoice.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.get_pay_detail = exports.get_pay_info = exports.apply_invoice = exports.get_seller_companyName = exports.get_invouce_info = exports.get_invoice_data = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var get_invoice_data = _request.host + '/v1/invoice/findInvoiceList'; // 获取发票申请数据
+exports.get_invoice_data = get_invoice_data;
+var get_invouce_info = _request.host + '/v1/invoice/findInvoiceTitle'; // 获取发票信息
+exports.get_invouce_info = get_invouce_info;
+var get_seller_companyName = _request.host + '/v2/contract/findSponsor'; // 获取开票方信息
+exports.get_seller_companyName = get_seller_companyName;
+var apply_invoice = _request.host + '/v1/invoice/applyInvoice'; // 申请开票
+exports.apply_invoice = apply_invoice;
+var get_pay_info = _request.host + '/v2/contract/findPayInfoBySubjectId'; // 获取支付信息
+exports.get_pay_info = get_pay_info;
+var get_pay_detail = _request.host + '/v1/pay/info/payDetail'; // 获取发票详情信息
+exports.get_pay_detail = get_pay_detail;
+
+/***/ }),
+
 /***/ 8:
 /*!*******************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/api/request.js ***!
@@ -9304,7 +9516,6 @@ module.exports.applyAuth = host + "/v1/account/apply/auth"; //发送短信验证
 
 module.exports.smsSend = host + "/v1/sms/"; // 上传营业执照
 
-module.exports.businessLicenseUpload = host + "/v1/account/apply/auth/businessLicense"; //企业认证：创建企业
 
 module.exports.createCompany = host + "/v1/account/create/company"; // 企业法人直接认证
 
