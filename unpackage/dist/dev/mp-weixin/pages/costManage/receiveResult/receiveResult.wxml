@@ -1,0 +1,1 @@
+<web-view src="{{webSrc}}" data-event-opts="{{[['load',[['webLoadSuc',['$event']]]],['error',[['webLoadErr',['$event']]]]]}}" bindload="__e" binderror="__e"></web-view>

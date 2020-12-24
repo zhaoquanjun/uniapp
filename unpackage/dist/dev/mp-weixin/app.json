@@ -44,6 +44,7 @@
     "pages/invoice/nuonuoPay/nuonuoPay",
     "pages/collection/dirctCollection/dirctCollection",
     "pages/collection/dirctCollection/dirctCollectionLaunch/dirctCollectionLaunch",
+    "pages/collection/templateCollection/templateCollection",
     "pages/template/useTemplate/index",
     "pages/template/contractTemplate/contractTemplate",
     "pages/template/addPerson/index",

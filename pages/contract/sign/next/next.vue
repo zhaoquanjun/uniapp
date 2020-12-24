@@ -47,7 +47,7 @@
 				</view>
 			</view>
 
-			<view v-for="(item, index) in signMans" :key="index" class="list" v-if="isSort" :data-index="index" catchtouchstart="dragStart" catchtouchmove="dragMove" catchtouchend="dragEnd">
+			<view v-for="(item, index) in signMans" :key="index" class="list" v-if="isSort" :data-index="index" @touchstart="dragStart" @touchmove="dragMove" @touchend="dragEnd">
 				<view class="info" v-if="item.relationType=='2'">
 					<view style="display:flex; justify-content:space-between">
 						<view class="name-wrapper" style="display:flex;">

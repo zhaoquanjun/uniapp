@@ -40,12 +40,6 @@
 	</view>
 	<!--收款方式菜单 -->
 	<slider-picker ref="sliderPicker" :sliderList="sliderList" @selectWay="handleSliderOperateFun"></slider-picker>
-	<!-- <halfSlideItem isShow='{{isShowReceiptMethod}}'>
-		<view class='slide-menu_list'>
-			<view class="slide-menu_item" bindtap="templateReceipt">销售模版发起收款</view>
-			<view class='slide-menu_item' bindtap="independentReceipt">独立收款</view>
-		</view>
-	</halfSlideItem> -->
 	<button v-if="!userToken" class="login-btn" @tap.stop="login">立即登录</button>
 	<wechatUserInfo :show="wechatUserInfoShow" @getWechatUserInfo="getWechatUserInfo"></wechatUserInfo>
 </view>
@@ -200,7 +194,7 @@ export default {
           break;
 
         case 2:
-          pageURI = '/pages/invvoice/invoice';
+          pageURI = '/pages/invoice/invoice';
           break;
 
         case 3:
@@ -312,16 +306,17 @@ export default {
      * @param {*} e 事件源
      */
     handleSliderOperateFun(e) {
+			console.log(e, 222)
       switch (e.detail) {
         case 0:
           uni.navigateTo({
-            url: '/pages/home/templateCollection/templateReceipt?isTemplate=1'
+            url: '/pages/collection/templateCollection/templateCollection?isTemplate=1'
           });
           break;
 
         case 1:
           uni.navigateTo({
-            url: '/pages/collection/dirctCollection/receipt?isTemplate=0'
+            url: '/pages/collection/dirctCollection/dirctCollection?isTemplate=0'
           });
           break;
 

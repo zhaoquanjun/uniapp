@@ -2,7 +2,7 @@
 <view>
 <!--pages/pm/stamp/add/addStamp.wxml-->
 <canvas canvas-id="stampCanvas" id="stampCanvas" class="stamp-canvas" disable-scroll="false" @touchstart="touchStart" @touchmove="touchMove"> 
-    <image class="watermark" src="/static/pages/pm/stamp/add/watermark.png">在此签名</image>    
+    <image class="watermark" src="/static/pages/pm/stamp/add/watermark.png"></image>    
 </canvas>
 <canvas class="stamp-canvas copy-canvas" canvas-id="myCanvas" id="myCanvas" style="z-index: -11; opacity: 0; visiblity: hidden;"></canvas>
 <view class="operation-btn-view">
@@ -16,9 +16,9 @@
         <view class="one one-dot" style="background-color:#FE4E51"></view>
     </view>
     <view class="line"></view>
-    <image src="/static/pages/pm/stamp/add/pen.png" :class="'pen-btn pen-size ' + (pen=='4'?'active-pen':'')" @tap.stop="switchPenSize" data-pen="4"></image>
-    <image src="/static/pages/pm/stamp/add/pen1.png" :class="'pen-btn pen-size ' + (pen=='6'?'active-pen':'')" @tap.stop="switchPenSize" data-pen="6"></image>
-    <image src="/static/pages/pm/stamp/add/pen2.png" :class="'pen-btn pen-size ' + (pen=='8'?'active-pen':'')" @tap.stop="switchPenSize" data-pen="8"></image>
+    <image src="/static/pages/pm/stamp/add/pen.png" :class="'pen-btn pen-size ' + (pen=='4'?'active-pen':'')" @tap.stop="switchPen" data-pen="4"></image>
+    <image src="/static/pages/pm/stamp/add/pen1.png" :class="'pen-btn pen-size ' + (pen=='6'?'active-pen':'')" @tap.stop="switchPen" data-pen="6"></image>
+    <image src="/static/pages/pm/stamp/add/pen2.png" :class="'pen-btn pen-size ' + (pen=='8'?'active-pen':'')" @tap.stop="switchPen" data-pen="8"></image>
     <view class="clean-btn" @tap.stop="clearAction">
         <text class="clean-text">清除</text>
     </view>
@@ -100,12 +100,6 @@ export default {
       var pen = e.currentTarget.dataset.pen;
       this.setData({
         pen: pen
-      });
-    },
-
-    switchPenSize() {
-      this.setData({
-        penSizeShow: !this.penSizeShow
       });
     },
 

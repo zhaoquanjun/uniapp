@@ -180,7 +180,7 @@
     background: #FFFFFF;
     transform: translateY(-200%);
     /*弹框弹出距离，与弹框布局高度有关，如300%表示弹起距离为3倍弹窗高度*/
-    transition: all 0.1s ease-in;
+    transition: all 0.25s ease-in;
     z-index: 12;
     border-radius: 12rpx;
 }

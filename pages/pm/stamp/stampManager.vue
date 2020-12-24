@@ -37,7 +37,7 @@
 				<image src="https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/account/user.png" v-if="item.authStatus" class="userList-icon"></image>
 				<image src="https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/account/person.png" v-if="item.auth==0||item.auth==1" class="userList-icon"></image>
 				<view class="userList-name">
-					{{item.companyName}}{{item.name}}
+					{{item.companyName ? item.companyName : ''}}{{item.name}}
 				</view>
 				<view class="userList-state" v-if="item.authStatus" :style="'background:' + (item.authStatus== 1 ? 'rgba(62,180,168,0.1)' :item.authStatus== 2 ? '#FDF0E5':'#F4F4F4') + '; color:' + (item.authStatus== 1? '#3EB4A8' : item.authStatus== 2 ? '#ED6C00':'#919191')">
 					{{item.authStatus=='1'?"已认证":item.authStatus== 2?"认证中":"未认证"}}</view>
@@ -307,34 +307,10 @@ export default {
     },
     switchUser: function (e) {
       var item = e.currentTarget.dataset.item;
-
-      if (item.companyId) {
-        this.setData({
-          currentUser: item.companyName
-        });
-        let roleTypes = item.roleTypes;
-        let isShow = false;
-
-        if (roleTypes) {
-          if (roleTypes.indexOf("1") > -1 || roleTypes.indexOf("2") > -1 || roleTypes.indexOf("3") > -1) {
-            isShow = true;
-          } else {
-            isShow = false;
-          }
-
-          this.setData({
-            selectedItem: item,
-            isShowAdd: isShow
-          });
-        }
-      } else {
-        this.setData({
-          currentUser: item.name,
-          isShowAdd: true
-        });
-      }
-
       this.setData({
+				selectedItem: item,
+				isShowAdd: !item.companyId ? true : false,
+				currentUser: item.companyId ? item.companyName : item.name,
         showDialog: !this.showDialog
       });
       this.requestStamp();
@@ -355,7 +331,7 @@ export default {
         label: '取消',
         value: 'cancel'
       }];
-      if (e.currentTarget.dataset.item.status != 2 || e.currentTarget.dataset.item.isDefault == 1) list.splice(0, 1);
+      if (e.currentTarget.dataset.item.status != 2 || e.currentTarget.dataset.item.isDefault == 1) list = list.slice(2);
       this.setData({
         list: list
       });

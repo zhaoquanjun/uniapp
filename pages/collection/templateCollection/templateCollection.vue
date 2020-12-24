@@ -193,7 +193,7 @@ export default {
       const templateAmount = e.currentTarget.dataset.amount;
       const templateId = e.currentTarget.dataset.id;
       uni.navigateTo({
-        url: `/pages/collection/dirctCollection/receipt?templateName=${templateName}&templateAmount=${templateAmount}&isTemplate=${this.isTemplate}&templateId=${templateId}`
+        url: `/pages/collection/dirctCollection/dirctCollection?templateName=${templateName}&templateAmount=${templateAmount}&isTemplate=${this.isTemplate}&templateId=${templateId}`
       });
     },
 

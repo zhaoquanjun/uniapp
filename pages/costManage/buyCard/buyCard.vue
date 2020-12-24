@@ -273,7 +273,7 @@ export default {
       } else {
         setTimeout(() => {
           uni.showToast({
-            icon: 'icon',
+            icon: 'none',
             title: '购买金额不能小于10元'
           });
         }, 50);

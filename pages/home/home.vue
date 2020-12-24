@@ -3,14 +3,14 @@
 <view>
 	<view class="header-Bar">
 		<view class="layout">
-			<view class="currentName" @tap.stop="_handleLaunchUserSwitch">
+			<view class="currentName" @tap.stop="handleLaunchUserSwitchFun">
 				<view class="_currentName">
 					{{userName}}
 				</view>
 				<image class="select" src="https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/account/select.png"></image>
 			</view>
 			<view class="layout-middle"></view>
-			<view class="search" @tap.stop="_handleToSearchPage">
+			<view class="search" @tap.stop="handleToSearchPageFun">
 				<icon size="15" color="white" style="width:26rpx; height:26rpx; margin-left:44rpx;margin-top:18rpx" type="search"></icon>
 				<!--<input type="text" value="{{searchValue}}" value="请输入合同名称"/>-->
 				<view class="underSearch"></view>
@@ -50,7 +50,7 @@
 				切换身份
 				<view class="company">
 					<image class="company-icon" src="https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/account/company.png"></image>
-					<view class="company-add" @tap.stop="_handleCreateCompany">创建企业</view>
+					<view class="company-add" @tap.stop="handleCreateCompanyFun">创建企业</view>
 				</view>
 			</view>
 			<scroll-view scroll-y nowrap style="height:540rpx">

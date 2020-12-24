@@ -31,7 +31,7 @@
 		</view>
 	</view>
 
-	<button class="nextButton" style="background-color:#464646" v-if="ishighLight" @tap.stop="buttonClicked?'codeGenerate':''">{{nextText}}</button>
+	<button class="nextButton" style="background-color:#464646" v-if="ishighLight" @tap.stop="codeGenerate">{{nextText}}</button>
 	<button class="nextButton" v-if="!ishighLight" style="background:#B7B7B7">{{nextText}}</button>
 </view>
 </template>
@@ -167,7 +167,7 @@ export default {
     /**
      * @name 填写备注
      */
-    handleInputRemarkFun() {
+    handleInputRemarkFun(e) {
       this.setData({
         remark: e.detail.value
       });
@@ -219,7 +219,7 @@ export default {
         success: res => {
           uni.hideLoading({});
           uni.navigateTo({
-            url: '/pages/collection/dirctCollection/receiptLaunch/receiptLaunch?inputAmount= ' + inputAmount + '&receiptMessage=' + receiptMessage + '&qrCodeUrl=' + res.qrCodeUrl + '&isTemplate=' + isTemplate + '&url=' + res.url
+            url: '/pages/collection/dirctCollection/dirctCollectionLaunch/dirctCollectionLaunch?inputAmount= ' + inputAmount + '&receiptMessage=' + receiptMessage + '&qrCodeUrl=' + res.qrCodeUrl + '&isTemplate=' + isTemplate + '&url=' + res.url
           });
         },
         fail: function (err) {

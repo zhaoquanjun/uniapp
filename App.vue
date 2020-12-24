@@ -29,7 +29,7 @@ export default {
     // 1:没有加入任何企业 2:企业普通成员 3:企业管理员
     activeTab: 'sign',
     // 证据管理选中tab
-    env: 'prod',
+    env: 'dev',
     hasShowOverdueModal: false,
     //登陆成功保存全局数据
     loginSuccess: function (userToken, userId, userName, userType, isAuth, phone, avatar, memberCompany, memberType) {

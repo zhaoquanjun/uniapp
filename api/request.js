@@ -7,7 +7,7 @@ const env = {
   // production env
   prodHost: "https://shanqian.cn/anshouyin"
 };
-const prefix = 'prod'; // current env
+const prefix = 'dev'; // current env
 
 var host = env[prefix + 'Host'];
 

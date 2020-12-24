@@ -51,7 +51,7 @@ export default {
     handleSelectSliderValueFun(e) {
       let value = e.currentTarget.dataset.index;
 
-      if (value == this.properties.sliderList.length - 1) {
+      if (value == this.sliderList.length - 1) {
         this.hide();
         return false;
       }
