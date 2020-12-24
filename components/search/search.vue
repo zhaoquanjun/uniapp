@@ -66,7 +66,6 @@ export default {
       this.setData({
         inputValue: ''
       });
-      this.searchClicked();
       this.$emit('cancelClicked');
     }
   }

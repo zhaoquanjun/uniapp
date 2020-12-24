@@ -1,9 +1,9 @@
 <template>
 <view class="page">
-		<image src="https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/component/newadd.png" class="weui-btn_default--fixed" @tap.stop="open1"></image>
+		<image src="https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/component/newadd.png" class="weui-btn_default--fixed" @tap.stop="open"></image>
     <!-- <image ></image>
     </view> -->
-    <view class="fadeIn" v-if="dialog1">
+    <view class="fadeIn" v-if="wrapperShow">
         <view class="weui-mask" @tap="close"></view>
         <view :class="'weui-half-screen-dialog ' + (contentShow ? 'show' : '')">
             <view class="weui-half-screen-dialog__bd">
@@ -23,27 +23,7 @@
 export default {
   data() {
     return {
-      properties: {
-        isShow: {
-          type: Boolean,
-          value: false,
-          observer: function (newVal, oldVal) {
-            console.log(newVal, oldVal);
-
-            if (newVal !== oldVal) {
-              this.setData({
-                dialog1: newVal
-              });
-              setTimeout(() => {
-                this.setData({
-                  contentShow: true
-                });
-              });
-            }
-          }
-        }
-      },
-      dialog1: false,
+      wrapperShow: false,
       contentShow: false,
       menuList: [{
         type: 'image',
@@ -78,29 +58,26 @@ export default {
       });
       setTimeout(() => {
         this.setData({
-          dialog1: false
+          wrapperShow: false
         });
       }, 250);
     },
 
-    open1() {
+    open() {
       this.setData({
-        dialog1: true
+        wrapperShow: true
       });
       setTimeout(() => {
         this.setData({
           contentShow: true
         });
-      });
-      this.$emit('isShowChange', {
-        detail: this.data.dialog1
-      });
+      }, 250);
     },
 
     openMenu(e) {
       const app = getApp();
 
-      if (!app.isLoginIn()) {
+      if (!app.globalData.isLoginIn()) {
         uni.switchTab({
           url: '/pages/pm/pmHome'
         });
@@ -169,11 +146,11 @@ export default {
 
       if (type == 'video') {
         uni.navigateTo({
-          url: '/newEvidence/videoRecord/videoRecord?type=' + type
+          url: '/pages/evidence/videoRecord/videoRecord?type=' + type
         });
       } else {
         uni.navigateTo({
-          url: '/newEvidence/addCertificate/addCertificate?type=' + type
+          url: '/pages/evidence/addCertificate/addCertificate?type=' + type
         });
       }
     }

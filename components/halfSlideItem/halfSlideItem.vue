@@ -1,7 +1,7 @@
 <template>
 <!--components/halfSlideItem/halfSlideItem.wxml-->
 <view class="page">
-	<view class="page-container" v-if="dialog1">
+	<view class="page-container" v-if="wrapperShow">
 		<view class="weui-mask" @tap="close"></view>
 		<view :class="'weui-half-screen-dialog ' + (contentShow ? 'show' : '')">
 			<view class="weui-half-screen-dialog__bd">
@@ -18,35 +18,12 @@
 export default {
   data() {
     return {
-      dialog1: false,
+      wrapperShow: false,
       contentShow: false
     };
   },
 
   components: {},
-  props: {
-    isShow: {
-      type: Boolean,
-      default: false
-    }
-  },
-  watch: {
-    isShow: {
-      handler: function (newVal, oldVal) {
-        if (newVal !== oldVal) {
-          this.setData({
-            dialog1: newVal
-          });
-          setTimeout(() => {
-            this.setData({
-              contentShow: true
-            });
-          });
-        }
-      },
-      immediate: true
-    }
-  },
   methods: {
     close: function () {
       this.setData({
@@ -54,11 +31,21 @@ export default {
       });
       setTimeout(() => {
         this.setData({
-          dialog1: false,
-          isShow: false
+          wrapperShow: false
         });
       }, 250);
-    }
+    },
+    
+    open() {
+      this.setData({
+        wrapperShow: true
+      });
+      setTimeout(() => {
+        this.setData({
+          contentShow: true
+        });
+      }, 250);
+    },
   }
 };
 </script>

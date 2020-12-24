@@ -122,11 +122,11 @@ export default {
 
       if (type == 'video') {
         uni.navigateTo({
-          url: '/newEvidence/videoRecord/videoRecord?type=' + type
+          url: '/evidence/videoRecord/videoRecord?type=' + type
         });
       } else {
         uni.navigateTo({
-          url: '/newEvidence/addCertificate/addCertificate?type=' + type
+          url: '/evidence/addCertificate/addCertificate?type=' + type
         });
       }
     },

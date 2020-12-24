@@ -7,7 +7,7 @@
 <view class="list-wrapper_title">已选：{{ selectList.length }}</view>
 <scroll-view class="list-wrapper" scroll-y="true" scroll-anchoring="true" scroll-with-animation="true" @scrolltolower="scrollToBottom">
 	<checkbox-group @change="getSelectList">
-		<view v-for="(item, index) in contracts" :key="index" class="contract" @tap="pushToDetail" :data-index="index" :data-item="item">
+		<view v-for="(item, index) in contracts" :key="index" class="contract" :data-index="index" :data-item="item">
 			<view class="checkbox-wrap">
 				<checkbox :value="item.id">
 					<view class="checkbox-content">
@@ -39,7 +39,7 @@
 </scroll-view>
 <view class="empty-data placeholder-color" v-if="contracts.length <= 0">暂无数据</view>
 
-<button class="launchButton" :style="'background:' + (selectList.length > 0 ? '#464646' : '#B7B7B7')" @tap="saveContractEvidenceRel">确定添加</button>
+<button class="launchButton" @tap="saveContractEvidenceRel">确定添加</button>
 </view>
 </template>
 
@@ -49,7 +49,6 @@ var api = require("../../../../api/request.js");
 var utils = require("../../../../utils/utils.js");
 import search from "../../../../components/search/search";
 import searchHighlightTextView from "../../../../components/searchHighlightTextView/searchHighlightTextView";
-import halfSlideItem from "../../../../components/halfSlideItem/halfSlideItem";
 
 export default {
   data() {
@@ -67,8 +66,7 @@ export default {
 
   components: {
     search,
-    searchHighlightTextView,
-    halfSlideItem
+    searchHighlightTextView
   },
   props: {},
 

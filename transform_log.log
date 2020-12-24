@@ -209,7 +209,7 @@ Convert pages/collection/dirctCollection/receipt.vue success!
 Convert pages/searchResult/searchResult.vue success!
 Convert pages/pm/stamp/stampManager.vue success!
 Convert pages/home/templateCollection/templateReceipt.vue success!
-Convert component pages/newEvidence/certificateDetail/certificateDetail.vue.wxml success!
+Convert component pages/evidence/certificateDetail/certificateDetail.vue.wxml success!
 Convert pages/template/addCompany/index.vue success!
 Convert pages/template/addPerson/index.vue success!
 Convert pages/template/contractTemplate/contractTemplate.vue success!
@@ -237,10 +237,10 @@ Convert wxApp_uni/components/verifycode/verifycode.vue success!
 Convert wxApp_uni/components/videoPlay/videoPlay.vue success!
 Convert wxApp_uni/components/videoPlayer/videoPlayer.vue success!
 Convert wxApp_uni/components/wechatUserInfo/wechatUserInfo.vue success!
-Convert wxApp_uni/newEvidence/addCertificate/addCertificate.vue success!
-Convert wxApp_uni/newEvidence/certificateDetail/certificateDetail.vue success!
-Convert wxApp_uni/newEvidence/signCertificate/signCertificate.vue success!
-Convert wxApp_uni/newEvidence/videoRecord/videoRecord.vue success!
+Convert wxApp_uni/evidence/addCertificate/addCertificate.vue success!
+Convert wxApp_uni/evidence/certificateDetail/certificateDetail.vue success!
+Convert wxApp_uni/evidence/signCertificate/signCertificate.vue success!
+Convert wxApp_uni/evidence/videoRecord/videoRecord.vue success!
 Convert wxApp_uni/pages/contract/index.vue success!
 Convert wxApp_uni/pages/evidence/index.vue success!
 Convert wxApp_uni/pages/home/home.vue success!
@@ -503,7 +503,7 @@ Convert wxApp_uni/pages/collection/dirctCollection/receipt.vue success!
 Convert wxApp_uni/pages/searchResult/searchResult.vue success!
 Convert wxApp_uni/pages/pm/stamp/stampManager.vue success!
 Convert wxApp_uni/pages/home/templateCollection/templateReceipt.vue success!
-Convert component wxApp_uni/pages/newEvidence/certificateDetail/certificateDetail.vue.wxml success!
+Convert component wxApp_uni/pages/evidence/certificateDetail/certificateDetail.vue.wxml success!
 Convert wxApp_uni/pages/template/addCompany/index.vue success!
 Convert wxApp_uni/pages/template/addPerson/index.vue success!
 Convert wxApp_uni/pages/template/contractTemplate/contractTemplate.vue success!
@@ -987,16 +987,16 @@ Convert wxApp_uni/node_modules/vant-weapp/lib/common/style/hairline.css.wxss suc
 [命名替换]:  showTime  -->  showTimeFun    file: newEvidence/addCertificate/addCertificate.js
 [命名替换]:  _switchTabBar  -->  switchTabBarFun    file: newEvidence/addCertificate/addCertificate.js
 [命名替换]:  _switchTabBar  -->  switchTabBarFun    file: newEvidence/addCertificate/addCertificate.js
-[命名替换]:  _checkAllowUpload  -->  checkAllowUploadFun    file: wxApp_uni/newEvidence/addCertificate/addCertificate.js
-[命名替换]:  showTime  -->  showTimeFun    file: wxApp_uni/newEvidence/addCertificate/addCertificate.js
-[命名替换]:  _switchTabBar  -->  switchTabBarFun    file: wxApp_uni/newEvidence/addCertificate/addCertificate.js
-[命名替换]:  _switchTabBar  -->  switchTabBarFun    file: wxApp_uni/newEvidence/addCertificate/addCertificate.js
+[命名替换]:  _checkAllowUpload  -->  checkAllowUploadFun    file: wxApp_uni/evidence/addCertificate/addCertificate.js
+[命名替换]:  showTime  -->  showTimeFun    file: wxApp_uni/evidence/addCertificate/addCertificate.js
+[命名替换]:  _switchTabBar  -->  switchTabBarFun    file: wxApp_uni/evidence/addCertificate/addCertificate.js
+[命名替换]:  _switchTabBar  -->  switchTabBarFun    file: wxApp_uni/evidence/addCertificate/addCertificate.js
 [命名替换]:  _downloadPdf  -->  downloadPdfFun    file: newEvidence/certificateDetail/certificateDetail.js
 [命名替换]:  _downloadPdf  -->  downloadPdfFun    file: newEvidence/certificateDetail/certificateDetail.js
 [命名替换]:  _openPdf  -->  openPdfFun    file: newEvidence/certificateDetail/certificateDetail.js
-[命名替换]:  _downloadPdf  -->  downloadPdfFun    file: wxApp_uni/newEvidence/certificateDetail/certificateDetail.js
-[命名替换]:  _downloadPdf  -->  downloadPdfFun    file: wxApp_uni/newEvidence/certificateDetail/certificateDetail.js
-[命名替换]:  _openPdf  -->  openPdfFun    file: wxApp_uni/newEvidence/certificateDetail/certificateDetail.js
+[命名替换]:  _downloadPdf  -->  downloadPdfFun    file: wxApp_uni/evidence/certificateDetail/certificateDetail.js
+[命名替换]:  _downloadPdf  -->  downloadPdfFun    file: wxApp_uni/evidence/certificateDetail/certificateDetail.js
+[命名替换]:  _openPdf  -->  openPdfFun    file: wxApp_uni/evidence/certificateDetail/certificateDetail.js
 [命名替换]:  _conversionSeals  -->  conversionSealsFun    file: pages/template/useTemplate/index.js
 [命名替换]:  _checkSubmitInfos  -->  checkSubmitInfosFun    file: pages/template/useTemplate/index.js
 [命名替换]:  _checkSignRepeat  -->  checkSignRepeatFun    file: pages/template/useTemplate/index.js

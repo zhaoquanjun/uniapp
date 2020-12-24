@@ -6,7 +6,7 @@
       <text class="sub-tit">姓名</text>
       <input type="text" placeholder="请输入" :value="name" @input="handleInputUserNameFun" @blur="handleBlurUserNameFun"></input>
       <view :class="'suggest-list ' + (suggests ? 'show': '')">
-        <view v-for="(item, index) in suggests" :key="index" class="item" :data-item="item" @tap.stop="_handleSelectSuggest">{{item.name}} - {{item.phone}}</view>
+        <view v-for="(item, index) in suggests" :key="index" class="item" :data-item="item" @tap.stop="handleSelectSuggestFun">{{item.name}} - {{item.phone}}</view>
       </view>
     </view>
     <view class="list-item">

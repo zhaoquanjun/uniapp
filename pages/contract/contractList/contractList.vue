@@ -38,9 +38,8 @@
 <view class="empty-data placeholder-color" v-if="contracts.length <= 0">暂无相关合同</view>
 
 <!-- 证据链菜单 -->
-<halfSlideItem :isShow="evidenceMenuShow">
+<halfSlideItem ref="operate">
 	<view class="slide-menu_list">
-		<!-- <view class='slide-menu_item' bindtap="_handlePayContract" wx:if="{{payContract}}">支付合同</view> -->
 		<view class="slide-menu_item" @tap="handleApplyInvoiceFun" v-if="applyInvoice">申请开票</view>
 		<view class="slide-menu_item" @tap="handleViewPayDetailFun" v-if="payDetail">付款详情</view>
 		<view class="slide-menu_item" @tap="goChainListPage">查看证据链</view>
@@ -48,7 +47,7 @@
 	</view>
 </halfSlideItem>
 <!-- 添加证据链菜单 -->
-<halfSlideItem :isShow="addEvidenceMenuShow">
+<halfSlideItem ref="evidence">
 	<view class="slide-menu_list">
 		<view class="slide-menu_item" @tap="goPicChain" data-totype="image">图片存证</view>
 		<view class="slide-menu_item" @tap="goPicChain" data-totype="file">文件存证</view>
@@ -86,10 +85,6 @@ export default {
       contracts: [],
       timer: null,
       canScroll: true,
-      // 是否已经拿到了全部数据
-      evidenceMenuShow: false,
-      // 更多操作
-      addEvidenceMenuShow: false,
       // 添加证据链
       payDetail: false,
       // 付款详情
@@ -310,7 +305,7 @@ export default {
       if (this.timer) clearTimeout(this.timer);
       this.setData({
         searchParams: e.detail,
-        pageIndex: 1,
+        pageIndex: 0,
         timer: setTimeout(() => {
           this.getContractsFun(3);
         }, 300)
@@ -422,9 +417,10 @@ export default {
       if (!itemInfo.id) {
         return;
       }
+			
+			this.$refs.operate.open()
 
       this.setData({
-        evidenceMenuShow: true,
         activeItme: itemInfo,
         payDetail: itemInfo.hasPay,
         payContract: itemInfo.needPay,
@@ -440,11 +436,8 @@ export default {
       if (!this.activeItme.id) {
         return;
       }
-
-      this.setData({
-        evidenceMenuShow: false,
-        addEvidenceMenuShow: true
-      });
+			this.$refs.operate.close()
+			this.$refs.evidence.open()
     },
 
     /**
@@ -452,19 +445,17 @@ export default {
      */
     goPicChain(e) {
       var toType = e.currentTarget.dataset.totype;
-      this.setData({
-        evidenceMenuShow: false,
-        addEvidenceMenuShow: false
-      });
+			this.$refs.operate.close()
+			this.$refs.evidence.close()
 
       if (toType == 'video') {
         const queryString = "&searchType=" + this.searchType + "&pageTitle=" + this.title;
         uni.navigateTo({
-          url: "/newEvidence/videoRecord/videoRecord?type=" + toType + "&fromId=" + this.activeItme.id + queryString
+          url: "/evidence/videoRecord/videoRecord?type=" + toType + "&fromId=" + this.activeItme.id + queryString
         });
       } else {
         uni.navigateTo({
-          url: "/newEvidence/addCertificate/addCertificate?type=" + toType + "&fromId=" + this.activeItme.id
+          url: "/evidence/addCertificate/addCertificate?type=" + toType + "&fromId=" + this.activeItme.id
         });
       }
     },
@@ -473,10 +464,8 @@ export default {
      * @desc 从证据列表添加
      */
     addChainFromList() {
-      this.setData({
-        evidenceMenuShow: false,
-        addEvidenceMenuShow: false
-      });
+      this.$refs.operate.close()
+      this.$refs.evidence.close()
       uni.navigateTo({
         url: "/pages/contract/contractList/chainList/chainList?id=" + this.activeItme.id
       });
@@ -506,9 +495,7 @@ export default {
      * @desc 查看证据链
      */
     goChainListPage() {
-      this.setData({
-        evidenceMenuShow: false
-      });
+      this.$refs.operate.close()
       uni.navigateTo({
         url: "/pages/contract/contractList/chains/chains?id=" + this.activeItme.id
       });
@@ -518,9 +505,7 @@ export default {
      * @name 支付合同
      */
     handlePayContractFun() {
-      this.setData({
-        evidenceMenuShow: false
-      });
+			this.$refs.operate.close()
       uni.navigateTo({
         url: '/pages/invvoice/payContract/payContract?id=' + this.activeItme.id + '&receiveName=' + this.activeItme.initiatorName
       });
@@ -530,9 +515,7 @@ export default {
      * @name 申请开票
      */
     handleApplyInvoiceFun() {
-      this.setData({
-        evidenceMenuShow: false
-      });
+      this.$refs.operate.close()
       let url = '/pages/invvoice/applyInvoice/applyInvoice?id=' + this.activeItme.id + '&title=' + this.activeItme.contractTitle + '&searchType=' + this.searchType + '&pageTitle=' + this.title;
       const isCompay = uni.getStorageSync('currentUser').companyId;
       console.log(isCompay);
@@ -550,9 +533,7 @@ export default {
      * @name 支付详情
      */
     handleViewPayDetailFun() {
-      this.setData({
-        evidenceMenuShow: false
-      });
+      this.$refs.operate.close()
       uni.navigateTo({
         url: '/pages/invvoice/payDetail/payDetail?id=' + this.activeItme.id
       });

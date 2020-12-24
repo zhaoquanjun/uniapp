@@ -1,0 +1,1 @@
+{"version":3,"sources":["uni-app:///main.js"],"names":["createPage","Page"],"mappings":";;;;;;;;;;kDAAA;AACA;AACA,iP;AACAA,UAAU,CAACC,uBAAD,CAAV,C","file":"pages/evvidence/addCertificate/addCertificate.js","sourcesContent":["import 'uni-pages';\nimport Vue from 'vue'\nimport Page from './pages/evvidence/addCertificate/addCertificate.vue'\ncreatePage(Page)"],"sourceRoot":""}

@@ -51,7 +51,7 @@
 <mp-halfScreenDialog ref="mphalfScreenDialog"></mp-halfScreenDialog>
 
 <!-- 证据链菜单 -->
-<halfSlideItem :isShow="evidenceMenuShow">
+<halfSlideItem ref="operate">
 	<view class="slide-menu_list">
 		<view :class="'slide-menu_item ' + ( activeItme.status == 1 ? '' : 'noUseSlide' )" @tap="previewContractChain">查看存证证书</view>
 		<view class="slide-menu_item" @tap="addChainFromList">关联合同</view>
@@ -98,7 +98,6 @@ export default {
       pageSize: 10,
       isTriggered: false,
       // 是否容器下拉刷新
-      evidenceMenuShow: false,
       activeItme: null,
       canDownload: "",
       pdfUrl: ""
@@ -255,7 +254,7 @@ export default {
     viewDetailFun(e) {
       const id = e.currentTarget.dataset.id;
       const type = e.currentTarget.dataset.type;
-      const url = '/newEvidence/certificateDetail/certificateDetail?id=' + id + '&type=' + type;
+      const url = '/evidence/certificateDetail/certificateDetail?id=' + id + '&type=' + type;
       uni.navigateTo({
         url: url
       });
@@ -266,30 +265,20 @@ export default {
      */
     showChainsMenu(arg) {
       let itemInfo = arg.currentTarget.dataset.activeitem;
-      const type = itemInfo.filePath.slice(itemInfo.filePath.lastIndexOf('.') + 1);
-      const canDownloadList = ['png', 'jpeg', 'jpg', 'mp4', 'mov', 'avi', 'rmvb', 'flv'];
-      let flag = false;
-
-      if (canDownloadList.indexOf(type.toLowerCase()) == -1 || itemInfo.evidenceType == 1) {
-        flag = false;
-      } else {
-        flag = true;
-      }
 
       this.setData({
-        evidenceMenuShow: true,
         activeItme: itemInfo,
-        canDownload: flag
+        canDownload: (itemInfo.fileType == '1' || itemInfo.fileType == '4') && itemInfo.evidenceType == 2 ? true : false
       });
+			
+			this.$refs.operate.open()
     },
 
     /**
      * @desc 从证据列表添加
      */
     addChainFromList() {
-      this.setData({
-        evidenceMenuShow: false
-      });
+			this.$refs.operate.close()
       uni.navigateTo({
         url: "/pages/contract/contractList/addContractList/addContractList?id=" + this.activeItme.id
       });
@@ -310,9 +299,7 @@ export default {
       }); // 下载成功 打开pdf
 
       that.downloadPdfFun(url, 1);
-      this.setData({
-        evidenceMenuShow: false
-      });
+      this.$refs.operate.close()
     },
 
     // 打开pdf文件
@@ -357,9 +344,7 @@ export default {
      * @name 下载源文件
      */
     handleStartDownloadFun() {
-      this.setData({
-        evidenceMenuShow: false
-      });
+      this.$refs.operate.close()
       this.gettingAuth(this.activeItme.filePath);
     },
 

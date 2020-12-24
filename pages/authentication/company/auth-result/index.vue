@@ -107,7 +107,7 @@ export default {
     },
 
     goSign() {
-      app.updateUserInfo(function () {
+      app.globalData.updateUserInfo(function () {
         uni.reLaunch({
           url: '/pages/home/home'
         });

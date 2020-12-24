@@ -6,7 +6,7 @@
 </view>
 
 <scroll-view class="list-wrapper" scroll-y="true" scroll-anchoring="true" scroll-with-animation="true" @scrolltolower="scrollToBottom">
-	<view v-for="(item, index) in contracts" :key="index" class="contract" @tap="pushToDetail" :data-index="index" :data-item="item">
+	<view v-for="(item, index) in contracts" :key="index" class="contract" :data-index="index" :data-item="item">
 		<view class="contract-introduce">
 			<view class="contract-title">
 				<searchHighlightTextView highlight="highlight" :text="item.name" :keyword="searchParams"></searchHighlightTextView>
@@ -41,14 +41,14 @@
 </view>
 
 <!-- 证据链菜单 -->
-<halfSlideItem :isShow="evidenceMenuShow">
+<halfSlideItem ref="operate">
 	<view class="slide-menu_list">
 		<view class="slide-menu_item" @tap="goChainDetail">查看证据详情</view>
 		<view class="slide-menu_item" @tap="deleteContractEvidenceRelWarn">取消关联</view>
 	</view>
 </halfSlideItem>
 <!-- 添加证据链菜单 -->
-<halfSlideItem :isShow="addEvidenceMenuShow">
+<halfSlideItem ref="evidencate">
 	<view class="slide-menu_list">
 		<view class="slide-menu_item" @tap="goPicChain" data-totype="image">图片存证</view>
 		<view class="slide-menu_item" @tap="goPicChain" data-totype="file">文件存证</view>
@@ -78,8 +78,6 @@ export default {
       timer: null,
       canScroll: true,
       queryId: null,
-      evidenceMenuShow: false,
-      addEvidenceMenuShow: false,
       activeItme: {}
     };
   },
@@ -247,9 +245,9 @@ export default {
     showMenu(arg) {
       let itemInfo = arg.currentTarget.dataset.activeitem;
       this.setData({
-        evidenceMenuShow: true,
         activeItme: itemInfo
       });
+			this.$refs.operate.open()
     },
 
     /**
@@ -287,9 +285,7 @@ export default {
      */
     deleteContractEvidenceRelWarn() {
       var that = this;
-      this.setData({
-        evidenceMenuShow: false
-      });
+			this.$refs.operate.close()
       uni.showModal({
         title: '提示',
         content: '取消关联操作不可撤回，是否确认取消关联吗？',
@@ -307,12 +303,10 @@ export default {
      * @desc 查看证据详情
      */
     goChainDetail() {
-      this.setData({
-        evidenceMenuShow: false
-      });
+			this.$refs.operate.close()
       let queryStr = '?id=' + this.activeItme.id + '&type=' + (this.activeItme.evidenceType == 2 ? 'data' : 'sign');
       uni.redirectTo({
-        url: '/newEvidence/certificateDetail/certificateDetail' + queryStr
+        url: '/pages/evidence/certificateDetail/certificateDetail' + queryStr
       });
     },
 
@@ -320,9 +314,7 @@ export default {
      * @desc 添加证据
      */
     addChainBtn() {
-      this.setData({
-        addEvidenceMenuShow: true
-      });
+			this.$refs.operate.open()
     },
 
     /**
@@ -330,18 +322,16 @@ export default {
      */
     goPicChain(e) {
       var toType = e.currentTarget.dataset.totype;
-      this.setData({
-        evidenceMenuShow: false,
-        addEvidenceMenuShow: false
-      });
+			this.$refs.operate.close()
+			this.$refs.evidence.close()
 
       if (toType == 'video') {
         uni.navigateTo({
-          url: "/newEvidence/videoRecord/videoRecord?type=" + toType + "&fromId=" + this.queryId + "&from=1"
+          url: "/evidence/videoRecord/videoRecord?type=" + toType + "&fromId=" + this.queryId + "&from=1"
         });
       } else {
         uni.navigateTo({
-          url: "/newEvidence/addCertificate/addCertificate?type=" + toType + "&fromId=" + this.queryId
+          url: "/evidence/addCertificate/addCertificate?type=" + toType + "&fromId=" + this.queryId
         });
       }
     },
@@ -350,10 +340,8 @@ export default {
      * @desc 从证据列表添加
      */
     addChainFromList() {
-      this.setData({
-        evidenceMenuShow: false,
-        addEvidenceMenuShow: false
-      });
+			this.$refs.operate.close()
+			this.$refs.evidence.close()
       uni.navigateTo({
         url: "/pages/contract/contractList/chainList/chainList?id=" + this.queryId
       });

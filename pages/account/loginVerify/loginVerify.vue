@@ -98,7 +98,7 @@ export default {
           //存储用户数据
           console.log(data);
           var app = getApp();
-          app.loginSuccess(data.token, data.userId, data.name, data.userType, data.auth, data.phone, data.icon, data.joinCompany, data.userCompanyType);
+          app.globalData.loginSuccess(data.token, data.userId, data.name, data.userType, data.auth, data.phone, data.icon, data.joinCompany, data.userCompanyType);
           uni.hideLoading(); //判断登陆来源
 
           var originType = _this.originType;

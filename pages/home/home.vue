@@ -29,7 +29,7 @@
 		</view>
 	</view>
 <!-- warnSign -->
-	<view class="launchButton" @tap.stop="_handleLaunchContract">
+	<view class="launchButton" @tap.stop="handleLaunchContractFun">
 		从聊天文件发起签署
 	</view>
 	<!-- 存证部分 -->
@@ -296,7 +296,7 @@ export default {
 
       if (app.globalData.checkHasAuth()) {
         uni.navigateTo({
-          url: '/pages/contract/contractList/contract?searchType=2&pageTitle=待自己处理'
+          url: '/pages/contract/contractList/contractList?searchType=2&pageTitle=待自己处理'
         });
       }
     },

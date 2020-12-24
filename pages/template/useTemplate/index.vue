@@ -7,7 +7,7 @@
   </view>
   <view class="title">合同文件</view>
   <view class="file-list">
-    <view v-for="(item, index) in fileList" :key="index" class="file-item" :data-item="item" @tap.stop="_handlePreviewFile">
+    <view v-for="(item, index) in fileList" :key="index" class="file-item" :data-item="item" @tap.stop="handlePreviewFileFun">
       <view class="l-wrapper">
         <view class="icon">
           <image :src="fileIcon" mode="aspectFit"></image>
@@ -19,7 +19,7 @@
   </view>
   <view class="title">合同附件</view>
   <view class="file-list">
-    <view v-for="(item, index) in attachment" :key="index" class="file-item" :data-item="item" @tap.stop="_handlePreviewFile">
+    <view v-for="(item, index) in attachment" :key="index" class="file-item" :data-item="item" @tap.stop="handlePreviewFileFun">
       <view class="l-wrapper">
         <view class="icon">
           <image :src="fileIcon" mode="aspectFit"></image>

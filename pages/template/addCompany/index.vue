@@ -6,14 +6,14 @@
       <text class="sub-tit">公司</text>
       <input type="text" placeholder="请输入" :value="companyName" @input="handleInputCompanyNameFun" @blur="handleBlurCompanyNameFun"></input>
       <view :class="'suggest-list ' + (companySuggests ? 'show': '')">
-        <view v-for="(item, index) in companySuggests" :key="index" class="item" :data-item="item" @tap.stop="_handleSelectCompanySuggest">{{item.name}} - {{item.phone}}</view>
+        <view v-for="(item, index) in companySuggests" :key="index" class="item" :data-item="item" @tap.stop="handleSelectCompanySuggestFun">{{item.name}} - {{item.phone}}</view>
       </view>
     </view>
     <view class="list-item">
       <text class="sub-tit">经办人姓名</text>
       <input type="text" placeholder="请输入" :value="name" @input="handleInputUserNameFun" @blur="handleBlurUserNameFun"></input>
       <view :class="'suggest-list ' + (suggests ? 'show': '')">
-        <view v-for="(item, index) in suggests" :key="index" class="item" :data-item="item" @tap.stop="_handleSelectPersonSuggest">{{item.name}} - {{item.phone}}</view>
+        <view v-for="(item, index) in suggests" :key="index" class="item" :data-item="item" @tap.stop="handleSelectPersonSuggestFun">{{item.name}} - {{item.phone}}</view>
       </view>
     </view>
     <view class="list-item">

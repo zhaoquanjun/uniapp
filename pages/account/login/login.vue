@@ -5,7 +5,7 @@
 <text class="login-title">{{loginTitle}}</text>
 
  <button class="btn" v-if="!isBindOpenId" open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">{{quickLoginTitle}}</button>
- <button class="btn" v-if="isBindOpenId" @tap.stop="_handleLoginByPhone">{{quickLoginTitle}}</button>
+ <button class="btn" v-if="isBindOpenId" @tap.stop="handleLoginByPhoneFun">{{quickLoginTitle}}</button>
 
  <view class="mark-view" :hidden="!isShowMark">
     <view class="mark-content-view global-shadow">

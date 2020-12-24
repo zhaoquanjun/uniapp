@@ -211,7 +211,6 @@ export default {
      */
     checkHasAuth() {
       console.log(this.isAuth);
-
       if (!this.isAuth) {
         // 未认证
         const companyId = uni.getStorageSync('currentUser').companyId;
