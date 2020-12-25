@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "申请开票",
+  "pullRefresh": true,
+  "titleBarColor": "#333333",
+  "usingComponents": {
+    "slider-picker": "/components/sliderPicker/sliderPicker"
+  }
+}

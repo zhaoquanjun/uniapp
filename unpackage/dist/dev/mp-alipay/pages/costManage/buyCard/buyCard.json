@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "购买礼品卡",
+  "pullRefresh": true,
+  "titleBarColor": "#ffffff",
+  "usingComponents": {
+    "slider-picker": "/components/sliderPicker/sliderPicker"
+  }
+}

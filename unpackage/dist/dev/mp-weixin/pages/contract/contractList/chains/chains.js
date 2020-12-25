@@ -468,7 +468,7 @@ var utils = __webpack_require__(/*! ../../../../utils/utils.js */ 35);var search
 
       if (toType == 'video') {
         uni.navigateTo({
-          url: "/evidence/videoRecord/videoRecord?type=" + toType + "&fromId=" + this.queryId + "&from=1" });
+          url: "/pages/evidence/videoRecord/videoRecord?type=" + toType + "&fromId=" + this.queryId + "&from=1" });
 
       } else {
         uni.navigateTo({

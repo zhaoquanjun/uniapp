@@ -293,6 +293,13 @@ var utils = __webpack_require__(/*! ../../utils/utils.js */ 35);var search = fun
 
         break;
 
+      case 7:
+        return {
+          name: '填写中',
+          bg: 'red' };
+
+        break;
+
       default:
         break;}
 
@@ -303,7 +310,6 @@ var utils = __webpack_require__(/*! ../../utils/utils.js */ 35);var search = fun
       * @param {*} e 事件源 
       */
   inputSearchFun: function inputSearchFun(e) {var _this = this;
-    console.log(e);
     this.setData({
       keyName: e.detail });
 
@@ -320,8 +326,9 @@ var utils = __webpack_require__(/*! ../../utils/utils.js */ 35);var search = fun
       */
   cancleSearchFun: function cancleSearchFun() {
     this.setData({
-      contracts: [] });
+      pageIndex: 0 });
 
+    this.getContractsFun();
   },
 
   /**
@@ -344,12 +351,9 @@ var utils = __webpack_require__(/*! ../../utils/utils.js */ 35);var search = fun
       success: function success(res) {
         console.log(res);
         var contracts = res.data;
-        res.data.map(function (it) {
-          return;
-        });
-        self.parseDataFun(contracts);
         contracts.map(function (it) {
           var result = self.getCurrentContractStatusFun(it.status);
+          it.gmtModified = self.formatTimeConvert(it.gmtModified, 0);
           it.statusText = result.name;
           it.bgStyle = result.bg;
         }), self.setData({
@@ -361,7 +365,7 @@ var utils = __webpack_require__(/*! ../../utils/utils.js */ 35);var search = fun
       } });
 
   },
-  parseDataFun: function parseDataFun(data) {var _this2 = this;
+  formatDateFun: function formatDateFun(data) {var _this2 = this;
     data.forEach(function (e) {
       e.gmtModified = _this2.formatTimeConvert(e.gmtModified, 0);
     });

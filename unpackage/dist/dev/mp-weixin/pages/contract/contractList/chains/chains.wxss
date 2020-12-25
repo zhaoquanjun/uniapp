@@ -1,4 +1,4 @@
-/* pages/chains/chains.wxss */
+
 page {
   position: relative;
   padding: 0rpx 48rpx;

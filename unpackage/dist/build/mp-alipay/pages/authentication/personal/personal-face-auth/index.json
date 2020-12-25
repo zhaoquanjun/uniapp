@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "个人认证",
+  "pullRefresh": true,
+  "titleBarColor": "#ffffff",
+  "usingComponents": {
+    "modal": "/components/modal/modal"
+  }
+}

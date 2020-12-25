@@ -592,11 +592,11 @@ var utils = __webpack_require__(/*! ../../../utils/utils.js */ 35);var search = 
       if (toType == 'video') {
         var queryString = "&searchType=" + this.searchType + "&pageTitle=" + this.title;
         uni.navigateTo({
-          url: "/evidence/videoRecord/videoRecord?type=" + toType + "&fromId=" + this.activeItme.id + queryString });
+          url: "/pages/evidence/videoRecord/videoRecord?type=" + toType + "&fromId=" + this.activeItme.id + queryString });
 
       } else {
         uni.navigateTo({
-          url: "/evidence/addCertificate/addCertificate?type=" + toType + "&fromId=" + this.activeItme.id });
+          url: "/pages/evidence/addCertificate/addCertificate?type=" + toType + "&fromId=" + this.activeItme.id });
 
       }
     },

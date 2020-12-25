@@ -149,38 +149,50 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
+
 var _request = __webpack_require__(/*! ../../../api/request */ 8);
-var _account = __webpack_require__(/*! ../../../api/account */ 58);var _methods;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
-
-{
-  data: function data() {
-    return {
-      wxCode: '',
-      openId: '',
-      unionId: '',
-      loginPhone: '',
-      quickLoginTitle: "微信账号快速登陆",
-      loginTitle: '闪签快捷登陆',
-      isShowMark: false,
-      isBindOpenId: false,
-      bandPhone: '' };
-
-  },
-
-  components: {},
-  props: {},
-  onLoad: function onLoad(options) {},
-  onShow: function onShow() {
-    this.getRegisterStatusFun();
-  },
-
-  onShareAppMessage: function onShareAppMessage() {},
-
-  methods: (_methods = {
+var _account = __webpack_require__(/*! ../../../api/account */ 58); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = { data: function data() {return { wxCode: '', openId: '', unionId: '', loginPhone: '', isShowMark: false, isBindOpenId: false, bandPhone: '' };}, components: {}, props: {}, onLoad: function onLoad(options) {}, onShow: function onShow() {this.getRegisterStatusFun();}, onShareAppMessage: function onShareAppMessage() {}, methods: { omerror: function omerror(e) {console.log(e, 'error111');
+    },
+    onAuthError: function onAuthError(e) {
+      console.log(e, 'error');
+    },
     /**
-                          * @name 微信登陆
-                          * @param {*} callback 回调
-                          */
+        * @name 微信登陆
+        * @param {*} callback 回调
+        */
     loginWxFun: function loginWxFun(callback) {var _this = this;
       uni.login({
         success: function success(res) {
@@ -276,31 +288,11 @@ var _account = __webpack_require__(/*! ../../../api/account */ 58);var _methods;
         }
       }
     },
-
-    /**
-        * @name 通过按钮获取参数，请求后台获取手机号以及微信信息
-        */
-    getPhoneNumber: function getPhoneNumber(e) {var _this5 = this;
-      if ("getPhoneNumber:ok" != e.detail.errMsg) {
-        setTimeout(function () {
-          uni.showToast({
-            icon: 'none',
-            title: '快捷登陆失败' });
-
-        }, 50);
-        return;
-      }
-
-      this.loginWxFun(function () {
-        _this5.getPhoneFun(e);
-      });
-    },
-
     /**
         * @name 获取手机号以及微信信息
         * @param {*} e 
         */
-    getPhoneFun: function getPhoneFun(e) {var _this6 = this;
+    getPhoneFun: function getPhoneFun(e) {var _this5 = this;
       (0, _request.post)({
         url: _account.decode_phone,
         params: {
@@ -311,7 +303,7 @@ var _account = __webpack_require__(/*! ../../../api/account */ 58);var _methods;
 
         success: function success(data) {
           //判断用户是否已经注册
-          _this6.setData({
+          _this5.setData({
             bandPhone: data.phone,
             loginPhone: data.phone,
             openId: data.openId,
@@ -331,48 +323,49 @@ var _account = __webpack_require__(/*! ../../../api/account */ 58);var _methods;
           }, 50);
         } });
 
-    } }, _defineProperty(_methods, "getPhoneNumber", function getPhoneNumber(
+    },
 
+    /**
+        * @name 通过按钮获取参数，请求后台获取手机号以及微信信息
+        */
+    getPhoneNumber: function getPhoneNumber(e) {var _this6 = this;
+      console.log(e, 9999);
+      if ("getPhoneNumber:ok" != e.detail.errMsg) {
+        setTimeout(function () {
+          uni.showToast({
+            icon: 'none',
+            title: '快捷登陆失败' });
 
+        }, 50);
+        return;
+      }
 
+      this.loginWxFun(function () {
+        _this6.getPhoneFun(e);
+      });
+    },
 
-  e) {var _this7 = this;
-    if ("getPhoneNumber:ok" != e.detail.errMsg) {
-      setTimeout(function () {
-        uni.showToast({
-          icon: 'none',
-          title: '快捷登陆失败' });
+    bindKeyInput: function bindKeyInput(e) {
+      var inputValue = e.detail.value;
+      console.log(inputValue.length);
 
-      }, 50);
-      return;
-    }
+      if (inputValue.length > 11) {
+        return inputValue.substr(0, 11);
+      }
 
-    this.loginWxFun(function () {
-      _this7.getPhoneFun(e);
-    });
-  }), _defineProperty(_methods, "bindKeyInput",
+      this.setData({
+        loginPhone: e.detail.value });
 
-  function bindKeyInput(e) {
-    var inputValue = e.detail.value;
-    console.log(inputValue.length);
+    },
 
-    if (inputValue.length > 11) {
-      return inputValue.substr(0, 11);
-    }
+    /**
+        * 绑定手机号码
+        */
+    bindPhoneAction: function bindPhoneAction() {
+      uni.navigateTo({
+        url: "/pages/account/loginVerify/loginVerify?phone=" + this.loginPhone + "&unionId=" + this.unionId + "&openId=" + this.openId });
 
-    this.setData({
-      loginPhone: e.detail.value });
-
-  }), _defineProperty(_methods, "bindPhoneAction",
-
-
-
-
-  function bindPhoneAction() {
-    uni.navigateTo({
-      url: "/pages/account/loginVerify/loginVerify?phone=" + this.loginPhone + "&unionId=" + this.unionId + "&openId=" + this.openId });
-
-  }), _methods) };exports.default = _default;
+    } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

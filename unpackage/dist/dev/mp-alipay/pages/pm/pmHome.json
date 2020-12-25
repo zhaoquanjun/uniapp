@@ -1,0 +1,11 @@
+{
+  "defaultTitle": "个人中心",
+  "titleBarColor": "#333333",
+  "usingComponents": {
+    "wechat-user-info": "/components/wechatUserInfo/wechatUserInfo",
+    "icon": "/components/icon/icon",
+    "avatar": "/components/avatar/avatar",
+    "half-slide-item": "/components/halfSlideItem/halfSlideItem",
+    "slider-picker": "/components/sliderPicker/sliderPicker"
+  }
+}

@@ -1,4 +1,4 @@
-/* pages/contract/sign/next/personSign/personSign.wxss */
+
 page {
   background-color: #F7F8F9;
 }
@@ -121,8 +121,8 @@ page {
   color: white;
   margin-left: 40rpx;
   font-size: 32rpx;
-}
-/*  重写 radio 样式  */
+}  
+/*  重写 radio 样式  */  
 /* 未选中的 背景样式 */
 radio .wx-radio-input {
   -webkit-border-radius: 50%;
@@ -131,12 +131,12 @@ radio .wx-radio-input {
   height: 30rpx;
   border: 2rpx solid #CCCCCC;
   background: #F7F8F9;
-}
+}  
 /* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
 radio .wx-radio-input.wx-radio-input-checked {
   border: 2rpx solid #EE7005;
   background: #EE7005;
-}
+}  
 /* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
 radio .wx-radio-input.wx-radio-input-checked::before {
   width: 3orpx;

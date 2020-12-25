@@ -1,7 +1,17 @@
-/* pages/contract/sign/launchSign/launchSign.wxss */
+
+/* #ifdef MP-WEIXIN*/  
 page {
   background-color: #F7F8F9;
 }
+/* #endif */
+
+/* #ifdef MP-ALIPAY*/  
+.a-page {
+  background-color: #F7F8F9;
+}
+/* #endif */
+
+
 .theme-title{
   padding: 0rpx 48rpx;
   font-size: 32rpx;

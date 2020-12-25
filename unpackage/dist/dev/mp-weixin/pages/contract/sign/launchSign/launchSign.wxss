@@ -1,4 +1,4 @@
-/* pages/contract/sign/launchSign/launchSign.wxss */
+
 page {
   background-color: #F7F8F9;
 }
@@ -119,7 +119,7 @@ page {
   position: relative;
   top: 4rpx;
   left: 8rpx;
-}
+}  
 /*
 .linkman-item{
   position: relative;

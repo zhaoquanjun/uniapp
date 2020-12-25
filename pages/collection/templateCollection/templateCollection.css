@@ -1,7 +1,15 @@
-/* pages/home/templateCollection/templateReceipt.wxss */
+
+/* #ifdef MP-WEIXIN*/  
 page {
   height: 100%;
 }
+/* #endif */
+
+/* #ifdef MP-ALIPAY*/  
+.a-page {
+  height: 100%;
+}
+/* #endif */
 
 .contract-search {
   padding: 32rpx 40rpx 16rpx;

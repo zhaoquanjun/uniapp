@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "闪签",
+  "pullRefresh": false,
+  "titleBarColor": "#333333",
+  "usingComponents": {
+    "home-add-data-storge": "/components/home-add-dataStorge/home-add-dataStorge",
+    "slider-picker": "/components/sliderPicker/sliderPicker"
+  }
+}

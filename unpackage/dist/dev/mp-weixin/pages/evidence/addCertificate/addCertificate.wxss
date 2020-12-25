@@ -50,10 +50,13 @@ page {
 .certificate-content-item .input-name {
   padding: 0 48rpx;
   background: #fff;
+	width: 100%;
   height: 112rpx;
   line-height: 112rpx;
   font-size: 28rpx;
-  color: #333333FF;
+  color: #333333;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 .input-tip {
   font-size: 24rpx;
@@ -77,14 +80,13 @@ page {
   padding-bottom: 12rpx;
 }
 .certificate-submit {
+	margin: 40rpx auto;
   width: 90%;
   height: 100rpx;
   line-height: 100rpx;
   background: #464646;
   -webkit-border-radius: 4px;
           border-radius: 4px;
-  margin-top: 40rpx;
-  margin-bottom: 40rpx;
   color: #fff;
 }
 .add-certificate-image {

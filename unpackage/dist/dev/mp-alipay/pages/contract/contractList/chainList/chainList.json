@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "证据管理",
+  "pullRefresh": true,
+  "titleBarColor": "#ffffff",
+  "usingComponents": {
+    "search": "/components/search/search",
+    "search-highlight-text-view": "/components/searchHighlightTextView/searchHighlightTextView"
+  }
+}

@@ -1,6 +1,15 @@
+
+/* #ifdef MP-WEIXIN*/  
 page {
   background-color: #F7F8F9;
 }
+/* #endif */
+
+/* #ifdef MP-ALIPAY*/  
+.a-page {
+  background-color: #F7F8F9;
+}
+/* #endif */
 
 .title {
   padding: 0 48rpx;

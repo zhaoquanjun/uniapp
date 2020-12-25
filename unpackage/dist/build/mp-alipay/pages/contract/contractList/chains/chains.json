@@ -1,0 +1,10 @@
+{
+  "defaultTitle": "证据链管理",
+  "pullRefresh": true,
+  "titleBarColor": "#ffffff",
+  "usingComponents": {
+    "search": "/components/search/search",
+    "search-highlight-text-view": "/components/searchHighlightTextView/searchHighlightTextView",
+    "half-slide-item": "/components/halfSlideItem/halfSlideItem"
+  }
+}

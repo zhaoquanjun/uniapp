@@ -33,7 +33,7 @@ export default {
       type: Boolean,
       default: false
     },
-    onTimeSearch: {
+    timeSearch: {
       type: Boolean,
       default: true
     }
@@ -53,8 +53,8 @@ export default {
           this.setData({
             inputValue: text
           });
-
-          if (this.onTimeSearch) {
+					console.log(this.timeSearch, this.isShowCancel)
+          if (this.timeSearch) {
             this.$emit('inputChanged', {
               detail: text
             });

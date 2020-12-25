@@ -1,5 +1,4 @@
-/* pages/contract/sign/next/companyLink/companyLink.wxss */
-/* pages/contract/sign/next/personLink/personLink.wxss */
+
 page {
   background-color: #F7F8F9;
 }

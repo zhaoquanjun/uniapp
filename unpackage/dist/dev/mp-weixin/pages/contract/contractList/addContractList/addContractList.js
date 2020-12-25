@@ -223,7 +223,6 @@ var utils = __webpack_require__(/*! ../../../../utils/utils.js */ 35);var search
     this.setData({
       pageId: pageId });
 
-    this.getChainsFun(true);
   },
 
   /**
@@ -241,11 +240,13 @@ var utils = __webpack_require__(/*! ../../../../utils/utils.js */ 35);var search
   /**
                                    * 生命周期函数--监听页面显示
                                    */
-  onShow: function onShow() {},
+  onShow: function onShow() {
+    this.getChainsFun(true);
+  },
 
   /**
-                                 * 生命周期函数--监听页面隐藏
-                                 */
+      * 生命周期函数--监听页面隐藏
+      */
   onHide: function onHide() {},
   methods: {
     /**

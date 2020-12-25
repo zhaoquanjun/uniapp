@@ -9359,16 +9359,16 @@ exports.get_pay_detail = get_pay_detail;
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.upload = exports.formData = exports.postBody = exports._delete = exports.put = exports.post = exports.get = exports.host = void 0; //不同环境的host
 var env = {
   // dev env
-  devHost: "https://dev.shanqian.cn/anshouyin",
+  dev: "https://dev.shanqian.cn/anshouyin",
   // test env
-  testHost: "https://testshouyiner.alphalawyer.cn/anshouyin",
+  test: "https://testshouyiner.alphalawyer.cn/anshouyin",
   // production env
-  prodHost: "https://shanqian.cn/anshouyin" };
+  prod: "https://shanqian.cn/anshouyin" };
 
 
 var prefix = 'dev'; // current env
 
-var host = env[prefix + 'Host'];exports.host = host;
+var host = env[prefix];exports.host = host;
 
 function sendRequest(options) {
   var app = getApp();
@@ -9513,16 +9513,6 @@ function sendRequest(options) {
       uni.hideLoading({});
       uni.stopPullDownRefresh();
       console.log('请求异常:' + e);
-      uni.showModal({
-        title: '提示',
-        content: e,
-        showCancel: false,
-        confirmText: '好的',
-        success: function success() {
-          app.globalData.quitLogin();
-        } });
-
-
       if (_fail) {
         _fail(e);
       }

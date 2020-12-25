@@ -3,7 +3,7 @@
 <view class="evidence-manager--area">
 	<view class="content">
 		<view class="search">
-			<search @inputChanged="changeSearchParamsFun" @cancelClicked="clearSearchParamsFun" isShowCancel="true" onTimeSearch="true"></search>
+			<search @inputChanged="changeSearchParamsFun" @cancelClicked="clearSearchParamsFun" :isShowCancel="true" :timeSearch="true"></search>
 		</view>
 		<scroll-view class="scroll-area" scroll-y="true" scroll-anchoring="true" refresher-enabled="true" :refresher-triggered="isTriggered" @refresherrefresh="pullDownRefreshFun" @scrolltolower="getMoreDataFun">
 			<view class="sign-area list-area" v-if="activeName == 'sign' && signs.length > 0">

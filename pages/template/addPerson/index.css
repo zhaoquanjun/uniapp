@@ -1,7 +1,17 @@
+
+/* #ifdef MP-WEIXIN*/  
 page {
   position: relative;
   background-color: #F7F8F9;
 }
+/* #endif */
+
+/* #ifdef MP-ALIPAY*/  
+.a-page {
+  position: relative;
+  background-color: #F7F8F9;
+}
+/* #endif */
 
 view {
   box-sizing: border-box;

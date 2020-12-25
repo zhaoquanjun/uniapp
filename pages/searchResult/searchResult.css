@@ -1,9 +1,17 @@
-/* pages/searchResult/searchResult.wxss */
+/* #ifdef MP-WEIXIN*/  
 .page{
   width: 100%;
   height: 100%;
   background: #ffffff;
-}
+} 
+/* #endif */
+/* #ifdef MP-ALIPAY*/  
+.a-page{
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+} 
+/* #endif */
 .contract-search {
   padding: 32rpx 40rpx 0rpx;
 }

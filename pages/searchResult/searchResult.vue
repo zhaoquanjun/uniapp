@@ -2,7 +2,7 @@
 <view>
 <!--pages/searchResult/searchResult.wxml-->
 <view class="contract-search">
-	<search @inputChanged="inputSearchFun" @cancelClicked="cancleSearchFun" onTimeSearch="true" isShowCancel="true"></search>
+	<search @inputChanged="inputSearchFun" @cancelClicked="cancleSearchFun" :timeSearch="true" ::isShowCancel="true"></search>
 </view>
 <view class="recent-search" v-if="contracts.length>0">搜索结果</view>
 <view v-for="(item, index) in contracts" :key="index" class="contract" style="border-bottom:2rpx solid #F5F5F5FF;" :data-item="item" :data-index="index" @tap="pushToDetail">
@@ -153,7 +153,14 @@ export default {
             bg: '#02B449'
           };
           break;
-
+				
+				case 7:
+				  return {
+				    name: '填写中',
+				    bg: 'red'
+				  };
+				  break;
+				
         default:
           break;
       }
@@ -164,7 +171,6 @@ export default {
      * @param {*} e 事件源 
      */
     inputSearchFun: function (e) {
-      console.log(e);
       this.setData({
         keyName: e.detail
       });
@@ -181,8 +187,9 @@ export default {
      */
     cancleSearchFun() {
       this.setData({
-        contracts: []
+        pageIndex: 0
       });
+			this.getContractsFun()
     },
 
     /**
@@ -205,12 +212,9 @@ export default {
         success: function (res) {
           console.log(res);
           var contracts = res.data;
-          res.data.map(it => {
-            return;
-          });
-          self.parseDataFun(contracts);
           contracts.map(it => {
             let result = self.getCurrentContractStatusFun(it.status);
+						it.gmtModified = self.formatTimeConvert(it.gmtModified, 0);
             it.statusText = result.name;
             it.bgStyle = result.bg;
           }), self.setData({
@@ -222,7 +226,7 @@ export default {
         }
       });
     },
-    parseDataFun: function (data) {
+    formatDateFun: function (data) {
       data.forEach(e => {
         e.gmtModified = this.formatTimeConvert(e.gmtModified, 0);
       });

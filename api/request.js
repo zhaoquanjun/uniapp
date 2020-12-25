@@ -1,16 +1,16 @@
 //不同环境的host
 const env = {
   // dev env
-  devHost: "https://dev.shanqian.cn/anshouyin",
+  dev: "https://dev.shanqian.cn/anshouyin",
   // test env
-  testHost: "https://testshouyiner.alphalawyer.cn/anshouyin",
+  test: "https://testshouyiner.alphalawyer.cn/anshouyin",
   // production env
-  prodHost: "https://shanqian.cn/anshouyin"
+  prod: "https://shanqian.cn/anshouyin"
 };
 
 const prefix = 'dev'; // current env
 
-export const host = env[prefix + 'Host'];
+export const host = env[prefix];
 
 function sendRequest(options) {
   const app = getApp();
@@ -155,16 +155,6 @@ function sendRequest(options) {
       uni.hideLoading({});
       uni.stopPullDownRefresh();
       console.log('请求异常:' + e);
-      uni.showModal({
-        title: '提示',
-        content: e,
-        showCancel: false,
-        confirmText: '好的',
-        success: function () {
-          app.globalData.quitLogin();
-        }
-      });
-
       if (fail) {
         fail(e);
       }

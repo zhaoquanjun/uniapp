@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "合同收款",
+  "titleBarColor": "#464646",
+  "usingComponents": {
+    "search": "/components/search/search",
+    "search-highlight-text-view": "/components/searchHighlightTextView/searchHighlightTextView"
+  }
+}

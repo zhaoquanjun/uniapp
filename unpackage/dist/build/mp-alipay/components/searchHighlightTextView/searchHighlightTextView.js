@@ -1,0 +1,10 @@
+;my.defineComponent || (my.defineComponent = Component);(my["webpackJsonp"]=my["webpackJsonp"]||[]).push([["components/searchHighlightTextView/searchHighlightTextView"],{"1e8c":function(t,e,n){},"2af1":function(t,e,n){"use strict";var a;n.d(e,"b",(function(){return r})),n.d(e,"c",(function(){return i})),n.d(e,"a",(function(){return a}));var r=function(){var t=this,e=t.$createElement;t._self._c},i=[]},"4b41":function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var a={data:function(){return{textArr:[],skeyword:"",stext:""}},components:{},props:{keyword:{type:String},text:{type:String}},watch:{keyword:{handler:"keywordChanged",immediate:!0},text:{handler:"textChanged",immediate:!0}},options:{addGlobalClass:!0},externalClasses:["highlight"],methods:{keywordChanged:function(t){this.setData({skeyword:t}),this.skeyword=t,this.manage()},textChanged:function(t){this.stext=t,this.manage()},manage:function(){this.stext&&this.manageText(this.stext,this.skeyword||"")},manageText:function(t,e){e?this.setData({textArr:t.replace(new RegExp("".concat(e),"g"),"%%".concat(e,"%%")).split("%%")}):this.setData({textArr:[t]})}}};e.default=a},8717:function(t,e,n){"use strict";n.r(e);var a=n("4b41"),r=n.n(a);for(var i in a)"default"!==i&&function(t){n.d(e,t,(function(){return a[t]}))}(i);e["default"]=r.a},b969:function(t,e,n){"use strict";n.r(e);var a=n("2af1"),r=n("8717");for(var i in r)"default"!==i&&function(t){n.d(e,t,(function(){return r[t]}))}(i);n("d50a");var s,o=n("f0c5"),c=Object(o["a"])(r["default"],a["b"],a["c"],!1,null,null,null,!1,a["a"],s);e["default"]=c.exports},d50a:function(t,e,n){"use strict";var a=n("1e8c"),r=n.n(a);r.a}}]);
+;(my["webpackJsonp"] = my["webpackJsonp"] || []).push([
+    'components/searchHighlightTextView/searchHighlightTextView-create-component',
+    {
+        'components/searchHighlightTextView/searchHighlightTextView-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('c11b')['createComponent'](__webpack_require__("b969"))
+        })
+    },
+    [['components/searchHighlightTextView/searchHighlightTextView-create-component']]
+]);

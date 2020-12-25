@@ -1,7 +1,15 @@
-/* pages/collection/dirctCollection/receiptLaunch/receiptLaunch.wxss */
+
+/* #ifdef MP-WEIXIN*/  
 page {
   background-color: #464646;
 }
+/* #endif */
+
+/* #ifdef MP-ALIPAY*/  
+.a-page {
+  background-color: #464646;
+}
+/* #endif */
 
 .pageContent {
   margin: 30rpx 20rpx 0rpx 20rpx;

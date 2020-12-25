@@ -1,7 +1,7 @@
 <template>
 <view>
 <view class="pl-search">
-	<search @inputChanged="inputSearchFun" @cancelClicked="cancleSearchFun" onTimeSearch="true" isShowCancel="true"></search>
+	<search @inputChanged="inputSearchFun" @cancelClicked="cancleSearchFun" :timeSearch="true" :isShowCancel="true"></search>
 </view>
 <scroll-view class="list-wrapper" scroll-y="true" scroll-anchoring="true" refresher-enabled="true" :refresher-triggered="topShow" scroll-with-animation="true" @scrolltolower="scrollToBottom" @refresherrefresh="pullingDownRefresh" @refresherrestore="pullingDownRefreshStore" @refresherabort="pullingDownRefreshStore">
 	<view v-for="(item, index) in contracts" :key="index" class="contract" @tap="pushToDetail" :data-index="index" :data-item="item">
@@ -450,11 +450,11 @@ export default {
       if (toType == 'video') {
         const queryString = "&searchType=" + this.searchType + "&pageTitle=" + this.title;
         uni.navigateTo({
-          url: "/evidence/videoRecord/videoRecord?type=" + toType + "&fromId=" + this.activeItme.id + queryString
+          url: "/pages/evidence/videoRecord/videoRecord?type=" + toType + "&fromId=" + this.activeItme.id + queryString
         });
       } else {
         uni.navigateTo({
-          url: "/evidence/addCertificate/addCertificate?type=" + toType + "&fromId=" + this.activeItme.id
+          url: "/pages/evidence/addCertificate/addCertificate?type=" + toType + "&fromId=" + this.activeItme.id
         });
       }
     },

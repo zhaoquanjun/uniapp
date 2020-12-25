@@ -1,8 +1,17 @@
-/* pages/pm/pmHome.wxss */
-Page {
-    background-color: #F5F5F5;
-    position: relative;
+
+/* #ifdef MP-WEIXIN*/  
+page {
+	background-color: #F5F5F5;
+	position: relative;
 }
+/* #endif */
+
+/* #ifdef MP-ALIPAY*/  
+.a-page {
+	background-color: #F5F5F5;
+	position: relative;
+}
+/* #endif */
 
 .home_bg {
     position: absolute;

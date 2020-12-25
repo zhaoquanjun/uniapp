@@ -1,0 +1,10 @@
+{
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#464646",
+  "navigationBarTitleText": "合同收款",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "search": "/components/search/search",
+    "search-highlight-text-view": "/components/searchHighlightTextView/searchHighlightTextView"
+  }
+}

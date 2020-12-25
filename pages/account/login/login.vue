@@ -1,11 +1,19 @@
 <template>
 <view>
-<!--pages/account/login/login.wxml-->
-<image :src="loginBgSrc" class="login-bg"></image>
-<text class="login-title">{{loginTitle}}</text>
 
- <button class="btn" v-if="!isBindOpenId" open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">{{quickLoginTitle}}</button>
- <button class="btn" v-if="isBindOpenId" @tap.stop="handleLoginByPhoneFun">{{quickLoginTitle}}</button>
+	<!-- #ifdef MP-WEIXIN -->  
+	<button class="btn" v-if="!isBindOpenId" open-type="getPhoneNumber" @getphonenumber="getPhoneNumber">微信账号快速登陆</button>
+	<button class="btn" v-if="isBindOpenId" @tap.stop="handleLoginByPhoneFun">微信账号快速登陆</button>
+	<!-- #endif -->
+
+ <!-- #ifdef MP-ALIPAY -->
+ <button open-type="getAuthorize"
+         @GetAuthorize="getPhoneNumber" scope='phoneNumber'>
+     授权手机号
+ </button>
+ <button class="btn" v-if="!isBindOpenId" open-type="getAuthorize" scope='phoneNumber' @GetAuthorize="getPhoneNumber" @onError="omerror" @Error="onAuthError">支付宝账号快速登陆</button>
+ <button class="btn" v-if="isBindOpenId" @tap.stop="handleLoginByPhoneFun">支付宝账号快速登陆</button>
+ <!-- #endif -->
 
  <view class="mark-view" :hidden="!isShowMark">
     <view class="mark-content-view global-shadow">
@@ -27,8 +35,6 @@ export default {
       openId: '',
       unionId: '',
       loginPhone: '',
-      quickLoginTitle: "微信账号快速登陆",
-      loginTitle: '闪签快捷登陆',
       isShowMark: false,
       isBindOpenId: false,
       bandPhone: ''
@@ -45,6 +51,12 @@ export default {
   onShareAppMessage() {},
 
   methods: {
+		omerror (e) {
+			console.log(e, 'error111')
+		},
+		onAuthError(e) {
+			console.log(e, 'error')
+		},
     /**
      * @name 微信登陆
      * @param {*} callback 回调
@@ -144,26 +156,6 @@ export default {
         }
       }
     },
-
-    /**
-     * @name 通过按钮获取参数，请求后台获取手机号以及微信信息
-     */
-    getPhoneNumber(e) {
-      if ("getPhoneNumber:ok" != e.detail.errMsg) {
-        setTimeout(() => {
-          uni.showToast({
-            icon: 'none',
-            title: '快捷登陆失败'
-          });
-        }, 50);
-        return;
-      }
-
-      this.loginWxFun(() => {
-        this.getPhoneFun(e);
-      });
-    },
-
     /**
      * @name 获取手机号以及微信信息
      * @param {*} e 
@@ -205,6 +197,7 @@ export default {
      * @name 通过按钮获取参数，请求后台获取手机号以及微信信息
      */
     getPhoneNumber(e) {
+			console.log(e, 9999)
       if ("getPhoneNumber:ok" != e.detail.errMsg) {
         setTimeout(() => {
           uni.showToast({

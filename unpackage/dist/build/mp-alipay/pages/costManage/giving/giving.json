@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "赠送闪签用户",
+  "pullRefresh": true,
+  "titleBarColor": "#ffffff",
+  "usingComponents": {
+    "slider-picker": "/components/sliderPicker/sliderPicker"
+  }
+}

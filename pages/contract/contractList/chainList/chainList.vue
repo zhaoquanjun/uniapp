@@ -2,7 +2,7 @@
 <view>
 <!--pages/contract/contractList/chainList/chainList.wxml-->
 <view class="pl-search">
-	<search @inputChanged="inputSearchFun" @cancelClicked="cancleSearchFun" onTimeSearch="true" isShowCancel="true"></search>
+	<search @inputChanged="inputSearchFun" @cancelClicked="cancleSearchFun" :timeSearch="true" :isShowCancel="true"></search>
 </view>
 <view class="list-wrapper_title">已选：{{ selectList.length }}</view>
 <scroll-view class="list-wrapper" scroll-y="true" scroll-anchoring="true" scroll-with-animation="true" @scrolltolower="scrollToBottom">

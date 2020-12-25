@@ -2,7 +2,7 @@
 <view>
 <!--pages/contract/contractList/contractTemplate/contractTemplate.wxml-->
 <view class="contract-search">
-	<search @inputChanged="inputSearchFun" @cancelClicked="cancleSearchFun" onTimeSearch="true" isShowCancel="true"></search>
+	<search @inputChanged="inputSearchFun" @cancelClicked="cancleSearchFun" :timeSearch="true" :isShowCancel="true"></search>
 </view>
 <view v-for="(item, index) in contractTemplates" :key="index" class="contract-template" @tap="templateSelect" :data-id="item.id">
 	<image :src="icon" mode="aspectFit" class="img"></image>

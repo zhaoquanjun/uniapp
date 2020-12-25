@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "模版选择",
+  "pullRefresh": true,
+  "titleBarColor": "#ffffff",
+  "usingComponents": {
+    "search": "/components/search/search",
+    "search-highlight-text-view": "/components/searchHighlightTextView/searchHighlightTextView"
+  }
+}

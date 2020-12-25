@@ -1,10 +1,21 @@
-/* pages/contract/contractList/addContractList/addContractList.wxss */
+
+/* #ifdef MP-WEIXIN*/  
 page {
   position: relative;
   padding: 0rpx 48rpx;
   background-color: #ffffff;
   box-sizing: border-box;
 }
+/* #endif */
+
+/* #ifdef MP-ALIPAY*/  
+.a-page {
+  position: relative;
+  padding: 0rpx 48rpx;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+/* #endif */
 
 .pl-search {
   width: 100%;

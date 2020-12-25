@@ -1,7 +1,7 @@
-/* pages/pm/pmHome.wxss */
-Page {
-    background-color: #F5F5F5;
-    position: relative;
+
+page {
+	background-color: #F5F5F5;
+	position: relative;
 }
 .home_bg {
     position: absolute;

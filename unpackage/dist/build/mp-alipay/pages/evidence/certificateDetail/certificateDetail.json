@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "存证详情",
+  "pullRefresh": true,
+  "titleBarColor": "#ffffff",
+  "usingComponents": {
+    "half-slide-item": "/components/halfSlideItem/halfSlideItem"
+  }
+}

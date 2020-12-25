@@ -149,7 +149,7 @@ var _default =
       type: Boolean,
       default: false },
 
-    onTimeSearch: {
+    timeSearch: {
       type: Boolean,
       default: true } },
 
@@ -169,8 +169,8 @@ var _default =
           _this.setData({
             inputValue: text });
 
-
-          if (_this.onTimeSearch) {
+          console.log(_this.timeSearch, _this.isShowCancel);
+          if (_this.timeSearch) {
             _this.$emit('inputChanged', {
               detail: text });
 

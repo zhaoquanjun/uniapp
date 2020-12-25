@@ -34,7 +34,7 @@ export default {
       type: Boolean,
       default: false
     },
-    onTimeSearch: {
+    timeSearch: {
       type: Boolean,
       default: true
     }
@@ -51,7 +51,7 @@ export default {
         inputValue: text
       });
 
-      if (this.onTimeSearch) {
+      if (this.timeSearch) {
         this.$emit('inputChanged', {
           detail: text
         });

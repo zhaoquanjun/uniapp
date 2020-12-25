@@ -1,5 +1,6 @@
+
 page {
-  background: #F7F8F9;
+  background-color: #F7F8F9;
 }
 .type-select {
   font-size: 32rpx;

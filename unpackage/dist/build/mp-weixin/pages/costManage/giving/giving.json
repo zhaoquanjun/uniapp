@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "赠送闪签用户",
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#ffffff",
+  "backgroundColorTop": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "slider-picker": "/components/sliderPicker/sliderPicker"
+  }
+}

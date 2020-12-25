@@ -1,6 +1,14 @@
+/* #ifdef MP-WEIXIN*/  
 page {
-    background: rgba(247, 248, 249, 1);
+	background: rgba(247, 248, 249, 1);
 }
+/* #endif */
+
+/* #ifdef MP-ALIPAY*/  
+.a-page {
+	background: rgba(247, 248, 249, 1);
+}
+/* #endif */
 
 .personal-info {
     font-size: 32rpx;

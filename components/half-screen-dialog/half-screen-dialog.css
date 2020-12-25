@@ -1,9 +1,4 @@
-/*!
- * WeUI v2.3.0 (https://github.com/weui/weui-wxss)
- * Copyright 2020 Tencent, Inc.
- * Licensed under the MIT license
- */
-.page{background-color:var(--weui-BG-2)}
+
 .page .weui-btn_default--fixed{
   width:110rpx;
   height:110rpx;

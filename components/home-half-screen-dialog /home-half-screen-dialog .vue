@@ -87,7 +87,7 @@ export default {
 
       if (type == 'video') {
         uni.navigateTo({
-          url: '/evidence/videoRecord/videoRecord?type=' + type
+          url: '/pages/evidence/videoRecord/videoRecord?type=' + type
         });
       } else {
         uni.navigateTo({

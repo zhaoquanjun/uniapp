@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "合同详情",
+  "titleBarColor": "#ffffff",
+  "usingComponents": {
+    "avatar": "/components/avatar/avatar"
+  }
+}

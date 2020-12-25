@@ -1,9 +1,16 @@
-/* pages/home/home.wxss */
-Page{
+/* #ifdef MP-WEIXIN*/  
+page{
   background-color: #F7F8F9;
   position: relative;
-}
+} 
+/* #endif */
 
+/* #ifdef MP-ALIPAY*/  
+.a-page{
+  background-color: #F7F8F9;
+  position: relative;
+} 
+/* #endif */
 .header-Bar{
   height: 256rpx;
   background:#333333;

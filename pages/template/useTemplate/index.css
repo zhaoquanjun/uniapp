@@ -1,8 +1,20 @@
+
+
+/* #ifdef MP-WEIXIN*/  
 page {
   position: relative;
   padding-bottom: 264rpx;
   background-color: #f7f8f9;
 }
+/* #endif */
+
+/* #ifdef MP-ALIPAY*/  
+.a-page {
+  position: relative;
+  padding-bottom: 264rpx;
+  background-color: #f7f8f9;
+}
+/* #endif */
 
 view {
   box-sizing: border-box;

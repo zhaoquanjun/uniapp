@@ -2,7 +2,7 @@
 <view>
 <!--pages/chains/chains.wxml-->
 <view class="pl-search">
-	<search @inputChanged="inputSearchFun" @cancelClicked="cancleSearchFun" onTimeSearch="true" isShowCancel="true"></search>
+	<search @inputChanged="inputSearchFun" @cancelClicked="cancleSearchFun" :timeSearch="true" :isShowCancel="true"></search>
 </view>
 
 <scroll-view class="list-wrapper" scroll-y="true" scroll-anchoring="true" scroll-with-animation="true" @scrolltolower="scrollToBottom">
@@ -326,7 +326,7 @@ export default {
 
       if (toType == 'video') {
         uni.navigateTo({
-          url: "/evidence/videoRecord/videoRecord?type=" + toType + "&fromId=" + this.queryId + "&from=1"
+          url: "/pages/evidence/videoRecord/videoRecord?type=" + toType + "&fromId=" + this.queryId + "&from=1"
         });
       } else {
         uni.navigateTo({

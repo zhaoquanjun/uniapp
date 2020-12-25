@@ -2,7 +2,7 @@
 <view>
 <!--pages/home/templateCollection/templateReceipt.wxml-->
 <view class="contract-search">
-	<search @inputChanged="inputSearchFun" @cancelClicked="cancleSearchFun" onTimeSearch="true" isShowCancel="true"></search>
+	<search @inputChanged="inputSearchFun" @cancelClicked="cancleSearchFun" :timeSearch="true" :isShowCancel="true"></search>
 </view>
 <scroll-view scroll-y="true" refresher-enabled="true" lower-threshold="0" scroll-anchoring="true" :refresher-triggered="isPullingDown" class="template-list" @refresherrefresh="handlePullDownFun" @scrolltolower="handleToBottomFun">
 	<view v-for="(item, index) in payTemplates" :key="index" class="payTemplate" :data-name="item.name" :data-amount="item.amount" :data-id="item.id" @tap="templateSelect">

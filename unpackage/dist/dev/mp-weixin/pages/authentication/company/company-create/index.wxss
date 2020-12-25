@@ -1,5 +1,6 @@
+
 page {
-    background: rgba(247, 248, 249, 1);
+	background: rgba(247, 248, 249, 1);
 }
 .company-create-info {
     font-size: 32rpx;

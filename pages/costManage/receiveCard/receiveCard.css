@@ -1,6 +1,15 @@
+
+/* #ifdef MP-WEIXIN*/  
 page {
   background-color: #201D21;
 }
+/* #endif */
+
+/* #ifdef MP-ALIPAY*/  
+.a-page {
+  background-color: #201D21;
+}
+/* #endif */
 
 view {
   box-sizing: border-box;

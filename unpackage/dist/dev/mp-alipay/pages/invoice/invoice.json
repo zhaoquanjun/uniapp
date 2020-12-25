@@ -1,0 +1,10 @@
+{
+  "defaultTitle": "发票申请",
+  "pullRefresh": true,
+  "titleBarColor": "#333333",
+  "usingComponents": {
+    "search": "/components/search/search",
+    "slider-picker": "/components/sliderPicker/sliderPicker",
+    "message-box": "/components/messageBox/messageBox"
+  }
+}

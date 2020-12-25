@@ -1,6 +1,15 @@
+/* #ifdef MP-WEIXIN*/  
 page {
-  background: #F7F8F9;
+  background-color: #F7F8F9;
 }
+/* #endif */
+
+/* #ifdef MP-ALIPAY*/  
+.a-page {
+  background-color: #F7F8F9;
+}
+/* #endif */
+
 
 .type-select {
   font-size: 32rpx;

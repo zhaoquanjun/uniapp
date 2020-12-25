@@ -1,6 +1,8 @@
 @import "./weui.css";
 @import "./font.css";
 @import "./components/searchHighlightTextView/searchHighlightTextView.css";
+
+/* #ifdef MP-WEIXIN*/  
 page {
   width: 100%;
   min-height: 100%;
@@ -8,6 +10,18 @@ page {
   font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB",
 		"Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 }
+/* #endif */
+
+/* #ifdef MP-ALIPAY*/  
+.a-page {
+  width: 100%;
+  min-height: 100%;
+  background-color: white;
+  font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB",
+		"Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+/* #endif */
+
 
 view, text, input {
   font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB",

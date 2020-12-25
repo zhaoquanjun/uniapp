@@ -1,0 +1,1 @@
+<view><text class="{{(item==skeyword?'highlight':'normal')}}" a:for="{{textArr}}" a:for-item="item" a:for-index="index" a:key="index">{{item}}</text></view>
