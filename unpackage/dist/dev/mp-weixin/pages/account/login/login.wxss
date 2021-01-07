@@ -11,8 +11,7 @@
   color: white;
   font-size: 32rpx;
   font-weight: 200;
-  -webkit-border-radius: 8rpx;
-          border-radius: 8rpx;
+  border-radius: 8rpx;
   background:rgba(70,70,70,1);
 }
 .login-title{
@@ -45,8 +44,7 @@
   left: 80rpx;
   top: 350rpx;
   background-color: #fff;
-  -webkit-border-radius: 10rpx;
-          border-radius: 10rpx;
+  border-radius: 10rpx;
 }
 .mark-phone-input{
   float: left;
@@ -69,8 +67,7 @@
   line-height: 80rpx;
   margin-top: 40rpx;
   background:rgba(70,70,70,1);
-  -webkit-border-radius:8px;
-          border-radius:8px;
+  border-radius:8px;
   color: #fff;
   text-align: center;
   font-size: 30rpx;

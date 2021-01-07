@@ -3,8 +3,7 @@ page {
   background-color: #F7F8F9;
 }
 view {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .card-list-page {
   position: absolute;
@@ -72,11 +71,9 @@ view {
   left: 0;
   width: 84rpx;
   height: 6rpx;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(247, 165, 0, 1)), to(rgba(237, 108, 0, 1)));
   background: -webkit-linear-gradient(right, rgba(247, 165, 0, 1) 0%, rgba(237, 108, 0, 1) 100%);
   background: linear-gradient(270deg, rgba(247, 165, 0, 1) 0%, rgba(237, 108, 0, 1) 100%);
-  -webkit-border-radius: 4rpx;
-          border-radius: 4rpx;
+  border-radius: 4rpx;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
@@ -230,8 +227,7 @@ view {
   padding: 8rpx 16rpx;
   font-size: 20rpx;
   line-height: 20rpx;
-  -webkit-border-radius: 4rpx;
-          border-radius: 4rpx;
+  border-radius: 4rpx;
   background-color: rgba(255, 255, 255, .15);
   z-index: 1;
 }

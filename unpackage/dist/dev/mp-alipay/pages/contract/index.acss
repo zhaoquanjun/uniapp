@@ -43,8 +43,7 @@
   width:670rpx;
   margin: 42rpx auto;
   background:rgba(255,255,255,1);
-  -webkit-border-radius:8rpx;
-          border-radius:8rpx;
+  border-radius:8rpx;
 }
 .types-select-container .type-item{
   font-size:30rpx;

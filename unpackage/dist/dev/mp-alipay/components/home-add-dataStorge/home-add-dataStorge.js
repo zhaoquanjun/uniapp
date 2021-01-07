@@ -177,7 +177,14 @@ var app = getApp();var _default =
       }
 
       var type = e.currentTarget.dataset.type;
+
+
+
+
+
       var currentUser = uni.getStorageSync('currentUser');
+
+
       var isAuth = false;
 
       if (currentUser.companyId && currentUser.authStatus == 1 || !currentUser.companyId && currentUser.auth == 1) {
@@ -248,9 +255,8 @@ var app = getApp();var _default =
     },
 
     skiptoEvidence: function skiptoEvidence() {
-      app.globalData.activeTab = 'data';
       uni.switchTab({
-        url: '/pages/evidence/index?tab=data' });
+        url: '/pages/evidence/index' });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-alipay/dist/index.js */ 1)["default"]))

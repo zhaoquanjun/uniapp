@@ -41,8 +41,7 @@ page {
   line-height: 32rpx;
   border-bottom: 2rpx solid #F5F5F5;
   background-color: #fff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .info-list .list-item input {
   text-align: right;
@@ -107,7 +106,6 @@ page {
   text-align: center;
   line-height: 100rpx;
   background: #464646;
-  -webkit-border-radius: 8rpx;
-          border-radius: 8rpx;
+  border-radius: 8rpx;
 }
 

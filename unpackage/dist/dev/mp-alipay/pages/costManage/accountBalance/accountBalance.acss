@@ -1,6 +1,5 @@
 view {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .scroll-area {
   width: 100%;
@@ -78,11 +77,9 @@ view {
   content: '';
   width: 120rpx;
   height: 6rpx;
-  background: -webkit-gradient(linear, right top, left top, from(rgba(247, 165, 0, 1)), to(rgba(237, 108, 0, 1)));
   background: -webkit-linear-gradient(right, rgba(247, 165, 0, 1) 0%, rgba(237, 108, 0, 1) 100%);
   background: linear-gradient(270deg, rgba(247, 165, 0, 1) 0%, rgba(237, 108, 0, 1) 100%);
-  -webkit-border-radius: 4rpx;
-          border-radius: 4rpx;
+  border-radius: 4rpx;
 }
 .balance-list--page .content {
   position: absolute;
@@ -163,8 +160,7 @@ view {
   text-align: center;
   font-size: 32rpx;
   color: #333;
-  -webkit-border-radius: 8rpx;
-          border-radius: 8rpx;
+  border-radius: 8rpx;
 }
 .balance-list--page .btn-groups .btn.send {
   color: #fff;

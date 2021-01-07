@@ -24,6 +24,10 @@
   background: transparent;
 }
 
+.search-box {
+	width: 100%;
+}
+
 .search-box .cancel-button {
   position: absolute;
   right: 16rpx;

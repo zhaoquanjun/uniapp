@@ -214,7 +214,7 @@ var app = getApp();var _default =
   onReachBottom: function onReachBottom() {},
   methods: {
     getRecordVideoFun: function getRecordVideoFun(e) {
-      app.globalData.activeTab = e.detail.data[0].type;
+      // app.globalData.activeTab = e.detail.data[0].type;
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-alipay/dist/index.js */ 1)["default"]))
 

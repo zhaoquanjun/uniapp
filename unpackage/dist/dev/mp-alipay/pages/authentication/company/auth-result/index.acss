@@ -28,8 +28,7 @@
     width:164rpx;
     display: inline-block;
     height:164rpx;
-    -webkit-border-radius: 82rpx;
-            border-radius: 82rpx;
+    border-radius: 82rpx;
     background:#F9F9F9;
     border:2rpx solid rgba(220,220,220,1);
     color: #FF7451;
@@ -112,8 +111,7 @@
     height:100rpx;
     line-height: 100rpx;
     background:rgba(70,70,70,1);
-    -webkit-border-radius:8rpx;
-            border-radius:8rpx;
+    border-radius:8rpx;
     color: white;
 }
 

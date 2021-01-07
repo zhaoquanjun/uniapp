@@ -101,9 +101,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components = {
-  homeAddDataStorge: function() {
-    return __webpack_require__.e(/*! import() | components/home-add-dataStorge/home-add-dataStorge */ "components/home-add-dataStorge/home-add-dataStorge").then(__webpack_require__.bind(null, /*! @/components/home-add-dataStorge/home-add-dataStorge.vue */ 526))
+var components
+try {
+  components = {
+    homeAddDataStorge: function() {
+      return __webpack_require__.e(/*! import() | components/home-add-dataStorge/home-add-dataStorge */ "components/home-add-dataStorge/home-add-dataStorge").then(__webpack_require__.bind(null, /*! @/components/home-add-dataStorge/home-add-dataStorge.vue */ 526))
+    }
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
   }
 }
 var render = function() {
@@ -219,7 +238,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _request = __webpack_require__(/*! ../../api/request */ 8);
-var _account = __webpack_require__(/*! ../../api/account */ 9); //
+var _account = __webpack_require__(/*! ../../api/account */ 9);function _readOnlyError(name) {throw new Error("\"" + name + "\" is read-only");} //
 //
 //
 //
@@ -299,7 +318,17 @@ var app = getApp();var homeAddDataStorge = function homeAddDataStorge() {__webpa
                                                                                                                                                                                                                                                                                                                       * @name 初始化用户信息
                                                                                                                                                                                                                                                                                                                       */initUserStatusOnLoadingFun: function initUserStatusOnLoadingFun() {var currentUser = uni.getStorageSync('currentUser');var name = currentUser && currentUser.companyId ? currentUser.companyName : currentUser.name && currentUser.name != '' ? currentUser.name : '未登录用户';this.setData({ userName: name, isLogin: app.globalData.isLoginIn() });this.getCompanyUserInfoFun();this.getContractCountFun();}, /**
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * @name 获取个人信息
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     */getSignalUsersInfoFun: function getSignalUsersInfoFun() {var _this = this;uni.showLoading({ title: '加载中' });(0, _request.get)({ url: _account.get_user_info, success: function success(res) {var currentUser = uni.getStorageSync('currentUser');var newArr = JSON.parse(JSON.stringify(_this.userList));newArr.unshift(res);if (!currentUser) {uni.setStorageSync('currentUser', res);currentUser = res;}uni.setStorageSync('userAccount', res.account);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     */getSignalUsersInfoFun: function getSignalUsersInfoFun() {var _this = this;uni.showLoading({ title: '加载中' });(0, _request.get)({ url: _account.get_user_info, success: function success(res) {var currentUser = uni.getStorageSync('currentUser');
+
+          var newArr = JSON.parse(JSON.stringify(_this.userList));
+          newArr.unshift(res);
+
+          if (!currentUser) {
+            uni.setStorageSync('currentUser', res);
+            currentUser = (_readOnlyError("currentUser"), res);
+          }
+
+          uni.setStorageSync('userAccount', res.account);
           _this.setData({
             userList: newArr,
             userName: currentUser && currentUser.companyId ? currentUser.compantName : res.name ? res.name : '未认证用户',
@@ -601,7 +630,14 @@ var app = getApp();var homeAddDataStorge = function homeAddDataStorge() {__webpa
         * 进行实名认证
         */
     authAction: function authAction() {
+
+
+
+
+
+
       var company_id = uni.getStorageSync('currentUser').companyId;
+
 
       if (company_id == undefined) {
         uni.navigateTo({

@@ -6,6 +6,7 @@
     "pages/pm/pmHome",
     "pages/root/root",
     "pages/account/login/login",
+    "pages/account/hlogin/hlogin",
     "pages/account/loginVerify/loginVerify",
     "pages/searchResult/searchResult",
     "pages/pm/stamp/stampManager",

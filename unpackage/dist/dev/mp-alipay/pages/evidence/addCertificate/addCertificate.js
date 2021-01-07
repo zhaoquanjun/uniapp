@@ -823,11 +823,11 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
             fileName: 'file',
             filePath: filePath,
             formData: {
-              'key': res.dir + _this5.addFileInfo.name,
-              'policy': res.policy,
-              'OSSAccessKeyId': res.accessid,
-              'signature': res.signature,
-              'success_action_status': '200' },
+              key: res.dir + _this5.addFileInfo.name,
+              policy: res.policy,
+              OSSAccessKeyId: res.accessid,
+              signature: res.signature,
+              success_action_status: 200 },
 
             success: function success() {
               // success
@@ -909,8 +909,6 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
     },
 
     switchTabBarFun: function switchTabBarFun() {
-      var app = getApp();
-      app.globalData.activeTab = 'data';
       uni.switchTab({
         url: '/pages/evidence/index' });
 

@@ -92,12 +92,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components = {
-  search: function() {
-    return __webpack_require__.e(/*! import() | components/search/search */ "components/search/search").then(__webpack_require__.bind(null, /*! @/components/search/search.vue */ 540))
-  },
-  halfSlideItem: function() {
-    return __webpack_require__.e(/*! import() | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then(__webpack_require__.bind(null, /*! @/components/halfSlideItem/halfSlideItem.vue */ 547))
+var components
+try {
+  components = {
+    search: function() {
+      return __webpack_require__.e(/*! import() | components/search/search */ "components/search/search").then(__webpack_require__.bind(null, /*! @/components/search/search.vue */ 540))
+    },
+    halfSlideItem: function() {
+      return __webpack_require__.e(/*! import() | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then(__webpack_require__.bind(null, /*! @/components/halfSlideItem/halfSlideItem.vue */ 547))
+    }
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
   }
 }
 var render = function() {
@@ -193,89 +212,68 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var _request = __webpack_require__(/*! ../../api/request.js */ 8);
-var _evidence = __webpack_require__(/*! ../../api/evidence.js */ 36);function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
-var util = __webpack_require__(/*! ../../utils/utils */ 37);
-var app = getApp();var search = function search() {__webpack_require__.e(/*! require.ensure | components/search/search */ "components/search/search").then((function () {return resolve(__webpack_require__(/*! ../../components/search/search */ 540));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var mpHalfScreenDialog = function mpHalfScreenDialog() {__webpack_require__.e(/*! require.ensure | components/half-screen-dialog/half-screen-dialog */ "components/half-screen-dialog/half-screen-dialog").then((function () {return resolve(__webpack_require__(/*! ../../components/half-screen-dialog/half-screen-dialog */ 554));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../components/halfSlideItem/halfSlideItem */ 547));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
-
-
-{
-  data: function data() {
-    return {
-      tabs: [{
-        name: '签署存证',
-        type: 'sign' },
-      {
-        name: '数据存证',
-        type: 'data' }],
-
-      signs: [],
-      datas: [],
-      signPageIndex: 1,
-      dataPageIndex: 1,
-      signTotal: 0,
-      dataTotal: 0,
-      activeName: 'sign',
-      searchParams: '',
-      pageSize: 10,
-      isTriggered: false,
-      // 是否容器下拉刷新
-      activeItme: null,
-      canDownload: "",
-      pdfUrl: "" };
-
-  },
-
-  components: {
-    search: search,
-    mpHalfScreenDialog: mpHalfScreenDialog,
-    halfSlideItem: halfSlideItem },
-
-  props: {},
-
-  onLoad: function onLoad() {},
-
-  onShow: function onShow() {
-    var activeTab = 'sign';
-    this.setData({
-      activeName: activeTab,
-      signPageIndex: 1 });
-
-    this.getPageDataFun(this.activeName, 1, this.getPageDataFun(activeTab == 'sign' ? 'data' : 'sign', 1));
-  },
-
-  onReady: function onReady() {
-    this.dialog = this.$refs.mphalfScreenDialog;
-  },
-
-  onHide: function onHide() {
-    this.dialog && this.dialog.close();
-  },
-
+var _evidence = __webpack_require__(/*! ../../api/evidence.js */ 36); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var util = __webpack_require__(/*! ../../utils/utils */ 37);var app = getApp();var search = function search() {__webpack_require__.e(/*! require.ensure | components/search/search */ "components/search/search").then((function () {return resolve(__webpack_require__(/*! ../../components/search/search */ 540));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var mpHalfScreenDialog = function mpHalfScreenDialog() {__webpack_require__.e(/*! require.ensure | components/half-screen-dialog/half-screen-dialog */ "components/half-screen-dialog/half-screen-dialog").then((function () {return resolve(__webpack_require__(/*! ../../components/half-screen-dialog/half-screen-dialog */ 554));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../components/halfSlideItem/halfSlideItem */ 547));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { tabs: [{ name: '签署存证', type: 'sign' }, { name: '数据存证', type: 'data' }], signs: [], pageIndex: 1, total: 0, activeName: 'sign', searchParams: '', pageSize: 10, isTriggered: false, // 是否容器下拉刷新
+      activeItme: null, canDownload: "", pdfUrl: "" };}, components: { search: search, mpHalfScreenDialog: mpHalfScreenDialog, halfSlideItem: halfSlideItem }, props: {}, onLoad: function onLoad() {}, onShow: function onShow() {this.setData({ pageIndex: 1 });this.getPageDataFun(1);}, onReady: function onReady() {this.dialog = this.$refs.mphalfScreenDialog;}, onHide: function onHide() {this.dialog && this.dialog.close();},
   onUnload: function onUnload() {
     app.globalData.activeTab = 'sign';
-  },
-
-  onPullDownRefresh: function onPullDownRefresh() {
-    console.log('页面下拉了');
-    this.getPageDataFun(this.activeName, 1);
   },
 
   onShareAppMessage: function onShareAppMessage() {},
@@ -286,10 +284,9 @@ var app = getApp();var search = function search() {__webpack_require__.e(/*! req
       console.log('容器下拉了');
       this.setData({
         isTriggered: true,
-        signPageIndex: 1,
-        dataPageIndex: 1 });
+        pageIndex: 1 });
 
-      this.getPageDataFun(this.activeName, 1, function () {
+      this.getPageDataFun(1, function () {
         _this.setData({
           isTriggered: false });
 
@@ -297,26 +294,14 @@ var app = getApp();var search = function search() {__webpack_require__.e(/*! req
     },
 
     /**
-        * @name 切换tab选项卡
-        * @param {*} e 事件源
-        */
-    changeTabsFun: function changeTabsFun(e) {
-      this.setData({
-        activeName: e.currentTarget.dataset.name,
-        searchParams: '' });
-
-      if (this[this.activeName + 's'].length > 0) return;
-      this.getPageDataFun(this.activeName, 1);
-    },
-
-    /**
         * @name 获取数据
-        * @param {*} type 获取存证的类型 （1 - 签署， 2 - 数据）
+        * @param {*} type 获取方式 1: 下拉 初始 2: 触底
         * @param {*} callback 回调函数
         */
-    getPageDataFun: function getPageDataFun(name, type, callback) {var _this2 = this;
+    getPageDataFun: function getPageDataFun(type, callback) {var _this2 = this;
       if (!app.globalData.isLoginIn()) return;
-      var url = _evidence.certificate_record_list + '?currentPage=' + (name == 'sign' ? this.signPageIndex : this.dataPageIndex) + '&pageSize=' + this.pageSize + (this.searchParams ? '&name=' + this.searchParams : '');
+      var url = _evidence.certificate_record_list + '?currentPage=' + this.pageIndex + '&pageSize=' + this.pageSize + (this.searchParams ?
+      '&name=' + this.searchParams : '');
       uni.showLoading({
         title: '加载中...' });
 
@@ -334,25 +319,12 @@ var app = getApp();var search = function search() {__webpack_require__.e(/*! req
             });
           }
 
-          var arr = [];
+          var arr = type == 1 ? res.results : _this2.signs.concat(res.results);
 
-          if (type == 1) {
-            arr = res.results;
-          } else {
-            arr = _this2[_this2.activeName + 's'].concat(res.results);
-          }
+          _this2.setData({
+            signs: arr,
+            total: res.total });
 
-          if (name == 'sign') {
-            _this2.setData({
-              signs: arr,
-              signTotal: res.total });
-
-          } else {
-            _this2.setData({
-              datas: arr,
-              dataTotal: res.total });
-
-          }
         } });
 
     },
@@ -361,11 +333,11 @@ var app = getApp();var search = function search() {__webpack_require__.e(/*! req
         * @name 触底加载更多
         */
     getMoreDataFun: function getMoreDataFun() {
-      if (this[this.activeName + 's'].length < this[this.activeName + 'Total']) {
-        this.setData(_defineProperty({},
-        this.activeName + 'PageIndex', parseInt(this[this.activeName + 'PageIndex']) + 1));
+      if (this.signs.length < this.total) {
+        this.setData({
+          pageIndex: parseInt(this.pageIndex) + 1 });
 
-        this.getPageDataFun(this.activeName, 2);
+        this.getPageDataFun(2);
       }
     },
 
@@ -377,7 +349,7 @@ var app = getApp();var search = function search() {__webpack_require__.e(/*! req
       this.setData({
         searchParams: msg.detail });
 
-      this.getPageDataFun(this.activeName, 1);
+      this.getPageDataFun(1);
     },
 
     /**
@@ -387,7 +359,7 @@ var app = getApp();var search = function search() {__webpack_require__.e(/*! req
       this.setData({
         searchParams: '' });
 
-      this.getPageDataFun(this.activeName, 1);
+      this.getPageDataFun(1);
     },
 
     viewDetailFun: function viewDetailFun(e) {
@@ -566,7 +538,8 @@ var app = getApp();var search = function search() {__webpack_require__.e(/*! req
 
           }
 
-          if (type.toLowerCase() == 'mp4' || type.toLowerCase() == 'mov' || type.toLowerCase() == 'avi' || type.toLowerCase() == 'rmvb' || type.toLowerCase() == 'flv') {
+          if (type.toLowerCase() == 'mp4' || type.toLowerCase() == 'mov' || type.toLowerCase() == 'avi' || type.toLowerCase() ==
+          'rmvb' || type.toLowerCase() == 'flv') {
             uni.saveVideoToPhotosAlbum({
               filePath: res.tempFilePath,
               success: function success(res) {

@@ -61,7 +61,14 @@ export default {
       }
 
       const type = e.currentTarget.dataset.type;
-      const currentUser = uni.getStorageSync('currentUser');
+			// #ifdef H5
+			const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+			// #endif
+			
+			// #ifndef H5
+			const currentUser = uni.getStorageSync('currentUser');
+			// #endif
+      
       let isAuth = false;
 
       if (currentUser.companyId && currentUser.authStatus == 1 || !currentUser.companyId && currentUser.auth == 1) {
@@ -132,9 +139,8 @@ export default {
     },
 
     skiptoEvidence() {
-      app.globalData.activeTab = 'data';
       uni.switchTab({
-        url: '/pages/evidence/index?tab=data'
+        url: '/pages/evidence/index'
       });
     }
 

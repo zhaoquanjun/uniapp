@@ -3,8 +3,7 @@
   background-color: #201D21;
 }
 view {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .receive-card--page {
   position: absolute;
@@ -31,8 +30,7 @@ view {
   padding: 72rpx 48rpx;
   width: 85%;
   background-color: #fff;
-  -webkit-border-radius: 24rpx;
-          border-radius: 24rpx;
+  border-radius: 24rpx;
 }
 .content .label {
   padding-bottom: 24rpx;
@@ -83,8 +81,7 @@ view {
   line-height: 72rpx;
   text-align: center;
   border: 1px solid rgba(151, 151, 151, .2);
-  -webkit-border-radius: 36rpx;
-          border-radius: 36rpx;
+  border-radius: 36rpx;
   font-family: 'PingFangSC-Regular,PingFang SC';
   font-size: 26rpx;
   color: #666666;
@@ -96,8 +93,7 @@ view {
   line-height: 100rpx;
   text-align: center;
   background-color: rgba(52, 50, 51, .1);
-  -webkit-border-radius: 50rpx;
-          border-radius: 50rpx;
+  border-radius: 50rpx;
   font-size: 30rpx;
   color: #201D21;
   font-family: 'PingFangSC-Regular,PingFang SC';
@@ -141,8 +137,7 @@ view {
   height: 100rpx;
   background: -webkit-linear-gradient(295deg, rgba(100, 97, 98, 1) 0%, rgba(99, 96, 98, 1) 0%, rgba(32, 30, 31, 1) 100%);
   background: linear-gradient(155deg, rgba(100, 97, 98, 1) 0%, rgba(99, 96, 98, 1) 0%, rgba(32, 30, 31, 1) 100%);
-  -webkit-border-radius: 50rpx;
-          border-radius: 50rpx;
+  border-radius: 50rpx;
 }
 .wx-login-btn image {
   margin-right: 20rpx;

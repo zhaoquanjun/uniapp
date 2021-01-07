@@ -40,8 +40,7 @@ page {
 }
 .item-section {
   margin-bottom: 16rpx;
-  -webkit-border-radius: 8rpx;
-          border-radius: 8rpx;
+  border-radius: 8rpx;
   background-color: #fff;
 }
 .item-section .title {
@@ -79,7 +78,6 @@ page {
   text-align: center;
   line-height: 100rpx;
   background: #464646;
-  -webkit-border-radius: 8rpx;
-          border-radius: 8rpx;
+  border-radius: 8rpx;
 }
 

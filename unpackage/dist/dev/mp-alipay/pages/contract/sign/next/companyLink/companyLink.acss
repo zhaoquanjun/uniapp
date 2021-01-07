@@ -33,8 +33,7 @@
   background-color: #fff;
   /* box-shadow: 0 8rpx 8rpx #666; */
   z-index: -11;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
@@ -99,8 +98,7 @@
   height:100rpx;
   line-height: 100rpx;
   background:rgba(70,70,70,1);
-  -webkit-border-radius:8rpx;
-          border-radius:8rpx;
+  border-radius:8rpx;
   color: white;
   margin-left: 40rpx;
   font-size:32rpx;

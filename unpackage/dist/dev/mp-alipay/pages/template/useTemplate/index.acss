@@ -5,8 +5,7 @@
   background-color: #f7f8f9;
 }
 view {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .title {
   padding: 0 48rpx;
@@ -364,7 +363,6 @@ view {
   font-weight: 500;
   color: #FFFFFF;
   text-align: center;
-  -webkit-border-radius: 8rpx;
-          border-radius: 8rpx;
+  border-radius: 8rpx;
 }
 

@@ -82,7 +82,7 @@ export default {
   onReachBottom: function () {},
   methods: {
     getRecordVideoFun(e) {
-      app.globalData.activeTab = e.detail.data[0].type;
+      // app.globalData.activeTab = e.detail.data[0].type;
     }
 
   }

@@ -52,6 +52,12 @@
 			}
 		},
 		{
+			"path": "pages/account/hlogin/hlogin",
+			"style": {
+				"navigationBarTitleText": "闪签"
+			}
+		},
+		{
 			"path": "pages/account/loginVerify/loginVerify",
 			"style": {}
 		},

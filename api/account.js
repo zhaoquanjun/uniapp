@@ -27,3 +27,8 @@ export const get_evidence_affirm_count = host + "/v1/evidence/affirm/count";
 export const company_message = host + "/v1/account/company/getOneAuthCompanyByName"; // 通过公司名称获取公司认证状态
 
 export const person_message = host + "/v1/account/user/getAuthUserByNameAndPhone"; // 通过姓名电话获取个人认证状态
+
+// ******************** h5
+export const h5_get_yzm_code = host + "/v1/sms/"; // 获取验证码
+
+export const h5_login = host + "/v1/account/login"; // 登录

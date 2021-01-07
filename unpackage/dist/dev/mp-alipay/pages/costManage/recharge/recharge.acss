@@ -3,8 +3,7 @@
   background-color: #f5f5f5;
 }
 view {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .recharge-page .recharge-account {
   margin: 16rpx 0;
@@ -65,8 +64,7 @@ view {
   font-size: 28rpx;
   line-height: 40rpx;
   border: 2rpx solid #ddd;
-  -webkit-border-radius: 4rpx;
-          border-radius: 4rpx;
+  border-radius: 4rpx;
 }
 .amount-list .list-area .list-item.active {
   color: #ED6C00;
@@ -129,8 +127,7 @@ view {
   color: #fff;
   font-size: 32rpx;
   font-weight: 500;
-  -webkit-border-radius: 8rpx;
-          border-radius: 8rpx;
+  border-radius: 8rpx;
   background-color: #464646;
 }
 

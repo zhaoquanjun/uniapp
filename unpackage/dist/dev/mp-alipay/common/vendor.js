@@ -2172,7 +2172,7 @@ function handleRef(ref) {
 }
 
 function triggerEvent(type, detail, options) {
-  var handler = this.props[customize('on-' + type)];
+  var handler = this.props && this.props[customize('on-' + type)];
   if (!handler) {
     return;
   }
@@ -2415,7 +2415,8 @@ function parsePage(vuePageOptions) {var _initVueComponent =
 
     __r: handleRef,
     __e: handleEvent,
-    __l: handleLink$1 };
+    __l: handleLink$1,
+    triggerEvent: triggerEvent };
 
 
   initHooks(pageOptions, hooks$1, vuePageOptions);
@@ -10635,7 +10636,7 @@ module.exports.create_company_cachet_url = _request.host + "/v1/file/create/cach
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.person_message = exports.company_message = exports.get_evidence_affirm_count = exports.update_usericon = exports.pc_login = exports.get_register_sms_code_url = exports.login_url = exports.update_count = exports.get_contract_uploadFile = exports.companyList = exports.upload_local = exports.get_user_info = exports.decode_phone = exports.get_phone_wx_code = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+Object.defineProperty(exports, "__esModule", { value: true });exports.h5_login = exports.h5_get_yzm_code = exports.person_message = exports.company_message = exports.get_evidence_affirm_count = exports.update_usericon = exports.pc_login = exports.get_register_sms_code_url = exports.login_url = exports.update_count = exports.get_contract_uploadFile = exports.companyList = exports.upload_local = exports.get_user_info = exports.decode_phone = exports.get_phone_wx_code = void 0;var _request = __webpack_require__(/*! ./request */ 8);
 
 var get_phone_wx_code = _request.host + "/v1/account/get/phone"; // 获取用户注册信息以及手机号openid uniid 等信息
 exports.get_phone_wx_code = get_phone_wx_code;
@@ -10664,7 +10665,12 @@ var get_evidence_affirm_count = _request.host + "/v1/evidence/affirm/count";expo
 var company_message = _request.host + "/v1/account/company/getOneAuthCompanyByName"; // 通过公司名称获取公司认证状态
 exports.company_message = company_message;
 var person_message = _request.host + "/v1/account/user/getAuthUserByNameAndPhone"; // 通过姓名电话获取个人认证状态
-exports.person_message = person_message;
+
+// ******************** h5
+exports.person_message = person_message;var h5_get_yzm_code = _request.host + "/v1/sms/"; // 获取验证码
+exports.h5_get_yzm_code = h5_get_yzm_code;
+var h5_login = _request.host + "/v1/account/login"; // 登录
+exports.h5_login = h5_login;
 
 /***/ })
 

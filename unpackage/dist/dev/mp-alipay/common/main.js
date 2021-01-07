@@ -145,7 +145,13 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 var _request = __webpack_require__(/*! ./api/request.js */ 8);
+
+
+
 var _account = __webpack_require__(/*! ./api/account.js */ 9);var _default =
+
+
+
 
 {
   //当小程序启动，或从后台进入前台显示，会触发 onShow
@@ -188,6 +194,25 @@ var _account = __webpack_require__(/*! ./api/account.js */ 9);var _default =
       this.phone = phone;
       this.avatar = avatar;
       this.memberType = memberType;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       uni.setStorageSync("userToken", userToken);
       uni.setStorageSync("userId", userId);
       uni.setStorageSync("userName", userName);
@@ -196,16 +221,31 @@ var _account = __webpack_require__(/*! ./api/account.js */ 9);var _default =
       uni.setStorageSync("phone", phone);
       uni.setStorageSync("avatar", avatar);
       uni.setStorageSync("memberType", memberType);
-
       if (memberCompany != null) {
         this.memberCompany = memberCompany;
         uni.setStorageSync("memberCompany", JSON.stringify(memberCompany));
       } else {
         uni.setStorageSync("memberCompany", '');
       }
+
+
     },
     //加载用户信息
     loadUserInfo: function loadUserInfo() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       this.userToken = uni.getStorageSync("userToken");
       this.userId = uni.getStorageSync("userId");
       this.userName = uni.getStorageSync("userName");
@@ -217,6 +257,8 @@ var _account = __webpack_require__(/*! ./api/account.js */ 9);var _default =
       this.memberType = uni.getStorageSync("memberType");
       var memberCompanyJson = uni.getStorageSync("memberCompany");
 
+
+
       if (memberCompanyJson.length != 0) {
         this.memberCompany = JSON.parse(memberCompanyJson);
       }
@@ -227,47 +269,40 @@ var _account = __webpack_require__(/*! ./api/account.js */ 9);var _default =
         */
     updateUserIcon: function updateUserIcon(avatar) {
       this.avatar = avatar;
-      uni.setStorageSync("avatar", avatar);
       var now = new Date();
       var nowTime = now.getTime();
-      uni.setStorageSync("lastUserInfoAuthDate", nowTime);
       this.lastUserInfoAuthDate = nowTime;
-      console.log(nowTime);
+
+
+
+
+
+
+
+      uni.setStorageSync("avatar", avatar);
+      uni.setStorageSync("lastUserInfoAuthDate", nowTime);
+
     },
-
-    /**
-        * 是否需要更新用户信息
-        */
-    isNeedUpdateUserInfo: function isNeedUpdateUserInfo() {
-      console.log(this.lastUserInfoAuthDate);
-
-      if (this.lastUserInfoAuthDate == null || this.lastUserInfoAuthDate.length == 0) {
-        return true;
-      }
-
-      var now = new Date();
-      var nowTime = now.getTime();
-      var day = parseInt((this.lastUserInfoAuthDate - nowTime) / (1000 * 60 * 60 * 24));
-      console.log(nowTime);
-      console.log(day);
-
-      if (day > 3) {
-        uni.setStorageSync("lastUserInfoAuthDate", nowTime);
-        this.lastUserInfoAuthDate = nowTime;
-        return true;
-      }
-
-      return false;
-    },
-
     /**
         * 退出登陆
         */
     quitLogin: function quitLogin() {
       this.userToken = null;
+
+
+
+
+
+
+
+
+
       uni.clearStorageSync();
       uni.reLaunch({
         url: '/pages/account/login/login' });
+
+
+
 
     },
 
@@ -279,8 +314,16 @@ var _account = __webpack_require__(/*! ./api/account.js */ 9);var _default =
     },
 
     login: function login() {
+
+
+
+
+
+
       uni.redirectTo({
         url: '/pages/root/root' });
+
+
 
     },
 
@@ -292,45 +335,6 @@ var _account = __webpack_require__(/*! ./api/account.js */ 9);var _default =
     },
 
     /**
-        * 授权成功
-        */
-    authSuccess: function authSuccess(name, userType) {
-      uni.setStorageSync("userName", userName);
-      uni.setStorageSync("userType", userType);
-      uni.setStorageSync("isAuth", 1);
-      this.userName = name;
-      this.userType = userType;
-      this.isAuth = true;
-    },
-
-    /**
-        * 获取用户坐标
-        */
-    updateUserLocal: function updateUserLocal() {
-      uni.getLocation({
-        type: 'wgs84',
-        success: function success(res) {
-          console.log(res);
-          var latitude = res.latitude;
-          var longitude = res.longitude;
-          (0, _request.post)({
-            url: _account.upload_local,
-            params: {
-              latitude: latitude,
-              longitude: longitude },
-
-            success: function success(data) {
-              console.log('local上传成功');
-            },
-            fail: function fail(smg) {
-              console.log('local上传失败');
-            } });
-
-        } });
-
-    },
-
-    /**
         * 获取用户信息
         */
     updateUserInfo: function updateUserInfo(callback) {
@@ -339,14 +343,9 @@ var _account = __webpack_require__(/*! ./api/account.js */ 9);var _default =
       (0, _request.get)({
         url: _account.get_user_info,
         success: function success(data) {
-          if (!data) {
-            return;
-          }
-
-          console.log(callback);
-
-          _this.loginSuccess(data.token, data.userId, data.name, data.userType, data.auth, data.phone, data.icon, data.joinCompany, data.userCompanyType);
-
+          if (!data) return;
+          _this.loginSuccess(data.token, data.userId, data.name, data.userType, data.auth, data.phone, data.icon, data.joinCompany,
+          data.userCompanyType);
           typeof callback == 'function' && callback();
         } });
 
@@ -359,7 +358,12 @@ var _account = __webpack_require__(/*! ./api/account.js */ 9);var _default =
       console.log(this.isAuth);
       if (!this.isAuth) {
         // 未认证
+
+
+
+
         var companyId = uni.getStorageSync('currentUser').companyId;
+
         var modalInfo = {
           title: companyId ? '立即进行企业实名认证' : '立即进行个人实名认证',
           url: companyId ? '/pages/authentication/company/company-auth-type/index' : '/pages/authentication/personal/personal-auth-type/index' };

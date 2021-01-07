@@ -3,8 +3,7 @@
   background-color: #fff;
 }
 view {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .card-detail-page {
   padding: 0 48rpx;

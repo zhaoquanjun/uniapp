@@ -33,8 +33,7 @@
   border-bottom: 2rpx solid #F5F5F5;
   font-size: 30rpx;
   font-weight: 400;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .item-Content .search-result--list {
   position: absolute;
@@ -50,8 +49,7 @@
   background-color: #fff;
   /* box-shadow: 0 8rpx 8rpx #666; */
   z-index: -11;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
@@ -82,8 +80,7 @@
   border-bottom: 2rpx solid #F5F5F5;
   font-size: 30rpx;
   font-weight: 400;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .item-Content .message input {
   text-align: right;
@@ -116,8 +113,7 @@
   height: 100rpx;
   line-height: 100rpx;
   background: rgba(70, 70, 70, 1);
-  -webkit-border-radius: 8rpx;
-          border-radius: 8rpx;
+  border-radius: 8rpx;
   color: white;
   margin-left: 40rpx;
   font-size: 32rpx;
@@ -125,8 +121,7 @@
 /*  重写 radio 样式  */  
 /* 未选中的 背景样式 */
 radio .wx-radio-input {
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   width: 30rpx;
   height: 30rpx;
   border: 2rpx solid #CCCCCC;

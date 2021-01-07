@@ -9,8 +9,7 @@
   background-color: #ffffff;
   margin: 54rpx 30rpx 16rpx 30rpx;
   height: 236rpx;
-  -webkit-border-radius: 4rpx;
-          border-radius: 4rpx;
+  border-radius: 4rpx;
   padding-left: 40rpx;
   padding-right: 40rpx;
 }
@@ -45,8 +44,7 @@
 .receipt-message {
   background-color: #ffffff;
   margin: 0rpx 30rpx 16rpx 30rpx;
-  -webkit-border-radius: 4rpx;
-          border-radius: 4rpx;
+  border-radius: 4rpx;
   padding-left: 40rpx;
   padding-right: 40rpx;
 }
@@ -97,7 +95,6 @@
   font-weight: 500;
   color: #fff;
   text-align: center;
-  -webkit-border-radius: 8rpx;
-          border-radius: 8rpx;
+  border-radius: 8rpx;
 }
 

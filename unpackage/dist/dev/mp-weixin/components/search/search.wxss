@@ -11,8 +11,7 @@
           align-items: center;
   height:84rpx;
   background:#F7F8F9FF;
-  -webkit-border-radius:4rpx;
-          border-radius:4rpx;
+  border-radius:4rpx;
   width: calc(100% - 48rpx);
   padding: 0 24rpx;
 }
@@ -24,12 +23,14 @@
   width: calc(100% - 30px);
   height: 84rpx;
   line-height: 84rpx;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 28rpx;
   color: #999999;
   font-weight: 400;
   background: transparent;
+}
+.search-box {
+	width: 100%;
 }
 .search-box .cancel-button {
   position: absolute;

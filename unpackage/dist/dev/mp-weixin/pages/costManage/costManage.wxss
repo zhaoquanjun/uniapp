@@ -3,8 +3,7 @@ page {
   background-color: #F7F8F9;
 }
 view {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .cost-manage--page {
   padding: 0 40rpx;
@@ -15,10 +14,8 @@ view {
   padding: 0 36rpx;
   width: 100%;
   background-color: #fff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-border-radius: 8rpx;
-          border-radius: 8rpx;
+  box-sizing: border-box;
+  border-radius: 8rpx;
 }
 .cost-manage--page .title {
   padding-top: 40rpx;
@@ -83,21 +80,18 @@ view {
   font-size: 28rpx;
   line-height: 28rpx;
   color: #333;
-  -webkit-border-radius: 8rpx;
-          border-radius: 8rpx;
+  border-radius: 8rpx;
 }
 .cost-manage--page .content .btn-group .btn.black {
   margin-left: 8rpx;
   color: #fff;
   background-color: #464646;
-  -webkit-border-radius: 8rpx;
-          border-radius: 8rpx;
+  border-radius: 8rpx;
 }
 .cost-manage--page .content .btn-group .btn.primary {
   border: 2rpx solid #D8D8D8;
   background-color: #fff;
-  -webkit-border-radius: 8rpx;
-          border-radius: 8rpx;
+  border-radius: 8rpx;
 }
 .cost-manage--page .detail {
   padding: 36rpx 0 34rpx;

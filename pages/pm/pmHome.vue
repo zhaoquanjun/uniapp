@@ -8,7 +8,7 @@
 					<open-data type="userAvatarUrl" class="avatar"></open-data>
 					<!-- #endif -->
 					<!-- #ifdef MP-ALIPAY -->
-					<image :src="userAvatar" mode="" class="avatar"></image>
+					<image :src="userAvatar" :data-a="userAvatar" mode="" class="avatar"></image>
 					<!-- #endif -->
 					<view class="info-box">
 						<view class="userName">
@@ -134,6 +134,7 @@
 					url: navigateUrl
 				});
 			}
+			
 			// #ifdef MP-ALIPAY
 			my.getAuthCode({
 				scopes: 'auth_user',
@@ -144,7 +145,9 @@
 								userAvatar: userInfo.avatar,
 								username: userInfo.nickName
 							});
-							console.log(this.userAvatar, this.username,userInfo, 88888)
+							app.globalData.userName = userInfo.nickName
+							app.globalData.userAvatar = userInfo.avatar
+							console.log(this.userAvatar, this.username, userInfo, 3333)
 						}
 					});
 				},
@@ -193,6 +196,7 @@
 					userToken: app.globalData.userToken,
 					isAuth: app.globalData.isAuth
 				});
+				console.log(app.globalData, 77777)
 			},
 
 			login: function() {

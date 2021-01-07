@@ -62,8 +62,7 @@ page {
     height:100rpx;
     line-height: 100rpx;
     background:rgba(70,70,70,1);
-    -webkit-border-radius:8rpx;
-            border-radius:8rpx;
+    border-radius:8rpx;
     color: white;
 }
 

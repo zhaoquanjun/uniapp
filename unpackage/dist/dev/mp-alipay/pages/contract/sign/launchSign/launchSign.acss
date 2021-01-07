@@ -46,8 +46,7 @@
   -webkit-box-align: center;
   -webkit-align-items: center;
           align-items: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   height:112rpx;
   line-height: 112rpx;
   padding-left: 48rpx;
@@ -159,8 +158,7 @@
   font-weight: 500;
   color: #fff;
   text-align: center;
-  -webkit-border-radius: 8rpx;
-          border-radius: 8rpx;
+  border-radius: 8rpx;
 }
 .user-dialog__mask {
   position: fixed;
@@ -184,8 +182,7 @@
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   z-index:12;
-  -webkit-border-radius: 12rpx;
-          border-radius: 12rpx;
+  border-radius: 12rpx;
 }
 .user-dialog--show .user-dialog__container {
   -webkit-transform: translateY(0);

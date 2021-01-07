@@ -14,8 +14,7 @@ page {
     height: 258rpx;
     padding-top: 60rpx;
     padding-bottom: 48rpx;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
     background-color: #333333;
 }
 .banner-image {
@@ -40,8 +39,7 @@ page {
     border: 8rpx solid white;
 }
 .avatar {
-    -webkit-border-radius: 50%;
-            border-radius: 50%;
+    border-radius: 50%;
     overflow: hidden;
     display: block;
 }
@@ -82,8 +80,7 @@ page {
     margin-top: 15rpx;
     padding-right: 24rpx;
     max-width: 360rpx;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 .phone {
     margin-top: 5rpx;
@@ -130,8 +127,7 @@ page {
     right: 30rpx;
     width: 50rpx;
     height: 50rpx;
-    -webkit-border-radius: 50%;
-            border-radius: 50%;
+    border-radius: 50%;
     text-align: center;
     font-size: 28rpx;
     font-weight: 200;
@@ -144,8 +140,7 @@ page {
 .auth-btn {
     margin-top: 20rpx;
     width: 110rpx;
-    -webkit-border-radius: 22rpx;
-            border-radius: 22rpx;
+    border-radius: 22rpx;
     border: 2rpx solid rgba(255, 255, 255, 1);
     line-height: 40rpx;
     font-size: 20rpx;
@@ -163,8 +158,7 @@ page {
     width: 690rpx;
     color: #fff;
     text-align: center;
-    -webkit-border-radius: 8rpx;
-            border-radius: 8rpx;
+    border-radius: 8rpx;
     font-size: 30rpx;
     font-weight: 200;
     line-height: 80rpx;
@@ -179,8 +173,7 @@ page {
     margin-left: 40rpx;
 }
 .home-userinfo-view {
-    -webkit-border-radius: 8rpx;
-            border-radius: 8rpx;
+    border-radius: 8rpx;
     background-color: #ffffff;
 }
 .user-content-cell {
@@ -229,8 +222,7 @@ page {
     right: 30rpx;
     width: 50rpx;
     height: 50rpx;
-    -webkit-border-radius: 50%;
-            border-radius: 50%;
+    border-radius: 50%;
     text-align: center;
     font-size: 28rpx;
     font-weight: 200;

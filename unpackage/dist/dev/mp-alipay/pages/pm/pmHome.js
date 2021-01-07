@@ -92,9 +92,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components = {
-  wechatUserInfo: function() {
-    return __webpack_require__.e(/*! import() | components/wechatUserInfo/wechatUserInfo */ "components/wechatUserInfo/wechatUserInfo").then(__webpack_require__.bind(null, /*! @/components/wechatUserInfo/wechatUserInfo.vue */ 561))
+var components
+try {
+  components = {
+    wechatUserInfo: function() {
+      return __webpack_require__.e(/*! import() | components/wechatUserInfo/wechatUserInfo */ "components/wechatUserInfo/wechatUserInfo").then(__webpack_require__.bind(null, /*! @/components/wechatUserInfo/wechatUserInfo.vue */ 561))
+    }
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
   }
 }
 var render = function() {
@@ -271,6 +290,7 @@ var app = getApp();var icon = function icon() {__webpack_require__.e(/*! require
 
     }
 
+
     my.getAuthCode({
       scopes: 'auth_user',
       success: function success(res) {
@@ -280,7 +300,9 @@ var app = getApp();var icon = function icon() {__webpack_require__.e(/*! require
               userAvatar: userInfo.avatar,
               username: userInfo.nickName });
 
-            console.log(_this2.userAvatar, _this2.username, userInfo, 88888);
+            app.globalData.userName = userInfo.nickName;
+            app.globalData.userAvatar = userInfo.avatar;
+            console.log(_this2.userAvatar, _this2.username, userInfo, 3333);
           } });
 
       } });
@@ -329,6 +351,7 @@ var app = getApp();var icon = function icon() {__webpack_require__.e(/*! require
         userToken: app.globalData.userToken,
         isAuth: app.globalData.isAuth });
 
+      console.log(app.globalData, 77777);
     },
 
     login: function login() {

@@ -3,8 +3,7 @@ page {
   background-color: #fff;
 }
 view {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .result-icon {
   margin: 80rpx auto 0;
@@ -21,8 +20,7 @@ view {
   height: 162rpx;
   background: rgba(249, 249, 249, 1);
   border: 2rpx solid rgba(220, 220, 220, 1);
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
 }
 .result-icon image {
   width: 70rpx;
@@ -51,8 +49,7 @@ view {
   color: #fff;
   font-size: 32rpx;
   font-weight: 500;
-  -webkit-border-radius: 8rpx;
-          border-radius: 8rpx;
+  border-radius: 8rpx;
   background-color: #464646;
 }
 .btn-groups {
@@ -82,8 +79,7 @@ view {
 .btn-groups .btn.black {
   width: 60%;
   color: #fff;
-  -webkit-border-radius: 8rpx;
-          border-radius: 8rpx;
+  border-radius: 8rpx;
   background-color: #464646;
 }
 

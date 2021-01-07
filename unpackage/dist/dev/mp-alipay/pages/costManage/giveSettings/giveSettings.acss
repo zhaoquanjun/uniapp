@@ -97,8 +97,7 @@
   color: #666666;
   background-color: #F2F2F2;
   border: 2rpx solid #ddd;
-  -webkit-border-radius: 4rpx;
-          border-radius: 4rpx;
+  border-radius: 4rpx;
 }
 .count-area .count {
   height: 60rpx;
@@ -149,8 +148,7 @@
   color: #fff;
   font-size: 32rpx;
   font-weight: 500;
-  -webkit-border-radius: 8rpx;
-          border-radius: 8rpx;
+  border-radius: 8rpx;
   background-color: #464646;
 }
 

@@ -135,16 +135,14 @@
     height:100rpx;
     line-height: 100rpx;
     background:#B7B7B7;
-    -webkit-border-radius:8rpx;
-            border-radius:8rpx;
+    border-radius:8rpx;
     color: white;
     margin-left: 40rpx;
 }  
 /*  重写 radio 样式  */  
 /* 未选中的 背景样式 */
 radio .wx-radio-input{
-    -webkit-border-radius: 0%;
-            border-radius: 0%;
+    border-radius: 0%;
     width: 28rpx;
     height: 28rpx;
     border:2rpx solid #CCCCCC;

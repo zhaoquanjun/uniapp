@@ -1,10 +1,1 @@
-<view>
-  <button open-type="getAuthorize" scope="phoneNumber" data-event-opts="{{[['GetAuthorize',[['getPhoneNumber',['$event']]]]]}}" onGetAuthorize="__e">授权手机号</button>
-  <block a:if="{{!isBindOpenId}}">
-    <button class="btn" open-type="getAuthorize" scope="phoneNumber" data-event-opts="{{[['GetAuthorize',[['getPhoneNumber',['$event']]]],['onError',[['omerror',['$event']]]],['Error',[['onAuthError',['$event']]]]]}}" onGetAuthorize="__e" onOnError="__e" onError="__e">支付宝账号快速登陆</button></block>
-  <block a:if="{{isBindOpenId}}">
-    <button data-event-opts="{{[['tap',[['handleLoginByPhoneFun',['$event']]]]]}}" class="btn" catchTap="__e">支付宝账号快速登陆</button></block>
-  <view class="mark-view" hidden="{{!isShowMark}}">
-    <view class="mark-content-view global-shadow">
-      <input class="mark-phone-input" placeholder="请输入手机号码" type="number" data-event-opts="{{[['input',[['bindKeyInput',['$event']]]]]}}" value="{{loginPhone}}" onInput="__e"/>
-      <view data-event-opts="{{[['tap',[['bindPhoneAction',['$event']]]]]}}" class="mark-btn" catchTap="__e">确认绑定此号码</view></view></view></view>
+<view><button open-type="getAuthorize" scope="phoneNumber" data-event-opts="{{[['GetAuthorize',[['getPhoneNumber',['$event']]]]]}}" onGetAuthorize="__e">授权手机号</button><block a:if="{{!isBindOpenId}}"><button class="btn" open-type="getAuthorize" scope="phoneNumber" data-event-opts="{{[['GetAuthorize',[['getPhoneNumber',['$event']]]],['onError',[['omerror',['$event']]]],['Error',[['onAuthError',['$event']]]]]}}" onGetAuthorize="__e" onOnError="__e" onError="__e">支付宝账号快速登陆</button></block><block a:if="{{isBindOpenId}}"><button data-event-opts="{{[['tap',[['handleLoginByPhoneFun',['$event']]]]]}}" class="btn" catchTap="__e">支付宝账号快速登陆</button></block><view class="mark-view" hidden="{{!isShowMark}}"><view class="mark-content-view global-shadow"><input class="mark-phone-input" placeholder="请输入手机号码" type="number" data-event-opts="{{[['input',[['bindKeyInput',['$event']]]]]}}" value="{{loginPhone}}" onInput="__e"/><view data-event-opts="{{[['tap',[['bindPhoneAction',['$event']]]]]}}" class="mark-btn" catchTap="__e">确认绑定此号码</view></view></view></view>

@@ -15,8 +15,7 @@
           transform: translate(-50%, -50%);
   background-color: #f5f5f5;
   min-width: 580rpx;
-  -webkit-border-radius: 20rpx;
-          border-radius: 20rpx;
+  border-radius: 20rpx;
 }
 .modal-wrapper .header {
   width: 100%;
@@ -26,10 +25,8 @@
   font-size: 32rpx;
   color: #333;
   font-weight: 500;
-  -webkit-border-top-left-radius: 20rpx;
-          border-top-left-radius: 20rpx;
-  -webkit-border-top-right-radius: 20rpx;
-          border-top-right-radius: 20rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
   background-color: #fff;
 }
 .modal-wrapper .content {
@@ -53,10 +50,8 @@
   text-align: center;
   font-size: 32rpx;
   font-weight: 500;
-  -webkit-border-bottom-left-radius: 20rpx;
-          border-bottom-left-radius: 20rpx;
-  -webkit-border-bottom-right-radius: 20rpx;
-          border-bottom-right-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
   background-color: #fff;
 }
 

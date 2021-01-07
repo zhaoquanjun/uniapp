@@ -3,8 +3,7 @@ page {
   background-color: #F7F8F9;
 }
 view {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .title {
   padding: 0 48rpx;
@@ -134,8 +133,7 @@ view {
   margin-left: -8rpx;
   width: 16rpx;
   height: 16rpx;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background-color: #999;
 }
 .contract-sign-flow .flow-content--area  .flow-content-item .item-flag.active {

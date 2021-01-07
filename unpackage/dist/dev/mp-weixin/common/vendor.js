@@ -8,7 +8,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}function _createClass(Constructor, protoProps, staticProps) {if (protoProps) _defineProperties(Constructor.prototype, protoProps);if (staticProps) _defineProperties(Constructor, staticProps);return Constructor;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
+Object.defineProperty(exports, "__esModule", { value: true });exports.createApp = createApp;exports.createComponent = createComponent;exports.createPage = createPage;exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _iterableToArrayLimit(arr, i) {if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}
 
 var _toString = Object.prototype.toString;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
@@ -363,112 +363,7 @@ var baseApi = /*#__PURE__*/Object.freeze({
   upx2px: upx2px,
   addInterceptor: addInterceptor,
   removeInterceptor: removeInterceptor,
-  interceptors: interceptors });var
-
-
-EventChannel = /*#__PURE__*/function () {
-  function EventChannel(id, events) {var _this = this;_classCallCheck(this, EventChannel);
-    this.id = id;
-    this.listener = {};
-    this.emitCache = {};
-    if (events) {
-      Object.keys(events).forEach(function (name) {
-        _this.on(name, events[name]);
-      });
-    }
-  }_createClass(EventChannel, [{ key: "emit", value: function emit(
-
-    eventName) {for (var _len3 = arguments.length, args = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {args[_key3 - 1] = arguments[_key3];}
-      var fns = this.listener[eventName];
-      if (!fns) {
-        return (this.emitCache[eventName] || (this.emitCache[eventName] = [])).push(args);
-      }
-      fns.forEach(function (opt) {
-        opt.fn.apply(opt.fn, args);
-      });
-      this.listener[eventName] = fns.filter(function (opt) {return opt.type !== 'once';});
-    } }, { key: "on", value: function on(
-
-    eventName, fn) {
-      this._addListener(eventName, 'on', fn);
-      this._clearCache(eventName);
-    } }, { key: "once", value: function once(
-
-    eventName, fn) {
-      this._addListener(eventName, 'once', fn);
-      this._clearCache(eventName);
-    } }, { key: "off", value: function off(
-
-    eventName, fn) {
-      var fns = this.listener[eventName];
-      if (!fns) {
-        return;
-      }
-      if (fn) {
-        for (var i = 0; i < fns.length;) {
-          if (fns[i].fn === fn) {
-            fns.splice(i, 1);
-            i--;
-          }
-          i++;
-        }
-      } else {
-        delete this.listener[eventName];
-      }
-    } }, { key: "_clearCache", value: function _clearCache(
-
-    eventName) {
-      var cacheArgs = this.emitCache[eventName];
-      if (cacheArgs) {
-        for (; cacheArgs.length > 0;) {
-          this.emit.apply(this, [eventName].concat(cacheArgs.shift()));
-        }
-      }
-    } }, { key: "_addListener", value: function _addListener(
-
-    eventName, type, fn) {
-      (this.listener[eventName] || (this.listener[eventName] = [])).push({
-        fn: fn,
-        type: type });
-
-    } }]);return EventChannel;}();
-
-
-var eventChannels = {};
-
-var eventChannelStack = [];
-
-var id = 0;
-
-function initEventChannel(events) {var cache = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-  id++;
-  var eventChannel = new EventChannel(id, events);
-  if (cache) {
-    eventChannels[id] = eventChannel;
-    eventChannelStack.push(eventChannel);
-  }
-  return eventChannel;
-}
-
-function getEventChannel(id) {
-  if (id) {
-    var eventChannel = eventChannels[id];
-    delete eventChannels[id];
-    return eventChannel;
-  }
-  return eventChannelStack.shift();
-}
-
-var navigateTo = {
-  args: function args(fromArgs, toArgs) {
-    var id = initEventChannel(fromArgs.events).id;
-    if (fromArgs.url) {
-      fromArgs.url = fromArgs.url + (fromArgs.url.indexOf('?') === -1 ? '?' : '&') + '__id__=' + id;
-    }
-  },
-  returnValue: function returnValue(fromRes, toRes) {
-    fromRes.eventChannel = getEventChannel();
-  } };
+  interceptors: interceptors });
 
 
 function findExistsPageIndex(url) {
@@ -537,6 +432,8 @@ var previewImage = {
   } };
 
 
+// import navigateTo from 'uni-helpers/navigate-to'
+
 function addSafeAreaInsets(result) {
   if (result.safeArea) {
     var safeArea = result.safeArea;
@@ -550,7 +447,7 @@ function addSafeAreaInsets(result) {
 }
 var protocols = {
   redirectTo: redirectTo,
-  navigateTo: navigateTo,
+  // navigateTo,  // 由于在微信开发者工具的页面参数，会显示__id__参数，因此暂时关闭mp-weixin对于navigateTo的AOP
   previewImage: previewImage,
   getSystemInfo: {
     returnValue: addSafeAreaInsets },
@@ -771,7 +668,7 @@ function initTriggerEvent(mpInstance) {
     }
   }
   var oldTriggerEvent = mpInstance.triggerEvent;
-  mpInstance.triggerEvent = function (event) {for (var _len4 = arguments.length, args = new Array(_len4 > 1 ? _len4 - 1 : 0), _key4 = 1; _key4 < _len4; _key4++) {args[_key4 - 1] = arguments[_key4];}
+  mpInstance.triggerEvent = function (event) {for (var _len3 = arguments.length, args = new Array(_len3 > 1 ? _len3 - 1 : 0), _key3 = 1; _key3 < _len3; _key3++) {args[_key3 - 1] = arguments[_key3];}
     return oldTriggerEvent.apply(mpInstance, [customize(event)].concat(args));
   };
 }
@@ -784,7 +681,7 @@ function initHook(name, options) {
     };
   } else {
     options[name] = function () {
-      initTriggerEvent(this);for (var _len5 = arguments.length, args = new Array(_len5), _key5 = 0; _key5 < _len5; _key5++) {args[_key5] = arguments[_key5];}
+      initTriggerEvent(this);for (var _len4 = arguments.length, args = new Array(_len4), _key4 = 0; _key4 < _len4; _key4++) {args[_key4] = arguments[_key4];}
       return oldHook.apply(this, args);
     };
   }
@@ -1252,7 +1149,7 @@ function getContextVm(vm) {
   return $parent && $parent.$parent;
 }
 
-function handleEvent(event) {var _this2 = this;
+function handleEvent(event) {var _this = this;
   event = wrapper$1(event);
 
   // [['tap',[['handle',[1,2,a]],['handle1',[1,2,a]]]]]
@@ -1283,14 +1180,14 @@ function handleEvent(event) {var _this2 = this;
       eventsArray.forEach(function (eventArray) {
         var methodName = eventArray[0];
         if (methodName) {
-          var handlerCtx = _this2.$vm;
+          var handlerCtx = _this.$vm;
           if (handlerCtx.$options.generic) {// mp-weixin,mp-toutiao 抽象节点模拟 scoped slots
             handlerCtx = getContextVm(handlerCtx) || handlerCtx;
           }
           if (methodName === '$emit') {
             handlerCtx.$emit.apply(handlerCtx,
             processEventArgs(
-            _this2.$vm,
+            _this.$vm,
             event,
             eventArray[1],
             eventArray[2],
@@ -1310,7 +1207,7 @@ function handleEvent(event) {var _this2 = this;
             handler.once = true;
           }
           var params = processEventArgs(
-          _this2.$vm,
+          _this.$vm,
           event,
           eventArray[1],
           eventArray[2],
@@ -1454,16 +1351,28 @@ function initRelation(detail) {
   this.triggerEvent('__l', detail);
 }
 
+function selectAllComponents(mpInstance, selector, $refs) {
+  var components = mpInstance.selectAllComponents(selector);
+  components.forEach(function (component) {
+    var ref = component.dataset.ref;
+    $refs[ref] = component.$vm || component;
+    {
+      if (component.dataset.vueGeneric === 'scoped') {
+        component.selectAllComponents('.scoped-ref').forEach(function (scopedComponent) {
+          selectAllComponents(scopedComponent, selector, $refs);
+        });
+      }
+    }
+  });
+}
+
 function initRefs(vm) {
   var mpInstance = vm.$scope;
   Object.defineProperty(vm, '$refs', {
     get: function get() {
       var $refs = {};
-      var components = mpInstance.selectAllComponents('.vue-ref');
-      components.forEach(function (component) {
-        var ref = component.dataset.ref;
-        $refs[ref] = component.$vm || component;
-      });
+      selectAllComponents(mpInstance, '.vue-ref', $refs);
+      // TODO 暂不考虑 for 中的 scoped
       var forComponents = mpInstance.selectAllComponents('.vue-ref-in-for');
       forComponents.forEach(function (component) {
         var ref = component.dataset.ref;
@@ -1503,12 +1412,25 @@ function parseApp(vm) {
 
 }
 
+var eventChannels = {};
+
+var eventChannelStack = [];
+
+function getEventChannel(id) {
+  if (id) {
+    var eventChannel = eventChannels[id];
+    delete eventChannels[id];
+    return eventChannel;
+  }
+  return eventChannelStack.shift();
+}
+
 function createApp(vm) {
   _vue.default.prototype.getOpenerEventChannel = function () {
-    if (!this.__eventChannel__) {
-      this.__eventChannel__ = new EventChannel();
+    // 微信小程序使用自身getOpenerEventChannel
+    {
+      return this.$scope.getOpenerEventChannel();
     }
-    return this.__eventChannel__;
   };
   var callHook = _vue.default.prototype.__call_hook;
   _vue.default.prototype.__call_hook = function (hook, args) {
@@ -1806,7 +1728,7 @@ uni$1;exports.default = _default;
 
 /***/ }),
 
-/***/ 11:
+/***/ 12:
 /*!**********************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
   \**********************************************************************************************************/
@@ -1935,14 +1857,14 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 131:
+/***/ 134:
 /*!***************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/prototype/prototype.js ***!
   \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var utils = __webpack_require__(/*! ../utils/utils.js */ 35);
+var utils = __webpack_require__(/*! ../utils/utils.js */ 37);
 
 Array.prototype.remove = function (val) {
   var index = this.indexOf(val);
@@ -1978,45 +1900,6 @@ String.prototype.firstLogicChar = function () {
     return s.slice(0, 2);
   }
 };
-
-/***/ }),
-
-/***/ 18:
-/*!****************************************************!*\
-  !*** /Users/icourt/Desktop/mycode/uni/api/cost.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.send_card_directive = exports.send_by_buy = exports.get_company_auth_status = exports.get_personal_auth_status = exports.cancel_hare_card = exports.share_card = exports.get_wx_pay_params = exports.buy_card_by_account = exports.get_card_list = exports.get_balance_list = exports.get_accout_info = exports.get_gift_card_status = exports.get_gift_card_from_wx = void 0;var _request = __webpack_require__(/*! ./request */ 8);
-
-var get_gift_card_from_wx = _request.host + '/v1/expense/receiveShareGiftCard/'; // 领取礼品卡
-exports.get_gift_card_from_wx = get_gift_card_from_wx;
-var get_gift_card_status = _request.host + '/v1/expense/transferGiftCardTimeout/'; // 获取礼品卡状态
-exports.get_gift_card_status = get_gift_card_status;
-var get_accout_info = _request.host + '/v1/account/getCurrentUserOrCompanyInfo'; // 获取账户信息（余额 礼品卡）
-exports.get_accout_info = get_accout_info;
-var get_balance_list = _request.host + '/v1/expense/consumptionDetailsList'; // 收入支出明细
-exports.get_balance_list = get_balance_list;
-var get_card_list = _request.host + '/v1/expense/couponList'; // 卡片列表
-exports.get_card_list = get_card_list;
-var buy_card_by_account = _request.host + '/v1/pay/account/pay'; // 账户余额购买
-exports.buy_card_by_account = buy_card_by_account;
-var get_wx_pay_params = _request.host + '/v1/pay/create/order'; // 获取微信支付参数
-exports.get_wx_pay_params = get_wx_pay_params;
-var share_card = _request.host + '/v1/expense/shareGiftCard'; // 获取分享礼品卡orderid
-exports.share_card = share_card;
-var cancel_hare_card = _request.host + '/v1/expense/cancelShareGiftCard/'; // 撤销分享
-exports.cancel_hare_card = cancel_hare_card;
-var get_personal_auth_status = _request.host + '/v1/account/user/getAuthUserInfoByNameAndPhone'; // 查询个人/经办人认证状态
-exports.get_personal_auth_status = get_personal_auth_status;
-var get_company_auth_status = _request.host + '/v1/account/company/getOneAuthCompanyByName'; // 查询企业认证状态
-exports.get_company_auth_status = get_company_auth_status;
-var send_by_buy = _request.host + '/v1/expense/batchTransfer'; // 礼品卡购买之后赠送
-exports.send_by_buy = send_by_buy;
-var send_card_directive = _request.host + '/v1/expense/transfer'; // 礼品卡直接赠送
-exports.send_card_directive = send_card_directive;
 
 /***/ }),
 
@@ -8067,6 +7950,42 @@ internalMixin(Vue);
 
 /***/ }),
 
+/***/ 27:
+/*!********************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/api/contract.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.get_signal_sign_person_list = exports.get_contract_launch = exports.get_contract_detail = exports.deleteContractEvidenceRel = exports.getChainsList = exports.saveContractEvidenceRel = exports.findNoRelatedContractEvidence = exports.saveEvidenceContractRel = exports.findNoRelatedContractSubject = exports.previewChainImg = exports.get_all_contract_list = exports.get_contract_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var get_contract_list = _request.host + "/v2/contract/list";exports.get_contract_list = get_contract_list;
+
+var get_all_contract_list = _request.host + "/v2/contract/count"; // 获取所有合同列表数据
+exports.get_all_contract_list = get_all_contract_list;
+var previewChainImg = _request.host + "/v1/blockchain/contractCert/preview/"; // 预览图片
+exports.previewChainImg = previewChainImg;
+var findNoRelatedContractSubject = _request.host + "/v1/contractEvidence/findNoRelatedContractSubject"; // 获取添加证据链关联(证据关联合同)
+exports.findNoRelatedContractSubject = findNoRelatedContractSubject;
+var saveEvidenceContractRel = _request.host + "/v1/contractEvidence/saveEvidenceContractRel"; // 确认关联
+exports.saveEvidenceContractRel = saveEvidenceContractRel;
+var findNoRelatedContractEvidence = _request.host + "/v1/contractEvidence/findNoRelatedContractEvidence"; // 添加证据链关联（合同关联证据）
+exports.findNoRelatedContractEvidence = findNoRelatedContractEvidence;
+var saveContractEvidenceRel = _request.host + "/v1/contractEvidence/saveContractEvidenceRel"; // 保存关联
+exports.saveContractEvidenceRel = saveContractEvidenceRel;
+var getChainsList = _request.host + "/v1/contractEvidence/findContractEvidence"; // 合同存证预览
+exports.getChainsList = getChainsList;
+var deleteContractEvidenceRel = _request.host + "/v1/contractEvidence/deleteContractEvidenceRel"; // 取消关联
+exports.deleteContractEvidenceRel = deleteContractEvidenceRel;
+var get_contract_detail = _request.host + "/v2/contract/detail"; // 获取合同详情
+exports.get_contract_detail = get_contract_detail;
+var get_contract_launch = _request.host + "/v2/contract/launch";exports.get_contract_launch = get_contract_launch;
+
+var get_signal_sign_person_list = _request.host + "/v1/contacts/findContacts";exports.get_signal_sign_person_list = get_signal_sign_person_list;
+
+/***/ }),
+
 /***/ 3:
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
@@ -8098,7 +8017,78 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 35:
+/***/ 311:
+/*!*******************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/api/invoice.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.get_pay_detail = exports.get_pay_info = exports.apply_invoice = exports.get_seller_companyName = exports.get_invouce_info = exports.get_invoice_data = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var get_invoice_data = _request.host + '/v1/invoice/findInvoiceList'; // 获取发票申请数据
+exports.get_invoice_data = get_invoice_data;
+var get_invouce_info = _request.host + '/v1/invoice/findInvoiceTitle'; // 获取发票信息
+exports.get_invouce_info = get_invouce_info;
+var get_seller_companyName = _request.host + '/v2/contract/findSponsor'; // 获取开票方信息
+exports.get_seller_companyName = get_seller_companyName;
+var apply_invoice = _request.host + '/v1/invoice/applyInvoice'; // 申请开票
+exports.apply_invoice = apply_invoice;
+var get_pay_info = _request.host + '/v2/contract/findPayInfoBySubjectId'; // 获取支付信息
+exports.get_pay_info = get_pay_info;
+var get_pay_detail = _request.host + '/v1/pay/info/payDetail'; // 获取发票详情信息
+exports.get_pay_detail = get_pay_detail;
+
+/***/ }),
+
+/***/ 36:
+/*!********************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/api/evidence.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.findContractSubject = exports.get_certificate_address = exports.evidence_detail = exports.saveChainToContract = exports.add_certificate_file = exports.get_upload_policy = exports.certificate_record_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var certificate_record_list = _request.host + "/v1/blockchain/certificateRecord/list"; // 出证记录列表(数据和签署)
+exports.certificate_record_list = certificate_record_list;
+var get_upload_policy = _request.host + "/v1/common/oss/policy"; // 获取 oss policy
+exports.get_upload_policy = get_upload_policy;
+var add_certificate_file = _request.host + "/v1/blockchain/dataStorage/add"; // 数据存证出证-文件类型
+exports.add_certificate_file = add_certificate_file;
+var saveChainToContract = _request.host + "/v1/contractEvidence/saveContractEvidence"; // 保存证据链关联合同
+exports.saveChainToContract = saveChainToContract;
+var evidence_detail = _request.host + "/v1/blockchain/certificateRecord/detail"; // 获取数据存证详情
+exports.evidence_detail = evidence_detail;
+var get_certificate_address = _request.host + "/v1/blockchain/cert/download"; // 出证下载地址
+exports.get_certificate_address = get_certificate_address;
+var findContractSubject = _request.host + "/v1/contractEvidence/findContractSubject"; // 获取合同关联列表
+exports.findContractSubject = findContractSubject;
+
+/***/ }),
+
+/***/ 360:
+/*!**********************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/api/collection.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.get_pay_QrCode = exports.get_sell_pay_QrCode = exports.get_pay_template_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var get_pay_template_list = _request.host + '/v1/pay/template/list'; // 获取支付模版列表
+exports.get_pay_template_list = get_pay_template_list;
+var get_sell_pay_QrCode = _request.host + "/v1/pay/template/use"; // 获取模版发起收款码
+exports.get_sell_pay_QrCode = get_sell_pay_QrCode;
+var get_pay_QrCode = _request.host + "/v1/pay/info/createQrCodePost"; // 合同相关支付 - 销售即开票 - 收款
+exports.get_pay_QrCode = get_pay_QrCode;
+
+/***/ }),
+
+/***/ 37:
 /*!*******************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/utils/utils.js ***!
   \*******************************************************/
@@ -8237,6 +8227,27 @@ module.exports.trim = trim;
 
 /***/ }),
 
+/***/ 385:
+/*!********************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/api/template.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.confirm_contract_launch_by_template = exports.get_template_detail = exports.get_templateList = exports.get_signal_sign_person_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var get_signal_sign_person_list = _request.host + "/v1/contacts/findContacts"; // 获取签署人列表 个人
+exports.get_signal_sign_person_list = get_signal_sign_person_list;
+var get_templateList = _request.host + '/v1/contract/template/templateList'; // 获取模版列表
+exports.get_templateList = get_templateList;
+var get_template_detail = _request.host + '/v1/contract/template/detail'; // 获取模版详情
+exports.get_template_detail = get_template_detail;
+var confirm_contract_launch_by_template = _request.host + "/v1/contract/template/launch"; // 通过合同模版发起
+exports.confirm_contract_launch_by_template = confirm_contract_launch_by_template;
+
+/***/ }),
+
 /***/ 4:
 /*!***************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/pages.json ***!
@@ -8248,7 +8259,36 @@ module.exports.trim = trim;
 
 /***/ }),
 
-/***/ 428:
+/***/ 426:
+/*!******************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/api/authen.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.authPhone = exports.smsSend = exports.applyAuth = exports.authFace = exports.companyHandle = exports.companyAuth = exports.businessLicenseUpload = exports.createCompany = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var createCompany = _request.host + "/v1/account/create/company"; // 创建企业
+exports.createCompany = createCompany;
+var businessLicenseUpload = _request.host + "/v1/account/apply/auth/businessLicense"; // 上传营业执照解析数据
+exports.businessLicenseUpload = businessLicenseUpload;
+var companyAuth = _request.host + "/v1/account/apply/auth/company"; // 法人认证
+exports.companyAuth = companyAuth;
+var companyHandle = _request.host + "/v1/account/apply/auth/company/handle"; // 经办人认证
+exports.companyHandle = companyHandle;
+var authFace = _request.host + "/v1/account/auth/face"; // 人脸进行实名认证(只小程序用)
+exports.authFace = authFace;
+var applyAuth = _request.host + "/v1/account/apply/auth"; // 人脸进行实名认证(只小程序用)
+exports.applyAuth = applyAuth;
+var smsSend = _request.host + "/v1/sms/"; // 获取验证码
+exports.smsSend = smsSend;
+var authPhone = _request.host + "/v1/account/auth/phone"; // 个人手机号认证
+exports.authPhone = authPhone;
+
+/***/ }),
+
+/***/ 443:
 /*!*****************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/utils/FXQ.js ***!
   \*****************************************************/
@@ -8776,48 +8816,7 @@ var FXQ = {
 
 /***/ }),
 
-/***/ 58:
-/*!*******************************************************!*\
-  !*** /Users/icourt/Desktop/mycode/uni/api/account.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.person_message = exports.company_message = exports.get_evidence_affirm_count = exports.update_usericon = exports.pc_login = exports.get_register_sms_code_url = exports.login_url = exports.update_count = exports.get_contract_uploadFile = exports.companyList = exports.upload_local = exports.get_user_info = exports.decode_phone = exports.get_phone_wx_code = void 0;var _request = __webpack_require__(/*! ./request */ 8);
-
-var get_phone_wx_code = _request.host + "/v1/account/get/phone"; // 获取用户注册信息以及手机号openid uniid 等信息
-exports.get_phone_wx_code = get_phone_wx_code;
-var decode_phone = _request.host + "/v1/account/decode/wxapp/phone"; // 获取手机以及微信信息
-exports.decode_phone = decode_phone;
-var get_user_info = _request.host + "/v1/account/user/info"; // 获取用户信息
-exports.get_user_info = get_user_info;
-var upload_local = _request.host + "/v1/account/update/local"; // 更新本地信息
-exports.upload_local = upload_local;
-var companyList = _request.host + "/v1/account/apply/auth/company/list"; // 企业列表
-exports.companyList = companyList;
-var get_contract_uploadFile = _request.host + "/v2/contract/uploadFile"; // 上传合同文件
-exports.get_contract_uploadFile = get_contract_uploadFile;
-var update_count = _request.host + "/v1/account/getCurrentUserOrCompanyInfo"; // 更新与自己相关合同数量信息
-exports.update_count = update_count;
-var login_url = _request.host + "/v1/account/login/wxapp"; // 微信登录
-exports.login_url = login_url;
-var get_register_sms_code_url = _request.host + "/v1/sms"; // 获取验证码
-exports.get_register_sms_code_url = get_register_sms_code_url;
-var pc_login = _request.host + '/v1/account/login'; // pc版登录
-exports.pc_login = pc_login;
-var update_usericon = _request.host + "/v1/account/update/icon";exports.update_usericon = update_usericon;
-
-var get_evidence_affirm_count = _request.host + "/v1/evidence/affirm/count";exports.get_evidence_affirm_count = get_evidence_affirm_count;
-
-var company_message = _request.host + "/v1/account/company/getOneAuthCompanyByName"; // 通过公司名称获取公司认证状态
-exports.company_message = company_message;
-var person_message = _request.host + "/v1/account/user/getAuthUserByNameAndPhone"; // 通过姓名电话获取个人认证状态
-exports.person_message = person_message;
-
-/***/ }),
-
-/***/ 590:
+/***/ 605:
 /*!***************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/common/component.js ***!
   \***************************************************************************************/
@@ -8825,8 +8824,8 @@ exports.person_message = person_message;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _basic = __webpack_require__(/*! ../mixins/basic */ 591);
-var _index = __webpack_require__(/*! ../mixins/observer/index */ 592);function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _basic = __webpack_require__(/*! ../mixins/basic */ 606);
+var _index = __webpack_require__(/*! ../mixins/observer/index */ 607);function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
 function mapKeys(source, target, map) {
   Object.keys(map).forEach(function (key) {
     if (source[key]) {
@@ -8889,7 +8888,7 @@ function VantComponent() {var vantOptions = arguments.length > 0 && arguments[0]
 
 /***/ }),
 
-/***/ 591:
+/***/ 606:
 /*!***********************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/mixins/basic.js ***!
   \***********************************************************************************/
@@ -8925,7 +8924,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 592:
+/***/ 607:
 /*!********************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/mixins/observer/index.js ***!
   \********************************************************************************************/
@@ -8933,8 +8932,8 @@ module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.observe = observe;var _behavior = __webpack_require__(/*! ./behavior */ 593);
-var _props = __webpack_require__(/*! ./props */ 594);
+Object.defineProperty(exports, "__esModule", { value: true });exports.observe = observe;var _behavior = __webpack_require__(/*! ./behavior */ 608);
+var _props = __webpack_require__(/*! ./props */ 609);
 function observe(vantOptions, options) {var
 
   watch =
@@ -8974,7 +8973,7 @@ function observe(vantOptions, options) {var
 
 /***/ }),
 
-/***/ 593:
+/***/ 608:
 /*!***********************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/mixins/observer/behavior.js ***!
   \***********************************************************************************************/
@@ -9047,7 +9046,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 594:
+/***/ 609:
 /*!********************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/mixins/observer/props.js ***!
   \********************************************************************************************/
@@ -9091,7 +9090,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.observePro
 
 /***/ }),
 
-/***/ 595:
+/***/ 610:
 /*!***********************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/common/utils.js ***!
   \***********************************************************************************/
@@ -9129,7 +9128,7 @@ function getSystemInfoSync() {
 
 /***/ }),
 
-/***/ 596:
+/***/ 611:
 /*!************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/picker/shared.js ***!
   \************************************************************************************/
@@ -9159,192 +9158,42 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.pickerProp
 
 /***/ }),
 
-/***/ 725:
-/*!******************************************************!*\
-  !*** /Users/icourt/Desktop/mycode/uni/api/authen.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.authPhone = exports.smsSend = exports.applyAuth = exports.authFace = exports.companyHandle = exports.companyAuth = exports.businessLicenseUpload = exports.createCompany = void 0;var _request = __webpack_require__(/*! ./request */ 8);
-
-var createCompany = _request.host + "/v1/account/create/company"; // 创建企业
-exports.createCompany = createCompany;
-var businessLicenseUpload = _request.host + "/v1/account/apply/auth/businessLicense"; // 上传营业执照解析数据
-exports.businessLicenseUpload = businessLicenseUpload;
-var companyAuth = _request.host + "/v1/account/apply/auth/company"; // 法人认证
-exports.companyAuth = companyAuth;
-var companyHandle = _request.host + "/v1/account/apply/auth/company/handle"; // 经办人认证
-exports.companyHandle = companyHandle;
-var authFace = _request.host + "/v1/account/auth/face"; // 人脸进行实名认证(只小程序用)
-exports.authFace = authFace;
-var applyAuth = _request.host + "/v1/account/apply/auth"; // 人脸进行实名认证(只小程序用)
-exports.applyAuth = applyAuth;
-var smsSend = _request.host + "/v1/sms/"; // 获取验证码
-exports.smsSend = smsSend;
-var authPhone = _request.host + "/v1/account/auth/phone"; // 个人手机号认证
-exports.authPhone = authPhone;
-
-/***/ }),
-
-/***/ 726:
+/***/ 68:
 /*!****************************************************!*\
-  !*** /Users/icourt/Desktop/mycode/uni/api/seal.js ***!
+  !*** /Users/icourt/Desktop/mycode/uni/api/cost.js ***!
   \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.save_personnal_seal = exports.upload_painted_wx_url = exports.delete_painted_url = exports.set_default_seal = exports.company_painted_list = exports.person_painted_list = exports.upload_person_seal = exports.upload_company_seal = exports.create_seal = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+Object.defineProperty(exports, "__esModule", { value: true });exports.send_card_directive = exports.send_by_buy = exports.get_company_auth_status = exports.get_personal_auth_status = exports.cancel_hare_card = exports.share_card = exports.get_wx_pay_params = exports.buy_card_by_account = exports.get_card_list = exports.get_balance_list = exports.get_accout_info = exports.get_gift_card_status = exports.get_gift_card_from_wx = void 0;var _request = __webpack_require__(/*! ./request */ 8);
 
-var create_seal = _request.host + "/v1/pass/uploadImgByBase64String"; // 生成印章base64
-exports.create_seal = create_seal;
-var upload_company_seal = _request.host + "/v1/file/saveCompanySeal"; // 保存公司印章
-exports.upload_company_seal = upload_company_seal;
-var upload_person_seal = _request.host + "/v1/file/savePersonalSeal"; // 保存个人印章
-exports.upload_person_seal = upload_person_seal;
-var person_painted_list = _request.host + "/v1/file/getPersonalSealList"; // 获取个人印章列表
-exports.person_painted_list = person_painted_list;
-var company_painted_list = _request.host + "/v1/file/getEnterpriseSealList"; // 获取公司印章列表
-exports.company_painted_list = company_painted_list;
-var set_default_seal = _request.host + "/v1/file/painted/default"; // 设置为默认印章
-exports.set_default_seal = set_default_seal;
-var delete_painted_url = _request.host + "/v1/file/handleSignImageStatus"; // 删除印章
-exports.delete_painted_url = delete_painted_url;
-var upload_painted_wx_url = _request.host + "/v1/pass/uploadFile"; // 上传印章
-exports.upload_painted_wx_url = upload_painted_wx_url;
-var save_personnal_seal = _request.host + "/v1/file/savePersonalSeal"; // 保存印章
-exports.save_personnal_seal = save_personnal_seal;
-module.exports.create_company_cachet_url = _request.host + "/v1/file/create/cachet"; // 绘制公司印章
-
-/***/ }),
-
-/***/ 727:
-/*!**********************************************************!*\
-  !*** /Users/icourt/Desktop/mycode/uni/api/collection.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.get_pay_QrCode = exports.get_sell_pay_QrCode = exports.get_pay_template_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
-
-var get_pay_template_list = _request.host + '/v1/pay/template/list'; // 获取支付模版列表
-exports.get_pay_template_list = get_pay_template_list;
-var get_sell_pay_QrCode = _request.host + "/v1/pay/template/use"; // 获取模版发起收款码
-exports.get_sell_pay_QrCode = get_sell_pay_QrCode;
-var get_pay_QrCode = _request.host + "/v1/pay/info/createQrCodePost"; // 合同相关支付 - 销售即开票 - 收款
-exports.get_pay_QrCode = get_pay_QrCode;
-
-/***/ }),
-
-/***/ 728:
-/*!********************************************************!*\
-  !*** /Users/icourt/Desktop/mycode/uni/api/evidence.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.findContractSubject = exports.get_certificate_address = exports.evidence_detail = exports.saveChainToContract = exports.add_certificate_file = exports.get_upload_policy = exports.certificate_record_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
-
-var certificate_record_list = _request.host + "/v1/blockchain/certificateRecord/list"; // 出证记录列表(数据和签署)
-exports.certificate_record_list = certificate_record_list;
-var get_upload_policy = _request.host + "/v1/common/oss/policy"; // 获取 oss policy
-exports.get_upload_policy = get_upload_policy;
-var add_certificate_file = _request.host + "/v1/blockchain/dataStorage/add"; // 数据存证出证-文件类型
-exports.add_certificate_file = add_certificate_file;
-var saveChainToContract = _request.host + "/v1/contractEvidence/saveContractEvidence"; // 保存证据链关联合同
-exports.saveChainToContract = saveChainToContract;
-var evidence_detail = _request.host + "/v1/blockchain/certificateRecord/detail"; // 获取数据存证详情
-exports.evidence_detail = evidence_detail;
-var get_certificate_address = _request.host + "/v1/blockchain/cert/download"; // 出证下载地址
-exports.get_certificate_address = get_certificate_address;
-var findContractSubject = _request.host + "/v1/contractEvidence/findContractSubject"; // 获取合同关联列表
-exports.findContractSubject = findContractSubject;
-
-/***/ }),
-
-/***/ 729:
-/*!********************************************************!*\
-  !*** /Users/icourt/Desktop/mycode/uni/api/contract.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.get_signal_sign_person_list = exports.get_contract_launch = exports.get_contract_detail = exports.deleteContractEvidenceRel = exports.getChainsList = exports.saveContractEvidenceRel = exports.findNoRelatedContractEvidence = exports.saveEvidenceContractRel = exports.findNoRelatedContractSubject = exports.previewChainImg = exports.get_all_contract_list = exports.get_contract_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
-
-var get_contract_list = _request.host + "/v2/contract/list";exports.get_contract_list = get_contract_list;
-
-var get_all_contract_list = _request.host + "/v2/contract/count"; // 获取所有合同列表数据
-exports.get_all_contract_list = get_all_contract_list;
-var previewChainImg = _request.host + "/v1/blockchain/contractCert/preview/"; // 预览图片
-exports.previewChainImg = previewChainImg;
-var findNoRelatedContractSubject = _request.host + "/v1/contractEvidence/findNoRelatedContractSubject"; // 获取添加证据链关联(证据关联合同)
-exports.findNoRelatedContractSubject = findNoRelatedContractSubject;
-var saveEvidenceContractRel = _request.host + "/v1/contractEvidence/saveEvidenceContractRel"; // 确认关联
-exports.saveEvidenceContractRel = saveEvidenceContractRel;
-var findNoRelatedContractEvidence = _request.host + "/v1/contractEvidence/findNoRelatedContractEvidence"; // 添加证据链关联（合同关联证据）
-exports.findNoRelatedContractEvidence = findNoRelatedContractEvidence;
-var saveContractEvidenceRel = _request.host + "/v1/contractEvidence/saveContractEvidenceRel"; // 保存关联
-exports.saveContractEvidenceRel = saveContractEvidenceRel;
-var getChainsList = _request.host + "/v1/contractEvidence/findContractEvidence"; // 合同存证预览
-exports.getChainsList = getChainsList;
-var deleteContractEvidenceRel = _request.host + "/v1/contractEvidence/deleteContractEvidenceRel"; // 取消关联
-exports.deleteContractEvidenceRel = deleteContractEvidenceRel;
-var get_contract_detail = _request.host + "/v2/contract/detail"; // 获取合同详情
-exports.get_contract_detail = get_contract_detail;
-var get_contract_launch = _request.host + "/v2/contract/launch";exports.get_contract_launch = get_contract_launch;
-
-var get_signal_sign_person_list = _request.host + "/v1/contacts/findContacts";exports.get_signal_sign_person_list = get_signal_sign_person_list;
-
-/***/ }),
-
-/***/ 730:
-/*!********************************************************!*\
-  !*** /Users/icourt/Desktop/mycode/uni/api/template.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.confirm_contract_launch_by_template = exports.get_template_detail = exports.get_templateList = exports.get_signal_sign_person_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
-
-var get_signal_sign_person_list = _request.host + "/v1/contacts/findContacts"; // 获取签署人列表 个人
-exports.get_signal_sign_person_list = get_signal_sign_person_list;
-var get_templateList = _request.host + '/v1/contract/template/templateList'; // 获取模版列表
-exports.get_templateList = get_templateList;
-var get_template_detail = _request.host + '/v1/contract/template/detail'; // 获取模版详情
-exports.get_template_detail = get_template_detail;
-var confirm_contract_launch_by_template = _request.host + "/v1/contract/template/launch"; // 通过合同模版发起
-exports.confirm_contract_launch_by_template = confirm_contract_launch_by_template;
-
-/***/ }),
-
-/***/ 731:
-/*!*******************************************************!*\
-  !*** /Users/icourt/Desktop/mycode/uni/api/invoice.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.get_pay_detail = exports.get_pay_info = exports.apply_invoice = exports.get_seller_companyName = exports.get_invouce_info = exports.get_invoice_data = void 0;var _request = __webpack_require__(/*! ./request */ 8);
-
-var get_invoice_data = _request.host + '/v1/invoice/findInvoiceList'; // 获取发票申请数据
-exports.get_invoice_data = get_invoice_data;
-var get_invouce_info = _request.host + '/v1/invoice/findInvoiceTitle'; // 获取发票信息
-exports.get_invouce_info = get_invouce_info;
-var get_seller_companyName = _request.host + '/v2/contract/findSponsor'; // 获取开票方信息
-exports.get_seller_companyName = get_seller_companyName;
-var apply_invoice = _request.host + '/v1/invoice/applyInvoice'; // 申请开票
-exports.apply_invoice = apply_invoice;
-var get_pay_info = _request.host + '/v2/contract/findPayInfoBySubjectId'; // 获取支付信息
-exports.get_pay_info = get_pay_info;
-var get_pay_detail = _request.host + '/v1/pay/info/payDetail'; // 获取发票详情信息
-exports.get_pay_detail = get_pay_detail;
+var get_gift_card_from_wx = _request.host + '/v1/expense/receiveShareGiftCard/'; // 领取礼品卡
+exports.get_gift_card_from_wx = get_gift_card_from_wx;
+var get_gift_card_status = _request.host + '/v1/expense/transferGiftCardTimeout/'; // 获取礼品卡状态
+exports.get_gift_card_status = get_gift_card_status;
+var get_accout_info = _request.host + '/v1/account/getCurrentUserOrCompanyInfo'; // 获取账户信息（余额 礼品卡）
+exports.get_accout_info = get_accout_info;
+var get_balance_list = _request.host + '/v1/expense/consumptionDetailsList'; // 收入支出明细
+exports.get_balance_list = get_balance_list;
+var get_card_list = _request.host + '/v1/expense/couponList'; // 卡片列表
+exports.get_card_list = get_card_list;
+var buy_card_by_account = _request.host + '/v1/pay/account/pay'; // 账户余额购买
+exports.buy_card_by_account = buy_card_by_account;
+var get_wx_pay_params = _request.host + '/v1/pay/create/order'; // 获取微信支付参数
+exports.get_wx_pay_params = get_wx_pay_params;
+var share_card = _request.host + '/v1/expense/shareGiftCard'; // 获取分享礼品卡orderid
+exports.share_card = share_card;
+var cancel_hare_card = _request.host + '/v1/expense/cancelShareGiftCard/'; // 撤销分享
+exports.cancel_hare_card = cancel_hare_card;
+var get_personal_auth_status = _request.host + '/v1/account/user/getAuthUserInfoByNameAndPhone'; // 查询个人/经办人认证状态
+exports.get_personal_auth_status = get_personal_auth_status;
+var get_company_auth_status = _request.host + '/v1/account/company/getOneAuthCompanyByName'; // 查询企业认证状态
+exports.get_company_auth_status = get_company_auth_status;
+var send_by_buy = _request.host + '/v1/expense/batchTransfer'; // 礼品卡购买之后赠送
+exports.send_by_buy = send_by_buy;
+var send_card_directive = _request.host + '/v1/expense/transfer'; // 礼品卡直接赠送
+exports.send_card_directive = send_card_directive;
 
 /***/ }),
 
@@ -9824,6 +9673,84 @@ module.exports.uploadFile = uploadFile;
 module.exports.sendPostBody = sendPostBody;
 module.exports.sendFormData = sendFormData;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 85:
+/*!****************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/api/seal.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.save_personnal_seal = exports.upload_painted_wx_url = exports.delete_painted_url = exports.set_default_seal = exports.company_painted_list = exports.person_painted_list = exports.upload_person_seal = exports.upload_company_seal = exports.create_seal = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var create_seal = _request.host + "/v1/pass/uploadImgByBase64String"; // 生成印章base64
+exports.create_seal = create_seal;
+var upload_company_seal = _request.host + "/v1/file/saveCompanySeal"; // 保存公司印章
+exports.upload_company_seal = upload_company_seal;
+var upload_person_seal = _request.host + "/v1/file/savePersonalSeal"; // 保存个人印章
+exports.upload_person_seal = upload_person_seal;
+var person_painted_list = _request.host + "/v1/file/getPersonalSealList"; // 获取个人印章列表
+exports.person_painted_list = person_painted_list;
+var company_painted_list = _request.host + "/v1/file/getEnterpriseSealList"; // 获取公司印章列表
+exports.company_painted_list = company_painted_list;
+var set_default_seal = _request.host + "/v1/file/painted/default"; // 设置为默认印章
+exports.set_default_seal = set_default_seal;
+var delete_painted_url = _request.host + "/v1/file/handleSignImageStatus"; // 删除印章
+exports.delete_painted_url = delete_painted_url;
+var upload_painted_wx_url = _request.host + "/v1/pass/uploadFile"; // 上传印章
+exports.upload_painted_wx_url = upload_painted_wx_url;
+var save_personnal_seal = _request.host + "/v1/file/savePersonalSeal"; // 保存印章
+exports.save_personnal_seal = save_personnal_seal;
+module.exports.create_company_cachet_url = _request.host + "/v1/file/create/cachet"; // 绘制公司印章
+
+/***/ }),
+
+/***/ 9:
+/*!*******************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/api/account.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.h5_login = exports.h5_get_yzm_code = exports.person_message = exports.company_message = exports.get_evidence_affirm_count = exports.update_usericon = exports.pc_login = exports.get_register_sms_code_url = exports.login_url = exports.update_count = exports.get_contract_uploadFile = exports.companyList = exports.upload_local = exports.get_user_info = exports.decode_phone = exports.get_phone_wx_code = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var get_phone_wx_code = _request.host + "/v1/account/get/phone"; // 获取用户注册信息以及手机号openid uniid 等信息
+exports.get_phone_wx_code = get_phone_wx_code;
+var decode_phone = _request.host + "/v1/account/decode/wxapp/phone"; // 获取手机以及微信信息
+exports.decode_phone = decode_phone;
+var get_user_info = _request.host + "/v1/account/user/info"; // 获取用户信息
+exports.get_user_info = get_user_info;
+var upload_local = _request.host + "/v1/account/update/local"; // 更新本地信息
+exports.upload_local = upload_local;
+var companyList = _request.host + "/v1/account/apply/auth/company/list"; // 企业列表
+exports.companyList = companyList;
+var get_contract_uploadFile = _request.host + "/v2/contract/uploadFile"; // 上传合同文件
+exports.get_contract_uploadFile = get_contract_uploadFile;
+var update_count = _request.host + "/v1/account/getCurrentUserOrCompanyInfo"; // 更新与自己相关合同数量信息
+exports.update_count = update_count;
+var login_url = _request.host + "/v1/account/login/wxapp"; // 微信登录
+exports.login_url = login_url;
+var get_register_sms_code_url = _request.host + "/v1/sms"; // 获取验证码
+exports.get_register_sms_code_url = get_register_sms_code_url;
+var pc_login = _request.host + '/v1/account/login'; // pc版登录
+exports.pc_login = pc_login;
+var update_usericon = _request.host + "/v1/account/update/icon";exports.update_usericon = update_usericon;
+
+var get_evidence_affirm_count = _request.host + "/v1/evidence/affirm/count";exports.get_evidence_affirm_count = get_evidence_affirm_count;
+
+var company_message = _request.host + "/v1/account/company/getOneAuthCompanyByName"; // 通过公司名称获取公司认证状态
+exports.company_message = company_message;
+var person_message = _request.host + "/v1/account/user/getAuthUserByNameAndPhone"; // 通过姓名电话获取个人认证状态
+
+// ******************** h5
+exports.person_message = person_message;var h5_get_yzm_code = _request.host + "/v1/sms/"; // 获取验证码
+exports.h5_get_yzm_code = h5_get_yzm_code;
+var h5_login = _request.host + "/v1/account/login"; // 登录
+exports.h5_login = h5_login;
 
 /***/ })
 

@@ -12,8 +12,7 @@ page {
   padding: 32rpx 40rpx 16rpx;
   width: 100%;
   background-color: #fff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   z-index: 1;
 }
 .invoice-list--page .invoice-list {
@@ -23,8 +22,7 @@ page {
   padding: 132rpx 48rpx 48rpx;
   width: 100%;
   height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .invoice-list--page .invoice-list .list-item {
   padding: 32rpx 0;
@@ -81,8 +79,7 @@ page {
   content: '';
   width: 16rpx;
   height: 16rpx;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
 }
 .list-item .desc {
   display: -webkit-box;
@@ -125,8 +122,7 @@ page {
   margin-right: 16rpx;
   width: 8rpx;
   height: 8rpx;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background-color: #666666;
 }
 .list-item .desc .more::before {
@@ -137,8 +133,7 @@ page {
   content: '';
   width: 8rpx;
   height: 8rpx;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background-color: #666666;
 }
 .list-item .desc .more::after {
@@ -149,8 +144,7 @@ page {
   content: '';
   width: 8rpx;
   height: 8rpx;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background-color: #666666;
 }
 .list-item .date {

@@ -691,11 +691,11 @@
 							fileName: 'file',
 							filePath: filePath,
 							formData: {
-								'key': res.dir + this.addFileInfo.name,
-								'policy': res.policy,
-								'OSSAccessKeyId': res.accessid,
-								'signature': res.signature,
-								'success_action_status': '200'
+								key: res.dir + this.addFileInfo.name,
+								policy: res.policy,
+								OSSAccessKeyId: res.accessid,
+								signature: res.signature,
+								success_action_status: 200
 							},
 							success: () => {
 								// success
@@ -777,8 +777,6 @@
 			},
 
 			switchTabBarFun() {
-				const app = getApp();
-				app.globalData.activeTab = 'data';
 				uni.switchTab({
 					url: '/pages/evidence/index'
 				});

@@ -45,8 +45,7 @@
   float: left;
   width: 74rpx;
   height: 74rpx;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   margin-top: 3rpx;
   margin-right: 64rpx;
 }
@@ -56,8 +55,7 @@
   height: 68rpx;
   margin-left: 3.5rpx;
   margin-top: 3.5rpx;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
 }
 .submit{
   float: left;

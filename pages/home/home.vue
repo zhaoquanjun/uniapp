@@ -127,7 +127,12 @@ export default {
      * @name 初始化用户信息
      */
     initUserStatusOnLoadingFun() {
-      const currentUser = uni.getStorageSync('currentUser');
+			// #ifdef H5
+				const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+			// #endif
+			// #ifndef H5
+				const currentUser = uni.getStorageSync('currentUser');
+			// #endif
       const name = currentUser && currentUser.companyId ? currentUser.companyName : currentUser.name && currentUser.name != '' ? currentUser.name : '未登录用户';
       this.setData({
         userName: name,
@@ -147,7 +152,12 @@ export default {
       get({
         url: get_user_info,
         success: res => {
-          let currentUser = uni.getStorageSync('currentUser');
+          // #ifdef H5
+          	const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+          // #endif
+          // #ifndef H5
+          	const currentUser = uni.getStorageSync('currentUser');
+          // #endif
           const newArr = JSON.parse(JSON.stringify(this.userList));
           newArr.unshift(res);
 
@@ -458,8 +468,15 @@ export default {
      * 进行实名认证
      */
     authAction: function () {
-      var company_id = uni.getStorageSync('currentUser').companyId;
-
+			
+			// #ifdef H5
+				const company_id = JSON.parse(localStorage.getItem('currentUser')).companyId;
+			// #endif
+			
+			// #ifndef H5
+				const company_id = uni.getStorageSync('currentUser').companyId;
+			// #endif
+      
       if (company_id == undefined) {
         uni.navigateTo({
           url: "/pages/authentication/personal/personal-auth-type/index"

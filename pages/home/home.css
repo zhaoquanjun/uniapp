@@ -377,6 +377,23 @@ page{
   height: 108rpx;
 }
 
+
+/*  #ifdef  H5  */
+.warning{
+  position: fixed;
+  bottom: 100rpx;
+  left: 0rpx;
+  height: 148rpx;
+  width: 670rpx;
+  margin:32rpx 40rpx;
+  border-top: 1rpx #E5E5E5 solid;
+  border-radius:8rpx;
+  border-left: 8rpx solid #464646;
+  background: white;
+}
+/*  #endif  */
+
+/*  #ifndef  H5  */
 .warning{
   position: fixed;
   bottom: 0rpx;
@@ -389,6 +406,8 @@ page{
   border-left: 8rpx solid #464646;
   background: white;
 }
+/*  #endif  */
+
 .warn-title{
   display: block;
   margin-top: 32rpx;
