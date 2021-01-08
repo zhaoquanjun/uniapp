@@ -257,4 +257,5 @@
 </script>
 <style>
 	@import "./app.css";
+	@import "./static/font/iconfont.css";
 </style>

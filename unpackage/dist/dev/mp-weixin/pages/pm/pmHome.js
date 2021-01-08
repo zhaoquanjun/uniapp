@@ -307,7 +307,6 @@ var app = getApp();var icon = function icon() {__webpack_require__.e(/*! require
 
 
 
-
   },
   onShow: function onShow() {
     var isAdmin = app.globalData.memberType == 3 ? true : false;

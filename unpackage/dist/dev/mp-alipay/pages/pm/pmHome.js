@@ -302,7 +302,6 @@ var app = getApp();var icon = function icon() {__webpack_require__.e(/*! require
 
             app.globalData.userName = userInfo.nickName;
             app.globalData.userAvatar = userInfo.avatar;
-            console.log(_this2.userAvatar, _this2.username, userInfo, 3333);
           } });
 
       } });

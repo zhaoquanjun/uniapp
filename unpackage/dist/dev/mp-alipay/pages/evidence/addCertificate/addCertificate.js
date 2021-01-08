@@ -235,12 +235,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
 
 
 
 
 var _evidence = __webpack_require__(/*! ../../../api/evidence.js */ 36); //
+//
+//
 //
 //
 //
@@ -372,9 +376,7 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
   onLoad: function onLoad(options) {var type = options.type;var formId = options.fromId;this.setData({ type: type, fileType: titleMap[type].value, formId: formId });uni.setNavigationBarTitle({ title: titleMap[type].title });}, onReady: function onReady() {}, methods: { // 名称输入函数
     nameInput: function nameInput(event) {var value = event.detail.value;this.setData({ nameValue: value });this.getHighLight();}, //添加图片
     tapAddImage: function tapAddImage() {var that = this;uni.showActionSheet({ itemList: ['拍照', '从相册选择'], success: function success(res) {console.log(res.tapIndex); // if(this)
-          that.chooseImage(res.tapIndex == 0 ? 'camera' : 'album');if (res.tapIndex == 0) {that.setData({ uploadMethod: 2 });} else {that.setData({
-              uploadMethod: 1 });
-
+          that.chooseImage(res.tapIndex == 0 ? 'camera' : 'album');if (res.tapIndex == 0) {that.setData({ uploadMethod: 2 });} else {that.setData({ uploadMethod: 1 });
           }
         } });
 
@@ -494,24 +496,24 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
 
     // 点击录音 、点击录音保存
     longPressBtn: function longPressBtn() {
-      var that = this;
-      console.log(123123123);
       clearInterval(timer);
 
-      if (that.recording) {
-        that.setData({
+      if (this.recording) {
+        this.setData({
           recording: false });
 
-        that.stop();
+        this.stop();
       } else {
-        that.setData({
+        this.setData({
           recording: true });
 
-        that.start();
+        this.start();
       }
     },
 
-    //开始录音
+    /**
+        * @name 开始录音
+        */
     start: function start() {
       var that = this;
       var options = {
@@ -538,7 +540,9 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
         console.log(res);
       });
     },
-    //停止录音
+    /**
+        * @name 停止录音
+        */
     stop: function stop() {var _this3 = this;
       var that = this;
       clearInterval(timer);
@@ -562,9 +566,21 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
         _this3.setData({
           addCertificateVoice: tempFilePath,
           isVoiceRecord: false,
-          duration: duration,
-          showDurationTime: _this3.showTimeFun(duration / 1000),
           addFileInfo: o });
+
+
+
+        _this3.setData({
+          duration: duration * 1000,
+          showDurationTime: _this3.showTimeFun(duration) });
+
+
+
+
+
+
+
+
 
         innerAudioContext.src = tempFilePath;
         innerAudioContext.onError(function (res) {
@@ -584,7 +600,9 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
         });
       });
     },
-    // 设置循环显示播放时长
+    /**
+        * @name 设置循环显示播放时长
+        */
     openInterval: function openInterval() {
       var that = this;
       timer = setInterval(function () {
@@ -609,16 +627,17 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
         return value < 10 ? '0' + value : value;
       }
     },
-    // 格式化时间 00:00:00
+    /**
+        * @name 格式化时间 00:00:00
+        * @param {Object} time 事件
+        */
     showTimeFun: function showTimeFun(time) {
+      console.log(time, 'shijianchangdu');
       function formatShow(value) {
         return value < 10 ? '0' + value : value;
       }
-
       var sec = parseInt(time % 60);
-
       var _min = parseInt(time / 60);
-
       var min = parseInt(_min % 24);
       var hour = parseInt(_min / 24);
       hour = formatShow(hour);
@@ -626,7 +645,9 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
       sec = formatShow(sec);
       return hour + ':' + min + ':' + sec;
     },
-    // 设置音频显示时间
+    /**
+        * @name 设置音频显示时间
+        */
     setTime: function setTime() {
       var that = this;
       timer = setInterval(function () {
@@ -651,7 +672,9 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
         return value < 10 ? '0' + value : value;
       }
     },
-    //播放声音
+    /**
+        * @name 播放声音
+        */
     playVoice: function playVoice() {var _this4 = this;
       var that = this;
       console.log(this.isPlay, innerAudioContext);
@@ -678,8 +701,10 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
         });
       }
     },
-
-    // 获取随机串
+    /**
+        * @name 获取随机串
+        * @param {Object} len 长度
+        */
     random_string: function random_string(len) {
       len = len || 32;
       var chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
@@ -692,8 +717,9 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
 
       return pwd;
     },
-
-    // 删除录制声音
+    /**
+        * @name 删除录制声音
+        */
     tapDeleteVoice: function tapDeleteVoice() {
       innerAudioContext.stop();
       innerAudioContext.destroy();
@@ -710,7 +736,10 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
 
       this.getHighLight();
     },
-    //提交按钮
+    /**
+        * @name 提交存证
+        * @param {Object} event 按钮事件源
+        */
     addCertificateSubmit: function addCertificateSubmit(event) {var _this5 = this;
       var that = this;
       if (that.isLoading) return;
@@ -914,14 +943,17 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
         } });
 
     },
-
+    /**
+        * @name 返回存证列表页
+        */
     switchTabBarFun: function switchTabBarFun() {
       uni.switchTab({
         url: '/pages/evidence/index' });
 
     },
-
-    // 提交存证是否高亮函数
+    /**
+        * @name 提交存证是否高亮函数
+        */
     getHighLight: function getHighLight() {
       var typeMapName = typeMap[this.type];
       var value = this[typeMapName];

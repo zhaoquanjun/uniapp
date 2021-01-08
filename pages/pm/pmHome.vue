@@ -8,7 +8,7 @@
 					<open-data type="userAvatarUrl" class="avatar"></open-data>
 					<!-- #endif -->
 					<!-- #ifdef MP-ALIPAY -->
-					<image :src="userAvatar" :data-a="userAvatar" mode="" class="avatar"></image>
+					<image class="avatar" :src="userAvatar || '/static/images/pm/av.png'" background-size="cover"></image>
 					<!-- #endif -->
 					<view class="info-box">
 						<view class="userName">
@@ -147,7 +147,6 @@
 							});
 							app.globalData.userName = userInfo.nickName
 							app.globalData.userAvatar = userInfo.avatar
-							console.log(this.userAvatar, this.username, userInfo, 3333)
 						}
 					});
 				},

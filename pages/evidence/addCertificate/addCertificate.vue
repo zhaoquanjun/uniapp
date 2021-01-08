@@ -25,15 +25,17 @@
 						</view>
 						<view v-if="addCertificateVoice" class="add-certificate-voice">
 							<view class="add-certificate-voice-progress">
-								<view :class="'add-certificate-voice-progress--btn ' + (isPlay ? 'one-stop-round' : 'one-start-round' )"
-								 @tap.stop="playVoice"></view>
+								<text :class="'add-certificate-voice-progress--btn iconfont ' + (isPlay ? 'iconicon_bofang' : 'iconbofang' )"
+								 @tap.stop="playVoice"></text>
 								<text class="add-certificate-voice-progress--start">{{showVideoPlayTime}}</text>
 								<view class="add-certificate-voice-progress--loading">
 									<view class="add-certificate-voice-progress--width" :style="'width:' + ((videoPlayTime * 100000 / duration) + '%')"></view>
 								</view>
 								<text class="add-certificate-voice-progress--end">{{showDurationTime}}</text>
 							</view>
+							<!--  #ifndef  MP-ALIPAY -->
 							<view class="size">音频大小：{{addFileInfo.size}}<text v-if="addFileInfo.size">M</text></view>
+							<!--  #endif -->
 							<view class="add-certificate-voice-delete one-close" @tap.stop="tapDeleteVoice"></view>
 						</view>
 					</view>
@@ -362,25 +364,25 @@
 
 			// 点击录音 、点击录音保存
 			longPressBtn() {
-				let that = this;
-				console.log(123123123);
 				clearInterval(timer);
 
-				if (that.recording) {
-					that.setData({
+				if (this.recording) {
+					this.setData({
 						recording: false
 					});
-					that.stop();
+					this.stop();
 				} else {
-					that.setData({
+					this.setData({
 						recording: true
 					});
-					that.start();
+					this.start();
 				}
 			},
 
-			//开始录音
-			start: function() {
+			/**
+			 * @name 开始录音
+			 */
+			start() {
 				var that = this;
 				const options = {
 					duration: 60000,
@@ -406,8 +408,10 @@
 					console.log(res);
 				});
 			},
-			//停止录音
-			stop: function() {
+			/**
+			 * @name 停止录音
+			 */
+			stop() {
 				var that = this;
 				clearInterval(timer);
 				recorderManager.stop();
@@ -430,10 +434,22 @@
 					this.setData({
 						addCertificateVoice: tempFilePath,
 						isVoiceRecord: false,
-						duration: duration,
-						showDurationTime: this.showTimeFun(duration / 1000),
 						addFileInfo: o
 					});
+					
+					// #ifdef  MP-ALIPAY
+					this.setData({
+						duration: duration * 1000,
+						showDurationTime: this.showTimeFun(duration),
+					})
+					// #endif
+					
+					// #ifndef  MP-ALIPAY
+					this.setData({
+						duration: duration,
+						showDurationTime: this.showTimeFun(duration / 1000),
+					})
+					// #endif
 					innerAudioContext.src = tempFilePath;
 					innerAudioContext.onError(res => {
 						console.log(res.errMsg);
@@ -452,7 +468,9 @@
 					});
 				});
 			},
-			// 设置循环显示播放时长
+			/**
+			 * @name 设置循环显示播放时长
+			 */
 			openInterval: function() {
 				var that = this;
 				timer = setInterval(function() {
@@ -477,16 +495,17 @@
 					return value < 10 ? '0' + value : value;
 				}
 			},
-			// 格式化时间 00:00:00
+			/**
+			 * @name 格式化时间 00:00:00
+			 * @param {Object} time 事件
+			 */
 			showTimeFun: function(time) {
+				console.log(time, 'shijianchangdu')
 				function formatShow(value) {
 					return value < 10 ? '0' + value : value;
 				}
-
 				var sec = parseInt(time % 60);
-
 				var _min = parseInt(time / 60);
-
 				var min = parseInt(_min % 24);
 				var hour = parseInt(_min / 24);
 				hour = formatShow(hour);
@@ -494,8 +513,10 @@
 				sec = formatShow(sec);
 				return hour + ':' + min + ':' + sec;
 			},
-			// 设置音频显示时间
-			setTime: function() {
+			/**
+			 * @name 设置音频显示时间
+			 */
+			setTime() {
 				var that = this;
 				timer = setInterval(function() {
 					let _time = that.videoPlayTime + 1;
@@ -519,8 +540,10 @@
 					return value < 10 ? '0' + value : value;
 				}
 			},
-			//播放声音
-			playVoice: function() {
+			/**
+			 * @name 播放声音
+			 */
+			playVoice() {
 				var that = this;
 				console.log(this.isPlay, innerAudioContext);
 
@@ -546,8 +569,10 @@
 					});
 				}
 			},
-
-			// 获取随机串
+			/**
+			 * @name 获取随机串
+			 * @param {Object} len 长度
+			 */
 			random_string(len) {
 				len = len || 32;
 				var chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
@@ -560,9 +585,10 @@
 
 				return pwd;
 			},
-
-			// 删除录制声音
-			tapDeleteVoice: function() {
+			/**
+			 * @name 删除录制声音
+			 */
+			tapDeleteVoice() {
 				innerAudioContext.stop();
 				innerAudioContext.destroy();
 				this.setData({
@@ -578,8 +604,11 @@
 				});
 				this.getHighLight();
 			},
-			//提交按钮
-			addCertificateSubmit: function(event) {
+			/**
+			 * @name 提交存证
+			 * @param {Object} event 按钮事件源
+			 */
+			addCertificateSubmit(event) {
 				let that = this;
 				if (that.isLoading) return;
 				let values = event.detail.value; //验证
@@ -782,14 +811,17 @@
 					}
 				});
 			},
-
+			/**
+			 * @name 返回存证列表页
+			 */
 			switchTabBarFun() {
 				uni.switchTab({
 					url: '/pages/evidence/index'
 				});
 			},
-
-			// 提交存证是否高亮函数
+			/**
+			 * @name 提交存证是否高亮函数
+			 */
 			getHighLight: function() {
 				let typeMapName = typeMap[this.type];
 				let value = this[typeMapName];
