@@ -148,7 +148,7 @@ page {
     color: rgba(255, 255, 255, 1);
     text-align: center;
 }
-.auth-btn .one {
+.auth-btn .iconfont {
     position: relative;
     top: 4rpx;
     font-size: 20rpx;

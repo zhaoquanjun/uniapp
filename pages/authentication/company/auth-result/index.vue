@@ -3,7 +3,7 @@
 <view class="company-auth-result" v-if="result=='f'">
     <view class="result-top">
         <view class="icon-container">
-            <text class="one one-warning"></text>
+            <text class="iconfont iconwarningo"></text>
         </view>
         <view class="result-text">认证失败</view>
         <view class="result-reason"> 法人信息不一致，请核对身份信息</view>
@@ -40,7 +40,7 @@
 <view class="company-auth-result" v-if="result=='ing'" style="height:1800rpx; background:#ffffff">
     <view class="result-top">
         <view class="icon-container">
-            <text class="one one-warning ing"></text>
+            <text class="iconfont iconwarningo ing"></text>
         </view>
         <view class="result-text">企业认证中</view>
         <view class="result-reason">企业正在认证中，请耐心等待</view>
@@ -53,7 +53,7 @@
 <view class="company-auth-result" v-if="result=='s'" style="height:1800rpx; background:#ffffff">
     <view class="result-top">
         <view class="icon-container">
-            <text class="one one-checked-circle"></text>
+            <text class="iconfont iconSuccess success"></text>
         </view>
         <view class="result-text">认证成功</view>
         <view class="result-reason">企业认证成功</view>

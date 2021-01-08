@@ -14,7 +14,7 @@
 				</view>
 				<view class="template-right">
 					<text class="price">¥ {{item.amount}}</text>
-					<text class="one one-apparrow-right"></text>
+					<text class="iconfont iconright-arrow"></text>
 				</view>
 			</view>
 			<view class="update-time">模板更新时间：{{item.gmtModified}}</view>

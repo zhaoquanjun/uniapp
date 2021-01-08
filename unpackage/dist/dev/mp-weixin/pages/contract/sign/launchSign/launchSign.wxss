@@ -114,7 +114,7 @@ page {
   color: #999999;
   font-weight: 400;
 }
-.linkman-add-sponsor .right .one {
+.linkman-add-sponsor .right .iconfont {
   position: relative;
   top: 4rpx;
   left: 8rpx;

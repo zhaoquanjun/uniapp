@@ -42,7 +42,7 @@
 						<view class="user-content-cell" v-if="item.hasAuth" :data-index="index" @tap.stop="tapItem">
 							<image :src="item.icon" class="item-icon" mode="aspectFit"></image>
 							<view class="user-content-cell-text global-title-color">{{item.name}}</view>
-							<view class="one one-apparrow-right"></view>
+							<view class="iconfont iconright-arrow"></view>
 						</view>
 					</view>
 				</view>

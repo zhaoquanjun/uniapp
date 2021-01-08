@@ -1,6 +1,5 @@
-@font-face {
-	font-family: "iconfont";
-  src: url('//at.alicdn.com/t/font_2316761_doaxojbbx19.ttf') format('truetype');
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_2316761_tv2k7oycen.ttf') format('truetype');
 }
 
 .iconfont {
@@ -9,6 +8,30 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.iconbaseline-close-px:before {
+  content: "\e616";
+}
+
+.iconadd:before {
+  content: "\e6b9";
+}
+
+.iconicon_down_arrow:before {
+  content: "\e68e";
+}
+
+.iconright-arrow:before {
+  content: "\e629";
+}
+
+.iconwarningo:before {
+  content: "\e835";
+}
+
+.iconSuccess:before {
+  content: "\e609";
 }
 
 .iconbofang:before {

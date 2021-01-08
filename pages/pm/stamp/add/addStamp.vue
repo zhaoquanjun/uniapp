@@ -6,14 +6,14 @@
 </canvas>
 <canvas class="stamp-canvas copy-canvas" canvas-id="myCanvas" id="myCanvas" style="z-index: -11; opacity: 0; visiblity: hidden;"></canvas>
 <view class="operation-btn-view">
-    <view :class="'first-pen-btn pen-btn ' + (color==='#000'?'active':'') + '}'" data-color="#000" @tap.stop="switchColor">
-        <view class="one one-dot" style="background-color:#000"></view>
+    <view :class="'pen-btn ' + (color==='#000'?'active':'')" data-color="#000" @tap.stop="switchColor">
+        <view class="pen" style="background-color:#000"></view>
     </view>
     <view :class="'pen-btn ' + (color==='#22ACF8'?'active':'')" data-color="#22ACF8" @tap.stop="switchColor">
-        <view class="one one-dot" style="background-color:#22ACF8"></view>
+        <view class="pen" style="background-color:#22ACF8"></view>
     </view>
     <view :class="'pen-btn ' + (color==='#FE4E51'?'active':'')" data-color="#FE4E51" @tap.stop="switchColor">
-        <view class="one one-dot" style="background-color:#FE4E51"></view>
+        <view class="pen" style="background-color:#FE4E51"></view>
     </view>
     <view class="line"></view>
     <image src="/static/pages/pm/stamp/add/pen.png" :class="'pen-btn pen-size ' + (pen=='4'?'active-pen':'')" @tap.stop="switchPen" data-pen="4"></image>

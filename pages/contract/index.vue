@@ -4,7 +4,7 @@
 		<view v-if="items.length > 0">
 			<view v-for="(item, index) in items" :key="index" class="type-item" @tap="goPage" :data-type="item.type" :data-name="item.name" :data-index="index">
 				<text>{{item.name}}</text>
-				<text class="one one-apparrow-right"></text>
+				<text class="iconfont iconright-arrow"></text>
 				<text class="item-count">{{item.count}}</text>
 			</view>
 		</view>

@@ -1,5 +1,4 @@
 @import "./weui.css";
-@import "./font.css";
 @import "./components/searchHighlightTextView/searchHighlightTextView.css";
 
 /* #ifdef MP-WEIXIN*/  

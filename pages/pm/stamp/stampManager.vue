@@ -23,7 +23,7 @@
 	<view style="width:100%;height:80rpx"></view>
 </view>
 <view class="uploadButton" v-if="isShowAdd" @tap.stop="addStampAction">
-	<text class="one one-add"></text>
+	<text class="iconfont iconadd"></text>
 </view>
 
 <view :class="'user-dialog ' + ( showDialog ? 'user-dialog--show' : '' )">

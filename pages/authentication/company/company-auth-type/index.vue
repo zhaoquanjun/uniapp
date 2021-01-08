@@ -9,7 +9,7 @@
             <text style="color:#999999;font-weight:400">（即时认证）</text>
             <text class="right">
                 <text>去认证</text>
-                <text class="one one-apparrow-right"></text>
+                <text class="iconfont iconright-arrow"></text>
             </text>
             <view class="bottom-info" style="font-size:30rpx">
                 <view>请确认你是企业法定代表人</view>
@@ -22,7 +22,7 @@
             <text style="color:#999999;font-weight:400">（约0～3工作日）</text>
             <text class="right">
                 <text>去认证</text>
-                <text class="one one-apparrow-right"></text>
+                <text class="iconfont iconright-arrow"></text>
             </text>
             <view class="bottom-info" style="font-size:30rpx">
                 <view>需要准备营业执照原件的高清照片</view>

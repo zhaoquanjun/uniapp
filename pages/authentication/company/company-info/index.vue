@@ -11,7 +11,7 @@
         <view class="upload-bottom">
             <view class="left" @tap.stop="chooseImage">
                 <image :src="businessImage" v-if="businessImage"></image>
-                <text class="one one-add" v-if="!businessImage"></text>
+                <text class="iconfont iconadd" v-if="!businessImage"></text>
             </view>
             <view class="right">
                 <view style="tip">1.请确保营业执照勿遮挡、缺边</view>
@@ -26,7 +26,7 @@
             <picker @change="bindPickerChange" range-key="label" :value="companyTypeIndex" :range="companyTypes">
                 <label class="value-select">
                     {{companyTypes[companyTypeIndex].label}}
-                    <text class="one one-arrow-down"></text>
+                    <text class="iconfont iconicon_down_arrow"></text>
                 </label>
             </picker>
 

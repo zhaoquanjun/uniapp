@@ -34,7 +34,7 @@ page {
   font-weight: 400;
   color: rgba(153, 153, 153, 1);
 }
-.type-select-header .one{
+.type-select-header .iconfont{
   font-size: 28rpx;
   position: relative;
   top:4rpx
@@ -54,7 +54,7 @@ page {
   margin: 0 32rpx;
   border-bottom: 2rpx solid #F5F5F5;
 }
-.types-select-container .type-item .one{
+.types-select-container .type-item .iconfont{
   float: right;
   color:#CECECE;
 }

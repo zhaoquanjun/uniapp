@@ -25,16 +25,6 @@
             <text class="sponsor">{{sponsor}}</text>
         </view>
     </view>
-    <!--<view class='file-signer'>
-        <text class='linkman-title'>{{linkmanTitle}}</text>
-        <view class='linkman-add-sponsor' catchtap='chooseSponsor'>
-            <text class="sponsor">{{sponsor}}</text>
-            <text class="right" data-index="1">
-                <text>更改</text>
-                <text class="one one-apparrow-right"></text>
-            </text>
-        </view>
-    </view>-->
     <button class="nextButton" style="background-color:#464646" v-if="ishighLight" @tap.stop="launchSignAction">{{signText}}</button>
     <button class="nextButton" v-if="!ishighLight" style="background:#B7B7B7">{{signText}}</button>
 </view>

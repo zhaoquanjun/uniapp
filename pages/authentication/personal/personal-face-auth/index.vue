@@ -3,7 +3,6 @@
     <view class="type-select-header">
         <view class="type-text">个人信息</view>
         <view class="right" @tap="showSafeInfo">
-        <!--   <text class="one one-locked"></text>-->
           <image src="/static/images/authen/safe.png" class="safe-tip"></image>   
             安全声明
         </view>
@@ -18,7 +17,6 @@
             <label class="name">证件类型</label>
             <label class="value-select">
                 居民身份证
-            <!--    <text class="one one-arrow-down"></text>-->
             </label>
         </view>
         <view class="field-item">

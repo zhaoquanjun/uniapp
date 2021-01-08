@@ -8,14 +8,14 @@
             <text data-index="1">人脸识别认证</text>
             <text class="right" data-index="1">
                 <text>去认证</text>
-                <text class="one one-apparrow-right"></text>
+                <text class="iconfont iconright-arrow"></text>
             </text>
         </view>
         <view class="type-item" @tap.stop="goPage" data-index="2">
             <text data-index="2">手机号认证</text>
             <text class="right" data-index="2">
                 <text>去认证</text>
-                <text class="one one-apparrow-right"></text>
+                <text class="iconfont iconright-arrow"></text>
             </text>
         </view>
     </view>

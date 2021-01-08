@@ -3,7 +3,7 @@
 <view class="personal-auth-result" v-if="result=='f'">
     <view class="result-top">
         <view class="icon-container">
-            <text class="one one-warning"></text>
+            <text class="iconfont iconwarningo"></text>
         </view>
         <view class="result-text">认证失败</view>
         <view class="result-reason">{{desc}}</view>
@@ -43,7 +43,7 @@
 <view class="personal-auth-result" v-if="result=='s'" style="height:1800rpx; background:#ffffff">
     <view class="result-top">
         <view class="icon-container">
-            <text class="one one-checked-circle"></text>
+            <text class="iconfont iconSuccess success"></text>
         </view>
         <view class="result-text">认证成功</view>
         <view class="result-reason">{{type==='phone'?'手机':'人脸'}}对比通过，可以进行合同签署</view>

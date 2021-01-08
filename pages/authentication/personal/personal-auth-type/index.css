@@ -30,7 +30,7 @@ page {
     border-left: 8rpx solid #EE7005;
 }
 
-.type-select-header .one {
+.type-select-header .iconfont {
     font-size: 28rpx;
     position: relative;
     top: 4rpx
@@ -67,7 +67,7 @@ page {
     font-size: 28rpx;
 }
 
-.types-select-container .type-item .right .one {
+.types-select-container .type-item .right .iconfont {
     position: relative;
     top: 4rpx;
     left: 8rpx;

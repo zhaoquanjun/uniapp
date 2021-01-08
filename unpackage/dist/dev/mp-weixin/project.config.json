@@ -11,20 +11,16 @@
   "appid": "wxd672f1935abe90f2",
   "projectname": "闪签平台",
   "condition": {
-    "search": {
-      "current": -1,
-      "list": []
-    },
-    "conversation": {
-      "current": -1,
+    "plugin": {
       "list": []
     },
     "game": {
-      "current": -1,
+      "list": []
+    },
+    "gamePlugin": {
       "list": []
     },
     "miniprogram": {
-      "current": -1,
       "list": []
     }
   }

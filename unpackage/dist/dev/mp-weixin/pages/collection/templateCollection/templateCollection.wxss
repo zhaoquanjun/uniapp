@@ -71,7 +71,7 @@ page {
   -webkit-align-items: center;
           align-items: center;
 }
-.template-right .one{
+.template-right .iconfont{
   color: #CECECE;
   font-size: 28rpx;
 }

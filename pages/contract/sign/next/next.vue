@@ -24,7 +24,7 @@
 							<view class="companyAuth" v-if="copyItem.isCompanyAuth" style="background:rgba(62,180,168,0.1); color:#3EB4A8">已认证</view>
 							<view class="companyAuth" v-else style="background:#F4F4F4; color:#666666">未认证</view>
 						</view>
-						<text class="one one-close" :data-item="item" data-type="delete" :data-index="index" @tap.stop="deleteSign"></text>
+						<text class="iconfont iconbaseline-close-px" :data-item="item" data-type="delete" :data-index="index" @tap.stop="deleteSign"></text>
 					</view>
 					<view class="phone">{{copyItem.userName}} {{copyItem.userPhone}}
 						<view class="personAuth" v-if="copyItem.isPersonAuth" style="background:rgba(62,180,168,0.1); color:#3EB4A8">已认证</view>
@@ -40,7 +40,7 @@
 							<view class="personAuth" v-if="copyItem.isPersonAuth" style="background:rgba(62,180,168,0.1); color:#3EB4A8">已认证</view>
 							<view class="personAuth" v-else style="background:#F4F4F4; color:#666666">未认证</view>
 						</view>
-						<text class="one one-close" :data-item="item" data-type="delete" :data-index="index" @tap.stop="deleteSign"></text>
+						<text class="iconfont iconbaseline-close-px" :data-item="item" data-type="delete" :data-index="index" @tap.stop="deleteSign"></text>
 					</view>
 					<view class="phone">{{copyItem.userPhone}}</view>
 					<view class="chapter">{{copyItem.sealName}}</view>
@@ -56,7 +56,7 @@
 							<view class="companyAuth" v-if="item.isCompanyAuth" style="background:rgba(62,180,168,0.1); color:#3EB4A8">已认证</view>
 							<view class="companyAuth" v-else style="background:#F4F4F4; color:#666666">未认证</view>
 						</view>
-						<text class="one one-close" :data-item="item" data-type="delete" :data-index="index" @tap.stop="deleteSign"></text>
+						<text class="iconfont iconbaseline-close-px" :data-item="item" data-type="delete" :data-index="index" @tap.stop="deleteSign"></text>
 					</view>
 					<view class="phone">{{item.userName}} {{item.userPhone}}
 						<view class="personAuth" v-if="item.isPersonAuth" style="background:rgba(62,180,168,0.1); color:#3EB4A8">已认证</view>
@@ -72,7 +72,7 @@
 							<view class="personAuth" v-if="item.isPersonAuth" style="background:rgba(62,180,168,0.1); color:#3EB4A8">已认证</view>
 							<view class="personAuth" v-else style="background:#F4F4F4; color:#666666">未认证</view>
 						</view>
-						<text class="one one-close" :data-item="item" data-type="delete" :data-index="index" @tap.stop="deleteSign"></text>
+						<text class="iconfont iconbaseline-close-px" :data-item="item" data-type="delete" :data-index="index" @tap.stop="deleteSign"></text>
 					</view>
 					<view class="phone">{{item.userPhone}}</view>
 					<view class="chapter">{{item.sealName}}</view>
@@ -86,7 +86,7 @@
 							<view class="companyAuth" v-if="item.isCompanyAuth" style="background:rgba(62,180,168,0.1); color:#3EB4A8">已认证</view>
 							<view class="companyAuth" v-else style="background:#F4F4F4; color:#666666">未认证</view>
 						</view>
-						<text class="one one-close" :data-item="item" data-type="delete" :data-index="index" @tap="deleteSign"></text>
+						<text class="iconfont iconbaseline-close-px" :data-item="item" data-type="delete" :data-index="index" @tap="deleteSign"></text>
 					</view>
 					<view class="phone">{{item.userName}} {{item.userPhone}}
 						<view class="personAuth" v-if="item.isPersonAuth" style="background:rgba(62,180,168,0.1); color:#3EB4A8">已认证</view>
@@ -101,7 +101,7 @@
 							<view class="personAuth" v-if="item.isPersonAuth" style="background:rgba(62,180,168,0.1); color:#3EB4A8">已认证</view>
 							<view class="personAuth" v-else style="background:#F4F4F4; color:#666666">未认证</view>
 						</view>
-						<text class="one one-close" :data-item="item" data-type="delete" :data-index="index" @tap="deleteSign"></text>
+						<text class="iconfont iconbaseline-close-px" :data-item="item" data-type="delete" :data-index="index" @tap="deleteSign"></text>
 					</view>
 					<view class="phone">{{item.userPhone}}</view>
 					<view class="chapter">{{item.sealName}}</view>
@@ -138,7 +138,7 @@
 							<view class="companyAuth" v-if="item.isCompanyAuth" style="background:rgba(62,180,168,0.1); color:#3EB4A8">已认证</view>
 							<view class="companyAuth" v-else style="background:#F4F4F4; color:#666666">未认证</view>
 						</view>
-						<text class="one one-close" :data-item="item" data-type="delete" :data-index="index" @tap="deleteLink"></text>
+						<text class="iconfont iconbaseline-close-px" :data-item="item" data-type="delete" :data-index="index" @tap="deleteLink"></text>
 					</view>
 					<view class="phone">{{item.userName}} {{item.userPhone}}
 						<view class="personAuth" v-if="item.isPersonAuth" style="background:rgba(62,180,168,0.1); color:#3EB4A8">已认证</view>
@@ -153,7 +153,7 @@
 							<view class="personAuth" v-if="item.isPersonAuth" style="background:rgba(62,180,168,0.1); color:#3EB4A8">已认证</view>
 							<view class="personAuth" v-else style="background:#F4F4F4; color:#666666">未认证</view>
 						</view>
-						<text class="one one-close" :data-item="item" data-type="delete" :data-index="index" @tap="deleteLink"></text>
+						<text class="iconfont iconbaseline-close-px" :data-item="item" data-type="delete" :data-index="index" @tap="deleteLink"></text>
 					</view>
 					<view class="phone">{{item.userPhone}}</view>
 				</view>
@@ -172,7 +172,7 @@
 							<input type="date" disabled="true" name="addtime" :value="signingDeadline" placeholder="请选择"></input>
 						</view>
 					</picker>
-					<text class="one one-apparrow-right"></text>
+					<text class="icofont iconright-arrow"></text>
 				</view>
 			</view>
 		</view>
@@ -185,7 +185,7 @@
 							<input type="date" disabled="true" name="addtime" :value="fileTermination" placeholder="请选择"></input>
 						</view>
 					</picker>
-					<text class="one one-apparrow-right"></text>
+					<text class="iconfont iconright-arrow"></text>
 				</view>
 			</view>
 		</view>

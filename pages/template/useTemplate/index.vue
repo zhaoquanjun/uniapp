@@ -14,7 +14,7 @@
         </view>
         <view class="name">{{item.fileName}}</view>
       </view>
-      <text class="one one-apparrow-right arrow"></text>
+      <text class="iconfont iconright-arrow arrow"></text>
     </view>
   </view>
   <view class="title">合同附件</view>
@@ -26,7 +26,7 @@
         </view>
         <view class="name">{{item.fileName}}</view>
       </view>
-      <text class="one one-apparrow-right arrow"></text>
+      <text class="iconfont iconright-arrow arrow"></text>
     </view>
   </view>
   <view class="title">参与方</view>
@@ -104,7 +104,7 @@
             <input type="date" disabled="true" name="addtime" :value="fileEndTime" placeholder="请选择"></input>
           </view>
         </picker>
-        <text class="one one-apparrow-right"></text>
+        <text class="iconfont iconright-arrow"></text>
       </view>
     </view>
   </view>

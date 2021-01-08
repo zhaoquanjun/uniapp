@@ -58,7 +58,7 @@
   border: 4rpx solid transparent;
   background: #ffffff
 }
-.pen-btn .one {
+.pen-btn .pen {
   width: 36rpx;
   height: 36rpx;
   color: transparent;
@@ -77,15 +77,11 @@
   background: rgba(255, 255, 255, 1);
   border-radius: 4px;
 }
-.pen-size-container .one {
-  position: inherit;
-}
 .line {
   border-right: 1px solid #E5E5E5;
   float: left;
-  width: 2rpx;
+  width: 40rpx;
   height: 40rpx;
-  margin-top: 30rpx;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }

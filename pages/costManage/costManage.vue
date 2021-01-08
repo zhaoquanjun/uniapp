@@ -15,7 +15,7 @@
      </view>
      <view class="detail" @tap="handleShowBalanceFun">
       <view class="detail-word">收支明细</view>
-      <view class="one one-apparrow-right icon"></view>
+      <view class="iconfont iconright-arrow icon"></view>
      </view>
   </view>
   <view class="list-item">
@@ -31,7 +31,7 @@
      </view>
      <view class="detail" @tap="handleShowCardFun">
       <view class="detail-word">查看全部</view>
-      <view class="one one-apparrow-right icon"></view>
+      <view class="iconfont iconright-arrow icon"></view>
      </view>
   </view>
 </view>

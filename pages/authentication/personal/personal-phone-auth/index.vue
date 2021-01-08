@@ -3,7 +3,6 @@
     <view class="type-select-header">
         <view class="type-text">个人信息</view>
         <view class="right" @tap="showSafeInfo">
-        <!--   <text class="one one-locked"></text>-->
           <image src="/static/images/authen/safe.png" class="safe-tip"></image>   
             安全声明
         </view>

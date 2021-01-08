@@ -183,16 +183,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-
-
-
-
-
-
-
 var _request = __webpack_require__(/*! ../../../../api/request.js */ 8);
 var _account = __webpack_require__(/*! ../../../../api/account.js */ 9); //
 //
@@ -246,19 +236,19 @@ var _account = __webpack_require__(/*! ../../../../api/account.js */ 9); //
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 __webpack_require__(/*! ../../../../prototype/prototype.js */ 134);var utils = __webpack_require__(/*! ../../../../utils/utils.js */ 37);var app = getApp();var _default = { data: function data() {return { showDialog: false, ishighLight: false, contractTitle: '', contractInfo: null, sponsor: '', linkmans: [], themeTitle: "合同主题", theme: '', fileTitle: '合同文件', fileName: '', url: '', linkmanTitle: '发起方', signText: '下一步', isScanOpen: false, companyList: '', currentUser: '', coverUrl: "", backfileName: "", filePath: "" };}, components: {}, props: {}, /**
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * 生命周期函数--监听页面加载
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */onLoad: function onLoad(options) {console.log(app.globalData);var userName = app.globalData.userName;this.setData({ fileName: options.fileName, url: options.url, coverUrl: options.coverUrl, backfileName: options.backfileName });var currentUser = uni.getStorageSync('currentUser');if (currentUser) {this.setData({ currentUser: currentUser });} else {this.setData({ sponsor: userName });}if (currentUser.name) {this.setData({ sponsor: currentUser.name });}if (currentUser.companyName) {this.setData({
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */onLoad: function onLoad(options) {console.log(app.globalData);var userName = app.globalData.userName;this.setData({ fileName: options.fileName, url: options.url, coverUrl: options.coverUrl, backfileName: options.backfileName });var currentUser = uni.getStorageSync('currentUser');if (currentUser) {this.setData({ currentUser: currentUser });} else {this.setData({ sponsor: userName });
+    }
+
+    if (currentUser.name) {
+      this.setData({
+        sponsor: currentUser.name });
+
+    }
+
+    if (currentUser.companyName) {
+      this.setData({
         sponsor: currentUser.companyName });
 
     }
