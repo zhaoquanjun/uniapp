@@ -736,6 +736,7 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
       }
 
       var filePath = this[typeMapName] || '';
+
       (0, _request.get)({
         url: _evidence.get_upload_policy + '?ossPrefixKey=' + "blockchain/",
         success: function success(res) {
@@ -818,6 +819,12 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
             fail: function fail(err) {
               console.log(err);
             } });
+
+
+
+
+
+
 
 
 

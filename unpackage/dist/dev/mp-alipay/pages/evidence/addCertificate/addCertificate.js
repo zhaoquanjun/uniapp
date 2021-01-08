@@ -731,6 +731,7 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
       }
 
       var filePath = this[typeMapName] || '';
+
       (0, _request.get)({
         url: _evidence.get_upload_policy + '?ossPrefixKey=' + "blockchain/",
         success: function success(res) {
@@ -817,7 +818,7 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
 
 
 
-          (0, _request.upload)({
+          my.uploadFile({
             url: res.host,
             fileType: 'image',
             fileName: 'file',
@@ -829,7 +830,12 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
               signature: res.signature,
               success_action_status: 200 },
 
-            success: function success() {
+            headers: {
+              "token": my.getStorageSync('userToken'),
+              "Content-Type": "multipart/form-data",
+              "wx_app_type": 1 },
+
+            success: function success(res) {
               // success
               var certificateType = values.type;
               var certificateName = values.name;
@@ -847,17 +853,18 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
               if (that.formId) {
                 that.saveChain(formDataParmas);
               } else {
-                (0, _request.upload)({
+                my.uploadFile({
                   url: _evidence.add_certificate_file,
-                  //url
+                  fileType: 'image',
+                  fileName: 'file',
                   filePath: filePath,
-                  // filePath
-                  key: 'file',
-                  //filename
                   formData: formDataParmas,
-                  // formDate
-                  success: function success() {
-                    // success
+                  headers: {
+                    "token": my.getStorageSync('userToken'),
+                    "Content-Type": "multipart/form-data",
+                    "wx_app_type": 1 },
+
+                  success: function success(res) {
                     uni.hideLoading();
                     uni.showModal({
                       title: '提交成功',
@@ -868,22 +875,22 @@ var typeMap = { image: 'addCertificateImageUrl', video: 'addCertificateVideo', v
                           // 此处对普通存证和数据链存证进行区分
                           _this5.switchTabBarFun();
                         }
-                      } });
+                      },
+                      fail: function fail(err) {
+                        uni.hideLoading();
+                        uni.showModal({
+                          title: '提交失败',
+                          content: '',
+                          cancelText: '关闭',
+                          confirmText: '继续提交',
+                          success: function success(res) {
+                            if (res.confirm) {
+                              that.addCertificateSubmit();
+                            } else if (res.cancel) {
+                              _this5.switchTabBarFun();
+                            }
+                          } });
 
-                  },
-                  fail: function fail(err) {
-                    uni.hideLoading();
-                    uni.showModal({
-                      title: '提交失败',
-                      content: '',
-                      cancelText: '关闭',
-                      confirmText: '继续提交',
-                      success: function success(res) {
-                        if (res.confirm) {
-                          that.addCertificateSubmit();
-                        } else if (res.cancel) {
-                          _this5.switchTabBarFun();
-                        }
                       } });
 
                   } });

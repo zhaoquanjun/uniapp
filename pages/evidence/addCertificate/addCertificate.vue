@@ -599,6 +599,7 @@
 				}
 
 				let filePath = this[typeMapName] || '';
+
 				get({
 					url: get_upload_policy + '?ossPrefixKey=' + "blockchain/",
 					success: res => {
@@ -685,7 +686,7 @@
 						// #endif
 
 						// #ifdef MP-ALIPAY
-						upload({
+						my.uploadFile({
 							url: res.host,
 							fileType: 'image',
 							fileName: 'file',
@@ -697,7 +698,12 @@
 								signature: res.signature,
 								success_action_status: 200
 							},
-							success: () => {
+							headers: {
+								"token": my.getStorageSync('userToken'),
+								"Content-Type": "multipart/form-data",
+								"wx_app_type": 1
+							},
+							success: res => {
 								// success
 								let certificateType = values.type;
 								let certificateName = values.name;
@@ -715,17 +721,18 @@
 								if (that.formId) {
 									that.saveChain(formDataParmas);
 								} else {
-									upload({
+									my.uploadFile({
 										url: add_certificate_file,
-										//url
+										fileType: 'image',
+										fileName: 'file',
 										filePath: filePath,
-										// filePath
-										key: 'file',
-										//filename
 										formData: formDataParmas,
-										// formDate
-										success: () => {
-											// success
+										headers: {
+											"token": my.getStorageSync('userToken'),
+											"Content-Type": "multipart/form-data",
+											"wx_app_type": 1
+										},
+										success: res => {
 											uni.hideLoading();
 											uni.showModal({
 												title: '提交成功',
@@ -736,26 +743,26 @@
 														// 此处对普通存证和数据链存证进行区分
 														this.switchTabBarFun();
 													}
-												}
-											});
-										},
-										fail: err => {
-											uni.hideLoading();
-											uni.showModal({
-												title: '提交失败',
-												content: '',
-												cancelText: '关闭',
-												confirmText: '继续提交',
-												success: res => {
-													if (res.confirm) {
-														that.addCertificateSubmit();
-													} else if (res.cancel) {
-														this.switchTabBarFun();
-													}
+												},
+												fail: err => {
+													uni.hideLoading();
+													uni.showModal({
+														title: '提交失败',
+														content: '',
+														cancelText: '关闭',
+														confirmText: '继续提交',
+														success: res => {
+															if (res.confirm) {
+																that.addCertificateSubmit();
+															} else if (res.cancel) {
+																this.switchTabBarFun();
+															}
+														}
+													});
 												}
 											});
 										}
-									});
+									})
 								}
 							},
 							fail: err => {
