@@ -4,8 +4,10 @@
 		<view v-if="items.length > 0">
 			<view v-for="(item, index) in items" :key="index" class="type-item" @tap="goPage" :data-type="item.type" :data-name="item.name" :data-index="index">
 				<text>{{item.name}}</text>
-				<text class="iconfont iconright-arrow"></text>
-				<text class="item-count">{{item.count}}</text>
+				<view class="count">
+					<text class="item-count">{{item.count}}</text>
+					<text class="iconfont iconright-arrow"></text>
+				</view>
 			</view>
 		</view>
 		<view v-else>
@@ -60,13 +62,21 @@ export default {
 
       const type = e.currentTarget.dataset.type;
       const name = e.currentTarget.dataset.name;
-      const currentUser = uni.getStorageSync('currentUser');
+			
+			// #ifdef  H5
+			const currentUser = JSON.parse(uni.getStorageSync('currentUser'));
+			// #endif
+			
+			// #ifndef  H5
+			const currentUser = uni.getStorageSync('currentUser');
+			// #endif
+      
       let isAuth = false;
-
+			
       if (currentUser.companyId && currentUser.authStatus == 1 || !currentUser.companyId && currentUser.auth == 1) {
         isAuth = true;
       }
-
+			
       if (!isAuth && currentUser.companyId) {
         uni.showModal({
           title: '立即进行企业实名认证',

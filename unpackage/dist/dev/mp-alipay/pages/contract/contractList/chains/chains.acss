@@ -1,11 +1,11 @@
 
 .a-page {
   position: relative;
-  padding: 0rpx 48rpx;
   background-color: #ffffff;
   box-sizing: border-box;
 }
 .pl-search {
+  padding: 0rpx 48rpx;
   width: 100%;
   top: 100rpx;
   border-bottom: 1px solid #F5F5F5;
@@ -15,7 +15,9 @@
   width: 100%;
   top: 80rpx;
   left: 0;
+  padding: 0rpx 48rpx;
   height: calc(100% - 240rpx);
+	box-sizing: border-box;
 }
 .contract {
   padding: 0 48rpx;
@@ -180,5 +182,8 @@
   text-align: center;
   position: fixed;
   bottom: 24rpx;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	        transform: translateX(-50%);
 }
 

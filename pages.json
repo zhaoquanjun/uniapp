@@ -96,6 +96,17 @@
 			}
 		},
 		{
+			"path": "pages/contract/contractSelect/contractSelect",
+			"style": {
+				"navigationBarTitleText": "合同上传",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"backgroundColorTop": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
 			"path": "pages/contract/contractList/contractList",
 			"style": {
 				"navigationBarTitleText": "合同管理",
@@ -234,17 +245,6 @@
 			}
 		},
 		{
-			"path": "pages/costManage/accountCard/accountCard",
-			"style": {
-				"navigationBarTitleText": "礼品卡",
-				"backgroundTextStyle": "dark",
-				"navigationBarBackgroundColor": "#ffffff",
-				"backgroundColorTop": "#ffffff",
-				"navigationBarTextStyle": "black",
-				"enablePullDownRefresh": true
-			}
-		},
-		{
 			"path": "pages/costManage/recharge/recharge",
 			"style": {
 				"navigationBarTitleText": "充值",
@@ -259,6 +259,17 @@
 			"path": "pages/costManage/buyCard/buyCard",
 			"style": {
 				"navigationBarTitleText": "购买礼品卡",
+				"backgroundTextStyle": "dark",
+				"navigationBarBackgroundColor": "#ffffff",
+				"backgroundColorTop": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/costManage/buyPackage/buyPackage",
+			"style": {
+				"navigationBarTitleText": "购买套餐",
 				"backgroundTextStyle": "dark",
 				"navigationBarBackgroundColor": "#ffffff",
 				"backgroundColorTop": "#ffffff",
@@ -584,6 +595,16 @@
 			"path": "pages/evidence/videoRecord/videoRecord",
 			"style": {
 				"navigationBarTitleText": "视频存证",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/evidence/fileRecord/fileRecord",
+			"style": {
+				"navigationBarTitleText": "文件存证",
 				"navigationBarBackgroundColor": "#ffffff",
 				"navigationBarTextStyle": "black",
 				"enablePullDownRefresh": true,

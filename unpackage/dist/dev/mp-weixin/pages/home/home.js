@@ -105,7 +105,7 @@ var components
 try {
   components = {
     homeAddDataStorge: function() {
-      return __webpack_require__.e(/*! import() | components/home-add-dataStorge/home-add-dataStorge */ "components/home-add-dataStorge/home-add-dataStorge").then(__webpack_require__.bind(null, /*! @/components/home-add-dataStorge/home-add-dataStorge.vue */ 530))
+      return __webpack_require__.e(/*! import() | components/home-add-dataStorge/home-add-dataStorge */ "components/home-add-dataStorge/home-add-dataStorge").then(__webpack_require__.bind(null, /*! @/components/home-add-dataStorge/home-add-dataStorge.vue */ 554))
     }
   }
 } catch (e) {
@@ -129,6 +129,24 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var l0 = _vm.__map(_vm.userList, function(item, index) {
+    var $orig = _vm.__get_orig(item)
+
+    var g0 = JSON.stringify(item)
+    return {
+      $orig: $orig,
+      g0: g0
+    }
+  })
+
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        l0: l0
+      }
+    }
+  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -237,7 +255,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 var _request = __webpack_require__(/*! ../../api/request */ 8);
+
+
+
 var _account = __webpack_require__(/*! ../../api/account */ 9);function _readOnlyError(name) {throw new Error("\"" + name + "\" is read-only");} //
 //
 //
@@ -313,12 +345,25 @@ var _account = __webpack_require__(/*! ../../api/account */ 9);function _readOnl
 //
 //
 //
-var app = getApp();var homeAddDataStorge = function homeAddDataStorge() {__webpack_require__.e(/*! require.ensure | components/home-add-dataStorge/home-add-dataStorge */ "components/home-add-dataStorge/home-add-dataStorge").then((function () {return resolve(__webpack_require__(/*! ../../components/home-add-dataStorge/home-add-dataStorge */ 530));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../components/sliderPicker/sliderPicker */ 537));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { showDialog: false, mineSignCount: '0', otherSignCount: '0', hasAuth: false, fileName: '', userName: '', userList: [], sliderList: [{ label: '发起文件签署', value: 1 }, { label: '从合同模版发起签署', value: 2 }, { label: '取消', value: 2 }], authType: 1 // 未认证状态 1:个人 2:企业 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var app = getApp();var homeAddDataStorge = function homeAddDataStorge() {__webpack_require__.e(/*! require.ensure | components/home-add-dataStorge/home-add-dataStorge */ "components/home-add-dataStorge/home-add-dataStorge").then((function () {return resolve(__webpack_require__(/*! ../../components/home-add-dataStorge/home-add-dataStorge */ 554));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../components/sliderPicker/sliderPicker */ 561));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { showDialog: false, mineSignCount: '0', otherSignCount: '0', hasAuth: false, fileName: '', userName: '', userList: [], sliderList: [{ label: '发起文件签署', value: 1 }, { label: '从合同模版发起签署', value: 2 }, { label: '取消', value: 2 }], authType: 1 // 未认证状态 1:个人 2:企业 
       , isLogin: "" };}, components: { homeAddDataStorge: homeAddDataStorge, sliderPicker: sliderPicker }, props: {}, onLoad: function onLoad() {}, onShow: function onShow() {this.initUserStatusOnLoadingFun();}, onUnload: function onUnload() {}, onShareAppMessage: function onShareAppMessage() {}, methods: { /**
                                                                                                                                                                                                                                                                                                                       * @name 初始化用户信息
-                                                                                                                                                                                                                                                                                                                      */initUserStatusOnLoadingFun: function initUserStatusOnLoadingFun() {var currentUser = uni.getStorageSync('currentUser');var name = currentUser && currentUser.companyId ? currentUser.companyName : currentUser.name && currentUser.name != '' ? currentUser.name : '未登录用户';this.setData({ userName: name, isLogin: app.globalData.isLoginIn() });this.getCompanyUserInfoFun();this.getContractCountFun();}, /**
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     * @name 获取个人信息
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     */getSignalUsersInfoFun: function getSignalUsersInfoFun() {var _this = this;uni.showLoading({ title: '加载中' });(0, _request.get)({ url: _account.get_user_info, success: function success(res) {var currentUser = uni.getStorageSync('currentUser');
+                                                                                                                                                                                                                                                                                                                      */initUserStatusOnLoadingFun: function initUserStatusOnLoadingFun() {var currentUser = uni.getStorageSync('currentUser');var name = '';if (currentUser) {name = currentUser.companyId ? currentUser.companyName : currentUser.name && currentUser.name != '' ? currentUser.name : '未登录用户';}this.setData({ userName: name, isLogin: app.globalData.isLoginIn() });this.getCompanyUserInfoFun();this.getContractCountFun();}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   * @name 获取个人信息
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   */getSignalUsersInfoFun: function getSignalUsersInfoFun() {var _this = this;uni.showLoading({ title: '加载中' });(0, _request.get)({ url: _account.get_user_info, success: function success(res) {
+          var currentUser = uni.getStorageSync('currentUser');
+
 
           var newArr = JSON.parse(JSON.stringify(_this.userList));
           newArr.unshift(res);
@@ -335,7 +380,9 @@ var app = getApp();var homeAddDataStorge = function homeAddDataStorge() {__webpa
             authType: 1,
             hasAuth: currentUser.companyId && currentUser.authStatus == 1 || currentUser.auth == 1 ? true : false });
 
-          app.globalData.isAuth = currentUser.companyId && currentUser.authStatus == 1 || currentUser.auth == 1 ? true : false;
+
+          app.globalData.isAuth = currentUser.companyId && currentUser.authStatus == 1 || currentUser.auth == 1 ? true :
+          false;
         },
         fail: function fail(err) {
           setTimeout(function () {
@@ -427,8 +474,18 @@ var app = getApp();var homeAddDataStorge = function homeAddDataStorge() {__webpa
     switchUser: function switchUser(e) {
       // item.authStauts(企业认证状态) -> 1:已认证 2:认证中 3:已拒绝 4:未认证
       // item.auth(个人认证状态) -> 1:认证 2:未认证
+
+
+
+
+
+
+
       var item = e.currentTarget.dataset.item;
       var name = item.companyId ? item.companyName : item.name;
+
+
+
       console.log(item, 999);
       this.setData({
         userName: name ? name : '未认证用户',
@@ -484,7 +541,7 @@ var app = getApp();var homeAddDataStorge = function homeAddDataStorge() {__webpa
 
       if (app.globalData.checkHasAuth()) {
         uni.navigateTo({
-          url: '/pages/contract/contractList/contract?searchType=3&pageTitle=待他人处理' });
+          url: '/pages/contract/contractList/contractList?searchType=3&pageTitle=待他人处理' });
 
       }
     },
@@ -508,12 +565,27 @@ var app = getApp();var homeAddDataStorge = function homeAddDataStorge() {__webpa
         * @name 上滑菜单操作
         */
     handleSliderOperateFun: function handleSliderOperateFun(e) {
+      console.log(e.detail);
       switch (e.detail) {
-        case 0:
+        case '0':
+
           this.handleLaunchByfileFun();
+
+
+
+
+
+
+
+
+
+
+
+
+
           break;
 
-        case 1:
+        case '1':
           this.handleLaunchByTemplateFun();
           break;
 
@@ -569,7 +641,8 @@ var app = getApp();var homeAddDataStorge = function homeAddDataStorge() {__webpa
             //filename
             success: function success(res) {
               uni.navigateTo({
-                url: '/pages/contract/sign/launchSign/launchSign?fileName=' + uploadFileName + '&url=' + res.url + '&coverUrl=' + res.coverUrl + '&backfileName=' + res.fileName });
+                url: '/pages/contract/sign/launchSign/launchSign?fileName=' + uploadFileName + '&url=' + res.url +
+                '&coverUrl=' + res.coverUrl + '&backfileName=' + res.fileName });
 
             },
             fail: function fail(err) {

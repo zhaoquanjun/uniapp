@@ -303,7 +303,7 @@ export default {
      */
     goChainDetail() {
 			this.$refs.operate.close()
-      let queryStr = '?id=' + this.activeItme.id + '&type=' + (this.activeItme.evidenceType == 2 ? 'data' : 'sign');
+      let queryStr = '?id=' + this.activeItme.id;
       uni.redirectTo({
         url: '/pages/evidence/certificateDetail/certificateDetail' + queryStr
       });
@@ -313,7 +313,7 @@ export default {
      * @desc 添加证据
      */
     addChainBtn() {
-			this.$refs.operate.open()
+			this.$refs.evidencate.open()
     },
 
     /**
@@ -322,7 +322,7 @@ export default {
     goPicChain(e) {
       var toType = e.currentTarget.dataset.totype;
 			this.$refs.operate.close()
-			this.$refs.evidence.close()
+			this.$refs.evidencate.close()
 
       if (toType == 'video') {
         uni.navigateTo({
@@ -330,7 +330,7 @@ export default {
         });
       } else {
         uni.navigateTo({
-          url: "/evidence/addCertificate/addCertificate?type=" + toType + "&fromId=" + this.queryId
+          url: "/pages/evidence/addCertificate/addCertificate?type=" + toType + "&fromId=" + this.queryId
         });
       }
     },
@@ -340,7 +340,7 @@ export default {
      */
     addChainFromList() {
 			this.$refs.operate.close()
-			this.$refs.evidence.close()
+			this.$refs.evidencate.close()
       uni.navigateTo({
         url: "/pages/contract/contractList/chainList/chainList?id=" + this.queryId
       });

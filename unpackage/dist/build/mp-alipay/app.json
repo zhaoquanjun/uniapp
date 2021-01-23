@@ -6,11 +6,13 @@
     "pages/pm/pmHome",
     "pages/root/root",
     "pages/account/login/login",
+    "pages/account/hlogin/hlogin",
     "pages/account/loginVerify/loginVerify",
     "pages/searchResult/searchResult",
     "pages/pm/stamp/stampManager",
     "pages/pm/stamp/add/addStamp",
     "pages/pm/stamp/addCachet/addCachet",
+    "pages/contract/contractSelect/contractSelect",
     "pages/contract/contractList/contractList",
     "pages/contract/sign/next/signConfirm/signConfirm",
     "pages/contract/sign/next/contractDetail/contractDetail",
@@ -28,6 +30,7 @@
     "pages/costManage/accountCard/accountCard",
     "pages/costManage/recharge/recharge",
     "pages/costManage/buyCard/buyCard",
+    "pages/costManage/buyPackage/buyPackage",
     "pages/costManage/receiveCard/receiveCard",
     "pages/costManage/receiveResult/receiveResult",
     "pages/costManage/giving/giving",
@@ -62,7 +65,8 @@
     "pages/authentication/personal/auth-result/index",
     "pages/evidence/addCertificate/addCertificate",
     "pages/evidence/certificateDetail/certificateDetail",
-    "pages/evidence/videoRecord/videoRecord"
+    "pages/evidence/videoRecord/videoRecord",
+    "pages/evidence/fileRecord/fileRecord"
   ],
   "subPackages": [],
   "window": {

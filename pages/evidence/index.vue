@@ -2,7 +2,7 @@
 	<view>
 		<view class="evidence-manager--area">
 			<view class="content">
-				<view class="search">
+				<view class="search-area">
 					<search @inputChanged="changeSearchParamsFun" @cancelClicked="clearSearchParamsFun" :isShowCancel="true"
 					 :timeSearch="true"></search>
 				</view>
@@ -38,18 +38,11 @@
 		<!-- 证据链菜单 -->
 		<halfSlideItem ref="operate">
 			<view class="slide-menu_list">
-				<view :class="'slide-menu_item ' + ( activeItme.status == 1 ? '' : 'noUseSlide' )" @tap="previewContractChain">查看存证证书</view>
+				<view :class="'slide-menu_item ' + ( activeItme && activeItme.status == 1 ? '' : 'noUseSlide' )" @tap="previewContractChain">查看存证证书</view>
 				<view class="slide-menu_item" @tap="addChainFromList">关联合同</view>
 				<view class="slide-menu_item" @tap="handleStartDownloadFun" v-if="canDownload">下载源文件</view>
 			</view>
 		</halfSlideItem>
-		<!-- 存证证书预览 -->
-		<view class="chain-wrap" v-if="showChainImg">
-			<view class="chain-mask"></view>
-			<view class="chain-img">
-				<web-view :src="chainImg" class="chainImgItem"></web-view>
-			</view>
-		</view>
 	</view>
 </template>
 
@@ -207,7 +200,7 @@
 			viewDetailFun(e) {
 				const id = e.currentTarget.dataset.id;
 				const type = e.currentTarget.dataset.type;
-				const url = '/evidence/certificateDetail/certificateDetail?id=' + id + '&type=' + type;
+				const url = '/pages/evidence/certificateDetail/certificateDetail?id=' + id + '&type=' + type;
 				uni.navigateTo({
 					url: url
 				});

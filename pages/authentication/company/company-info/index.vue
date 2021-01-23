@@ -71,6 +71,9 @@ export default {
       companyTypeIndex: 0,
       legalPersonName: '',
       companyTypes: [{
+          label: '请选择',
+          value: 0
+        }, {
         label: '企业',
         value: 1
       }, {
@@ -102,6 +105,9 @@ export default {
     if (this.query.type == 'legent') {
       this.setData({
         companyTypes: [{
+          label: '请选择',
+          value: 0
+        }, {
           label: '企业',
           value: 1
         }, {
@@ -112,6 +118,9 @@ export default {
     } else {
       this.setData({
         companyTypes: [{
+          label: '请选择',
+          value: 0
+        }, {
           label: '企业',
           value: 1
         }, {
@@ -208,20 +217,24 @@ export default {
       } = this;
       const currentUser = uni.getStorageSync('currentUser');
       let mgs = [];
-
-      if (!companyName) {
-        mgs.push('企业名称');
-      }
+			
+			if (!companyName) {
+			  mgs.push('企业名称');
+			}
 
       if (!creditCode) {
         mgs.push('统一社会信用代码');
       }
+			
+			if (!legalPersonName) {
+			  mgs.push('法定代表人姓名');
+			}
+			
+			if (companyTypeIndex == 0) {
+				mgs.push('企业类型');
+			}
 
-      if (!legalPersonName) {
-        mgs.push('法定代表人姓名');
-      }
-
-      if (!/^9+/.test(creditCode)) {
+      if (query.type == 'legent' && !/^9+/.test(creditCode)) {
         setTimeout(() => {
           uni.showToast({
             icon: 'none',
@@ -242,7 +255,7 @@ export default {
       }
 
       let params = {
-        companyType: companyTypeIndex + 1,
+        companyType: companyTypeIndex,
         companyName,
         creditCode,
         legalPersonName,

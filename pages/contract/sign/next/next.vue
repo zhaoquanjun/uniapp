@@ -172,7 +172,7 @@
 							<input type="date" disabled="true" name="addtime" :value="signingDeadline" placeholder="请选择"></input>
 						</view>
 					</picker>
-					<text class="icofont iconright-arrow"></text>
+					<text class="iconfont iconright-arrow"></text>
 				</view>
 			</view>
 		</view>

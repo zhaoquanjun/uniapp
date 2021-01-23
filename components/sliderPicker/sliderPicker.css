@@ -21,6 +21,21 @@
   background-color: rgba(0, 0, 0, .5);
 }
 
+/*  #ifdef  H5  */
+.slider-picker--area .slider-box {
+  position: absolute;
+  left: 0;
+  bottom: 50px;
+  transform: translateY(100%);
+  padding: 10rpx 48rpx;
+  width: 100%;
+  background-color: #fff;
+  transition: all .2s ease-in-out;
+  box-sizing: border-box;
+}
+/*  #endif  */
+
+/*  #ifndef  H5  */
 .slider-picker--area .slider-box {
   position: absolute;
   left: 0;
@@ -32,6 +47,9 @@
   transition: all .2s ease-in-out;
   box-sizing: border-box;
 }
+/*  #endif  */
+
+
 
 .slider-picker--area .slider-box.content-show {
   transform: translateY(0);

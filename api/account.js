@@ -1,6 +1,8 @@
 import { host } from "./request";
 
-export const get_phone_wx_code = host + "/v1/account/get/phone"; // 获取用户注册信息以及手机号openid uniid 等信息
+export const get_phone_wx_code = host + "/v1/account/get/phone"; // 获取用户注册信息以及手机号openid uniid 等信息 微信
+
+export const get_phone_zfb_code = host + "/v1/account/get/phone"; // 获取用户注册信息以及手机号openid uniid 等信息 支付宝
 
 export const decode_phone = host + "/v1/account/decode/wxapp/phone"; // 获取手机以及微信信息
 
@@ -32,3 +34,4 @@ export const person_message = host + "/v1/account/user/getAuthUserByNameAndPhone
 export const h5_get_yzm_code = host + "/v1/sms/"; // 获取验证码
 
 export const h5_login = host + "/v1/account/login"; // 登录
+

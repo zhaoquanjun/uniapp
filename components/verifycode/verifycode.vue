@@ -1,21 +1,16 @@
 <template>
-	<view>
-		<!--components/verifycode/verifycode.wxml-->
-
-
-		<view class="wx-verify-bg" :hidden="!isShow">
-			<view class="wx-mask"></view>
-			<text class="verify-title">{{title}}</text>
-			<text class="verify-content">{{content}}{{phone}}</text>
-			<view class="verify-code-view" @tap.stop="openKeyboard">
-				<view v-for="(code, index) in codes" :key="index" :class="'verify-input-view ' + (index==0?'verify-input-view-first':'')">
-					<text class="verify-text">{{code}}</text>
-				</view>
-				<input class="key-input" type="number" adjust-position="false" confirm-type="done" :focus="isFocus" :value="inputValue"
-				 @input="listenKeyInput"></input>
+	<view :class="'wx-verify-bg ' + (isShow ? 'show' : '')">
+		<view class="wx-mask"></view>
+		<text class="verify-title">{{title}}</text>
+		<text class="verify-content">{{content}}{{phone}}</text>
+		<view class="verify-code-view" @tap.stop="openKeyboard">
+			<view v-for="(code, index) in codes" :key="index" :class="'verify-input-view ' + (index==0?'verify-input-view-first':'')">
+				<text class="verify-text">{{code}}</text>
 			</view>
-			<text class="again-send-class" :style="'color:' + againSendTextColor" @tap.stop="againSendAction">{{againSendText}}</text>
+			<input class="key-input" type="number" adjust-position="false" confirm-type="done" :focus="isFocus" :value="inputValue"
+			 @input="listenKeyInput"></input>
 		</view>
+		<text class="again-send-class" :style="'color:' + againSendTextColor" @tap.stop="againSendAction">{{againSendText}}</text>
 	</view>
 </template>
 

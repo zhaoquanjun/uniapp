@@ -1,11 +1,10 @@
-
-page {
-  position: relative;
-  padding-bottom: 264rpx;
-  background-color: #f7f8f9;
-}
 view {
   box-sizing: border-box;
+}
+.use-template--page {
+	position: relative;
+	padding-bottom: 200rpx;
+	background-color: #f7f8f9;
 }
 .title {
   padding: 0 48rpx;
@@ -353,7 +352,7 @@ view {
 .launch-btn {
   position: absolute;
   left: 40rpx;
-  bottom: 100rpx;
+  bottom: 50rpx;
   width: calc(100% - 80rpx);
   height: 100rpx;
   line-height: 100rpx;

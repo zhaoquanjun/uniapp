@@ -88,18 +88,18 @@
     <view class="setting-item">
       <text class="sub-title">签署截止时间</text>
       <view class="date-picker">
-        <picker mode="date" :value="date" start="2019-10-01" end data-type="file" @change="handleSelectDateFun">
+        <picker mode="date" :value="signEndTime" start="2019-10-01" end="2200" data-type="sign" @change="handleSelectDateFun">
           <view class="pickDate">
             <input type="date" disabled="true" name="addtime" :value="signEndTime" placeholder="请选择"></input>
           </view>
         </picker>
-        <text class="one one-apparrow-right"></text>
+        <text class="iconfont iconright-arrow"></text>
       </view>
     </view>
     <view class="setting-item">
       <text class="sub-title">合同终止时间</text>
       <view class="date-picker">
-        <picker mode="date" :value="date" start="2019-10-01" end data-type="file" @change="handleSelectDateFun">
+        <picker mode="date" :value="fileEndTime" start="2019-10-01" end="2200" data-type="file" @change="handleSelectDateFun">
           <view class="pickDate">
             <input type="date" disabled="true" name="addtime" :value="fileEndTime" placeholder="请选择"></input>
           </view>
@@ -312,6 +312,7 @@ export default {
      */
     handleSelectDateFun(e) {
       const type = e.currentTarget.dataset.type;
+			console.log(type, e.detail.value)
 
       switch (type) {
         case 'file':

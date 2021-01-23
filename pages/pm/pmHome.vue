@@ -7,7 +7,12 @@
 					<!-- #ifdef MP-WEIXIN -->
 					<open-data type="userAvatarUrl" class="avatar"></open-data>
 					<!-- #endif -->
+
 					<!-- #ifdef MP-ALIPAY -->
+					<image class="avatar" :src="userAvatar || '/static/images/pm/av.png'" background-size="cover"></image>
+					<!-- #endif -->
+
+					<!-- #ifdef H5 -->
 					<image class="avatar" :src="userAvatar || '/static/images/pm/av.png'" background-size="cover"></image>
 					<!-- #endif -->
 					<view class="info-box">
@@ -16,9 +21,15 @@
 								<!-- #ifdef MP-WEIXIN -->
 								<open-data type="userNickName" class="name"></open-data>
 								<!-- #endif -->
+
 								<!-- #ifdef MP-ALIPAY -->
 								<view class="name">{{username}}</view>
 								<!-- #endif -->
+
+								<!-- #ifdef H5 -->
+								<view class="name">{{username}}</view>
+								<!-- #endif -->
+
 								<view class="phone">{{userPhone}}</view>
 							</view>
 							<view class="auth-btn" @tap.stop="authAction" v-if="isAuth*1">已认证</view>
@@ -75,22 +86,25 @@
 		data() {
 			return {
 				items: [{
-					icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/seal_icon.png',
-					name: '印章管理',
-					hasAuth: true
-				}, {
-					icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/cost_icon.png',
-					name: '费用管理',
-					hasAuth: true
-				}, {
-					icon: "/static/images/invoice/invoice_apply_icon.png",
-					name: '发票申请',
-					hasAuth: true
-				}, {
-					icon: "/static/images/invoice/invoice_apply_icon.png",
-					name: '收款',
-					hasAuth: true
-				}],
+						icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/seal_icon.png',
+						name: '印章管理',
+						hasAuth: true
+					},
+					{
+						icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/cost_icon.png',
+						name: '费用管理',
+						hasAuth: true
+					},
+					{
+						icon: "/static/images/invoice/invoice_apply_icon.png",
+						name: '发票申请',
+						hasAuth: true
+					}, {
+						icon: "/static/images/invoice/invoice_apply_icon.png",
+						name: '收款',
+						hasAuth: true
+					}
+				],
 				sliderList: [{
 					label: '销售模版发起收款',
 					value: 0
@@ -134,13 +148,16 @@
 					url: navigateUrl
 				});
 			}
-			
+
 			// #ifdef MP-ALIPAY
 			my.getAuthCode({
 				scopes: 'auth_user',
 				success: (res) => {
+					console.log(res, 1111)
+					app.globalData.authCode = res.authCode
 					my.getAuthUserInfo({
 						success: (userInfo) => {
+							console.log(userInfo, 222)
 							this.setData({
 								userAvatar: userInfo.avatar,
 								username: userInfo.nickName
@@ -173,11 +190,15 @@
 			if (currentUser.companyId && currentUser.roleTypes && !currentUser.roleTypes.includes('1') && !currentUser.roleTypes
 				.includes('2') || currentUser.companyId && currentUser.roleTypes == null || !app.globalData.isLoginIn()) {
 				list[1].hasAuth = false;
-			} // 当前企业没有收款资质
+			} else {
+				list[1].hasAuth = true;
+			}
 
 
 			if (currentUser.companyId && currentUser.payStatus != 2 || !currentUser.companyId) {
 				list[3].hasAuth = false;
+			} else {
+				list[3].hasAuth = true;
 			}
 
 			this.setData({

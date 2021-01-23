@@ -96,7 +96,7 @@ var components
 try {
   components = {
     wechatUserInfo: function() {
-      return __webpack_require__.e(/*! import() | components/wechatUserInfo/wechatUserInfo */ "components/wechatUserInfo/wechatUserInfo").then(__webpack_require__.bind(null, /*! @/components/wechatUserInfo/wechatUserInfo.vue */ 565))
+      return __webpack_require__.e(/*! import() | components/wechatUserInfo/wechatUserInfo */ "components/wechatUserInfo/wechatUserInfo").then(__webpack_require__.bind(null, /*! @/components/wechatUserInfo/wechatUserInfo.vue */ 589))
     }
   }
 } catch (e) {
@@ -154,6 +154,17 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -274,21 +285,27 @@ var _account = __webpack_require__(/*! ../../api/account.js */ 9); //
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 // pages/pm/pmHome.js
-var app = getApp();var icon = function icon() {__webpack_require__.e(/*! require.ensure | components/icon/icon */ "components/icon/icon").then((function () {return resolve(__webpack_require__(/*! ../../components/icon/icon */ 572));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var avatar = function avatar() {__webpack_require__.e(/*! require.ensure | components/avatar/avatar */ "components/avatar/avatar").then((function () {return resolve(__webpack_require__(/*! ../../components/avatar/avatar */ 579));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var wechatUserInfo = function wechatUserInfo() {__webpack_require__.e(/*! require.ensure | components/wechatUserInfo/wechatUserInfo */ "components/wechatUserInfo/wechatUserInfo").then((function () {return resolve(__webpack_require__(/*! ../../components/wechatUserInfo/wechatUserInfo */ 565));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../components/halfSlideItem/halfSlideItem */ 551));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../components/sliderPicker/sliderPicker */ 537));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { items: [{ icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/seal_icon.png', name: '印章管理', hasAuth: true }, { icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/cost_icon.png', name: '费用管理', hasAuth: true }, { icon: "/static/images/invoice/invoice_apply_icon.png", name: '发票申请', hasAuth: true }, { icon: "/static/images/invoice/invoice_apply_icon.png", name: '收款', hasAuth: true }], sliderList: [{ label: '销售模版发起收款', value: 0 }, { label: '独立收款', value: 1 }, { label: '取消', value: 2 }], isShowReceiptMethod: false, isAdmin: false, wechatUserInfoShow: false, waitAffirmCount: 0, unreadContractMessageCount: 0, username: '', userPhone: '', userToken: '', userAvatar: '', isAuth: false };}, components: { icon: icon, avatar: avatar, wechatUserInfo: wechatUserInfo, halfSlideItem: halfSlideItem, sliderPicker: sliderPicker },
-  props: {},
-
-  /**
-              * 生命周期函数--监听页面加载
-              */
-  onLoad: function onLoad(options) {
-    if (options.navigateUrl != null) {
-      var navigateUrl = options.navigateUrl.replace(':', "?");
-      navigateUrl = navigateUrl.replace('#', '=');
-      uni.navigateTo({
+var app = getApp();var icon = function icon() {__webpack_require__.e(/*! require.ensure | components/icon/icon */ "components/icon/icon").then((function () {return resolve(__webpack_require__(/*! ../../components/icon/icon */ 596));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var avatar = function avatar() {__webpack_require__.e(/*! require.ensure | components/avatar/avatar */ "components/avatar/avatar").then((function () {return resolve(__webpack_require__(/*! ../../components/avatar/avatar */ 603));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var wechatUserInfo = function wechatUserInfo() {__webpack_require__.e(/*! require.ensure | components/wechatUserInfo/wechatUserInfo */ "components/wechatUserInfo/wechatUserInfo").then((function () {return resolve(__webpack_require__(/*! ../../components/wechatUserInfo/wechatUserInfo */ 589));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../components/halfSlideItem/halfSlideItem */ 575));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../components/sliderPicker/sliderPicker */ 561));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { items: [{ icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/seal_icon.png', name: '印章管理', hasAuth: true }, { icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/cost_icon.png', name: '费用管理', hasAuth: true }, { icon: "/static/images/invoice/invoice_apply_icon.png", name: '发票申请', hasAuth: true }, { icon: "/static/images/invoice/invoice_apply_icon.png", name: '收款', hasAuth: true }], sliderList: [{ label: '销售模版发起收款', value: 0 }, { label: '独立收款', value: 1 }, { label: '取消', value: 2 }], isShowReceiptMethod: false, isAdmin: false, wechatUserInfoShow: false, waitAffirmCount: 0, unreadContractMessageCount: 0, username: '', userPhone: '', userToken: '', userAvatar: '', isAuth: false };}, components: { icon: icon, avatar: avatar, wechatUserInfo: wechatUserInfo, halfSlideItem: halfSlideItem, sliderPicker: sliderPicker }, props: {}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    * 生命周期函数--监听页面加载
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    */onLoad: function onLoad(options) {if (options.navigateUrl != null) {var navigateUrl = options.navigateUrl.replace(':', "?");navigateUrl = navigateUrl.replace('#', '=');uni.navigateTo({
         url: navigateUrl });
 
     }
+
+
+
 
 
 

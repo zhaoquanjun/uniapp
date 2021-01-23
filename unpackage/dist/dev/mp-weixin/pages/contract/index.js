@@ -153,6 +153,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 var _request = __webpack_require__(/*! ../../api/request.js */ 8);
 var _contract = __webpack_require__(/*! ../../api/contract.js */ 27); //
 //
@@ -176,9 +178,9 @@ var _contract = __webpack_require__(/*! ../../api/contract.js */ 27); //
 //
 //
 //
-var app = getApp();var _default = { data: function data() {return { items: [], isLogin: true };}, components: {}, props: {}, onLoad: function onLoad() {this.setData({ isLogin: app.globalData.isLoginIn() });console.log(this.isLogin);}, onShow: function onShow() {this.getContractDataAndCount();
-  },
-
+//
+//
+var app = getApp();var _default = { data: function data() {return { items: [], isLogin: true };}, components: {}, props: {}, onLoad: function onLoad() {this.setData({ isLogin: app.globalData.isLoginIn() });console.log(this.isLogin);}, onShow: function onShow() {this.getContractDataAndCount();},
   onShareAppMessage: function onShareAppMessage() {},
 
   methods: {
@@ -192,7 +194,15 @@ var app = getApp();var _default = { data: function data() {return { items: [], i
 
       var type = e.currentTarget.dataset.type;
       var name = e.currentTarget.dataset.name;
+
+
+
+
+
+
       var currentUser = uni.getStorageSync('currentUser');
+
+
       var isAuth = false;
 
       if (currentUser.companyId && currentUser.authStatus == 1 || !currentUser.companyId && currentUser.auth == 1) {

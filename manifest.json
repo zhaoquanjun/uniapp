@@ -78,7 +78,14 @@
             "base" : "/"
         },
         "devServer" : {
-            "https" : true
+            "https" : true,
+						"proxy": {
+							"/anshouyin": {
+								"target": "https://devshouyiner.alphalawyer.cn/",
+								"changeOrigin": true,
+								"secure": false
+							}
+						}
         },
         "optimization" : {
             "treeShaking" : {

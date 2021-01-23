@@ -1,9 +1,8 @@
 
-.a-page {
-  position: relative;
-  padding: 0rpx 48rpx;
-  background-color: #ffffff;
-  box-sizing: border-box;
+.chainList-page {
+	padding: 0rpx 48rpx;
+	background-color: #ffffff;
+	box-sizing: border-box;
 }
 .pl-search {
   width: 100%;
@@ -203,12 +202,14 @@
   text-align: center;
   position: fixed;
   bottom: 24rpx;
-}  
+}
+
 /*checkbox 整体大小  */
 checkbox {
   width: 32rpx;
   height: 32rpx;
-}  
+}
+
 /*checkbox 选项框大小  */
 checkbox .wx-checkbox-input {
   width: 32rpx;
@@ -216,11 +217,13 @@ checkbox .wx-checkbox-input {
   border-radius: 50%;
   -webkit-transform: translateY(-160%);
           transform: translateY(-160%);
-}  
+}
+
 /*checkbox选中后样式  */
 checkbox .wx-checkbox-input.wx-checkbox-input-checked {
   background: #ED6C00;
-}  
+}
+
 /*checkbox选中后图标样式  */
 checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   width: 28rpx;
@@ -234,6 +237,7 @@ checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   -webkit-transform: translate(-50%, -50%) scale(1);
 }
 .checkbox-content {
+	margin-left: 16rpx;
   -webkit-transform: translateY(-16%);
           transform: translateY(-16%);
 }

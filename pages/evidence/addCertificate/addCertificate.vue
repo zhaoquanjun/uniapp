@@ -11,7 +11,7 @@
 							<view class="add-certificate-image--item">
 								<image class="image-add" mode="aspectFit" :src="addCertificateImageUrl || 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/certificate/add.png'"
 								 @tap.stop="tapAddImage"></image>
-								<view v-if="addCertificateImageUrl" class="image-delete one-close" :data-index="index" @tap.stop="tapDeleteImage"></view>
+								<view v-if="addCertificateImageUrl" class="image-delete one-close" @tap.stop="tapDeleteImage"></view>
 							</view>
 						</view>
 					</view>
@@ -436,14 +436,14 @@
 						isVoiceRecord: false,
 						addFileInfo: o
 					});
-					
+
 					// #ifdef  MP-ALIPAY
 					this.setData({
 						duration: duration * 1000,
 						showDurationTime: this.showTimeFun(duration),
 					})
 					// #endif
-					
+
 					// #ifndef  MP-ALIPAY
 					this.setData({
 						duration: duration,
@@ -501,6 +501,7 @@
 			 */
 			showTimeFun: function(time) {
 				console.log(time, 'shijianchangdu')
+
 				function formatShow(value) {
 					return value < 10 ? '0' + value : value;
 				}
@@ -635,10 +636,12 @@
 						uni.showLoading({
 							title: '上传中'
 						});
+						
 						// #ifdef MP-WEIXIN  
 						upload({
 							url: res.host,
 							filePath: filePath,
+							key: 'file', //filename
 							name: 'file',
 							formData: {
 								'key': res.dir + this.addFileInfo.name,
@@ -798,6 +801,86 @@
 								console.log(err);
 							}
 						});
+						// #endif
+
+						// #ifdef H5
+						
+						upload({
+							url: res.host + '/',
+							filePath: filePath,
+							name: 'file',
+							params: {
+								'key': res.dir + this.addFileInfo.name,
+								'policy': res.policy,
+								'OSSAccessKeyId': res.accessid,
+								'signature': res.signature,
+								'success_action_status': '200'
+							},
+							success: () => {
+								// success
+								let certificateType = values.type;
+								let certificateName = values.name;
+								let formDataParmas = {
+									'filePath': res.ossUrl + res.dir + this.addFileInfo.name,
+									'fileName': this.addFileInfo.originName,
+									'name': certificateName,
+									'type': certificateType,
+									'fileType': this.fileType,
+									'uploadMethod': this.uploadMethod,
+									'uploadChannel': 2
+								};
+								console.log(formDataParmas);
+
+								if (that.formId) {
+									that.saveChain(formDataParmas);
+								} else {
+									upload({
+										url: add_certificate_file,
+										//url
+										filePath: filePath,
+										// filePath
+										key: 'file',
+										//filename
+										formData: formDataParmas,
+										// formDate
+										success: () => {
+											// success
+											uni.hideLoading();
+											uni.showModal({
+												title: '提交成功',
+												content: '',
+												showCancel: false,
+												success: data => {
+													if (data.confirm) {
+														// 此处对普通存证和数据链存证进行区分
+														this.switchTabBarFun();
+													}
+												}
+											});
+										},
+										fail: err => {
+											uni.hideLoading();
+											uni.showModal({
+												title: '提交失败',
+												content: '',
+												cancelText: '关闭',
+												confirmText: '继续提交',
+												success: res => {
+													if (res.confirm) {
+														that.addCertificateSubmit();
+													} else if (res.cancel) {
+														this.switchTabBarFun();
+													}
+												}
+											});
+										}
+									});
+								}
+							},
+							fail: err => {
+								console.log(err);
+							}
+						})
 						// #endif
 
 					},

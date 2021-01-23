@@ -132,9 +132,24 @@ export default {
           url: '/pages/evidence/videoRecord/videoRecord?type=' + type
         });
       } else {
-        uni.navigateTo({
-          url: '/pages/evidence/addCertificate/addCertificate?type=' + type
-        });
+				if (type == 'file') {
+					// #ifdef MP-ALIPAY
+					uni.navigateTo({
+					  url: '/pages/evidence/fileRecord/fileRecord?type=' + type
+					});
+					// #endif
+					
+					// #ifdef MP-WEIXIN
+					uni.navigateTo({
+					  url: '/pages/evidence/addCertificate/addCertificate?type=' + type
+					});
+					// #endif
+				} else {
+					uni.navigateTo({
+					  url: '/pages/evidence/addCertificate/addCertificate?type=' + type
+					});
+				}
+       
       }
     },
 

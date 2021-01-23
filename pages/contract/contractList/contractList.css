@@ -2,7 +2,6 @@
 /* #ifdef MP-WEIXIN*/  
 page {
   position: relative;
-  padding: 0rpx 48rpx;
   background-color: #ffffff;
   box-sizing: border-box;
 }
@@ -11,15 +10,14 @@ page {
 /* #ifdef MP-ALIPAY*/  
 .a-page {
   position: relative;
-  padding: 0rpx 48rpx;
   background-color: #ffffff;
   box-sizing: border-box;
 }
 /* #endif */
 
 .pl-search {
+  padding: 0rpx 48rpx;
   width: 100%;
-  border-bottom: 1px solid #F5F5F5;
 }
 
 .list-wrapper {

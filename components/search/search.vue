@@ -4,7 +4,8 @@
   <view class="search">
     <image @tap="searchClicked" class="icon-search" src="https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/component/search_icon.png"></image>
     <input class="search-input" placeholder-style="color:#B2B2B2" placeholder="请输入文件名称" @input="inputChanged" :disabled="isDisableInput" :focus="isAutoFocus" :value="inputValue"></input>
-    <view class="cancel-button" :hidden="!(isShowCancel && inputValue)" @tap="cancelClicked">取消</view>
+    <!-- <view class="cancel-button" >取消</view> -->
+		<text class="iconfont iconbaseline-close-px cancel-button" v-if="(isShowCancel && inputValue)" @tap="cancelClicked"></text>
   </view>
 </view>
 </template>

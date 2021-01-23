@@ -1,0 +1,14 @@
+{
+  "current": 0,
+  "modes": [
+    {
+      "title": "1",
+      "page": "pages/costManage/buyCard/buyCard"
+    },
+    {
+      "title": "333",
+      "page": "pages/account/loginVerify/loginVerify",
+      "pageQuery": "phone=15910559620"
+    }
+  ]
+}

@@ -6,7 +6,9 @@
         <view class="input-name-box">
             <textarea name="content" maxlength="100" @input="textInput" placeholder="请不要包括特殊字符，且长度不要超过100字">
           </textarea>
-            <text class="input-tip">{{contractTitle.length}}/100</text>
+					<!--  #ifdef MP-WEIXIN -->
+					<text class="input-tip">{{contractTitle.length}}/100</text>
+					<!--  #endif -->
         </view>
     </view>
 

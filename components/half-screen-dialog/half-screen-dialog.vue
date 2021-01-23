@@ -1,18 +1,18 @@
 <template>
-<view class="page">
-		<image src="https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/component/newadd.png" class="weui-btn_default--fixed" @tap.stop="open"></image>
+<view class="dialog-section">
+		<image src="https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/component/newadd.png" class="add-btn" @tap.stop="open"></image>
     <!-- <image ></image>
     </view> -->
     <view class="fadeIn" v-if="wrapperShow">
-        <view class="weui-mask" @tap="close"></view>
-        <view :class="'weui-half-screen-dialog ' + (contentShow ? 'show' : '')">
-            <view class="weui-half-screen-dialog__bd">
+        <view class="mask" @tap="close"></view>
+        <view :class="'dialog-content ' + (contentShow ? 'show' : '')">
+            <view class="list-wrapper">
                 <view v-for="(item, index) in menuList" :key="index" class="meun-list__item" :data-item="item" :data-type="item.type" @tap.stop="openMenu">
                   <image :src="item.imgUrl" mode="aspectFit"></image>
                   <text>{{item.name}}</text>
                 </view>
             </view>
-             <view class="weui-half-screen-dialog__hd__side" @tap="close">取消</view>
+             <view class="cancel-btn" @tap="close">取消</view>
         </view>
     </view>
 </view>

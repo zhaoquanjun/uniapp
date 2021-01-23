@@ -178,6 +178,12 @@ page {
     margin-left: 30rpx;
 }
 
+/* #ifdef  H5 */
+.login-btn {
+    bottom: 200rpx;
+}
+/* #endif */
+
 .userinfo-bg-view {
     margin-top: 40rpx;
     margin-right: 40rpx;

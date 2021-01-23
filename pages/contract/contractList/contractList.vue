@@ -4,7 +4,7 @@
 	<search @inputChanged="inputSearchFun" @cancelClicked="cancleSearchFun" :timeSearch="true" :isShowCancel="true"></search>
 </view>
 <scroll-view class="list-wrapper" scroll-y="true" scroll-anchoring="true" refresher-enabled="true" :refresher-triggered="topShow" scroll-with-animation="true" @scrolltolower="scrollToBottom" @refresherrefresh="pullingDownRefresh" @refresherrestore="pullingDownRefreshStore" @refresherabort="pullingDownRefreshStore">
-	<view v-for="(item, index) in contracts" :key="index" class="contract" @tap="pushToDetail" :data-index="index" :data-item="item">
+	<view v-for="(item, index) in contracts" :key="index" class="contract" @tap="pushToDetail" :data-id="item.id" :data-status="item.status" :data-index="index" :data-item="item">
 		<view class="contract-introduce">
 			<view class="contract-title">
 				<searchHighlightTextView highlight="highlight" :text="item.contractTitle" :keyword="searchParams"></searchHighlightTextView>
@@ -20,7 +20,7 @@
 			<view class="contract-signatory">签署方：{{item.signNames}}
 			</view>
 		</view>
-		<view class="contract-operate" v-if="searchType < 8" @tap.stop="showChainsMenu" :data-activeitem="item">
+		<view class="contract-operate" v-if="searchType < 8" @tap.stop="showChainsMenu" :data-activeitem="item" :data-activeit="JSON.stringify(item)">
 			<view class="contract-operate_item"></view>
 			<view class="contract-operate_item"></view>
 			<view class="contract-operate_item"></view>
@@ -353,8 +353,17 @@ export default {
      * 跳转到详情
      */
     pushToDetail: function (e) {
-      const contractId = e.currentTarget.dataset.item.id;
-      const status = e.currentTarget.dataset.item.status;
+			// #ifndef  H5
+			const contractId = e.currentTarget.dataset.item.id;
+			const status = e.currentTarget.dataset.item.status;
+			// #endif
+			
+			// #ifdef  H5
+			console.log(e.currentTarget.dataset)
+			const contractId = e.currentTarget.dataset.id;
+			const status = e.currentTarget.dataset.status;
+			// #endif
+      
       let url = '';
 
       if (this.searchType == 8) {
@@ -369,7 +378,6 @@ export default {
         url: url
       });
     },
-    //---------------Util-----------------
 
     /**
      * 状态 与 index 之间的关系
@@ -411,8 +419,14 @@ export default {
      * @desc 显示证据链弹窗
      */
     showChainsMenu(arg) {
-      let itemInfo = arg.currentTarget.dataset.activeitem;
-
+			// #ifdef  H5
+			const itemInfo = JSON.parse(arg.currentTarget.dataset.activeit);
+			// #endif
+			
+			// #ifndef  H5
+			const itemInfo = arg.currentTarget.dataset.activeitem;
+			// #endif
+      
       if (!itemInfo.id) {
         return;
       }
@@ -425,7 +439,6 @@ export default {
         payContract: itemInfo.needPay,
         applyInvoice: itemInfo.isOpenInvoice
       });
-      console.log(this.applyInvoice, itemInfo, 222);
     },
 
     /**
@@ -515,9 +528,15 @@ export default {
      */
     handleApplyInvoiceFun() {
       this.$refs.operate.close()
-      let url = '/pages/invvoice/applyInvoice/applyInvoice?id=' + this.activeItme.id + '&title=' + this.activeItme.contractTitle + '&searchType=' + this.searchType + '&pageTitle=' + this.title;
-      const isCompay = uni.getStorageSync('currentUser').companyId;
-      console.log(isCompay);
+      let url = '/pages/invoice/applyInvoice/applyInvoice?id=' + this.activeItme.id + '&title=' + this.activeItme.contractTitle + '&searchType=' + this.searchType + '&pageTitle=' + this.title;
+			
+			// #ifndef  H5
+			const isCompay = uni.getStorageSync('currentUser').companyId;
+			// #endif
+			
+			// #ifdef  H5
+			const isCompay = JSON.parse(localStorage.getItem('currentUser')).companyId;
+			// #endif
 
       if (isCompay) {
         url += '&initiatorName=' + this.activeItme.initiatorName + '&';

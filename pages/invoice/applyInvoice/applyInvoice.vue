@@ -6,7 +6,7 @@
   <view class="info-list">
     <view class="list-item">
       <view class="label">抬头类型</view>
-      <view class="value" style="width: 74%;">
+      <view class="value" style="width: 80%;">
         <radio-group @change="handleSelectTypeFun">
           <label v-for="(item, index) in checkList" :key="index" style="margin-left: 16rpx;">
             <radio :value="item.value" :checked="item.checked"></radio>

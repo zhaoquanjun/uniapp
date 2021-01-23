@@ -14,7 +14,7 @@ export const host = env[prefix];
 
 function sendRequest(options) {
   const app = getApp();
-  var userToken = app.globalData.getUserToken();
+  const userToken = app.globalData.getUserToken();
   let {
     contentType,
     url,
@@ -36,10 +36,11 @@ function sendRequest(options) {
       "Content-Type": contentType,
       "wx_app_type": 1
     };
-
+		
     if (company_id) {
       reqHeader.company_id = company_id;
     }
+		
   }
 
   uni.request({
@@ -61,19 +62,35 @@ function sendRequest(options) {
           showModelToHome('提示', '您的用户认证已变更');
         } else {
           //token验证失败
-          if (app.globalData.isLoginIn() && !app.globalData.hasShowOverdueModal) {
-            app.globalData.hasShowOverdueModal = true;
-            uni.showModal({
-              title: '提示',
-              content: '您的登陆状态已失效，请重新登陆',
-              showCancel: false,
-              confirmText: '好的',
-              success: function () {
-                app.globalData.hasShowOverdueModal = false;
-                app.globalData.quitLogin();
-              }
-            });
-          }
+					if (app.globalData.isLoginIn()) {
+						if (!app.globalData.hasShowOverdueModal) {
+						  app.globalData.hasShowOverdueModal = true;
+						  uni.showModal({
+						    title: '提示',
+						    content: '您的登陆状态已失效，请重新登陆',
+						    showCancel: false,
+						    confirmText: '好的',
+						    success: function () {
+						      app.globalData.hasShowOverdueModal = false;
+						      app.globalData.quitLogin();
+						    }
+						  });
+						}
+					} else {
+						// #ifdef H5
+						localStorage.clear()
+						uni.reLaunch({
+							url: '/pages/account/hlogin/hlogin'
+						})
+						// #endif
+						
+						// #ifndef H5
+						uni.clearStorageSync();
+						uni.reLaunch({
+							url: '/pages/account/login/login'
+						});
+						// #endif
+					}
         }
 
         return;
@@ -136,7 +153,7 @@ function sendRequest(options) {
 
       uni.stopPullDownRefresh();
       var data = e.data;
-
+			console.log(e, 9999)
       if (data.isSuccess == false) {
         console.log(e);
 
@@ -152,12 +169,11 @@ function sendRequest(options) {
       }
     },
     fail: function (e) {
+			console.log(e, 7777)
       uni.hideLoading({});
       uni.stopPullDownRefresh();
       console.log('请求异常:' + e);
-      if (fail) {
-        fail(e);
-      }
+			typeof fail == 'function' && fail(e)
     },
     complete: () => {
       typeof complete == 'function' && complete();
@@ -445,7 +461,7 @@ function uploadFile({
     },
     fail: function (e) {
       uni.stopPullDownRefresh();
-      fail("数据请求失败");
+      typeof fail == 'function' && fail("数据请求失败");
     }
   });
 }

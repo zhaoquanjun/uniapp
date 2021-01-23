@@ -801,7 +801,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"wxApp","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"闪签平台","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -1857,7 +1857,7 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 134:
+/***/ 150:
 /*!***************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/prototype/prototype.js ***!
   \***************************************************************/
@@ -7429,7 +7429,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"wxApp","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"闪签平台","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7450,14 +7450,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"wxApp","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"闪签平台","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"wxApp","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"闪签平台","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7543,7 +7543,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"wxApp","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"闪签平台","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -8017,7 +8017,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 311:
+/***/ 327:
 /*!*******************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/api/invoice.js ***!
   \*******************************************************/
@@ -8066,25 +8066,6 @@ var get_certificate_address = _request.host + "/v1/blockchain/cert/download"; //
 exports.get_certificate_address = get_certificate_address;
 var findContractSubject = _request.host + "/v1/contractEvidence/findContractSubject"; // 获取合同关联列表
 exports.findContractSubject = findContractSubject;
-
-/***/ }),
-
-/***/ 360:
-/*!**********************************************************!*\
-  !*** /Users/icourt/Desktop/mycode/uni/api/collection.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.get_pay_QrCode = exports.get_sell_pay_QrCode = exports.get_pay_template_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
-
-var get_pay_template_list = _request.host + '/v1/pay/template/list'; // 获取支付模版列表
-exports.get_pay_template_list = get_pay_template_list;
-var get_sell_pay_QrCode = _request.host + "/v1/pay/template/use"; // 获取模版发起收款码
-exports.get_sell_pay_QrCode = get_sell_pay_QrCode;
-var get_pay_QrCode = _request.host + "/v1/pay/info/createQrCodePost"; // 合同相关支付 - 销售即开票 - 收款
-exports.get_pay_QrCode = get_pay_QrCode;
 
 /***/ }),
 
@@ -8227,7 +8208,37 @@ module.exports.trim = trim;
 
 /***/ }),
 
-/***/ 385:
+/***/ 376:
+/*!**********************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/api/collection.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.get_pay_QrCode = exports.get_sell_pay_QrCode = exports.get_pay_template_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var get_pay_template_list = _request.host + '/v1/pay/template/list'; // 获取支付模版列表
+exports.get_pay_template_list = get_pay_template_list;
+var get_sell_pay_QrCode = _request.host + "/v1/pay/template/use"; // 获取模版发起收款码
+exports.get_sell_pay_QrCode = get_sell_pay_QrCode;
+var get_pay_QrCode = _request.host + "/v1/pay/info/createQrCodePost"; // 合同相关支付 - 销售即开票 - 收款
+exports.get_pay_QrCode = get_pay_QrCode;
+
+/***/ }),
+
+/***/ 4:
+/*!***************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/pages.json ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ 401:
 /*!********************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/api/template.js ***!
   \********************************************************/
@@ -8248,18 +8259,7 @@ exports.confirm_contract_launch_by_template = confirm_contract_launch_by_templat
 
 /***/ }),
 
-/***/ 4:
-/*!***************************************************!*\
-  !*** /Users/icourt/Desktop/mycode/uni/pages.json ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
-/***/ 426:
+/***/ 442:
 /*!******************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/api/authen.js ***!
   \******************************************************/
@@ -8288,7 +8288,7 @@ exports.authPhone = authPhone;
 
 /***/ }),
 
-/***/ 443:
+/***/ 459:
 /*!*****************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/utils/FXQ.js ***!
   \*****************************************************/
@@ -8816,7 +8816,7 @@ var FXQ = {
 
 /***/ }),
 
-/***/ 605:
+/***/ 629:
 /*!***************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/common/component.js ***!
   \***************************************************************************************/
@@ -8824,8 +8824,8 @@ var FXQ = {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _basic = __webpack_require__(/*! ../mixins/basic */ 606);
-var _index = __webpack_require__(/*! ../mixins/observer/index */ 607);function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _basic = __webpack_require__(/*! ../mixins/basic */ 630);
+var _index = __webpack_require__(/*! ../mixins/observer/index */ 631);function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
 function mapKeys(source, target, map) {
   Object.keys(map).forEach(function (key) {
     if (source[key]) {
@@ -8888,7 +8888,7 @@ function VantComponent() {var vantOptions = arguments.length > 0 && arguments[0]
 
 /***/ }),
 
-/***/ 606:
+/***/ 630:
 /*!***********************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/mixins/basic.js ***!
   \***********************************************************************************/
@@ -8924,7 +8924,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 607:
+/***/ 631:
 /*!********************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/mixins/observer/index.js ***!
   \********************************************************************************************/
@@ -8932,8 +8932,8 @@ module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.observe = observe;var _behavior = __webpack_require__(/*! ./behavior */ 608);
-var _props = __webpack_require__(/*! ./props */ 609);
+Object.defineProperty(exports, "__esModule", { value: true });exports.observe = observe;var _behavior = __webpack_require__(/*! ./behavior */ 632);
+var _props = __webpack_require__(/*! ./props */ 633);
 function observe(vantOptions, options) {var
 
   watch =
@@ -8973,7 +8973,7 @@ function observe(vantOptions, options) {var
 
 /***/ }),
 
-/***/ 608:
+/***/ 632:
 /*!***********************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/mixins/observer/behavior.js ***!
   \***********************************************************************************************/
@@ -9046,7 +9046,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 609:
+/***/ 633:
 /*!********************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/mixins/observer/props.js ***!
   \********************************************************************************************/
@@ -9090,7 +9090,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.observePro
 
 /***/ }),
 
-/***/ 610:
+/***/ 634:
 /*!***********************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/common/utils.js ***!
   \***********************************************************************************/
@@ -9128,7 +9128,7 @@ function getSystemInfoSync() {
 
 /***/ }),
 
-/***/ 611:
+/***/ 635:
 /*!************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/picker/shared.js ***!
   \************************************************************************************/
@@ -9158,7 +9158,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.pickerProp
 
 /***/ }),
 
-/***/ 68:
+/***/ 76:
 /*!****************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/api/cost.js ***!
   \****************************************************/
@@ -9166,7 +9166,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.pickerProp
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.send_card_directive = exports.send_by_buy = exports.get_company_auth_status = exports.get_personal_auth_status = exports.cancel_hare_card = exports.share_card = exports.get_wx_pay_params = exports.buy_card_by_account = exports.get_card_list = exports.get_balance_list = exports.get_accout_info = exports.get_gift_card_status = exports.get_gift_card_from_wx = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+Object.defineProperty(exports, "__esModule", { value: true });exports.buy_package = exports.get_package_list = exports.get_account_and_card_info = exports.send_card_directive = exports.send_by_buy = exports.get_company_auth_status = exports.get_personal_auth_status = exports.cancel_hare_card = exports.share_card = exports.get_zfb_pay_params = exports.get_wx_pay_params = exports.buy_card_by_account = exports.get_card_list = exports.get_balance_list = exports.get_accout_info = exports.get_gift_card_status = exports.get_gift_card_from_wx = void 0;var _request = __webpack_require__(/*! ./request */ 8);
 
 var get_gift_card_from_wx = _request.host + '/v1/expense/receiveShareGiftCard/'; // 领取礼品卡
 exports.get_gift_card_from_wx = get_gift_card_from_wx;
@@ -9182,6 +9182,8 @@ var buy_card_by_account = _request.host + '/v1/pay/account/pay'; // 账户余额
 exports.buy_card_by_account = buy_card_by_account;
 var get_wx_pay_params = _request.host + '/v1/pay/create/order'; // 获取微信支付参数
 exports.get_wx_pay_params = get_wx_pay_params;
+var get_zfb_pay_params = _request.host + '/v1/pay/ali/create/applets/order'; // 获取支付宝支付参数
+exports.get_zfb_pay_params = get_zfb_pay_params;
 var share_card = _request.host + '/v1/expense/shareGiftCard'; // 获取分享礼品卡orderid
 exports.share_card = share_card;
 var cancel_hare_card = _request.host + '/v1/expense/cancelShareGiftCard/'; // 撤销分享
@@ -9194,6 +9196,12 @@ var send_by_buy = _request.host + '/v1/expense/batchTransfer'; // 礼品卡购�
 exports.send_by_buy = send_by_buy;
 var send_card_directive = _request.host + '/v1/expense/transfer'; // 礼品卡直接赠送
 exports.send_card_directive = send_card_directive;
+var get_account_and_card_info = _request.host + '/v1/expense/accountBalance'; // 获取账户余额以及礼品卡余额
+exports.get_account_and_card_info = get_account_and_card_info;
+var get_package_list = _request.host + '/v1/contractExpense/listContractSetMeals'; // 获取信息 （余额 礼品卡）
+exports.get_package_list = get_package_list;
+var buy_package = _request.host + '/v1/contractExpense/purchaseContractSetMeal'; // 购买
+exports.buy_package = buy_package;
 
 /***/ }),
 
@@ -9247,6 +9255,7 @@ function sendRequest(options) {
     if (company_id) {
       reqHeader.company_id = company_id;
     }
+
   }
 
   uni.request({
@@ -9268,17 +9277,33 @@ function sendRequest(options) {
           showModelToHome('提示', '您的用户认证已变更');
         } else {
           //token验证失败
-          if (app.globalData.isLoginIn() && !app.globalData.hasShowOverdueModal) {
-            app.globalData.hasShowOverdueModal = true;
-            uni.showModal({
-              title: '提示',
-              content: '您的登陆状态已失效，请重新登陆',
-              showCancel: false,
-              confirmText: '好的',
-              success: function success() {
-                app.globalData.hasShowOverdueModal = false;
-                app.globalData.quitLogin();
-              } });
+          if (app.globalData.isLoginIn()) {
+            if (!app.globalData.hasShowOverdueModal) {
+              app.globalData.hasShowOverdueModal = true;
+              uni.showModal({
+                title: '提示',
+                content: '您的登陆状态已失效，请重新登陆',
+                showCancel: false,
+                confirmText: '好的',
+                success: function success() {
+                  app.globalData.hasShowOverdueModal = false;
+                  app.globalData.quitLogin();
+                } });
+
+            }
+          } else {
+
+
+
+
+
+
+
+
+            uni.clearStorageSync();
+            uni.reLaunch({
+              url: '/pages/account/login/login' });
+
 
           }
         }
@@ -9343,7 +9368,7 @@ function sendRequest(options) {
 
       uni.stopPullDownRefresh();
       var data = e.data;
-
+      console.log(e, 9999);
       if (data.isSuccess == false) {
         console.log(e);
 
@@ -9359,12 +9384,11 @@ function sendRequest(options) {
       }
     },
     fail: function fail(e) {
+      console.log(e, 7777);
       uni.hideLoading({});
       uni.stopPullDownRefresh();
       console.log('请求异常:' + e);
-      if (_fail) {
-        _fail(e);
-      }
+      typeof _fail == 'function' && _fail(e);
     },
     complete: function complete() {
       typeof _complete == 'function' && _complete();
@@ -9652,7 +9676,7 @@ function uploadFile(_ref7)
     },
     fail: function fail(e) {
       uni.stopPullDownRefresh();
-      _fail2("数据请求失败");
+      typeof _fail2 == 'function' && _fail2("数据请求失败");
     } });
 
 }
@@ -9676,38 +9700,6 @@ module.exports.sendFormData = sendFormData;
 
 /***/ }),
 
-/***/ 85:
-/*!****************************************************!*\
-  !*** /Users/icourt/Desktop/mycode/uni/api/seal.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.save_personnal_seal = exports.upload_painted_wx_url = exports.delete_painted_url = exports.set_default_seal = exports.company_painted_list = exports.person_painted_list = exports.upload_person_seal = exports.upload_company_seal = exports.create_seal = void 0;var _request = __webpack_require__(/*! ./request */ 8);
-
-var create_seal = _request.host + "/v1/pass/uploadImgByBase64String"; // 生成印章base64
-exports.create_seal = create_seal;
-var upload_company_seal = _request.host + "/v1/file/saveCompanySeal"; // 保存公司印章
-exports.upload_company_seal = upload_company_seal;
-var upload_person_seal = _request.host + "/v1/file/savePersonalSeal"; // 保存个人印章
-exports.upload_person_seal = upload_person_seal;
-var person_painted_list = _request.host + "/v1/file/getPersonalSealList"; // 获取个人印章列表
-exports.person_painted_list = person_painted_list;
-var company_painted_list = _request.host + "/v1/file/getEnterpriseSealList"; // 获取公司印章列表
-exports.company_painted_list = company_painted_list;
-var set_default_seal = _request.host + "/v1/file/painted/default"; // 设置为默认印章
-exports.set_default_seal = set_default_seal;
-var delete_painted_url = _request.host + "/v1/file/handleSignImageStatus"; // 删除印章
-exports.delete_painted_url = delete_painted_url;
-var upload_painted_wx_url = _request.host + "/v1/pass/uploadFile"; // 上传印章
-exports.upload_painted_wx_url = upload_painted_wx_url;
-var save_personnal_seal = _request.host + "/v1/file/savePersonalSeal"; // 保存印章
-exports.save_personnal_seal = save_personnal_seal;
-module.exports.create_company_cachet_url = _request.host + "/v1/file/create/cachet"; // 绘制公司印章
-
-/***/ }),
-
 /***/ 9:
 /*!*******************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/api/account.js ***!
@@ -9716,10 +9708,12 @@ module.exports.create_company_cachet_url = _request.host + "/v1/file/create/cach
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.h5_login = exports.h5_get_yzm_code = exports.person_message = exports.company_message = exports.get_evidence_affirm_count = exports.update_usericon = exports.pc_login = exports.get_register_sms_code_url = exports.login_url = exports.update_count = exports.get_contract_uploadFile = exports.companyList = exports.upload_local = exports.get_user_info = exports.decode_phone = exports.get_phone_wx_code = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+Object.defineProperty(exports, "__esModule", { value: true });exports.h5_login = exports.h5_get_yzm_code = exports.person_message = exports.company_message = exports.get_evidence_affirm_count = exports.update_usericon = exports.pc_login = exports.get_register_sms_code_url = exports.login_url = exports.update_count = exports.get_contract_uploadFile = exports.companyList = exports.upload_local = exports.get_user_info = exports.decode_phone = exports.get_phone_zfb_code = exports.get_phone_wx_code = void 0;var _request = __webpack_require__(/*! ./request */ 8);
 
-var get_phone_wx_code = _request.host + "/v1/account/get/phone"; // 获取用户注册信息以及手机号openid uniid 等信息
+var get_phone_wx_code = _request.host + "/v1/account/get/phone"; // 获取用户注册信息以及手机号openid uniid 等信息 微信
 exports.get_phone_wx_code = get_phone_wx_code;
+var get_phone_zfb_code = _request.host + "/v1/account/get/phone"; // 获取用户注册信息以及手机号openid uniid 等信息 支付宝
+exports.get_phone_zfb_code = get_phone_zfb_code;
 var decode_phone = _request.host + "/v1/account/decode/wxapp/phone"; // 获取手机以及微信信息
 exports.decode_phone = decode_phone;
 var get_user_info = _request.host + "/v1/account/user/info"; // 获取用户信息
@@ -9751,6 +9745,38 @@ exports.person_message = person_message;var h5_get_yzm_code = _request.host + "/
 exports.h5_get_yzm_code = h5_get_yzm_code;
 var h5_login = _request.host + "/v1/account/login"; // 登录
 exports.h5_login = h5_login;
+
+/***/ }),
+
+/***/ 93:
+/*!****************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/api/seal.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.save_personnal_seal = exports.upload_painted_wx_url = exports.delete_painted_url = exports.set_default_seal = exports.company_painted_list = exports.person_painted_list = exports.upload_person_seal = exports.upload_company_seal = exports.create_seal = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var create_seal = _request.host + "/v1/pass/uploadImgByBase64String"; // 生成印章base64
+exports.create_seal = create_seal;
+var upload_company_seal = _request.host + "/v1/file/saveCompanySeal"; // 保存公司印章
+exports.upload_company_seal = upload_company_seal;
+var upload_person_seal = _request.host + "/v1/file/savePersonalSeal"; // 保存个人印章
+exports.upload_person_seal = upload_person_seal;
+var person_painted_list = _request.host + "/v1/file/getPersonalSealList"; // 获取个人印章列表
+exports.person_painted_list = person_painted_list;
+var company_painted_list = _request.host + "/v1/file/getEnterpriseSealList"; // 获取公司印章列表
+exports.company_painted_list = company_painted_list;
+var set_default_seal = _request.host + "/v1/file/painted/default"; // 设置为默认印章
+exports.set_default_seal = set_default_seal;
+var delete_painted_url = _request.host + "/v1/file/handleSignImageStatus"; // 删除印章
+exports.delete_painted_url = delete_painted_url;
+var upload_painted_wx_url = _request.host + "/v1/pass/uploadFile"; // 上传印章
+exports.upload_painted_wx_url = upload_painted_wx_url;
+var save_personnal_seal = _request.host + "/v1/file/savePersonalSeal"; // 保存印章
+exports.save_personnal_seal = save_personnal_seal;
+module.exports.create_company_cachet_url = _request.host + "/v1/file/create/cachet"; // 绘制公司印章
 
 /***/ })
 

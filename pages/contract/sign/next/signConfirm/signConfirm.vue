@@ -20,9 +20,18 @@ export default {
   props: {},
   onLoad: function (options) {
     console.log(options);
-    const currentUser = uni.getStorageSync('currentUser');
-    const userId = uni.getStorageSync('userId');
-    const token = app.globalData.getUserToken();
+		
+		// #ifdef  H5
+		const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+		const userId = localStorage.getItem('userId');
+		// #endif
+		
+		// #ifndef  H5
+		const currentUser = uni.getStorageSync('currentUser');
+		const userId = uni.getStorageSync('userId');
+		// #endif
+   
+		const token = app.globalData.getUserToken();
     let str = this[app.globalData.env + 'WebSrc'] + '?userId=' + userId + '&contractId=' + options.contractId + '&token=' + token;
 
     if (currentUser && currentUser.companyId) {

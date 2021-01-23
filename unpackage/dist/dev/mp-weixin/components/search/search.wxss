@@ -12,7 +12,7 @@
   height:84rpx;
   background:#F7F8F9FF;
   border-radius:4rpx;
-  width: calc(100% - 48rpx);
+  width: 100%;
   padding: 0 24rpx;
 }
 .search .icon-search {

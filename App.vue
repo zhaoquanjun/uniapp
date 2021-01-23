@@ -21,6 +21,7 @@
 		globalData: {
 			//以下可以自定义添加函数和全局数据
 			userToken: null,
+			authCode: '',
 			userId: '',
 			userName: '',
 			userType: 1,
@@ -38,6 +39,18 @@
 			// 证据管理选中tab
 			env: 'dev',
 			hasShowOverdueModal: false,
+			getUserAuthCode: function(callback) {
+				// #ifdef MP-ALIPAY
+				my.getAuthCode({
+					scopes: 'auth_user',
+					success: (res) => {
+						this.authCode = res.authCode
+						console.log(this.authCode, 9999)
+						// typeof callback == 'function' && callback()
+					},
+				});
+				// #endif
+			},
 			//登陆成功保存全局数据
 			loginSuccess: function(userToken, userId, userName, userType, isAuth, phone, avatar, memberCompany, memberType) {
 				console.log(userToken, userId, userName, userType, isAuth, phone, avatar, memberCompany, memberType, 21121);
@@ -99,7 +112,7 @@
 				this.memberType = localStorage.getItem("memberType");
 				var memberCompanyJson = localStorage.getItem("memberCompany");
 				// #endif
-
+				
 				// #ifndef H5
 				this.userToken = uni.getStorageSync("userToken");
 				this.userId = uni.getStorageSync("userId");
@@ -114,7 +127,7 @@
 				// #endif
 
 
-				if (memberCompanyJson.length != 0) {
+				if (memberCompanyJson && memberCompanyJson.length != 0) {
 					this.memberCompany = JSON.parse(memberCompanyJson);
 				}
 			},
@@ -165,7 +178,7 @@
 			 * 是否登录中
 			 */
 			isLoginIn: function() {
-				return this.userToken && this.userToken.length > 0;
+				return Boolean(this.userToken && this.userToken.length > 0);
 			},
 
 			login() {

@@ -158,6 +158,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _request = __webpack_require__(/*! ../../../api/request */ 8);
+
+
+
 var _account = __webpack_require__(/*! ../../../api/account */ 9); //
 //
 //
@@ -184,8 +187,9 @@ var _account = __webpack_require__(/*! ../../../api/account */ 9); //
 //
 //
 //
-var _default = { data: function data() {return { wxCode: '', openId: '', unionId: '', loginPhone: '', isShowMark: false, isBindOpenId: false, bandPhone: '' };}, components: {}, props: {}, onLoad: function onLoad(options) {}, onShow: function onShow() {this.getRegisterStatusFun();}, onShareAppMessage: function onShareAppMessage() {}, methods: { omerror: function omerror(e) {console.log(e, 'error111');
-    },
+var _default = { data: function data() {return { wxCode: '', openId: '', unionId: '', loginPhone: '', isShowMark: false, isBindOpenId: false, bandPhone: '' };}, components: {}, props: {}, onLoad: function onLoad(options) {}, onShow: function onShow() {this.getRegisterStatusFun();}, onShareAppMessage: function onShareAppMessage() {},
+
+  methods: {
     onAuthError: function onAuthError(e) {
       console.log(e, 'error');
     },
@@ -203,18 +207,36 @@ var _default = { data: function data() {return { wxCode: '', openId: '', unionId
             typeof callback == 'function' && callback();
           } else {
             setTimeout(function () {
+
               uni.showToast({
                 icon: 'none',
                 title: '请先授权微信登陆' });
+
+
+
+
+
+
+
+
 
             }, 50);
           }
         },
         fail: function fail() {
           setTimeout(function () {
+
             uni.showToast({
               icon: 'none',
               title: '请先授权微信登陆' });
+
+
+
+
+
+
+
+
 
           }, 50);
         } });
@@ -259,7 +281,8 @@ var _default = { data: function data() {return { wxCode: '', openId: '', unionId
 
               if (canNavigate) {
                 uni.navigateTo({
-                  url: "/pages/account/loginVerify/loginVerify?phone=" + _this4.bandPhone + "&unionId=" + _this4.unionId + "&openId=" + _this4.openId + "&originType=" + _this4.originType });
+                  url: "/pages/account/loginVerify/loginVerify?phone=" + _this4.bandPhone + "&unionId=" + _this4.unionId +
+                  "&openId=" + _this4.openId + "&originType=" + _this4.originType });
 
               }
             } else {
@@ -283,7 +306,8 @@ var _default = { data: function data() {return { wxCode: '', openId: '', unionId
       } else {
         if (canNavigate) {
           uni.navigateTo({
-            url: "/pages/account/loginVerify/loginVerify?phone=" + this.bandPhone + "&unionId=" + this.unionId + "&openId=" + this.openId + "&originType=" + this.originType });
+            url: "/pages/account/loginVerify/loginVerify?phone=" + this.bandPhone + "&unionId=" + this.unionId +
+            "&openId=" + this.openId + "&originType=" + this.originType });
 
         }
       }
@@ -292,7 +316,7 @@ var _default = { data: function data() {return { wxCode: '', openId: '', unionId
         * @name 获取手机号以及微信信息
         * @param {*} e 
         */
-    getPhoneFun: function getPhoneFun(e) {var _this5 = this;
+    getWxPhoneFun: function getWxPhoneFun(e) {var _this5 = this;
       (0, _request.post)({
         url: _account.decode_phone,
         params: {
@@ -311,7 +335,8 @@ var _default = { data: function data() {return { wxCode: '', openId: '', unionId
             isBindOpenId: true });
 
           uni.navigateTo({
-            url: "/pages/account/loginVerify/loginVerify?phone=" + data.phone + "&unionId=" + data.unionId + "&openId=" + data.openId });
+            url: "/pages/account/loginVerify/loginVerify?phone=" + data.phone + "&unionId=" + data.unionId + "&openId=" +
+            data.openId });
 
         },
         fail: function fail(msg) {
@@ -326,10 +351,40 @@ var _default = { data: function data() {return { wxCode: '', openId: '', unionId
     },
 
     /**
+        * @name 获取支付宝手机号
+        */
+    _getZfbPhone: function _getZfbPhone() {var _this6 = this;
+      (0, _request.post)({
+        url: _account.get_phone_zfb_code,
+        success: function success(res) {
+          _this6.setData({
+            bandPhone: res.phone,
+            loginPhone: res.phone,
+            openId: res.openId,
+            unionId: res.unionId,
+            isBindOpenId: true });
+
+          uni.navigateTo({
+            url: "/pages/account/loginVerify/loginVerify?phone=" + res.phone + "&unionId=" + res.unionId + "&openId=" +
+            res.openId });
+
+        },
+        fail: function fail(err) {
+          setTimeout(function () {
+            uni.showToast({
+              icon: 'none',
+              title: err });
+
+          }, 50);
+        } });
+
+    },
+
+    /**
         * @name 通过按钮获取参数，请求后台获取手机号以及微信信息
         */
-    getPhoneNumber: function getPhoneNumber(e) {var _this6 = this;
-      console.log(e, 9999);
+    getPhoneNumber: function getPhoneNumber(e) {var _this7 = this;
+
       if ("getPhoneNumber:ok" != e.detail.errMsg) {
         setTimeout(function () {
           uni.showToast({
@@ -339,10 +394,32 @@ var _default = { data: function data() {return { wxCode: '', openId: '', unionId
         }, 50);
         return;
       }
-
       this.loginWxFun(function () {
-        _this6.getPhoneFun(e);
+        _this7.getWxPhoneFun(e);
       });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     },
 
     bindKeyInput: function bindKeyInput(e) {
@@ -363,7 +440,8 @@ var _default = { data: function data() {return { wxCode: '', openId: '', unionId
         */
     bindPhoneAction: function bindPhoneAction() {
       uni.navigateTo({
-        url: "/pages/account/loginVerify/loginVerify?phone=" + this.loginPhone + "&unionId=" + this.unionId + "&openId=" + this.openId });
+        url: "/pages/account/loginVerify/loginVerify?phone=" + this.loginPhone + "&unionId=" + this.unionId +
+        "&openId=" + this.openId });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

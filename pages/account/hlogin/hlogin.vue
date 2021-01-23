@@ -118,6 +118,7 @@
 							phone: res.phone,
 							currentUser: JSON.stringify(res)
 						});
+						console.log(res)
 						app.globalData.loginSuccess(res.token, res.userId, res.name, res.userType, res.auth, res.phone, res.icon, res.joinCompany, res.userCompanyType);
 						uni.reLaunch({
 						  url: '/pages/home/home'

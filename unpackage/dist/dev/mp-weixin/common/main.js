@@ -166,6 +166,7 @@ var _account = __webpack_require__(/*! ./api/account.js */ 9);var _default =
   globalData: {
     //以下可以自定义添加函数和全局数据
     userToken: null,
+    authCode: '',
     userId: '',
     userName: '',
     userType: 1,
@@ -183,6 +184,18 @@ var _account = __webpack_require__(/*! ./api/account.js */ 9);var _default =
     // 证据管理选中tab
     env: 'dev',
     hasShowOverdueModal: false,
+    getUserAuthCode: function getUserAuthCode(callback) {
+
+
+
+
+
+
+
+
+
+
+    },
     //登陆成功保存全局数据
     loginSuccess: function loginSuccess(userToken, userId, userName, userType, isAuth, phone, avatar, memberCompany, memberType) {
       console.log(userToken, userId, userName, userType, isAuth, phone, avatar, memberCompany, memberType, 21121);
@@ -259,7 +272,7 @@ var _account = __webpack_require__(/*! ./api/account.js */ 9);var _default =
 
 
 
-      if (memberCompanyJson.length != 0) {
+      if (memberCompanyJson && memberCompanyJson.length != 0) {
         this.memberCompany = JSON.parse(memberCompanyJson);
       }
     },
@@ -310,7 +323,7 @@ var _account = __webpack_require__(/*! ./api/account.js */ 9);var _default =
         * 是否登录中
         */
     isLoginIn: function isLoginIn() {
-      return this.userToken && this.userToken.length > 0;
+      return Boolean(this.userToken && this.userToken.length > 0);
     },
 
     login: function login() {

@@ -17,6 +17,7 @@ page {
 /* #endif */
 
 .add-certificate-box {
+	padding-bottom: 48rpx;
   font-size: 24rpx;
   background: #F7F8F9;
 }
@@ -101,7 +102,7 @@ page {
 }
 
 .certificate-submit {
-	margin: 40rpx auto;
+	margin: 40rpx auto 0;
   width: 90%;
   height: 100rpx;
   line-height: 100rpx;

@@ -14,26 +14,22 @@
       </view>
      </view>
      <view class="detail" @tap="handleShowBalanceFun">
-      <view class="detail-word">收支明细</view>
+      <view class="detail-word">详情</view>
       <view class="iconfont iconright-arrow icon"></view>
      </view>
   </view>
-  <view class="list-item">
-    <view class="title">礼品卡</view>
-     <view class="content">
-      <view class="balance card">
-        <view class="amount">{{count}}</view>
-        <view class="prefix">张</view>
-      </view>
-      <view class="btn-group">
-        <view class="btn primary" @tap="handleBuyFun">购买礼品卡</view>
-      </view>
-     </view>
-     <view class="detail" @tap="handleShowCardFun">
-      <view class="detail-word">查看全部</view>
-      <view class="iconfont iconright-arrow icon"></view>
-     </view>
-  </view>
+	<view class="list-item">
+	  <view class="title">合同套餐</view>
+	   <view class="content">
+	    <view class="balance card">
+	      <view class="amount">{{package}}</view>
+	      <view class="prefix">份</view>
+	    </view>
+	    <view class="btn-group">
+	      <view class="btn primary" @tap="handleBuyPacckageFun">购买套餐</view>
+	    </view>
+	   </view>
+	</view>
 </view>
 </template>
 
@@ -45,7 +41,8 @@ export default {
   data() {
     return {
       balance: 0,
-      count: 0
+      count: 0,
+			package: 0
     };
   },
 
@@ -108,7 +105,8 @@ export default {
         success: res => {
           this.setData({
             balance: (res.accountFee / 100).toFixed(2),
-            count: res.couponFee
+            count: res.couponFee,
+						package: res.contractExpense
           });
         },
         fail: err => {
@@ -130,15 +128,6 @@ export default {
     },
 
     /**
-     * @name 跳转礼品卡
-     */
-    handleShowCardFun() {
-      uni.navigateTo({
-        url: '/pages/costManage/accountCard/accountCard'
-      });
-    },
-
-    /**
      * @name 充值跳转
      */
     handleRechargeFun() {
@@ -155,15 +144,14 @@ export default {
         url: '/pages/costManage/buyCard/buyCard?origin=give'
       });
     },
-
-    /**
-     * @name 购买礼品卡跳转
-     */
-    handleBuyFun() {
-      uni.navigateTo({
-        url: '/pages/costManage/buyCard/buyCard?origin=buy'
-      });
-    }
+		/**
+		 * @name 购买套餐
+		 */
+		handleBuyPacckageFun() {
+			uni.navigateTo({
+			  url: '/pages/costManage/buyPackage/buyPackage'
+			});
+		}
 
   }
 };
