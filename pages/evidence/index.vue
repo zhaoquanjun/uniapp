@@ -13,7 +13,7 @@
 						 :data-id="item.id" @tap="viewDetailFun">
 							<view class="item-detail">
 								<view class="title">{{item.name}}</view>
-								<view class="type">存证类型：{{ item.evidenceType==2 ? '数据存证' : '签署存证' }}</view>
+								<view class="type">存证类型：{{ item.evidenceType == 1 ? '签署存证' : item.evidenceType == 2 ? '数据存证' : item.evidenceType == 3 ? '电函回执存证' : item.evidenceType == 5 ? '电子律师函签署存证' : ''  }}</view>
 								<view :class="'time ' + (item.status != 1 ? 'hidden' : '')">存证时间：{{item.gmtModified}}</view>
 							</view>
 							<view class="contract-operate" @tap.stop="showChainsMenu" :data-activeitem="item">

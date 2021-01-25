@@ -149,7 +149,7 @@ var _cost = __webpack_require__(/*! ../../../api/cost.js */ 76); //
 //
 //
 // pages/account/loginVerify/loginVerify.js
-var verifyCode = function verifyCode() {__webpack_require__.e(/*! require.ensure | components/verifycode/verifycode */ "components/verifycode/verifycode").then((function () {return resolve(__webpack_require__(/*! ../../../components/verifycode/verifycode */ 614));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var verifyCode = function verifyCode() {__webpack_require__.e(/*! require.ensure | components/verifycode/verifycode */ "components/verifycode/verifycode").then((function () {return resolve(__webpack_require__(/*! ../../../components/verifycode/verifycode */ 606));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 {
   data: function data() {
     return {

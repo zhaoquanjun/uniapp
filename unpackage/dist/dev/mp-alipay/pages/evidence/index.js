@@ -96,10 +96,10 @@ var components
 try {
   components = {
     search: function() {
-      return __webpack_require__.e(/*! import() | components/search/search */ "components/search/search").then(__webpack_require__.bind(null, /*! @/components/search/search.vue */ 572))
+      return __webpack_require__.e(/*! import() | components/search/search */ "components/search/search").then(__webpack_require__.bind(null, /*! @/components/search/search.vue */ 564))
     },
     halfSlideItem: function() {
-      return __webpack_require__.e(/*! import() | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then(__webpack_require__.bind(null, /*! @/components/halfSlideItem/halfSlideItem.vue */ 579))
+      return __webpack_require__.e(/*! import() | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then(__webpack_require__.bind(null, /*! @/components/halfSlideItem/halfSlideItem.vue */ 571))
     }
   }
 } catch (e) {
@@ -256,7 +256,7 @@ var _evidence = __webpack_require__(/*! ../../api/evidence.js */ 36); //
 //
 //
 //
-var util = __webpack_require__(/*! ../../utils/utils */ 37);var app = getApp();var search = function search() {__webpack_require__.e(/*! require.ensure | components/search/search */ "components/search/search").then((function () {return resolve(__webpack_require__(/*! ../../components/search/search */ 572));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var mpHalfScreenDialog = function mpHalfScreenDialog() {__webpack_require__.e(/*! require.ensure | components/half-screen-dialog/half-screen-dialog */ "components/half-screen-dialog/half-screen-dialog").then((function () {return resolve(__webpack_require__(/*! ../../components/half-screen-dialog/half-screen-dialog */ 586));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../components/halfSlideItem/halfSlideItem */ 579));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { tabs: [{ name: '签署存证', type: 'sign' }, { name: '数据存证', type: 'data' }], signs: [], pageIndex: 1, total: 0, activeName: 'sign', searchParams: '', pageSize: 10, isTriggered: false, // 是否容器下拉刷新
+var util = __webpack_require__(/*! ../../utils/utils */ 37);var app = getApp();var search = function search() {__webpack_require__.e(/*! require.ensure | components/search/search */ "components/search/search").then((function () {return resolve(__webpack_require__(/*! ../../components/search/search */ 564));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var mpHalfScreenDialog = function mpHalfScreenDialog() {__webpack_require__.e(/*! require.ensure | components/half-screen-dialog/half-screen-dialog */ "components/half-screen-dialog/half-screen-dialog").then((function () {return resolve(__webpack_require__(/*! ../../components/half-screen-dialog/half-screen-dialog */ 578));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../components/halfSlideItem/halfSlideItem */ 571));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { tabs: [{ name: '签署存证', type: 'sign' }, { name: '数据存证', type: 'data' }], signs: [], pageIndex: 1, total: 0, activeName: 'sign', searchParams: '', pageSize: 10, isTriggered: false, // 是否容器下拉刷新
       activeItme: null, canDownload: "", pdfUrl: "" };}, components: { search: search, mpHalfScreenDialog: mpHalfScreenDialog, halfSlideItem: halfSlideItem }, props: {}, onLoad: function onLoad() {}, onShow: function onShow() {this.setData({ pageIndex: 1 });this.getPageDataFun(1);}, onReady: function onReady() {
     this.dialog = this.$refs.mphalfScreenDialog;
   },

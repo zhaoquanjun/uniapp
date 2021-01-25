@@ -345,11 +345,15 @@ var app = getApp();var icon = function icon() {__webpack_require__.e(/*! require
     if (currentUser.companyId && currentUser.roleTypes && !currentUser.roleTypes.includes('1') && !currentUser.roleTypes.
     includes('2') || currentUser.companyId && currentUser.roleTypes == null || !app.globalData.isLoginIn()) {
       list[1].hasAuth = false;
-    } // 当前企业没有收款资质
+    } else {
+      list[1].hasAuth = true;
+    }
 
 
     if (currentUser.companyId && currentUser.payStatus != 2 || !currentUser.companyId) {
       list[3].hasAuth = false;
+    } else {
+      list[3].hasAuth = true;
     }
 
     this.setData({
