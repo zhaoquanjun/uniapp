@@ -191,7 +191,7 @@ var _account = __webpack_require__(/*! ./api/account.js */ 9);var _default =
         success: function success(res) {
           _this2.authCode = res.authCode;
           console.log(_this2.authCode, 9999);
-          // typeof callback == 'function' && callback()
+          typeof callback == 'function' && callback();
         } });
 
 

@@ -9257,7 +9257,6 @@ function sendRequest(options) {
     }
 
   }
-
   uni.request({
     url: url,
     header: reqHeader,
@@ -9368,7 +9367,6 @@ function sendRequest(options) {
 
       uni.stopPullDownRefresh();
       var data = e.data;
-      console.log(e, 9999);
       if (data.isSuccess == false) {
         console.log(e);
 

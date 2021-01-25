@@ -81,8 +81,12 @@
 		get_account_and_card_info,
 		get_package_list,
 		buy_package,
-		get_wx_pay_params
+		get_wx_pay_params,
+		get_zfb_pay_params
 	} from '../../../api/cost.js'
+	
+	const app = getApp()
+	
 	export default {
 		data() {
 			return {
@@ -106,7 +110,6 @@
 				activeIndex: 0,
 				rechargeValue: 100, // 实时金额
 				total: Number(100).toFixed(2), // 总额
-				timer: null,
 			}
 		},
 		/**
@@ -405,26 +408,31 @@
 			 */
 			_getZfbPayParams() {
 				uni.showLoading({
-					title: '创建订单中',
-				})
+					title: '创建订单中'
+				});
 				get({
-					url: get_wx_pay_params + '?amount=' + this.total + '&body=支付宝支付&rechargeType=1',
+					url: get_zfb_pay_params,
+					params: {
+						amount: this.total,
+						body: '支付宝支付',
+						rechargeType: 1,
+						authCode: app.globalData.authCode
+					},
 					success: res => {
-						console.log(res)
-						this._payByZfb(res)
+						this._payByZfb(res);
 					},
 					fail: err => {
 						setTimeout(() => {
 							uni.showToast({
 								icon: 'none',
-								title: err,
-							})
-						}, 50)
+								title: err
+							});
+						}, 50);
 					},
 					complete: () => {
-						uni.hideLoading()
+						uni.hideLoading();
 					}
-				})
+				});
 			},
 			/**
 			 * @name 微信支付

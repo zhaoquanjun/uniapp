@@ -189,7 +189,14 @@
 						newArr.unshift(res);
 
 						if (!currentUser) {
+							// #ifdef H5
+							localStorage.setItem('currentUser', JSON.stringify(res))
+							// #endif
+							
+							// #ifndef H5
 							uni.setStorageSync('currentUser', res);
+							// #endif
+							
 							currentUser = res;
 						}
 

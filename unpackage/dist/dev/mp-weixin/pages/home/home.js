@@ -369,7 +369,14 @@ var app = getApp();var homeAddDataStorge = function homeAddDataStorge() {__webpa
           newArr.unshift(res);
 
           if (!currentUser) {
+
+
+
+
+
             uni.setStorageSync('currentUser', res);
+
+
             currentUser = (_readOnlyError("currentUser"), res);
           }
 

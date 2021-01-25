@@ -31,8 +31,11 @@
 		get
 	} from '../../../api/request.js'
 	import {
-		get_wx_pay_params
+		get_wx_pay_params,
+		get_zfb_pay_params
 	} from '../../../api/cost.js'
+	
+	const app = getApp()
 
 	export default {
 		data() {
@@ -165,8 +168,7 @@
 					title: '创建订单中'
 				});
 				get({
-					url: get_wx_pay_params + '?amount=' + this.rechargeValue + '&body=微信支付&rechargeType=1&goods=' + this.rechargeValue +
-						'&goodsNum=1',
+					url: get_wx_pay_params + '?amount=' + this.rechargeValue + '&body=微信支付&rechargeType=1',
 					success: res => {
 						console.log(res);
 						this.payByWxFun(res);
@@ -193,10 +195,14 @@
 					title: '创建订单中'
 				});
 				get({
-					url: get_wx_pay_params + '?amount=' + this.rechargeValue + '&body=支付宝支付&rechargeType=1&goods=' + this.rechargeValue +
-						'&goodsNum=1',
+					url: get_zfb_pay_params,
+					params: {
+						amount: this.total,
+						body: '支付宝支付',
+						rechargeType: 1,
+						authCode: app.globalData.authCode
+					},
 					success: res => {
-						console.log(res);
 						this.payByZfbFun(res);
 					},
 					fail: err => {
@@ -217,6 +223,7 @@
 			 * @name 微信支付
 			 */
 			payByWxFun(data) {
+				console.log(this.rechargeValue, 1111)
 				if (this.rechargeValue) {
 					uni.requestPayment({
 						'timeStamp': data.timeStamp,
@@ -249,7 +256,7 @@
 			/**
 			 * @name 支付宝支付
 			 */
-			payByWxFun(data) {
+			payByZfbFun(data) {
 				if (this.rechargeValue) {
 					my.tradePay({
 						tradeNO: data,

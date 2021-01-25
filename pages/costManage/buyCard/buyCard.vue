@@ -139,8 +139,9 @@
 		/**
 		 * 生命周期函数--监听页面隐藏
 		 */
-		onHide: function() {},
-
+		onHide: function() {
+			if (this.timer) clearTimeout(this.timer)
+		},
 		/**
 		 * 生命周期函数--监听页面卸载
 		 */
@@ -204,18 +205,6 @@
 				this.setData({
 					count: value,
 					total: this.rechargeValue ? (this.rechargeValue * value).toFixed(2) : '0.00'
-				});
-				return value;
-			},
-
-			/**
-			 * @name 输入数量失去焦点
-			 */
-			handleBlurCountFun(e) {
-				let value = e.detail.value;
-				if (value > 500) value = 500;
-				this.setData({
-					count: value
 				});
 				return value;
 			},
@@ -322,8 +311,15 @@
 					title: '创建订单中'
 				});
 				get({
-					url: get_wx_pay_params + '?amount=' + this.total + '&body=微信支付&rechargeType=0&goods=' + this.rechargeValue +
-						'&goodsNum=' + this.count,
+					url: get_wx_pay_params,
+					params: {
+						amount: this.total,
+						body: '微信支付',
+						rechargeType: 0,
+						goods: this.rechargeValue,
+						goodsNum: this.count,
+						authCode: app.globalData.authCode
+					},
 					success: res => {
 						console.log(res);
 						this.payByWxFun(res);
@@ -350,8 +346,15 @@
 					title: '创建订单中'
 				});
 				get({
-					url: get_zfb_pay_params + '?amount=' + this.total + '&body=支付宝支付&rechargeType=0&goods=' + this.rechargeValue +
-						'&goodsNum=' + this.count + '&authCode=' + app.globalData.authCode,
+					url: get_zfb_pay_params,
+					params: {
+						amount: this.total,
+						body: '支付宝支付',
+						rechargeType: 0,
+						goods: this.rechargeValue,
+						goodsNum: this.count,
+						authCode: app.globalData.authCode
+					},
 					success: res => {
 						console.log(res);
 						this.payByZfbFun(res);
@@ -419,7 +422,7 @@
 				if (this.rechargeValue) {
 					my.tradePay({
 						tradeNO: data,
-						success: function(res) {
+						success: res => {
 							setTimeout(() => {
 								uni.showToast({
 									icon: 'none',

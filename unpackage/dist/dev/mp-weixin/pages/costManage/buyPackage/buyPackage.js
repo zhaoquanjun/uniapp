@@ -283,15 +283,18 @@ var _cost = __webpack_require__(/*! ../../../api/cost.js */ 76); //
 //
 //
 //
-var _default = { data: function data() {return { packages: [], accountInfo: { card: 0, account: 0 }, payInfo: { card: 0, account: 0, third: 0 }, checkedStatus: { card: true, account: true, third: false }, packageId: '', selectWays: ['card', 'account'], activeIndex: 0, rechargeValue: 100, // 实时金额
-      total: Number(100).toFixed(2), // 总额
-      timer: null };}, /**
-                        * 生命周期函数--监听页面显示
-                        */onShow: function onShow() {this._getPackagesList();}, methods: { /**
-                                                                                            * @name 能否购买
-                                                                                            */_setCanNextValue: function _setCanNextValue() {var value = false;if (this.total == 0 || Number(this.payInfo.card) + Number(this.payInfo.account) + Number(this.payInfo.third) < this.rechargeValue) {value = false;} else {value = true;}console.log(value);this.setData({ canNext: value });}, /**
-                                                                                                                                                                                                                                                                                                                                                                                               * @name 获取账户余额以及礼品卡余额
-                                                                                                                                                                                                                                                                                                                                                                                               */_getAccountAndCardInfo: function _getAccountAndCardInfo() {var _this = this;(0, _request.get)({ url: _cost.get_account_and_card_info, success: function success(res) {var pay = { card: 0, account: 0, third: 0 };if (res.couponBalance && res.couponBalance > 0) {pay.card = res.couponBalance > _this.rechargeValue ? _this.rechargeValue : res.couponBalance;}if (!res.couponBalance && res.expenseBalance > 0) {pay.account = res.expenseBalance > _this.rechargeValue ? _this.rechargeValue : res.expenseBalance;}_this.setData({ accountInfo: { card: (res.couponBalance / 100).toFixed(2), account: (res.expenseBalance / 100).toFixed(2) }, payInfo: pay });_this._setCanNextValue();}, fail: function fail(err) {
+var app = getApp();var _default = { data: function data() {return { packages: [], accountInfo: { card: 0, account: 0 }, payInfo: { card: 0, account: 0, third: 0 }, checkedStatus: { card: true, account: true, third: false }, packageId: '', selectWays: ['card', 'account'], activeIndex: 0, rechargeValue: 100, // 实时金额
+      total: Number(100).toFixed(2) // 总额
+    };}, /**
+          * 生命周期函数--监听页面显示
+          */onShow: function onShow() {this._getPackagesList();}, methods: { /**
+                                                                              * @name 能否购买
+                                                                              */_setCanNextValue: function _setCanNextValue() {var value = false;if (this.total == 0 || Number(this.payInfo.card) + Number(this.payInfo.account) + Number(this.payInfo.third) < this.rechargeValue) {value = false;} else {value = true;}console.log(value);this.setData({ canNext: value });}, /**
+                                                                                                                                                                                                                                                                                                                                                                                 * @name 获取账户余额以及礼品卡余额
+                                                                                                                                                                                                                                                                                                                                                                                 */_getAccountAndCardInfo: function _getAccountAndCardInfo() {var _this = this;(0, _request.get)({ url: _cost.get_account_and_card_info, success: function success(res) {var pay = { card: 0, account: 0, third: 0 };if (res.couponBalance && res.couponBalance > 0) {pay.card = res.couponBalance > _this.rechargeValue ? _this.rechargeValue : res.couponBalance;}if (!res.couponBalance && res.expenseBalance > 0) {pay.account = res.expenseBalance > _this.rechargeValue ? _this.rechargeValue : res.expenseBalance;}_this.setData({ accountInfo: { card: (res.couponBalance / 100).toFixed(2), account: (res.expenseBalance / 100).toFixed(2) }, payInfo: pay });
+          _this._setCanNextValue();
+        },
+        fail: function fail(err) {
           setTimeout(function () {
             uni.showToast({
               icon: 'none',
@@ -540,9 +543,14 @@ var _default = { data: function data() {return { packages: [], accountInfo: { ca
         title: '创建订单中' });
 
       (0, _request.get)({
-        url: _cost.get_wx_pay_params + '?amount=' + this.total + '&body=支付宝支付&rechargeType=1',
+        url: _cost.get_zfb_pay_params,
+        params: {
+          amount: this.total,
+          body: '支付宝支付',
+          rechargeType: 1,
+          authCode: app.globalData.authCode },
+
         success: function success(res) {
-          console.log(res);
           _this4._payByZfb(res);
         },
         fail: function fail(err) {

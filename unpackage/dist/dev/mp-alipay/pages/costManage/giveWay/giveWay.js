@@ -149,19 +149,33 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
-var _cost = __webpack_require__(/*! ../../../api/cost.js */ 76);function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
-
-{
-  data: function data() {
-    return {
+var _cost = __webpack_require__(/*! ../../../api/cost.js */ 76); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = { data: function data() {return {
       ways: [{
-        icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/friends.png',
-        label: '微信好友',
+        icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/zfb_icon.png',
+        label: '支付宝好友',
         type: 1 },
       {
         icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/shanqian_icon.png',
         label: '闪签用户',
         type: 2 }],
+
 
       origin: 'card',
       id: '',
@@ -253,17 +267,40 @@ var _cost = __webpack_require__(/*! ../../../api/cost.js */ 76);function ownKeys
                                                * 用户点击右上角分享
                                                */
   onShareAppMessage: function onShareAppMessage() {var _this = this;
-    var shareObj = {};
-    var origin = this.origin == 'give' ? 'buy' : 'rechargeCard';
-    shareObj = {
-      title: "".concat(this.money, "\u5143\u793C\u54C1\u5361\uFF0C\u70B9\u51FB\u5373\u53EF\u9886\u53D6"),
-      // 分享标题
-      // desc: '',
-      path: "/pages/costManage/receiveCard/receiveCard?gifCardId=".concat(this.wxShareId),
-      imageUrl: this.shareIcon // 分享封面图
-    };
 
-    shareObj = _objectSpread(_objectSpread({}, shareObj), {}, {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    return {
+      title: "".concat(this.money, "\u5143\u793C\u54C1\u5361\uFF0C\u70B9\u51FB\u5373\u53EF\u9886\u53D6"),
+      path: "/pages/costManage/receiveCard/receiveCard?gifCardId=".concat(this.wxShareId),
+      imageUrl: this.shareIcon, // 分享封面图
       success: function success(res) {
         console.error('分享成功', res);
         setTimeout(function () {
@@ -282,10 +319,11 @@ var _cost = __webpack_require__(/*! ../../../api/cost.js */ 76);function ownKeys
 
         }, 50);
         _this.cancelShareFun();
-      } });
+      } };
 
-    console.error('shareObj', shareObj, this.id, this.wxShareId);
-    return shareObj;
+
+
+
   },
   methods: {
     handleSelectShareWayFun: function handleSelectShareWayFun(e) {var _this2 = this;

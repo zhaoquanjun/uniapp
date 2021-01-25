@@ -162,32 +162,35 @@ __webpack_require__.r(__webpack_exports__);
 var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
 
 
-var _cost = __webpack_require__(/*! ../../../api/cost.js */ 76);var _methods;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
-
-
-
-{
-  data: function data() {
-    return {
-      userName: '',
-      amountList: [{
-        label: 100,
-        value: 100 },
-      {
-        label: 500,
-        value: 500 },
-      {
-        label: 1000,
-        value: 1000 }],
-
-      valueStatus: 'select',
-      rechargeValue: 100,
-      total: 100.00,
-      selectActive: 100 };
-
-  },
-
-  components: {},
+var _cost = __webpack_require__(/*! ../../../api/cost.js */ 76); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var app = getApp();var _default = { data: function data() {return { userName: '', amountList: [{ label: 100, value: 100 }, { label: 500, value: 500 }, { label: 1000, value: 1000 }], valueStatus: 'select', rechargeValue: 100, total: 100.00, selectActive: 100 };}, components: {},
   props: {},
 
   /**
@@ -231,10 +234,10 @@ var _cost = __webpack_require__(/*! ../../../api/cost.js */ 76);var _methods;fun
                                                * 用户点击右上角分享
                                                */
   onShareAppMessage: function onShareAppMessage() {},
-  methods: (_methods = {
+  methods: {
     /**
-                          * @name 获取当前账户主体
-                          */
+              * @name 获取当前账户主体
+              */
     getCurrentUserNameFun: function getCurrentUserNameFun() {
       var userName = '';
       var currentUser = uni.getStorageSync('currentUser');
@@ -297,8 +300,7 @@ var _cost = __webpack_require__(/*! ../../../api/cost.js */ 76);var _methods;fun
         title: '创建订单中' });
 
       (0, _request.get)({
-        url: _cost.get_wx_pay_params + '?amount=' + this.rechargeValue + '&body=微信支付&rechargeType=1&goods=' + this.rechargeValue +
-        '&goodsNum=1',
+        url: _cost.get_wx_pay_params + '?amount=' + this.rechargeValue + '&body=微信支付&rechargeType=1',
         success: function success(res) {
           console.log(res);
           _this.payByWxFun(res);
@@ -325,10 +327,14 @@ var _cost = __webpack_require__(/*! ../../../api/cost.js */ 76);var _methods;fun
         title: '创建订单中' });
 
       (0, _request.get)({
-        url: _cost.get_wx_pay_params + '?amount=' + this.rechargeValue + '&body=支付宝支付&rechargeType=1&goods=' + this.rechargeValue +
-        '&goodsNum=1',
+        url: _cost.get_zfb_pay_params,
+        params: {
+          amount: this.total,
+          body: '支付宝支付',
+          rechargeType: 1,
+          authCode: app.globalData.authCode },
+
         success: function success(res) {
-          console.log(res);
           _this2.payByZfbFun(res);
         },
         fail: function fail(err) {
@@ -349,6 +355,7 @@ var _cost = __webpack_require__(/*! ../../../api/cost.js */ 76);var _methods;fun
         * @name 微信支付
         */
     payByWxFun: function payByWxFun(data) {
+      console.log(this.rechargeValue, 1111);
       if (this.rechargeValue) {
         uni.requestPayment({
           'timeStamp': data.timeStamp,
@@ -376,63 +383,63 @@ var _cost = __webpack_require__(/*! ../../../api/cost.js */ 76);var _methods;fun
           'complete': function complete() {} });
 
       }
-    } }, _defineProperty(_methods, "payByWxFun", function payByWxFun(
+    },
+
+    /**
+        * @name 支付宝支付
+        */
+    payByZfbFun: function payByZfbFun(data) {
+      if (this.rechargeValue) {
+        my.tradePay({
+          tradeNO: data,
+          success: function success(res) {
+            setTimeout(function () {
+              uni.showToast({
+                icon: 'none',
+                title: '支付成功' });
+
+            }, 50);
+            setTimeout(function () {
+              uni.redirectTo({
+                url: '/pages/costManage/accountBalance/accountBalance?type=2&origin=result' });
+
+            }, 1500);
+
+          },
+          fail: function fail(err) {
+            setTimeout(function () {
+              uni.showToast({
+                icon: 'none',
+                title: err });
+
+            }, 50);
+          } });
+
+      }
+    },
+
+    /**
+        * @name 确认充值
+        */
+    handleConfirmRechargeFun: function handleConfirmRechargeFun() {
+      if (this.rechargeValue && Number(this.rechargeValue) >= 10) {
+
+        this.getWxPayParamsFun();
 
 
 
 
-  data) {
-    if (this.rechargeValue) {
-      my.tradePay({
-        tradeNO: data,
-        success: function success(res) {
-          setTimeout(function () {
-            uni.showToast({
-              icon: 'none',
-              title: '支付成功' });
-
-          }, 50);
-          setTimeout(function () {
-            uni.redirectTo({
-              url: '/pages/costManage/accountBalance/accountBalance?type=2&origin=result' });
-
-          }, 1500);
-
-        },
-        fail: function fail(err) {
-          setTimeout(function () {
-            uni.showToast({
-              icon: 'none',
-              title: err });
-
-          }, 50);
-        } });
-
-    }
-  }), _defineProperty(_methods, "handleConfirmRechargeFun", function handleConfirmRechargeFun()
 
 
+      } else {
+        setTimeout(function () {
+          uni.showToast({
+            icon: 'none',
+            title: '充值金额不能小于10元' });
 
-
-  {
-    if (this.rechargeValue && Number(this.rechargeValue) >= 10) {
-
-      this.getWxPayParamsFun();
-
-
-
-
-
-
-    } else {
-      setTimeout(function () {
-        uni.showToast({
-          icon: 'none',
-          title: '充值金额不能小于10元' });
-
-      }, 50);
-    }
-  }), _methods) };exports.default = _default;
+        }, 50);
+      }
+    } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

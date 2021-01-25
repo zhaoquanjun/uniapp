@@ -271,11 +271,12 @@ var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.en
   /**
                                  * 生命周期函数--监听页面隐藏
                                  */
-  onHide: function onHide() {},
-
+  onHide: function onHide() {
+    if (this.timer) clearTimeout(this.timer);
+  },
   /**
-                                 * 生命周期函数--监听页面卸载
-                                 */
+      * 生命周期函数--监听页面卸载
+      */
   onUnload: function onUnload() {},
 
   /**
@@ -336,18 +337,6 @@ var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.en
       this.setData({
         count: value,
         total: this.rechargeValue ? (this.rechargeValue * value).toFixed(2) : '0.00' });
-
-      return value;
-    },
-
-    /**
-        * @name 输入数量失去焦点
-        */
-    handleBlurCountFun: function handleBlurCountFun(e) {
-      var value = e.detail.value;
-      if (value > 500) value = 500;
-      this.setData({
-        count: value });
 
       return value;
     },
@@ -454,8 +443,15 @@ var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.en
         title: '创建订单中' });
 
       (0, _request.get)({
-        url: _cost.get_wx_pay_params + '?amount=' + this.total + '&body=微信支付&rechargeType=0&goods=' + this.rechargeValue +
-        '&goodsNum=' + this.count,
+        url: _cost.get_wx_pay_params,
+        params: {
+          amount: this.total,
+          body: '微信支付',
+          rechargeType: 0,
+          goods: this.rechargeValue,
+          goodsNum: this.count,
+          authCode: app.globalData.authCode },
+
         success: function success(res) {
           console.log(res);
           _this2.payByWxFun(res);
@@ -482,8 +478,15 @@ var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.en
         title: '创建订单中' });
 
       (0, _request.get)({
-        url: _cost.get_zfb_pay_params + '?amount=' + this.total + '&body=支付宝支付&rechargeType=0&goods=' + this.rechargeValue +
-        '&goodsNum=' + this.count + '&authCode=' + app.globalData.authCode,
+        url: _cost.get_zfb_pay_params,
+        params: {
+          amount: this.total,
+          body: '支付宝支付',
+          rechargeType: 0,
+          goods: this.rechargeValue,
+          goodsNum: this.count,
+          authCode: app.globalData.authCode },
+
         success: function success(res) {
           console.log(res);
           _this3.payByZfbFun(res);
@@ -547,18 +550,18 @@ var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.en
     /**
         * @name 支付宝支付
         */
-    payByZfbFun: function payByZfbFun(data) {
+    payByZfbFun: function payByZfbFun(data) {var _this5 = this;
       if (this.rechargeValue) {
         my.tradePay({
           tradeNO: data,
-          success: function success(res) {var _this5 = this;
+          success: function success(res) {
             setTimeout(function () {
               uni.showToast({
                 icon: 'none',
                 title: '支付成功' });
 
             }, 50);
-            this.setData({
+            _this5.setData({
               timer: setTimeout(function () {
                 if (_this5.origin == 'give') {
                   uni.navigateTo({

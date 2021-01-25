@@ -22,15 +22,29 @@ import { share_card, cancel_hare_card } from '../../../api/cost.js'
 export default {
   data() {
     return {
+			// #ifdef  MP-WEIXIN
+			ways: [{
+			  icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/friends.png',
+			  label: '微信好友',
+			  type: 1
+			}, {
+			  icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/shanqian_icon.png',
+			  label: '闪签用户',
+			  type: 2
+			}],
+			// #endif
+			
+      // #ifdef  MP-ALIPAY
       ways: [{
-        icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/friends.png',
-        label: '微信好友',
+        icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/zfb_icon.png',
+        label: '支付宝好友',
         type: 1
       }, {
         icon: 'https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/cost/shanqian_icon.png',
         label: '闪签用户',
         type: 2
       }],
+      // #endif
       origin: 'card',
       id: '',
       wxShareId: '',
@@ -121,39 +135,63 @@ export default {
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    let shareObj = {};
-    let origin = this.origin == 'give' ? 'buy' : 'rechargeCard';
-    shareObj = {
-      title: `${this.money}元礼品卡，点击即可领取`,
-      // 分享标题
-      // desc: '',
-      path: `/pages/costManage/receiveCard/receiveCard?gifCardId=${this.wxShareId}`,
-      imageUrl: this.shareIcon // 分享封面图
-
-    };
-    shareObj = { ...shareObj,
-      success: res => {
-        console.error('分享成功', res);
-        setTimeout(() => {
-          uni.showToast({
-            icon: 'none',
-            title: '分享成功'
-          });
-        }, 50);
-      },
-      fail: error => {
-        console.error('分享失败', error);
-        setTimeout(() => {
-          uni.showToast({
-            icon: 'none',
-            title: '分享失败'
-          });
-        }, 50);
-        this.cancelShareFun();
-      }
-    };
-    console.error('shareObj', shareObj, this.id, this.wxShareId);
-    return shareObj;
+		// #ifdef  MP-WEIXIN
+		let shareSettings = {
+			title: `${this.money}元礼品卡，点击即可领取`,
+			path: `/pages/costManage/receiveCard/receiveCard?gifCardId=${this.wxShareId}`,
+			imageUrl: this.shareIcon, // 分享封面图
+		  success: res => {
+		    console.error('分享成功', res);
+		    setTimeout(() => {
+		      uni.showToast({
+		        icon: 'none',
+		        title: '分享成功'
+		      });
+		    }, 50);
+		  },
+		  fail: error => {
+		    console.error('分享失败', error);
+		    setTimeout(() => {
+		      uni.showToast({
+		        icon: 'none',
+		        title: '分享失败'
+		      });
+		    }, 50);
+		    this.cancelShareFun();
+		  }
+		};
+		console.log(shareSettings, 9999)
+		return shareSettings
+		// #endif
+		
+		// #ifdef  MP-ALIPAY
+		return {
+			title: `${this.money}元礼品卡，点击即可领取`,
+			path: `/pages/costManage/receiveCard/receiveCard?gifCardId=${this.wxShareId}`,
+			imageUrl: this.shareIcon, // 分享封面图
+		  success: res => {
+		    console.error('分享成功', res);
+		    setTimeout(() => {
+		      uni.showToast({
+		        icon: 'none',
+		        title: '分享成功'
+		      });
+		    }, 50);
+		  },
+		  fail: error => {
+		    console.error('分享失败', error);
+		    setTimeout(() => {
+		      uni.showToast({
+		        icon: 'none',
+		        title: '分享失败'
+		      });
+		    }, 50);
+		    this.cancelShareFun();
+		  }
+		};
+		// #endif
+		
+    
   },
   methods: {
     handleSelectShareWayFun(e) {

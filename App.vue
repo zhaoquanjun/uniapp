@@ -46,7 +46,7 @@
 					success: (res) => {
 						this.authCode = res.authCode
 						console.log(this.authCode, 9999)
-						// typeof callback == 'function' && callback()
+						typeof callback == 'function' && callback()
 					},
 				});
 				// #endif

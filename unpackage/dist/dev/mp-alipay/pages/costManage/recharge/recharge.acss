@@ -77,10 +77,12 @@ view {
 }
 .amount-input--area input {
   padding-right: 48rpx;
+	width: 100%;
   text-align: right;
   font-size: 28rpx;
   color: #333;
   line-height: 28rpx;
+	box-sizing: border-box;
 }
 .amount-input--area .prefix {
   position: absolute;

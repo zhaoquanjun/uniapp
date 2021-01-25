@@ -72,7 +72,7 @@
 					</view>
 				</view>
 				<view class="send list" v-if="activeName == 3">
-					<view class="title-label"><text class="prefix">*</text> 可使用</view>
+					<view class="title-label"><text class="prefix">*</text> 已使用</view>
 					<view v-for="(item, index) in send" :key="index" :class="'card-item ' + (item.couponType == 1 ? 'vip' : item.couponType == 2 ? 'shanqian' : item.couponType == 3 ? 'lawyer' : '')">
 						<view :class="'header ' + (item.receive == 1 ? 'overdue' : '')">
 							<view class="top">
