@@ -92,14 +92,18 @@ view {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 108rpx;
-  line-height: 108rpx;
+	padding: 32rpx 0;
   border-bottom: 2rpx solid #F5F5F5;
 }
 
 .contract-base--area .base-list-item .item-title {
   font-size: 30rpx;
   color: #1A1A1A;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+	max-width: 80%;
 }
 
 .contract-base--area .base-list-item .item-content {

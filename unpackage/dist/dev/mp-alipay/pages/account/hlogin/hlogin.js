@@ -197,6 +197,12 @@ var app = getApp();var _default = { data: function data() {return { phone: "", y
         (0, _request.get)({
           url: _account.h5_get_yzm_code + this.phone,
           success: function success(res) {
+            setTimeout(function () {
+              uni.showToast({
+                icon: 'none',
+                title: '验证码发送成功，请注意查收' });
+
+            }, 50);
             _this.timer && clearInterval(_this.timer);
             _this.timer = setInterval(function () {
               if (_this.time > 1) {

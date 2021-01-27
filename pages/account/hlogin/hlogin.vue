@@ -65,6 +65,12 @@
 					get({
 						url: h5_get_yzm_code + this.phone,
 						success: res => {
+							setTimeout(() => {
+								uni.showToast({
+									icon: 'none',
+									title: '验证码发送成功，请注意查收'
+								});
+							}, 50);
 							this.timer && clearInterval(this.timer);
 							this.timer = setInterval(() => {
 								if (this.time > 1) {
