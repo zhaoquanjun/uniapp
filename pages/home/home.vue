@@ -178,11 +178,11 @@
 					url: get_user_info,
 					success: res => {
 						// #ifdef H5
-						const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+						let currentUser = JSON.parse(localStorage.getItem('currentUser'));
 						// #endif
 						
 						// #ifndef H5
-						const currentUser = uni.getStorageSync('currentUser');
+						let currentUser = uni.getStorageSync('currentUser');
 						// #endif
 						
 						const newArr = JSON.parse(JSON.stringify(this.userList));
@@ -199,7 +199,6 @@
 							
 							currentUser = res;
 						}
-
 						uni.setStorageSync('userAccount', res.account);
 						this.setData({
 							userList: newArr,

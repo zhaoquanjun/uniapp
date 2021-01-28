@@ -58,16 +58,20 @@
 	align-items: center;
 }
 
+.login-content .account-area .value .input-wrapper {
+	padding: 0 0 10rpx;
+	width: 100%;
+	border-bottom: 2rpx solid hsla(0, 0%, 83.1%, .8);
+}
+
 .login-content .account-area .value input {
 	border: none;
 	outline: none;
 	width: 100%;
-	padding: 0 0 10rpx;
 	font-size: 32rpx;
 	height: 40rpx;
 	line-height: 38rpx;
 	color: #464646;
-	border-bottom: 2rpx solid hsla(0, 0%, 83.1%, .8);
 	border-radius: 0;
 	background-color: #f0f2f6;
 	box-sizing: border-box;

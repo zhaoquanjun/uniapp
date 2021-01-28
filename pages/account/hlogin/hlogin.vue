@@ -7,11 +7,15 @@
 			<view class="account-area">
 				<view class="label">手机号</view>
 				<view class="value">
-					<input type="number" placeholder="请输入手机号" v-model="phone">
+					<view class="input-wrapper">
+						<input type="number" placeholder="请输入手机号" v-model="phone">
+					</view>
 				</view>
 				<view class="label yzm">验证码</view>
 				<view class="value">
-					<input type="number" maxlength="6" placeholder="请输入验证码" v-model="yzm" class="code">
+					<view class="input-wrapper code">
+						<input type="number" maxlength="6" placeholder="请输入验证码" v-model="yzm">
+					</view>
 					<view class="getcode-btn" @tap.stop="getYzmCode">{{ getCodeBtnWords }}</view>
 				</view>
 				<view class="login-btn" @tap="login">登录</view>

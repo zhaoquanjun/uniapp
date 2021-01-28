@@ -155,6 +155,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
 var _utils = _interopRequireDefault(__webpack_require__(/*! ../../../utils/utils.js */ 37));
 var _request = __webpack_require__(/*! ../../../api/request */ 8);
 
@@ -183,17 +187,17 @@ var _account = __webpack_require__(/*! ../../../api/account.js */ 9);function _i
 //
 //
 //
+//
+//
+//
+//
 var app = getApp();var _default = { data: function data() {return { phone: "", yzm: "", timer: null, time: 60, getCodeBtnWords: "获取验证码" };}, onLoad: function onLoad() {}, onShow: function onShow() {}, methods: { /**
                                                                                                                                                                                                                      * @name 规范输入手机号
                                                                                                                                                                                                                      */_handleFormatPhoneNumber: function _handleFormatPhoneNumber(val) {this.phone = val.replace(/[^\d.]/g, "");}, /**
                                                                                                                                                                                                                                                                                                                                      * @name 规范输入验证码
-                                                                                                                                                                                                                                                                                                                                     */_handleFormatYzmCode: function _handleFormatYzmCode(val) {this.yzm = val.replace(/[^\d.]/g, "");
-    },
-    /**
-        * @name 获取验证码
-        */
-    getYzmCode: function getYzmCode() {var _this = this;
-      if (_utils.default.isTelCode(this.phone) && !this.timer) {
+                                                                                                                                                                                                                                                                                                                                     */_handleFormatYzmCode: function _handleFormatYzmCode(val) {this.yzm = val.replace(/[^\d.]/g, "");}, /**
+                                                                                                                                                                                                                                                                                                                                                                                                                                           * @name 获取验证码
+                                                                                                                                                                                                                                                                                                                                                                                                                                           */getYzmCode: function getYzmCode() {var _this = this;if (_utils.default.isTelCode(this.phone) && !this.timer) {
         (0, _request.get)({
           url: _account.h5_get_yzm_code + this.phone,
           success: function success(res) {

@@ -56,7 +56,8 @@
   height: 48rpx;
   border-radius: 50%;
   border: 4rpx solid transparent;
-  background: #ffffff
+  background: #ffffff;
+	box-sizing: content-box;
 }
 .pen-btn .pen {
   width: 36rpx;

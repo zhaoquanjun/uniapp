@@ -13,17 +13,23 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
+    "plugin": {
       "list": []
     },
     "game": {
       "list": []
     },
-    "miniprogram": {
+    "gamePlugin": {
       "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/account/hlogin/hlogin",
+          "pathName": "pages/account/hlogin/hlogin",
+          "scene": null
+        }
+      ]
     }
   }
 }

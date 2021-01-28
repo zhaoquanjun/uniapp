@@ -186,9 +186,42 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
+
+
+
+
+
 var _seal = __webpack_require__(/*! ../../../api/seal.js */ 93);
+
+
+
+
 var _account = __webpack_require__(/*! ../../../api/account.js */ 9); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -248,16 +281,7 @@ var app = getApp();var sliderPicker = function sliderPicker() {__webpack_require
       curIndex: -1, // 当前操作索引
       currentStorage: null };}, components: { sliderPicker: sliderPicker }, props: {}, /**
                                                                                         * 生命周期函数--监听页面加载
-                                                                                        */onLoad: function onLoad(options) {if (options.stampLeft != null) {this.setData({ stampLeft: options.stampLeft, stampTop: options.stampTop, currentPage: options.currentPage });}
-    var isSelect = options.style == 'select' ? true : false;
-    this.setData({
-      isSelect: isSelect });
-
-  },
-
-  onShow: function onShow() {var _this2 = this;
-    this.setData({
-      isShowAdd: true,
+                                                                                        */onLoad: function onLoad(options) {if (options.stampLeft != null) {this.setData({ stampLeft: options.stampLeft, stampTop: options.stampTop, currentPage: options.currentPage });}var isSelect = options.style == 'select' ? true : false;this.setData({ isSelect: isSelect });}, onShow: function onShow() {var _this2 = this;this.setData({ isShowAdd: true,
       userList2: [] });
 
     (0, _request.get)({
@@ -301,7 +325,6 @@ var app = getApp();var sliderPicker = function sliderPicker() {__webpack_require
 
 
       var _this = this;
-
       var userToken = app.globalData.getUserToken();
       var header = {
         "token": userToken,
@@ -311,6 +334,7 @@ var app = getApp();var sliderPicker = function sliderPicker() {__webpack_require
       if (this.selectedItem.companyId) {
         header.company_id = this.selectedItem.companyId;
       }
+      console.log(header, this.selectedItem);
 
       (0, _request.postBody)({
         url: reuqestUrl,
@@ -398,6 +422,20 @@ var app = getApp();var sliderPicker = function sliderPicker() {__webpack_require
         showDialog: !this.showDialog });
 
     },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     switchUser: function switchUser(e) {
       var item = e.currentTarget.dataset.item;
       this.setData({
@@ -409,11 +447,13 @@ var app = getApp();var sliderPicker = function sliderPicker() {__webpack_require
       this.requestStamp();
     },
 
+
     /**
         * @name 展示上拉菜单
         */
     handleShowOperateToolsFun: function handleShowOperateToolsFun(e) {
-      if (this.selectedItem.companyId && !this.selectedItem.roleTypes.includes('1') && !this.selectedItem.roleTypes.includes('2')) return;
+      if (this.selectedItem.companyId && !this.selectedItem.roleTypes.includes('1') && !this.selectedItem.roleTypes.includes(
+      '2')) return;
       var list = [{
         label: '设为默认',
         value: 'default' },

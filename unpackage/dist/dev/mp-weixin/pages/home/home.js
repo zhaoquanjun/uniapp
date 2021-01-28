@@ -270,7 +270,7 @@ var _request = __webpack_require__(/*! ../../api/request */ 8);
 
 
 
-var _account = __webpack_require__(/*! ../../api/account */ 9);function _readOnlyError(name) {throw new Error("\"" + name + "\" is read-only");} //
+var _account = __webpack_require__(/*! ../../api/account */ 9); //
 //
 //
 //
@@ -377,9 +377,8 @@ var app = getApp();var homeAddDataStorge = function homeAddDataStorge() {__webpa
             uni.setStorageSync('currentUser', res);
 
 
-            currentUser = (_readOnlyError("currentUser"), res);
+            currentUser = res;
           }
-
           uni.setStorageSync('userAccount', res.account);
           _this.setData({
             userList: newArr,

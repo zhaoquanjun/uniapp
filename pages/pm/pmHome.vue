@@ -234,7 +234,7 @@
 				var index = e.currentTarget.dataset.index;
 				var pageURI = '';
 
-				switch (index) {
+				switch (Number(index)) {
 					case 0:
 						pageURI = "/pages/pm/stamp/stampManager";
 						break;
@@ -252,9 +252,10 @@
 						break;
 
 					default:
-						pageURI = "/pages/pm/project/projectList";
+						pageURI = "";
 						break;
 				}
+				console.log(pageURI)
 
 				if (index != 3) {
 					uni.navigateTo({
