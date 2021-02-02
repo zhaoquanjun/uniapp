@@ -60,9 +60,6 @@ export default {
       }, {
         label: '企业账户',
         type: 'company'
-      }, {
-        label: '取消',
-        type: 'cancel'
       }],
       origin: 'give',
       id: '',

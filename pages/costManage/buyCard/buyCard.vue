@@ -73,9 +73,6 @@
 				}, {
 					label: '微信支付',
 					value: 'wx'
-				}, {
-					label: '取消',
-					value: 'cancel'
 				}],
 				// #endif
 
@@ -86,9 +83,6 @@
 				}, {
 					label: '支付宝支付',
 					value: 'wx'
-				}, {
-					label: '取消',
-					value: 'cancel'
 				}],
 				// #endif
 

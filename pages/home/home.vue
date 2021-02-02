@@ -115,9 +115,6 @@
 				}, {
 					label: '从合同模版发起签署',
 					value: 2
-				}, {
-					label: '取消',
-					value: 2
 				}],
 				authType: 1 // 未认证状态 1:个人 2:企业 
 					,
@@ -391,9 +388,8 @@
 			 * @name 上滑菜单操作
 			 */
 			handleSliderOperateFun(e) {
-				console.log(e.detail)
-				switch (e.detail) {
-					case '0':
+				switch (Number(e.detail)) {
+					case 0:
 					// #ifdef  MP-WEIXIN
 					this.handleLaunchByfileFun();
 					// #endif
@@ -411,7 +407,7 @@
 					// #endif
 						break;
 
-					case '1':
+					case 1:
 						this.handleLaunchByTemplateFun();
 						break;
 
@@ -497,6 +493,7 @@
 			 * @name 通过合同模版发起合同
 			 */
 			handleLaunchByTemplateFun() {
+				console.log(77777)
 				uni.navigateTo({
 					url: '/pages/template/contractTemplate/contractTemplate'
 				});

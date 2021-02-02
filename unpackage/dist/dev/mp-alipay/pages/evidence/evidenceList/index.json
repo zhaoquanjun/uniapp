@@ -1,0 +1,10 @@
+{
+  "defaultTitle": "证据列表",
+  "pullRefresh": true,
+  "titleBarColor": "#ffffff",
+  "usingComponents": {
+    "search": "/components/search/search",
+    "half-slide-item": "/components/halfSlideItem/halfSlideItem",
+    "mp-half-screen-dialog": "/components/half-screen-dialog/half-screen-dialog"
+  }
+}

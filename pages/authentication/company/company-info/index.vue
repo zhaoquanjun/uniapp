@@ -236,10 +236,23 @@ export default {
 
       if (query.type == 'legent' && !/^9+/.test(creditCode)) {
         setTimeout(() => {
-          uni.showToast({
-            icon: 'none',
-            title: '法人认证统一社会信用代码需为9开头，非9请走代理人认证'
-          });
+					wx.showModal({
+					  title: '提示',
+					  content: '法人认证统一社会信用代码需为9开头，非9请走代理人认证',
+						showCancel: false,
+					  success (res) {
+					    if (res.confirm) {
+					      console.log('用户点击确定')
+					    } else if (res.cancel) {
+					      console.log('用户点击取消')
+					    }
+					  }
+					})
+
+          // uni.showToast({
+          //   icon: 'none',
+          //   title: '法人认证统一社会信用代码需为9开头，非9请走代理人认证'
+          // });
         }, 50);
         return false;
       }

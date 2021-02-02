@@ -90,7 +90,7 @@ radio .wx-radio-input.wx-radio-input-checked::before {
   border-radius: 16rpx;
 }
 @font-face {font-family: "iconfont";
-  src: url('//at.alicdn.com/t/font_2316761_tv2k7oycen.ttf') format('truetype');
+  src: url('//at.alicdn.com/t/font_2316761_v4fjqc1bxq.ttf') format('truetype');
 }
 .iconfont {
   font-family: "iconfont" !important;
@@ -98,6 +98,18 @@ radio .wx-radio-input.wx-radio-input-checked::before {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.iconmore:before {
+  content: "\e700";
+}
+.iconduihao:before {
+  content: "\e70d";
+}
+.iconsanjiaodown:before {
+  content: "\e6b5";
+}
+.iconsousuo:before {
+  content: "\e74f";
 }
 .iconbaseline-close-px:before {
   content: "\e616";

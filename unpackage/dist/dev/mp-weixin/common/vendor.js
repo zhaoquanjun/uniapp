@@ -1857,14 +1857,14 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 150:
+/***/ 149:
 /*!***************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/prototype/prototype.js ***!
   \***************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var utils = __webpack_require__(/*! ../utils/utils.js */ 37);
+var utils = __webpack_require__(/*! ../utils/utils.js */ 66);
 
 Array.prototype.remove = function (val) {
   var index = this.indexOf(val);
@@ -8017,7 +8017,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 327:
+/***/ 326:
 /*!*******************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/api/invoice.js ***!
   \*******************************************************/
@@ -8042,173 +8042,7 @@ exports.get_pay_detail = get_pay_detail;
 
 /***/ }),
 
-/***/ 36:
-/*!********************************************************!*\
-  !*** /Users/icourt/Desktop/mycode/uni/api/evidence.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.findContractSubject = exports.get_certificate_address = exports.evidence_detail = exports.saveChainToContract = exports.add_certificate_file = exports.get_upload_policy = exports.certificate_record_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
-
-var certificate_record_list = _request.host + "/v1/blockchain/certificateRecord/list"; // 出证记录列表(数据和签署)
-exports.certificate_record_list = certificate_record_list;
-var get_upload_policy = _request.host + "/v1/common/oss/policy"; // 获取 oss policy
-exports.get_upload_policy = get_upload_policy;
-var add_certificate_file = _request.host + "/v1/blockchain/dataStorage/add"; // 数据存证出证-文件类型
-exports.add_certificate_file = add_certificate_file;
-var saveChainToContract = _request.host + "/v1/contractEvidence/saveContractEvidence"; // 保存证据链关联合同
-exports.saveChainToContract = saveChainToContract;
-var evidence_detail = _request.host + "/v1/blockchain/certificateRecord/detail"; // 获取数据存证详情
-exports.evidence_detail = evidence_detail;
-var get_certificate_address = _request.host + "/v1/blockchain/cert/download"; // 出证下载地址
-exports.get_certificate_address = get_certificate_address;
-var findContractSubject = _request.host + "/v1/contractEvidence/findContractSubject"; // 获取合同关联列表
-exports.findContractSubject = findContractSubject;
-
-/***/ }),
-
-/***/ 37:
-/*!*******************************************************!*\
-  !*** /Users/icourt/Desktop/mycode/uni/utils/utils.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(uni) {//数据转化  
-function formatNumber(n) {
-  n = n.toString();
-  return n[1] ? n : '0' + n;
-}
-/** 
-   * 时间戳转化为年 月 日 时 分 秒 
-   * number: 传入时间戳 
-   * format：返回格式，支持自定义，但参数必须与formateArr里保持一致 
-  */
-
-
-function formatTime(timestamp, format) {
-  var date = new Date(timestamp);
-  return formatDate(date, format);
-}
-
-function formatDate(date, format) {
-  var formateArr = ['Y', 'M', 'D', 'h', 'm', 's'];
-  var returnArr = [];
-  returnArr.push(date.getFullYear());
-  returnArr.push(formatNumber(date.getMonth() + 1));
-  returnArr.push(formatNumber(date.getDate()));
-  returnArr.push(formatNumber(date.getHours()));
-  returnArr.push(formatNumber(date.getMinutes()));
-  returnArr.push(formatNumber(date.getSeconds()));
-
-  for (var i in returnArr) {
-    format = format.replace(formateArr[i], returnArr[i]);
-  }
-
-  return format;
-}
-/*校验电话码格式 */
-
-
-function isTelCode(str) {
-  var reg = /^[1][3,4,5,7,8][0-9]{9}$/;
-  return reg.test(str);
-}
-
-function showError(err) {
-  var title = '出错了';
-
-  if (typeof err === 'string') {
-    title = err;
-  } else if (err.errMsg) {
-    title = err.errMsg;
-  }
-
-  setTimeout(function () {
-    uni.showToast({
-      duration: 2000,
-      icon: 'none',
-      title: title });
-
-  }, 50);
-}
-
-function showSuccess(title) {
-  setTimeout(function () {
-    uni.showToast({
-      title: title });
-
-  }, 50);
-}
-
-function filterEmoji(text) {
-  var ranges = ["\uD83C[\uDF00-\uDFFF]", "\uD83D[\uDC00-\uDE4F]", "\uD83D[\uDE80-\uDEFF]"];
-  return text.replace(new RegExp(ranges.join('|'), 'g'), '');
-}
-
-function formatTimeSecond(s) {
-  return formatTimeSecondWithSign(s, '分', '秒');
-}
-
-function formatTimeSecondWithSign(s, mSign, sSign) {
-  s = s % 60000 / 1000;
-  var t;
-
-  if (s > -1) {
-    var min = Math.floor(s / 60);
-    var sec = Math.floor(s % 60);
-
-    if (min <= 0) {
-      return sec + sSign;
-    } else {
-      return min + mSign + sec + sSign;
-    }
-  }
-
-  return 0 + sSign;
-}
-
-function getPreviousPage() {
-  var pages = getCurrentPages();
-  var currPage = pages[pages.length - 1]; //当前页面
-
-  var prevPage = pages[pages.length - 2]; //上一个页面
-
-  return prevPage;
-} //去左空格
-
-
-function ltrim(s) {
-  return s.replace(/(^\s*)/g, "");
-} //去右空格
-
-
-function rtrim(s) {
-  return s.replace(/(\s*$)/g, "");
-} //去左右空格
-
-
-function trim(s) {
-  return s.replace(/(^\s*)|(\s*$)/g, "");
-}
-
-module.exports.formatTimeSecond = formatTimeSecond;
-module.exports.formatTimeSecondWithSign = formatTimeSecondWithSign;
-module.exports.formatTime = formatTime;
-module.exports.formatDate = formatDate;
-module.exports.isTelCode = isTelCode;
-module.exports.showError = showError;
-module.exports.showSuccess = showSuccess;
-module.exports.filterEmoji = filterEmoji;
-module.exports.getPreviousPage = getPreviousPage;
-module.exports.trim = trim;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
-
-/***/ }),
-
-/***/ 376:
+/***/ 375:
 /*!**********************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/api/collection.js ***!
   \**********************************************************/
@@ -8238,7 +8072,7 @@ exports.get_pay_QrCode = get_pay_QrCode;
 
 /***/ }),
 
-/***/ 401:
+/***/ 400:
 /*!********************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/api/template.js ***!
   \********************************************************/
@@ -8259,7 +8093,7 @@ exports.confirm_contract_launch_by_template = confirm_contract_launch_by_templat
 
 /***/ }),
 
-/***/ 442:
+/***/ 441:
 /*!******************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/api/authen.js ***!
   \******************************************************/
@@ -8288,7 +8122,7 @@ exports.authPhone = authPhone;
 
 /***/ }),
 
-/***/ 459:
+/***/ 458:
 /*!*****************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/utils/FXQ.js ***!
   \*****************************************************/
@@ -8816,7 +8650,187 @@ var FXQ = {
 
 /***/ }),
 
-/***/ 629:
+/***/ 523:
+/*!********************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/api/evidence.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.update_project_desc = exports.get_contact_evidence = exports.get_project_detail = exports.delete_project = exports.complete_project = exports.create_project = exports.get_project_list = exports.findContractSubject = exports.get_certificate_address = exports.evidence_detail = exports.saveChainToContract = exports.add_certificate_file = exports.get_upload_policy = exports.certificate_record_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+
+var certificate_record_list = _request.host + "/v1/blockchain/certificateRecord/list"; // 出证记录列表(数据和签署)
+exports.certificate_record_list = certificate_record_list;
+var get_upload_policy = _request.host + "/v1/common/oss/policy"; // 获取 oss policy
+exports.get_upload_policy = get_upload_policy;
+var add_certificate_file = _request.host + "/v1/blockchain/dataStorage/add"; // 数据存证出证-文件类型
+exports.add_certificate_file = add_certificate_file;
+var saveChainToContract = _request.host + "/v1/contractEvidence/saveContractEvidence"; // 保存证据链关联合同
+exports.saveChainToContract = saveChainToContract;
+var evidence_detail = _request.host + "/v1/blockchain/certificateRecord/detail"; // 获取数据存证详情
+exports.evidence_detail = evidence_detail;
+var get_certificate_address = _request.host + "/v1/blockchain/cert/download"; // 出证下载地址
+exports.get_certificate_address = get_certificate_address;
+var findContractSubject = _request.host + "/v1/contractEvidence/findContractSubject"; // 获取合同关联列表
+exports.findContractSubject = findContractSubject;
+var get_project_list = _request.host + "/v1/project/list"; // 查询项目列表
+exports.get_project_list = get_project_list;
+var create_project = _request.host + "/v1/project/save"; // 新建项目
+exports.create_project = create_project;
+var complete_project = _request.host + "/v1/project/updateStatus"; // 完成项目
+exports.complete_project = complete_project;
+var delete_project = _request.host + "/v1/project/delete"; // 删除项目
+exports.delete_project = delete_project;
+var get_project_detail = _request.host + "/v1/project/detail"; // 获取项目详情
+exports.get_project_detail = get_project_detail;
+var get_contact_evidence = _request.host + "/v1/project/projectEvidenceList"; // 获取项目关联证据
+exports.get_contact_evidence = get_contact_evidence;
+var update_project_desc = _request.host + "/v1/project/updateDescription"; // 添加项目描述
+exports.update_project_desc = update_project_desc;
+
+/***/ }),
+
+/***/ 66:
+/*!*******************************************************!*\
+  !*** /Users/icourt/Desktop/mycode/uni/utils/utils.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(uni) {//数据转化  
+function formatNumber(n) {
+  n = n.toString();
+  return n[1] ? n : '0' + n;
+}
+/** 
+   * 时间戳转化为年 月 日 时 分 秒 
+   * number: 传入时间戳 
+   * format：返回格式，支持自定义，但参数必须与formateArr里保持一致 
+  */
+
+
+function formatTime(timestamp, format) {
+  var date = new Date(timestamp);
+  return formatDate(date, format);
+}
+
+function formatDate(date, format) {
+  var formateArr = ['Y', 'M', 'D', 'h', 'm', 's'];
+  var returnArr = [];
+  returnArr.push(date.getFullYear());
+  returnArr.push(formatNumber(date.getMonth() + 1));
+  returnArr.push(formatNumber(date.getDate()));
+  returnArr.push(formatNumber(date.getHours()));
+  returnArr.push(formatNumber(date.getMinutes()));
+  returnArr.push(formatNumber(date.getSeconds()));
+
+  for (var i in returnArr) {
+    format = format.replace(formateArr[i], returnArr[i]);
+  }
+
+  return format;
+}
+/*校验电话码格式 */
+
+
+function isTelCode(str) {
+  var reg = /^[1][3,4,5,7,8][0-9]{9}$/;
+  return reg.test(str);
+}
+
+function showError(err) {
+  var title = '出错了';
+
+  if (typeof err === 'string') {
+    title = err;
+  } else if (err.errMsg) {
+    title = err.errMsg;
+  }
+
+  setTimeout(function () {
+    uni.showToast({
+      duration: 2000,
+      icon: 'none',
+      title: title });
+
+  }, 50);
+}
+
+function showSuccess(title) {
+  setTimeout(function () {
+    uni.showToast({
+      title: title });
+
+  }, 50);
+}
+
+function filterEmoji(text) {
+  var ranges = ["\uD83C[\uDF00-\uDFFF]", "\uD83D[\uDC00-\uDE4F]", "\uD83D[\uDE80-\uDEFF]"];
+  return text.replace(new RegExp(ranges.join('|'), 'g'), '');
+}
+
+function formatTimeSecond(s) {
+  return formatTimeSecondWithSign(s, '分', '秒');
+}
+
+function formatTimeSecondWithSign(s, mSign, sSign) {
+  s = s % 60000 / 1000;
+  var t;
+
+  if (s > -1) {
+    var min = Math.floor(s / 60);
+    var sec = Math.floor(s % 60);
+
+    if (min <= 0) {
+      return sec + sSign;
+    } else {
+      return min + mSign + sec + sSign;
+    }
+  }
+
+  return 0 + sSign;
+}
+
+function getPreviousPage() {
+  var pages = getCurrentPages();
+  var currPage = pages[pages.length - 1]; //当前页面
+
+  var prevPage = pages[pages.length - 2]; //上一个页面
+
+  return prevPage;
+} //去左空格
+
+
+function ltrim(s) {
+  return s.replace(/(^\s*)/g, "");
+} //去右空格
+
+
+function rtrim(s) {
+  return s.replace(/(\s*$)/g, "");
+} //去左右空格
+
+
+function trim(s) {
+  return s.replace(/(^\s*)|(\s*$)/g, "");
+}
+
+module.exports.formatTimeSecond = formatTimeSecond;
+module.exports.formatTimeSecondWithSign = formatTimeSecondWithSign;
+module.exports.formatTime = formatTime;
+module.exports.formatDate = formatDate;
+module.exports.isTelCode = isTelCode;
+module.exports.showError = showError;
+module.exports.showSuccess = showSuccess;
+module.exports.filterEmoji = filterEmoji;
+module.exports.getPreviousPage = getPreviousPage;
+module.exports.trim = trim;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 662:
 /*!***************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/common/component.js ***!
   \***************************************************************************************/
@@ -8824,8 +8838,8 @@ var FXQ = {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _basic = __webpack_require__(/*! ../mixins/basic */ 630);
-var _index = __webpack_require__(/*! ../mixins/observer/index */ 631);function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _basic = __webpack_require__(/*! ../mixins/basic */ 663);
+var _index = __webpack_require__(/*! ../mixins/observer/index */ 664);function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
 function mapKeys(source, target, map) {
   Object.keys(map).forEach(function (key) {
     if (source[key]) {
@@ -8888,7 +8902,7 @@ function VantComponent() {var vantOptions = arguments.length > 0 && arguments[0]
 
 /***/ }),
 
-/***/ 630:
+/***/ 663:
 /*!***********************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/mixins/basic.js ***!
   \***********************************************************************************/
@@ -8924,7 +8938,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 631:
+/***/ 664:
 /*!********************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/mixins/observer/index.js ***!
   \********************************************************************************************/
@@ -8932,8 +8946,8 @@ module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.observe = observe;var _behavior = __webpack_require__(/*! ./behavior */ 632);
-var _props = __webpack_require__(/*! ./props */ 633);
+Object.defineProperty(exports, "__esModule", { value: true });exports.observe = observe;var _behavior = __webpack_require__(/*! ./behavior */ 665);
+var _props = __webpack_require__(/*! ./props */ 666);
 function observe(vantOptions, options) {var
 
   watch =
@@ -8973,7 +8987,7 @@ function observe(vantOptions, options) {var
 
 /***/ }),
 
-/***/ 632:
+/***/ 665:
 /*!***********************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/mixins/observer/behavior.js ***!
   \***********************************************************************************************/
@@ -9046,7 +9060,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 633:
+/***/ 666:
 /*!********************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/mixins/observer/props.js ***!
   \********************************************************************************************/
@@ -9090,7 +9104,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.observePro
 
 /***/ }),
 
-/***/ 634:
+/***/ 667:
 /*!***********************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/common/utils.js ***!
   \***********************************************************************************/
@@ -9128,7 +9142,7 @@ function getSystemInfoSync() {
 
 /***/ }),
 
-/***/ 635:
+/***/ 668:
 /*!************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/picker/shared.js ***!
   \************************************************************************************/
@@ -9158,7 +9172,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.pickerProp
 
 /***/ }),
 
-/***/ 76:
+/***/ 75:
 /*!****************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/api/cost.js ***!
   \****************************************************/
@@ -9746,7 +9760,7 @@ exports.h5_login = h5_login;
 
 /***/ }),
 
-/***/ 93:
+/***/ 92:
 /*!****************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/api/seal.js ***!
   \****************************************************/

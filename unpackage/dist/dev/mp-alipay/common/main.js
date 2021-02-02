@@ -350,14 +350,22 @@ var _account = __webpack_require__(/*! ./api/account.js */ 9);var _default =
     /**
         * 获取用户信息
         */
-    updateUserInfo: function updateUserInfo(callback) {
+    updateUserInfo: function updateUserInfo(callback) {var _this3 = this;
       var _this = this;
 
       (0, _request.get)({
         url: _account.get_user_info,
         success: function success(data) {
           if (!data) return;
-          _this.loginSuccess(data.token, data.userId, data.name, data.userType, data.auth, data.phone, data.icon, data.joinCompany,
+
+
+
+
+
+          var token = uni.getStorageSync('userToken');
+
+
+          _this3.loginSuccess(token, data.userId, data.name, data.userType, data.auth, data.phone, data.icon, data.joinCompany,
           data.userCompanyType);
           typeof callback == 'function' && callback();
         } });

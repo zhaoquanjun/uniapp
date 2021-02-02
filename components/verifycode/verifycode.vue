@@ -7,7 +7,7 @@
 			<view v-for="(code, index) in codes" :key="index" :class="'verify-input-view ' + (index==0?'verify-input-view-first':'')">
 				<text class="verify-text">{{code}}</text>
 			</view>
-			<input class="key-input" type="number" adjust-position="false" confirm-type="done" :focus="isFocus" :value="inputValue"
+			<input :class="'key-input ' + (isFocus ? 'input-focus' : '')" type="number" adjust-position="false" confirm-type="done" :focus="isFocus" :value="inputValue"
 			 @input="listenKeyInput"></input>
 		</view>
 		<text class="again-send-class" :style="'color:' + againSendTextColor" @tap.stop="againSendAction">{{againSendText}}</text>
@@ -54,15 +54,7 @@
 					codes: ["", "", "", "", "", ""]
 				});
 			},
-
-			closeView() {
-				this.setData({
-					isShow: !this.isShow,
-					isFocus: false,
-					inputValue: ''
-				});
-			},
-
+			
 			/**
 			 * 清除验证码
 			 */
@@ -106,9 +98,10 @@
 				if (textLength > 5) {
 					var returnString = text.substr(0, 6);
 					this.inputSuccess(returnString);
-					return returnString;
+					return '';
 				}
 			},
+			
 			againSendAction: function() {
 				if (this.timeCount != 60) {
 					return;

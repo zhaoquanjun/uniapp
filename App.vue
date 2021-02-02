@@ -210,9 +210,17 @@
 
 				get({
 					url: get_user_info,
-					success: function(data) {
+					success: data => {
 						if (!data) return;
-						_this.loginSuccess(data.token, data.userId, data.name, data.userType, data.auth, data.phone, data.icon, data.joinCompany,
+						// #ifdef  H5
+						const token = localStorage.getItem('userToken')
+						// #endif
+						
+						// #ifndef  H5
+						const token = uni.getStorageSync('userToken')
+						// #endif
+						
+						this.loginSuccess(token, data.userId, data.name, data.userType, data.auth, data.phone, data.icon, data.joinCompany,
 							data.userCompanyType);
 						typeof callback == 'function' && callback();
 					}

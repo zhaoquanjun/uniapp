@@ -50,7 +50,6 @@
 
 .weui-half-screen-dialog__bd {
   width: 100%;
-  min-height: 200rpx;
   padding: 0;
   display: flex;
   align-items: center;

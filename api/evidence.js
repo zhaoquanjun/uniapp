@@ -13,3 +13,17 @@ export const evidence_detail = host + "/v1/blockchain/certificateRecord/detail";
 export const get_certificate_address = host + "/v1/blockchain/cert/download"; // 出证下载地址
 
 export const findContractSubject = host + "/v1/contractEvidence/findContractSubject"; // 获取合同关联列表
+
+export const get_project_list = host + "/v1/project/list"; // 查询项目列表
+
+export const create_project = host + "/v1/project/save"; // 新建项目
+
+export const complete_project = host + "/v1/project/updateStatus"; // 完成项目
+
+export const delete_project = host + "/v1/project/delete"; // 删除项目
+
+export const get_project_detail = host + "/v1/project/detail"; // 获取项目详情
+
+export const get_contact_evidence = host + "/v1/project/projectEvidenceList"; // 获取项目关联证据
+
+export const update_project_desc = host + "/v1/project/updateDescription"; // 添加项目描述

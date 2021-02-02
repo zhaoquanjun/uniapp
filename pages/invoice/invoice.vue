@@ -52,16 +52,10 @@ export default {
       refuse: [{
         label: '查看拒绝原因',
         value: 'refuse'
-      }, {
-        label: '取消',
-        value: 'cancel'
       }],
       check: [{
         label: '查看发票',
         value: 'invoice'
-      }, {
-        label: '取消',
-        value: 'cancel'
       }],
       list: [],
       messageInfo: {

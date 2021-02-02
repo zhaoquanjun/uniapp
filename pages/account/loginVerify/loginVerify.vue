@@ -1,5 +1,7 @@
 <template>
-	<verify-code ref="code"></verify-code>
+	<view class="login-verify--page">
+		<verify-code ref="code"></verify-code>
+	</view>
 </template>
 
 <script>

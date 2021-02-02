@@ -111,9 +111,6 @@
 				}, {
 					label: '独立收款',
 					value: 1
-				}, {
-					label: '取消',
-					value: 2
 				}],
 				isShowReceiptMethod: false,
 				isAdmin: false,

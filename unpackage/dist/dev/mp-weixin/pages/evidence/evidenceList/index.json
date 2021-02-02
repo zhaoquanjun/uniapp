@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "证据列表",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "search": "/components/search/search",
+    "half-slide-item": "/components/halfSlideItem/halfSlideItem",
+    "mp-half-screen-dialog": "/components/half-screen-dialog/half-screen-dialog"
+  }
+}

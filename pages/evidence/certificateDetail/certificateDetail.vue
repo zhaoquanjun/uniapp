@@ -5,10 +5,7 @@
 			<view style="display:flex; justify-content:space-between">
 				<view class="certificate-title">存证名称</view>
 				<view style="display:flex; justify-content:flex-end;">
-					<view :class="'certificate-detail-preview ' + ((dataList.status === 1 ?  '': 'failed' ))" @tap="showSlideMenu"
-					 v-if="type == 'sign'">更多操作</view>
-					<view :class="'certificate-detail-preview ' + ((dataList.status === 1 ?  '': 'failed' ))" @tap="previewCertificate"
-					 v-if="type == 'data'">查看证书</view>
+					<view class="certificate-detail-preview" @tap="showSlideMenu">更多操作</view>
 				</view>
 			</view>
 			<view class="certificate-detail-items">
@@ -48,7 +45,7 @@
 				</view>
 				<video @tap.stop="checkVideo" v-if="dataList.fileType === 4" id="videoBox" class="certificate-detail-file-content-video"
 				 :src="dataList.filePath" @Error="videoError"></video>
-				<view class="pdf-file" v-if="dataList.fileType === 5" @tap="handleViewDetailFun">
+				<view class="pdf-file" v-if="dataList.fileType === 5" @tap="previewCertificate">
 					<image src="https://shouyiner-prod.oss-cn-beijing.aliyuncs.com/wxapp/shanqian/certificate/file.png" class="file-image"></image>
 					<text>{{dataList.fileName}}</text>
 				</view>
@@ -86,10 +83,10 @@
 		</view>
 
 		<!-- 证据链菜单 -->
-		<halfSlideItem :isShow="evidenceMenuShow">
+		<halfSlideItem ref="evidence">
 			<view class="slide-menu_list">
 				<view class="slide-menu_item" @tap="previewCertificate">查看证书</view>
-				<view class="slide-menu_item" @tap="goChainListPage">查看证据链</view>
+				<view class="slide-menu_item" @tap="goChainListPage" v-if="dataList.evidenceType == 1">查看证据链</view>
 			</view>
 		</halfSlideItem>
 		<!-- <view class='empty-data placeholder-color' wx:if="{{dataList.length <= 0}}">暂无数据</view> -->
@@ -125,8 +122,8 @@
 	export default {
 		data() {
 			return {
-				id: '',
-				// 存证id，路由获取
+				id: '', // 证据id
+				contractId: "", // 合同id
 				dataList: {},
 				// 存证详情数据
 				icon: 'one-filetype-image',
@@ -142,11 +139,9 @@
 				textContext: '',
 				// 文本内容
 				pdfUrl: '',
-				contractId: "",
 				type: 'sign',
 				audioContext: null,
 				contractList: [],
-				evidenceMenuShow: false,
 				durationShow: ""
 			};
 		},
@@ -159,7 +154,7 @@
 		onLoad: function(options) {
 			this.setData({
 				id: options.id
-			});
+			})
 			this.fetchRecords();
 			this.getContractList();
 		},
@@ -185,7 +180,6 @@
 
 			// 获取存证详情
 			fetchRecords: function() {
-				var that = this;
 				uni.showLoading({
 					title: '加载中'
 				});
@@ -194,9 +188,8 @@
 					// get请求
 					url: url,
 					success: res => {
-						uni.hideLoading();
 						let icon = iconMap[res.fileType];
-						that.setData({
+						this.setData({
 							dataList: res || {},
 							icon: icon,
 							contractId: res.filePath
@@ -213,26 +206,31 @@
 									this.downloadPdfFun(res, 0);
 								},
 								fail: function(err) {
-									uni.hideLoading(); // utils.showError(err)
+									setTimeout(() => {
+										uni.showToast({
+											icon: 'none',
+											title: err
+										})
+									}, 50)
+								},
+								complete: () => {
+									uni.hideLoading();
 								}
 							});
 						}
 					},
 					fail: err => {
+						setTimeout(() => {
+							uni.showToast({
+								icon: 'none',
+								title: err
+							})
+						}, 50)
+					},
+					complete:() => {
 						uni.hideLoading();
-						utils.showError(err);
 					}
 				});
-			},
-
-			handleViewDetailFun() {
-				if (this.type == 'sign') {
-					uni.navigateTo({
-						url: `/pages/contract/sign/next/contractDetail/contractDetail?contractId=${this.contractId}`
-					});
-				} else {
-					this.previewCertificate();
-				}
 			},
 
 			checkImage: function(e) {
@@ -342,7 +340,8 @@
 			},
 			// 预览下载
 			previewCertificate: function(e) {
-				var that = this;
+				
+				this.$refs.evidence.close()
 
 				if (this.dataList.status !== 1) {
 					setTimeout(() => {
@@ -359,16 +358,23 @@
 				var url = get_certificate_address + "/" + this.dataList.id;
 				uni.showLoading({
 					title: '加载中'
-				}); // 下载成功 打开pdf
+				});
 
 				get({
 					url: url,
-					success: function(res) {
-						that.downloadPdfFun(res, 1);
+					success: res => {
+						this.downloadPdfFun(res, 1);
 					},
 					fail: function(err) {
+						setTimeout(() => {
+							uni.showToast({
+								icon: 'none',
+								title: err
+							})
+						}, 50)
+					},
+					complete: () => {
 						uni.hideLoading();
-						utils.showError(err);
 					}
 				});
 			},
@@ -446,20 +452,16 @@
 			 * @desc 更多操作
 			 */
 			showSlideMenu() {
-				this.setData({
-					evidenceMenuShow: true
-				});
+				this.$refs.evidence.open()
 			},
 
 			/**
 			 * @desc 查看证据链
 			 */
 			goChainListPage() {
-				this.setData({
-					evidenceMenuShow: false
-				});
+				this.$refs.evidence.close()
 				uni.navigateTo({
-					url: "/pages/contract/contractList/chains/chains?id=" + this.id
+					url: "/pages/contract/contractList/chains/chains?id=" + this.contractId
 				});
 			},
 			/**

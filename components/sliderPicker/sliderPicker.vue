@@ -3,7 +3,8 @@
 <view :class="'slider-picker--area ' + (wrapperShow ? 'wrapper-show' : '')">
   <view class="mask" @tap="hide"></view>
   <view :class="'slider-box ' + (contentShow ? 'content-show' : '')">
-    <view v-for="(item, index) in sliderList" :key="index" class="slider-item" @tap="handleSelectSliderValueFun" :data-value="item.value" :data-index="index">{{item.label}}</view>
+    <view v-for="(item, index) in sliderList" :key="index" :class="'slider-item ' + (index == sliderList.length - 1 ? 'bor' : '')" @tap="handleSelectSliderValueFun" :data-value="item.value" :data-index="index">{{item.label}}</view>
+		<view class="cancel" @tap="hide">取消</view>
   </view>
 </view>
 </template>
@@ -50,12 +51,6 @@ export default {
 
     handleSelectSliderValueFun(e) {
       let value = e.currentTarget.dataset.index;
-
-      if (value == this.sliderList.length - 1) {
-        this.hide();
-        return false;
-      }
-
       this.$emit('selectWay', {
         detail: value
       });

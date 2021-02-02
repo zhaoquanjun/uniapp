@@ -1,6 +1,5 @@
 {
-	"pages": [
-		{
+	"pages": [{
 			"path": "pages/home/home",
 			"style": {
 				"backgroundTextStyle": "dark",
@@ -610,6 +609,56 @@
 				"enablePullDownRefresh": true,
 				"backgroundTextStyle": "dark"
 			}
+		},
+		{
+			"path": "pages/evidence/evidenceList/index",
+			"style": {
+				"navigationBarTitleText": "证据列表",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+
+		}, {
+			"path": "pages/evidence/projectManage/index",
+			"style": {
+				"navigationBarTitleText": "项目管理",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+
+		}, {
+			"path": "pages/evidence/projectDetail/index",
+			"style": {
+				"navigationBarTitleText": "项目详情",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+
+		}, {
+			"path": "pages/evidence/projectDetail/addDesc/index",
+			"style": {
+				"navigationBarTitleText": "添加项目描述",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+
+		}, {
+			"path": "pages/evidence/projectMembers/index",
+			"style": {
+				"navigationBarTitleText": "项目成员",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
 		}
 	],
 	"permission": {
@@ -621,8 +670,7 @@
 		"color": "#C5C5C5",
 		"selectedColor": "#464646",
 		"backgroundColor": "#FFFFFF",
-		"list": [
-			{
+		"list": [{
 				"pagePath": "pages/home/home",
 				"text": "首页",
 				"iconPath": "/static/images/tabbar/home.png",

@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "项目管理",
+  "pullRefresh": true,
+  "titleBarColor": "#ffffff",
+  "usingComponents": {
+    "slider-picker": "/components/sliderPicker/sliderPicker"
+  }
+}

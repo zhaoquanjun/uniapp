@@ -25,8 +25,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/account/hlogin/hlogin",
-          "pathName": "pages/account/hlogin/hlogin",
+          "name": "pages/evidence/projectDetail/index",
+          "pathName": "pages/evidence/projectDetail/index",
           "scene": null
         }
       ]

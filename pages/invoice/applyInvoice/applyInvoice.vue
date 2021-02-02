@@ -130,9 +130,6 @@ export default {
       }, {
         label: '增值税专用发票',
         value: 's'
-      }, {
-        label: '取消',
-        value: 'cancle'
       }],
       postWay: [{
         label: '不推送',
@@ -146,9 +143,6 @@ export default {
       }, {
         label: '推送到邮箱和手机',
         value: '2'
-      }, {
-        label: '取消',
-        value: 'cancle'
       }],
       searchType: '',
       pageTitle: '',

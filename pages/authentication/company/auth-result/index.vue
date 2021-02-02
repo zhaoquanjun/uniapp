@@ -14,17 +14,17 @@
     <view class="base-info-container">
         <view class="field-item">
             <label class="name">企业名称</label>
-            <text class="value-input">{{company.companyName}}</text>
+            <text class="value-input">{{company.companyName || '-'}}</text>
         </view>
         <view class="line"></view>
         <view class="field-item">
             <label class="name">统一社会信用代码</label>
-            <text class="value-input">{{company.creditCode}}</text>
+            <text class="value-input">{{company.creditCode || '-'}}</text>
         </view>
         <view class="line"></view>
         <view class="field-item">
             <label class="name">法定代表人姓名</label>
-            <text class="value-input">{{company.legalPersonName}}</text>
+            <text class="value-input">{{company.legalPersonName || '-'}}</text>
         </view>
                 <view class="field-item">
             <label class="name">法定代表人身份证号</label>
@@ -85,7 +85,14 @@ export default {
    */
   onLoad: function (options) {
     this.setData({
-      company: uni.getStorageSync('currentUser'),
+			// #ifdef  H5
+			company: JSON.parse(localStorage.getItem('currentUser')),
+			// #endif
+			
+			// #ifndef  H5
+			company: uni.getStorageSync('currentUser'),
+			// #endif
+      
       result: options.result
     });
   },

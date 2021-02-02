@@ -42,6 +42,9 @@ page {
 }
 
 .types-select-container .type-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
     font-size: 32rpx;
     font-weight: 500;
     color: rgba(51, 51, 51, 1);
@@ -61,7 +64,6 @@ page {
 }
 
 .types-select-container .type-item .right {
-    float: right;
     color: #999999;
     font-weight: 400;
     font-size: 28rpx;

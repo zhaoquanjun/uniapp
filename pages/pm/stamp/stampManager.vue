@@ -111,9 +111,6 @@
 				}, {
 					label: '删除印章',
 					value: 'delete'
-				}, {
-					label: '取消',
-					value: 'cancel'
 				}],
 				// 上拉菜单列表
 				curItem: null,
@@ -328,9 +325,6 @@
 				}, {
 					label: '删除印章',
 					value: 'delete'
-				}, {
-					label: '取消',
-					value: 'cancel'
 				}];
 				if (e.currentTarget.dataset.item.status != 2 || e.currentTarget.dataset.item.isDefault == 1) list = list.slice(2);
 				this.setData({

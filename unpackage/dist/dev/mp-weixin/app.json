@@ -65,7 +65,12 @@
     "pages/evidence/addCertificate/addCertificate",
     "pages/evidence/certificateDetail/certificateDetail",
     "pages/evidence/videoRecord/videoRecord",
-    "pages/evidence/fileRecord/fileRecord"
+    "pages/evidence/fileRecord/fileRecord",
+    "pages/evidence/evidenceList/index",
+    "pages/evidence/projectManage/index",
+    "pages/evidence/projectDetail/index",
+    "pages/evidence/projectDetail/addDesc/index",
+    "pages/evidence/projectMembers/index"
   ],
   "subPackages": [],
   "window": {
@@ -115,5 +120,5 @@
   },
   "plugins": {},
   "usingComponents": {},
-  "sitemapLocation": "sitemap19.json"
+  "sitemapLocation": "sitemap43.json"
 }

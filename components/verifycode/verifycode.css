@@ -1,4 +1,4 @@
-/* components/verifycode/verifycode.wxss */
+
 .wx-verify-bg {
 	transform: translateY(200%);
 }
@@ -15,6 +15,13 @@
 	height: 100%;
 	opacity: 0;
 	z-index: 11;
+	box-sizing: border-box;
+	color: transparent;
+}
+
+.input-focus {
+	width: 200%;
+	text-align: right;
 }
 
 .wx-mask {
@@ -24,6 +31,7 @@
 	left: 0;
 	bottom: 0;
 	background: #fff;
+	z-index: 11;
 }
 
 .verify-title {

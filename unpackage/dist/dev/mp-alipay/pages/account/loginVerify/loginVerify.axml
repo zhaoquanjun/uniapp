@@ -1,1 +1,1 @@
-<verify-code vue-id="0467ba1c-1" ref="__r" data-ref="code" onVueInit="__l"></verify-code>
+<view class="login-verify--page"><verify-code vue-id="0467ba1c-1" ref="__r" data-ref="code" onVueInit="__l"></verify-code></view>

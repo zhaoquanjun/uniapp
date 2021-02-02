@@ -96,7 +96,7 @@ var components
 try {
   components = {
     halfSlideItem: function() {
-      return __webpack_require__.e(/*! import() | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then(__webpack_require__.bind(null, /*! @/components/halfSlideItem/halfSlideItem.vue */ 571))
+      return __webpack_require__.e(/*! import() | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then(__webpack_require__.bind(null, /*! @/components/halfSlideItem/halfSlideItem.vue */ 613))
     }
   }
 } catch (e) {
@@ -262,13 +262,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
 var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
 
 
-var _evidence = __webpack_require__(/*! ../../../api/evidence.js */ 36); //
+var _evidence = __webpack_require__(/*! ../../../api/evidence.js */ 523); //
 //
 //
 //
@@ -365,12 +362,10 @@ var _evidence = __webpack_require__(/*! ../../../api/evidence.js */ 36); //
 //
 //
 //
-//
-//
-//
-var utils = __webpack_require__(/*! ../../../utils/utils.js */ 37);var app = getApp();var timer = null;var innerAudioContext = uni.createInnerAudioContext();var videoBox = null; // 存证类型icon的MAP
+var utils = __webpack_require__(/*! ../../../utils/utils.js */ 66);var app = getApp();var timer = null;var innerAudioContext = uni.createInnerAudioContext();var videoBox = null; // 存证类型icon的MAP
 // 存证类型icon的MAP
-var iconMap = { 1: 'one-filetype-doc', 2: 'one-filetype-image', 3: 'one-filetype-music', 4: 'one-filetype-video', 5: 'one-contract' };var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../../components/halfSlideItem/halfSlideItem */ 571));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { id: '', // 存证id，路由获取
+var iconMap = { 1: 'one-filetype-doc', 2: 'one-filetype-image', 3: 'one-filetype-music', 4: 'one-filetype-video', 5: 'one-contract' };var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../../components/halfSlideItem/halfSlideItem */ 613));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { id: '', // 证据id
+      contractId: "", // 合同id
       dataList: {}, // 存证详情数据
       icon: 'one-filetype-image', // 存证类型icon
       duration: 0, //声音类型音频时长
@@ -378,27 +373,30 @@ var iconMap = { 1: 'one-filetype-doc', 2: 'one-filetype-image', 3: 'one-filetype
       videoPlayTime: 0, // 音频播放时间time
       showVideoPlayTime: '00:00:00', //音频播放显示时间
       textContext: '', // 文本内容
-      pdfUrl: '', contractId: "", type: 'sign', audioContext: null, contractList: [], evidenceMenuShow: false, durationShow: "" };}, components: { halfSlideItem: halfSlideItem }, props: {}, // 页面load加载数据
+      pdfUrl: '', type: 'sign', audioContext: null, contractList: [], durationShow: "" };}, components: { halfSlideItem: halfSlideItem }, props: {}, // 页面load加载数据
   onLoad: function onLoad(options) {this.setData({ id: options.id });this.fetchRecords();this.getContractList();}, onReady: function onReady() {this.setData({ audioContext: uni.createAudioContext('myAudio') });}, methods: { handlePlayFun: function handlePlayFun(e) {console.log(this.audioContext, this.audioContext._getAppStatus());this.audioContext.play();console.log(this.audioContext._getAppStatus());}, playToEndFun: function playToEndFun(e) {this.audioContext.pause();this.audioContext.seek(0);this.audioContext.pause();}, // 获取存证详情
-    fetchRecords: function fetchRecords() {var _this = this;var that = this;uni.showLoading({ title: '加载中' });var url = _evidence.evidence_detail + '?id=' + this.id;(0, _request.get)({ // get请求
-        url: url, success: function success(res) {uni.hideLoading();var icon = iconMap[res.fileType];that.setData({ dataList: res || {}, icon: icon, contractId: res.filePath });if (res.fileType === 5) {var _url = _evidence.get_certificate_address + "/" + _this.dataList.id;uni.showLoading({ title: '加载中' });(0, _request.get)({ url: _url, success: function success(res) {_this.downloadPdfFun(res, 0);}, fail: function fail(err) {uni.hideLoading(); // utils.showError(err)
-              } });}
+    fetchRecords: function fetchRecords() {var _this = this;uni.showLoading({ title: '加载中' });var url = _evidence.evidence_detail + '?id=' + this.id;(0, _request.get)({ // get请求
+        url: url, success: function success(res) {var icon = iconMap[res.fileType];_this.setData({ dataList: res || {}, icon: icon, contractId: res.filePath });if (res.fileType === 5) {var _url = _evidence.get_certificate_address + "/" + _this.dataList.id;uni.showLoading({ title: '加载中' });(0, _request.get)({ url: _url, success: function success(res) {_this.downloadPdfFun(res, 0);}, fail: function fail(err) {setTimeout(function () {uni.showToast({ icon: 'none', title: err });
+                }, 50);
+              },
+              complete: function complete() {
+                uni.hideLoading();
+              } });
+
+          }
         },
         fail: function fail(err) {
+          setTimeout(function () {
+            uni.showToast({
+              icon: 'none',
+              title: err });
+
+          }, 50);
+        },
+        complete: function complete() {
           uni.hideLoading();
-          utils.showError(err);
         } });
 
-    },
-
-    handleViewDetailFun: function handleViewDetailFun() {
-      if (this.type == 'sign') {
-        uni.navigateTo({
-          url: "/pages/contract/sign/next/contractDetail/contractDetail?contractId=".concat(this.contractId) });
-
-      } else {
-        this.previewCertificate();
-      }
     },
 
     checkImage: function checkImage(e) {
@@ -507,8 +505,9 @@ var iconMap = { 1: 'one-filetype-doc', 2: 'one-filetype-image', 3: 'one-filetype
       }
     },
     // 预览下载
-    previewCertificate: function previewCertificate(e) {
-      var that = this;
+    previewCertificate: function previewCertificate(e) {var _this3 = this;
+
+      this.$refs.evidence.close();
 
       if (this.dataList.status !== 1) {
         setTimeout(function () {
@@ -525,32 +524,39 @@ var iconMap = { 1: 'one-filetype-doc', 2: 'one-filetype-image', 3: 'one-filetype
       var url = _evidence.get_certificate_address + "/" + this.dataList.id;
       uni.showLoading({
         title: '加载中' });
-      // 下载成功 打开pdf
+
 
       (0, _request.get)({
         url: url,
         success: function success(res) {
-          that.downloadPdfFun(res, 1);
+          _this3.downloadPdfFun(res, 1);
         },
         fail: function fail(err) {
+          setTimeout(function () {
+            uni.showToast({
+              icon: 'none',
+              title: err });
+
+          }, 50);
+        },
+        complete: function complete() {
           uni.hideLoading();
-          utils.showError(err);
         } });
 
     },
 
     // 打开pdf文件
-    downloadPdfFun: function downloadPdfFun(url, status) {var _this3 = this;
+    downloadPdfFun: function downloadPdfFun(url, status) {var _this4 = this;
       console.log(url);
       uni.downloadFile({
         url: url,
         success: function success(res) {
           uni.hideLoading();
           var filePath = res.tempFilePath;
-          _this3.setData({
+          _this4.setData({
             pdfUrl: filePath });
 
-          if (status) _this3.openPdfFun(filePath);
+          if (status) _this4.openPdfFun(filePath);
         },
         fail: function fail(res) {
           uni.hideLoading();
@@ -581,7 +587,7 @@ var iconMap = { 1: 'one-filetype-doc', 2: 'one-filetype-image', 3: 'one-filetype
     /**
         * @desc 获取关联合同
         */
-    getContractList: function getContractList() {var _this4 = this;
+    getContractList: function getContractList() {var _this5 = this;
       var params = {
         certificateEvidenceId: this.id,
         pageIndex: 0,
@@ -591,7 +597,7 @@ var iconMap = { 1: 'one-filetype-doc', 2: 'one-filetype-image', 3: 'one-filetype
         url: _evidence.findContractSubject,
         params: params,
         success: function success(res) {
-          _this4.setData({
+          _this5.setData({
             contractList: res.data });
 
         } });
@@ -612,20 +618,16 @@ var iconMap = { 1: 'one-filetype-doc', 2: 'one-filetype-image', 3: 'one-filetype
         * @desc 更多操作
         */
     showSlideMenu: function showSlideMenu() {
-      this.setData({
-        evidenceMenuShow: true });
-
+      this.$refs.evidence.open();
     },
 
     /**
         * @desc 查看证据链
         */
     goChainListPage: function goChainListPage() {
-      this.setData({
-        evidenceMenuShow: false });
-
+      this.$refs.evidence.close();
       uni.navigateTo({
-        url: "/pages/contract/contractList/chains/chains?id=" + this.id });
+        url: "/pages/contract/contractList/chains/chains?id=" + this.contractId });
 
     },
     /**
