@@ -321,29 +321,7 @@ var _evidence = __webpack_require__(/*! ../../../api/evidence.js */ 523);functio
         } });
 
     },
-    /**
-        * @name 选择类型
-        * @param {Object} item 选中节点
-        */
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /**
-            * @name 选择类型
-            * @param {Object} e 事件源
-            */
-    _handleSelectType: function _handleSelectType(e) {
-      var item = e.currentTarget.dataset.item;
+    _handleSelectType: function _handleSelectType(item) {
       this.setData({
         selectsShow: false,
         activeItem: item,
@@ -352,7 +330,6 @@ var _evidence = __webpack_require__(/*! ../../../api/evidence.js */ 523);functio
 
       this._getProjectList(1);
     },
-
     /**
         * @name 打开下拉框
         */

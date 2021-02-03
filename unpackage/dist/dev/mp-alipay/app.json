@@ -70,7 +70,8 @@
     "pages/evidence/projectManage/index",
     "pages/evidence/projectDetail/index",
     "pages/evidence/projectDetail/addDesc/index",
-    "pages/evidence/projectMembers/index"
+    "pages/evidence/projectMembers/index",
+    "pages/evidence/contactProject/index"
   ],
   "subPackages": [],
   "window": {

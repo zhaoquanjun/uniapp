@@ -46,6 +46,7 @@
 			<view class="slide-menu_list">
 				<view :class="'slide-menu_item ' + ( activeItme && activeItme.status == 1 ? '' : 'noUseSlide' )" @tap="previewContractChain">查看存证证书</view>
 				<view class="slide-menu_item" @tap="addChainFromList">关联合同</view>
+				<view class="slide-menu_item" @tap="_handleContactProject">关联项目</view>
 				<view class="slide-menu_item" @tap="handleStartDownloadFun" v-if="canDownload">下载源文件</view>
 			</view>
 		</halfSlideItem>
@@ -120,7 +121,18 @@
 		onShareAppMessage() {},
 
 		methods: {
-			// 滚动容器下啦刷新
+			/**
+			 * @name 前往关联项目
+			 */
+			_handleContactProject() {
+				uni.navigateTo({
+					url: '/pages/evidence/contactProject/index?id=' + this.activeItme.id
+				})
+				this.$refs.operate.close()
+			},
+			/**
+			 * @name 滚动容器下啦刷新
+			 */
 			pullDownRefreshFun() {
 				console.log('容器下拉了');
 				this.setData({

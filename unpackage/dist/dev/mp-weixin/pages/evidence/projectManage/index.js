@@ -224,7 +224,7 @@ var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
 
 
 
-var _evidence = __webpack_require__(/*! ../../../api/evidence.js */ 523);function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../../components/sliderPicker/sliderPicker */ 601));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _evidence = __webpack_require__(/*! ../../../api/evidence.js */ 523);function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../../components/sliderPicker/sliderPicker */ 609));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -321,29 +321,7 @@ var _evidence = __webpack_require__(/*! ../../../api/evidence.js */ 523);functio
         } });
 
     },
-    /**
-        * @name 选择类型
-        * @param {Object} item 选中节点
-        */
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /**
-            * @name 选择类型
-            * @param {Object} e 事件源
-            */
-    _handleSelectType: function _handleSelectType(e) {
-      var item = e.currentTarget.dataset.item;
+    _handleSelectType: function _handleSelectType(item) {
       this.setData({
         selectsShow: false,
         activeItem: item,
@@ -352,7 +330,6 @@ var _evidence = __webpack_require__(/*! ../../../api/evidence.js */ 523);functio
 
       this._getProjectList(1);
     },
-
     /**
         * @name 打开下拉框
         */

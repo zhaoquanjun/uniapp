@@ -101,11 +101,26 @@ var render = function() {
     _vm.projectDetail && _vm.projectDetail.gmtCreate
       ? _vm.formatTimeConvert(_vm.projectDetail.gmtCreate, 1)
       : null
+  var l0 =
+    _vm.projectDetail && _vm.evidences.length > 0
+      ? _vm.__map(_vm.evidences, function(item, index) {
+          var $orig = _vm.__get_orig(item)
+
+          var m1 = item.gmtCreate
+            ? _vm.formatTimeConvert(item.gmtCreate, 1)
+            : null
+          return {
+            $orig: $orig,
+            m1: m1
+          }
+        })
+      : null
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
-        m0: m0
+        m0: m0,
+        l0: l0
       }
     }
   )
@@ -178,49 +193,83 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
 
 
 
-var _evidence = __webpack_require__(/*! ../../../api/evidence.js */ 523); //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = { data: function data() {return { projectId: '', projectDetail: null, evidences: [], pageIndex: 1, pageSize: 10, total: 0 };}, onLoad: function onLoad(options) {this.setData({ projectId: '2526ef3e651e11eb8ab27cd30aeb1494' //options.id
-    });}, onShow: function onShow() {this._getProjectDetail();this._getContactEvidence();}, methods: { /**
-                                                                                                        * @name 获取项目详情
-                                                                                                        */_getProjectDetail: function _getProjectDetail() {var _this = this;(0, _request.get)({ url: _evidence.get_project_detail, params: { projectId: this.projectId }, success: function success(res) {console.log(res);_this.setData({ projectDetail: res });
+var _evidence = __webpack_require__(/*! ../../../api/evidence.js */ 523);function _toConsumableArray(arr) {return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();}function _nonIterableSpread() {throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _iterableToArray(iter) {if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);}function _arrayWithoutHoles(arr) {if (Array.isArray(arr)) return _arrayLikeToArray(arr);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;}var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../../components/sliderPicker/sliderPicker */ 585));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+{
+  data: function data() {
+    return {
+      isCreator: false,
+      projectId: '',
+      projectDetail: null,
+      evidences: [],
+      pageIndex: 1,
+      pageSize: 10,
+      total: 0,
+      activeId: '',
+      sliders: [{
+        label: '查看证据',
+        value: 1 },
+
+      {
+        label: '从项目中移除',
+        value: 1 }] };
+
+
+
+  },
+  components: {
+    sliderPicker: sliderPicker },
+
+  onLoad: function onLoad(options) {
+    this.setData({
+      projectId: options.id });
+
+  },
+  onShow: function onShow() {
+    this._getProjectDetail();
+    this._getContactEvidence();
+  },
+  onPullDownRefresh: function onPullDownRefresh() {
+    this._getProjectDetail();
+    this._getContactEvidence();
+  },
+  methods: {
+    /**
+              * @name 获取项目详情
+              */
+    _getProjectDetail: function _getProjectDetail() {var _this = this;
+      (0, _request.get)({
+        url: _evidence.get_project_detail,
+        params: {
+          projectId: this.projectId },
+
+        success: function success(res) {
+          _this.setData({
+            projectDetail: res,
+            isCreator: res.creator,
+            sliders: res.creator ? [{
+              label: '查看证据',
+              value: 1 },
+
+            {
+              label: '从项目中移除',
+              value: 1 }] :
+
+            [{
+              label: '查看证据',
+              value: 1 }] });
+
 
         },
         fail: function fail(err) {
@@ -235,8 +284,9 @@ var _default = { data: function data() {return { projectId: '', projectDetail: n
     },
     /**
         * @name 获取项目关联证据
+        * @param {type} type 类型 1: 初始加载 2:加载更多
         */
-    _getContactEvidence: function _getContactEvidence() {var _this2 = this;
+    _getContactEvidence: function _getContactEvidence() {var _this2 = this;var type = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
       (0, _request.get)({
         url: _evidence.get_contact_evidence,
         params: {
@@ -245,8 +295,11 @@ var _default = { data: function data() {return { projectId: '', projectDetail: n
           pageSize: this.pageSize },
 
         success: function success(res) {
+          var arr = [];
+          if (type == 1) arr = res.data;
+          if (type == 2) arr = [].concat(_toConsumableArray(_this2.evidences), _toConsumableArray(res.data));
           _this2.setData({
-            evidences: res.data,
+            evidences: arr,
             total: res.totalCount });
 
         },
@@ -264,6 +317,7 @@ var _default = { data: function data() {return { projectId: '', projectDetail: n
         * @name 添加项目描述
         */
     _handleAddDesc: function _handleAddDesc() {
+      if (!this.isCreator) return;
       if (this.projectDetail && this.projectDetail.description) {
 
 
@@ -294,6 +348,76 @@ var _default = { data: function data() {return { projectId: '', projectDetail: n
       uni.navigateTo({
         url: '/pages/evidence/projectMembers/index' });
 
+
+    },
+    /**
+        * @name 加载更多
+        */
+    getMoreDataFun: function getMoreDataFun() {
+      if (this.evidences.length < this.total) {
+        this.setData({
+          pageIndex: Number(this.pageIndex) + 1 });
+
+        this._getContactEvidence(2);
+      }
+    },
+    /**
+        * @name 更多操作
+        */
+    _handleOperateMore: function _handleOperateMore(item) {
+      this.$refs.sliderPicker.show();
+      this.setData({
+        activeId: item.id });
+
+    },
+    /**
+        * @name 上拉菜单操作
+        */
+    _handleOperateItem: function _handleOperateItem(e) {
+      switch (e.detail) {
+        case 0:
+          uni.navigateTo({
+            url: '/pages/evidence/certificateDetail/certificateDetail?id=' + this.activeId });
+
+          break;
+        case 1:
+          this._removeItem();
+          break;
+        default:
+          break;}
+
+      this.$refs.sliderPicker.hide();
+    },
+    /**
+        * @name 从项目中移除证据
+        */
+    _removeItem: function _removeItem() {var _this3 = this;
+      (0, _request.get)({
+        url: _evidence.remove_evidence_form_project,
+        params: {
+          projectId: this.projectId,
+          evidenceId: this.activeId },
+
+        success: function success(res) {
+          setTimeout(function () {
+            uni.showToast({
+              icon: 'none',
+              title: '移除成功' });
+
+          }, 50);
+          _this3.setData({
+            pageIndex: 1 });
+
+          _this3._getContactEvidence();
+        },
+        fail: function fail(err) {
+          setTimeout(function () {
+            uni.showToast({
+              icon: 'none',
+              title: err });
+
+          }, 50);
+        } });
 
     },
     /**

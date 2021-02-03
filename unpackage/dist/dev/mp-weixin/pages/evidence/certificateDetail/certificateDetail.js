@@ -101,7 +101,7 @@ var components
 try {
   components = {
     halfSlideItem: function() {
-      return __webpack_require__.e(/*! import() | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then(__webpack_require__.bind(null, /*! @/components/halfSlideItem/halfSlideItem.vue */ 629))
+      return __webpack_require__.e(/*! import() | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then(__webpack_require__.bind(null, /*! @/components/halfSlideItem/halfSlideItem.vue */ 637))
     }
   }
 } catch (e) {
@@ -369,7 +369,7 @@ var _evidence = __webpack_require__(/*! ../../../api/evidence.js */ 523); //
 //
 var utils = __webpack_require__(/*! ../../../utils/utils.js */ 66);var app = getApp();var timer = null;var innerAudioContext = uni.createInnerAudioContext();var videoBox = null; // 存证类型icon的MAP
 // 存证类型icon的MAP
-var iconMap = { 1: 'one-filetype-doc', 2: 'one-filetype-image', 3: 'one-filetype-music', 4: 'one-filetype-video', 5: 'one-contract' };var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../../components/halfSlideItem/halfSlideItem */ 629));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { id: '', // 证据id
+var iconMap = { 1: 'one-filetype-doc', 2: 'one-filetype-image', 3: 'one-filetype-music', 4: 'one-filetype-video', 5: 'one-contract' };var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../../components/halfSlideItem/halfSlideItem */ 637));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { id: '', // 证据id
       contractId: "", // 合同id
       dataList: {}, // 存证详情数据
       icon: 'one-filetype-image', // 存证类型icon

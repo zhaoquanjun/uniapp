@@ -216,7 +216,7 @@ var _cost = __webpack_require__(/*! ../../../api/cost.js */ 75); //
 //
 //
 //
-var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../../components/sliderPicker/sliderPicker */ 601));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var app = getApp();var _default = { data: function data() {return { amountList: [{ // 选择金额列表
+var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../../components/sliderPicker/sliderPicker */ 609));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var app = getApp();var _default = { data: function data() {return { amountList: [{ // 选择金额列表
         label: 100, value: 100 }, { label: 500, value: 500 }, { label: 1000, value: 1000 }], selectList: [{ label: '账户余额', value: 'account' }, { label: '微信支付', value: 'wx' }],
       origin: 'buy',
       activeIndex: 0,

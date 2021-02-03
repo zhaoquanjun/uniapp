@@ -210,7 +210,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
 var _invoice = __webpack_require__(/*! ../../../api/invoice.js */ 326);function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
-var util = __webpack_require__(/*! ../../../utils/utils */ 66);var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../../components/sliderPicker/sliderPicker */ 601));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var util = __webpack_require__(/*! ../../../utils/utils */ 66);var sliderPicker = function sliderPicker() {__webpack_require__.e(/*! require.ensure | components/sliderPicker/sliderPicker */ "components/sliderPicker/sliderPicker").then((function () {return resolve(__webpack_require__(/*! ../../../components/sliderPicker/sliderPicker */ 609));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 {

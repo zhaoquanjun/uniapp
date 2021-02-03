@@ -2,5 +2,7 @@
   "defaultTitle": "项目详情",
   "pullRefresh": true,
   "titleBarColor": "#ffffff",
-  "usingComponents": {}
+  "usingComponents": {
+    "slider-picker": "/components/sliderPicker/sliderPicker"
+  }
 }

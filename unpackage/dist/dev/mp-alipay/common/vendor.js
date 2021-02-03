@@ -9578,7 +9578,7 @@ var FXQ = {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.update_project_desc = exports.get_contact_evidence = exports.get_project_detail = exports.delete_project = exports.complete_project = exports.create_project = exports.get_project_list = exports.findContractSubject = exports.get_certificate_address = exports.evidence_detail = exports.saveChainToContract = exports.add_certificate_file = exports.get_upload_policy = exports.certificate_record_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+Object.defineProperty(exports, "__esModule", { value: true });exports.evidence_contact_project = exports.get_evidence_can_contact_projects = exports.remove_evidence_form_project = exports.update_project_desc = exports.get_contact_evidence = exports.get_project_detail = exports.delete_project = exports.complete_project = exports.create_project = exports.get_project_list = exports.findContractSubject = exports.get_certificate_address = exports.evidence_detail = exports.saveChainToContract = exports.add_certificate_file = exports.get_upload_policy = exports.certificate_record_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
 
 var certificate_record_list = _request.host + "/v1/blockchain/certificateRecord/list"; // 出证记录列表(数据和签署)
 exports.certificate_record_list = certificate_record_list;
@@ -9608,6 +9608,12 @@ var get_contact_evidence = _request.host + "/v1/project/projectEvidenceList"; //
 exports.get_contact_evidence = get_contact_evidence;
 var update_project_desc = _request.host + "/v1/project/updateDescription"; // 添加项目描述
 exports.update_project_desc = update_project_desc;
+var remove_evidence_form_project = _request.host + "/v1/project/deleteProjectEvidence"; // 将证据移出项目
+exports.remove_evidence_form_project = remove_evidence_form_project;
+var get_evidence_can_contact_projects = _request.host + "/v1/project/evidenceProjectRelWillList"; // 证据可以关联项目的列表
+exports.get_evidence_can_contact_projects = get_evidence_can_contact_projects;
+var evidence_contact_project = _request.host + "/v1/project/addProjectEvidences"; // 证据关联项目
+exports.evidence_contact_project = evidence_contact_project;
 
 /***/ }),
 

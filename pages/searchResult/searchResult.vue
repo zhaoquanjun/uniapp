@@ -2,7 +2,7 @@
 <view>
 <!--pages/searchResult/searchResult.wxml-->
 <view class="contract-search">
-	<search @inputChanged="inputSearchFun" @cancelClicked="cancleSearchFun" :timeSearch="true" ::isShowCancel="true"></search>
+	<search @inputChanged="inputSearchFun" @cancelClicked="cancleSearchFun" :timeSearch="true" :isShowCancel="true"></search>
 </view>
 <view class="recent-search" v-if="contracts.length>0">搜索结果</view>
 <view v-for="(item, index) in contracts" :key="index" class="contract" style="border-bottom:2rpx solid #F5F5F5FF;" :data-item="item" :data-index="index" @tap="pushToDetail">

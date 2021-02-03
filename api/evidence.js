@@ -27,3 +27,9 @@ export const get_project_detail = host + "/v1/project/detail"; // 获取项目�
 export const get_contact_evidence = host + "/v1/project/projectEvidenceList"; // 获取项目关联证据
 
 export const update_project_desc = host + "/v1/project/updateDescription"; // 添加项目描述
+
+export const remove_evidence_form_project = host + "/v1/project/deleteProjectEvidence"; // 将证据移出项目
+
+export const get_evidence_can_contact_projects = host + "/v1/project/evidenceProjectRelWillList"; // 证据可以关联项目的列表
+
+export const evidence_contact_project = host + "/v1/project/addProjectEvidences"; // 证据关联项目

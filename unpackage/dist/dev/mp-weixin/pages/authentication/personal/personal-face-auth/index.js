@@ -96,7 +96,7 @@ var components
 try {
   components = {
     modal: function() {
-      return __webpack_require__.e(/*! import() | components/modal/modal */ "components/modal/modal").then(__webpack_require__.bind(null, /*! @/components/modal/modal.vue */ 678))
+      return __webpack_require__.e(/*! import() | components/modal/modal */ "components/modal/modal").then(__webpack_require__.bind(null, /*! @/components/modal/modal.vue */ 686))
     }
   }
 } catch (e) {
@@ -198,7 +198,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _request = __webpack_require__(/*! ../../../../api/request.js */ 8);
 var _authen = __webpack_require__(/*! ../../../../api/authen.js */ 441);
-var _account = __webpack_require__(/*! ../../../../api/account.js */ 9);function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var modal = function modal() {__webpack_require__.e(/*! require.ensure | components/modal/modal */ "components/modal/modal").then((function () {return resolve(__webpack_require__(/*! ../../../../components/modal/modal */ 678));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _account = __webpack_require__(/*! ../../../../api/account.js */ 9);function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var modal = function modal() {__webpack_require__.e(/*! require.ensure | components/modal/modal */ "components/modal/modal").then((function () {return resolve(__webpack_require__(/*! ../../../../components/modal/modal */ 686));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 {

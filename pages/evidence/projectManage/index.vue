@@ -31,7 +31,7 @@
 			<view v-if="list.length > 0">
 				<view class="project-item" v-for="(item, index) in list" :key="index" @tap="_handleViewDetail(item)">
 					<view class="file-icon">
-						<image src="../../../static/images/evidence/file-icon.png" mode=""></image>
+						<image src="../../../static/images/evidence/file-icon.png" mode="aspectFit"></image>
 					</view>
 					<view class="content">
 						<view class="title">{{ item.name }}</view>
@@ -41,7 +41,7 @@
 						</view>
 					</view>
 					
-					<view class="more" @tap.stop="_handleMoreOperate(item)" v-if="item.stautus !== 2">
+					<view class="more" @tap.stop="_handleMoreOperate(item)" v-if="item.status !== 2 && item.creator">
 						<text class="iconfont iconmore"></text>
 					</view>
 					
@@ -169,11 +169,6 @@
 					}
 				})
 			},
-			/**
-			 * @name 选择类型
-			 * @param {Object} item 选中节点
-			 */
-			// #ifdef  H5
 			_handleSelectType(item) {
 				this.setData({
 					selectsShow: false,
@@ -183,24 +178,6 @@
 				})
 				this._getProjectList(1)
 			},
-			// #endif
-
-			// #ifndef  H5
-			/**
-			 * @name 选择类型
-			 * @param {Object} e 事件源
-			 */
-			_handleSelectType(e) {
-				const item = e.currentTarget.dataset.item
-				this.setData({
-					selectsShow: false,
-					activeItem: item,
-					status: item.value,
-					pageIndex: 1,
-				})
-				this._getProjectList(1)
-			},
-			// #endif
 			/**
 			 * @name 打开下拉框
 			 */

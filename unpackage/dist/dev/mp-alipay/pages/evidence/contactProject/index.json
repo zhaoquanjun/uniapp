@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "关联项目",
+  "pullRefresh": true,
+  "titleBarColor": "#ffffff",
+  "usingComponents": {
+    "search": "/components/search/search"
+  }
+}

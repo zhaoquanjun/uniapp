@@ -15,21 +15,23 @@
 			<text class="text">项目成员</text>
 			<text class="iconfont iconright-arrow"></text>
 		</view>
-		<view class="evidence-list section">
+		<scroll-view class="evidence-list section" scroll-y="true" scroll-anchoring="true" refresher-enabled="true"
+		 @scrolltolower="getMoreDataFun">
 			<view class="title">证据列表</view>
 			<view v-if="evidences.length > 0">
 				<view class="item" v-for="(item, index) in evidences" :key="index">
 					<view class="content">
-						<view class="title"></view>
-						<view class="time"></view>
+						<view class="title">{{ item.fileName }}</view>
+						<view class="time">{{ item.gmtCreate ? formatTimeConvert(item.gmtCreate, 1) : '' }}</view>
 					</view>
-					<view class="more">
+					<view class="more" @tap="_handleOperateMore(item)">
 						<text class="iconfont iconmore"></text>
 					</view>
 				</view>
 			</view>
 			<view class="ev-empty" v-else>暂无关联证据</view>
-		</view>
+		</scroll-view>
+		<slider-picker ref="sliderPicker" :sliderList="sliders" @selectWay="_handleOperateItem" />
 	</view>
 </template>
 
@@ -40,26 +42,46 @@
 
 	import {
 		get_project_detail,
-		get_contact_evidence
+		get_contact_evidence,
+		remove_evidence_form_project
 	} from '../../../api/evidence.js'
 
+	import sliderPicker from "../../../components/sliderPicker/sliderPicker";
 	export default {
 		data() {
 			return {
+				isCreator: false,
 				projectId: '',
 				projectDetail: null,
 				evidences: [],
 				pageIndex: 1,
 				pageSize: 10,
-				total: 0
+				total: 0,
+				activeId: '',
+				sliders: [{
+						label: '查看证据',
+						value: 1
+					},
+					{
+						label: '从项目中移除',
+						value: 1
+					}
+				]
 			}
+		},
+		components: {
+			sliderPicker
 		},
 		onLoad(options) {
 			this.setData({
-				projectId: '2526ef3e651e11eb8ab27cd30aeb1494' //options.id
+				projectId: options.id
 			})
 		},
 		onShow() {
+			this._getProjectDetail()
+			this._getContactEvidence()
+		},
+		onPullDownRefresh() {
 			this._getProjectDetail()
 			this._getContactEvidence()
 		},
@@ -74,9 +96,21 @@
 						projectId: this.projectId
 					},
 					success: res => {
-						console.log(res)
 						this.setData({
-							projectDetail: res
+							projectDetail: res,
+							isCreator: res.creator,
+							sliders: res.creator ? [{
+									label: '查看证据',
+									value: 1
+								},
+								{
+									label: '从项目中移除',
+									value: 1
+								}
+							] : [{
+								label: '查看证据',
+								value: 1
+							}]
 						})
 					},
 					fail: err => {
@@ -91,8 +125,9 @@
 			},
 			/**
 			 * @name 获取项目关联证据
+			 * @param {type} type 类型 1: 初始加载 2:加载更多
 			 */
-			_getContactEvidence() {
+			_getContactEvidence(type = 1) {
 				get({
 					url: get_contact_evidence,
 					params: {
@@ -101,8 +136,11 @@
 						pageSize: this.pageSize
 					},
 					success: res => {
+						let arr = []
+						if (type == 1) arr = res.data
+						if (type == 2) arr = [...this.evidences, ...res.data]
 						this.setData({
-							evidences: res.data,
+							evidences: arr,
 							total: res.totalCount
 						})
 					},
@@ -120,6 +158,7 @@
 			 * @name 添加项目描述
 			 */
 			_handleAddDesc() {
+				if (!this.isCreator) return
 				if (this.projectDetail && this.projectDetail.description) {
 					// #ifdef  H5
 					localStorage.setItem('projectDesc', this.projectDetail.description)
@@ -151,6 +190,76 @@
 					url: '/pages/evidence/projectMembers/index'
 				})
 
+			},
+			/**
+			 * @name 加载更多
+			 */
+			getMoreDataFun() {
+				if (this.evidences.length < this.total) {
+					this.setData({
+						pageIndex: Number(this.pageIndex) + 1
+					})
+					this._getContactEvidence(2)
+				}
+			},
+			/**
+			 * @name 更多操作
+			 */
+			_handleOperateMore(item) {
+				this.$refs.sliderPicker.show()
+				this.setData({
+					activeId: item.id
+				})
+			},
+			/**
+			 * @name 上拉菜单操作
+			 */
+			_handleOperateItem(e) {
+				switch (e.detail) {
+					case 0:
+						uni.navigateTo({
+							url: '/pages/evidence/certificateDetail/certificateDetail?id=' + this.activeId
+						})
+						break
+					case 1:
+						this._removeItem()
+						break
+					default:
+						break
+				}
+				this.$refs.sliderPicker.hide()
+			},
+			/**
+			 * @name 从项目中移除证据
+			 */
+			_removeItem() {
+				get({
+					url: remove_evidence_form_project,
+					params: {
+						projectId: this.projectId,
+						evidenceId: this.activeId
+					},
+					success: res => {
+						setTimeout(() => {
+							uni.showToast({
+								icon: 'none',
+								title: '移除成功'
+							})
+						}, 50)
+						this.setData({
+							pageIndex: 1
+						})
+						this._getContactEvidence()
+					},
+					fail: err => {
+						setTimeout(() => {
+							uni.showToast({
+								icon: 'none',
+								title: err
+							})
+						}, 50)
+					}
+				})
 			},
 			/**
 			 * @name 时间格式化

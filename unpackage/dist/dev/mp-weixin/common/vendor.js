@@ -8658,7 +8658,7 @@ var FXQ = {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.update_project_desc = exports.get_contact_evidence = exports.get_project_detail = exports.delete_project = exports.complete_project = exports.create_project = exports.get_project_list = exports.findContractSubject = exports.get_certificate_address = exports.evidence_detail = exports.saveChainToContract = exports.add_certificate_file = exports.get_upload_policy = exports.certificate_record_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
+Object.defineProperty(exports, "__esModule", { value: true });exports.evidence_contact_project = exports.get_evidence_can_contact_projects = exports.remove_evidence_form_project = exports.update_project_desc = exports.get_contact_evidence = exports.get_project_detail = exports.delete_project = exports.complete_project = exports.create_project = exports.get_project_list = exports.findContractSubject = exports.get_certificate_address = exports.evidence_detail = exports.saveChainToContract = exports.add_certificate_file = exports.get_upload_policy = exports.certificate_record_list = void 0;var _request = __webpack_require__(/*! ./request */ 8);
 
 var certificate_record_list = _request.host + "/v1/blockchain/certificateRecord/list"; // 出证记录列表(数据和签署)
 exports.certificate_record_list = certificate_record_list;
@@ -8688,6 +8688,12 @@ var get_contact_evidence = _request.host + "/v1/project/projectEvidenceList"; //
 exports.get_contact_evidence = get_contact_evidence;
 var update_project_desc = _request.host + "/v1/project/updateDescription"; // 添加项目描述
 exports.update_project_desc = update_project_desc;
+var remove_evidence_form_project = _request.host + "/v1/project/deleteProjectEvidence"; // 将证据移出项目
+exports.remove_evidence_form_project = remove_evidence_form_project;
+var get_evidence_can_contact_projects = _request.host + "/v1/project/evidenceProjectRelWillList"; // 证据可以关联项目的列表
+exports.get_evidence_can_contact_projects = get_evidence_can_contact_projects;
+var evidence_contact_project = _request.host + "/v1/project/addProjectEvidences"; // 证据关联项目
+exports.evidence_contact_project = evidence_contact_project;
 
 /***/ }),
 
@@ -8830,7 +8836,7 @@ module.exports.trim = trim;
 
 /***/ }),
 
-/***/ 662:
+/***/ 670:
 /*!***************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/common/component.js ***!
   \***************************************************************************************/
@@ -8838,8 +8844,8 @@ module.exports.trim = trim;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _basic = __webpack_require__(/*! ../mixins/basic */ 663);
-var _index = __webpack_require__(/*! ../mixins/observer/index */ 664);function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _basic = __webpack_require__(/*! ../mixins/basic */ 671);
+var _index = __webpack_require__(/*! ../mixins/observer/index */ 672);function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
 function mapKeys(source, target, map) {
   Object.keys(map).forEach(function (key) {
     if (source[key]) {
@@ -8902,7 +8908,7 @@ function VantComponent() {var vantOptions = arguments.length > 0 && arguments[0]
 
 /***/ }),
 
-/***/ 663:
+/***/ 671:
 /*!***********************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/mixins/basic.js ***!
   \***********************************************************************************/
@@ -8938,7 +8944,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 664:
+/***/ 672:
 /*!********************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/mixins/observer/index.js ***!
   \********************************************************************************************/
@@ -8946,8 +8952,8 @@ module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.observe = observe;var _behavior = __webpack_require__(/*! ./behavior */ 665);
-var _props = __webpack_require__(/*! ./props */ 666);
+Object.defineProperty(exports, "__esModule", { value: true });exports.observe = observe;var _behavior = __webpack_require__(/*! ./behavior */ 673);
+var _props = __webpack_require__(/*! ./props */ 674);
 function observe(vantOptions, options) {var
 
   watch =
@@ -8987,7 +8993,7 @@ function observe(vantOptions, options) {var
 
 /***/ }),
 
-/***/ 665:
+/***/ 673:
 /*!***********************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/mixins/observer/behavior.js ***!
   \***********************************************************************************************/
@@ -9060,7 +9066,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 666:
+/***/ 674:
 /*!********************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/mixins/observer/props.js ***!
   \********************************************************************************************/
@@ -9104,7 +9110,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.observePro
 
 /***/ }),
 
-/***/ 667:
+/***/ 675:
 /*!***********************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/common/utils.js ***!
   \***********************************************************************************/
@@ -9142,7 +9148,7 @@ function getSystemInfoSync() {
 
 /***/ }),
 
-/***/ 668:
+/***/ 676:
 /*!************************************************************************************!*\
   !*** /Users/icourt/Desktop/mycode/uni/miniprogram_npm/vant-weapp/picker/shared.js ***!
   \************************************************************************************/

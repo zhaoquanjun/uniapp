@@ -659,6 +659,16 @@
 				"enablePullDownRefresh": true,
 				"backgroundTextStyle": "dark"
 			}
+		}, {
+			"path": "pages/evidence/contactProject/index",
+			"style": {
+				"navigationBarTitleText": "关联项目",
+				"navigationBarBackgroundColor": "#ffffff",
+				"navigationBarTextStyle": "black",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+
 		}
 	],
 	"permission": {

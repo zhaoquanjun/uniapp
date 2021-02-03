@@ -4,5 +4,7 @@
   "navigationBarTextStyle": "black",
   "enablePullDownRefresh": true,
   "backgroundTextStyle": "dark",
-  "usingComponents": {}
+  "usingComponents": {
+    "slider-picker": "/components/sliderPicker/sliderPicker"
+  }
 }

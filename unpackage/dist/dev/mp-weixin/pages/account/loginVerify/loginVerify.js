@@ -153,7 +153,7 @@ var _cost = __webpack_require__(/*! ../../../api/cost.js */ 75); //
 //
 //
 // pages/account/loginVerify/loginVerify.js
-var verifyCode = function verifyCode() {__webpack_require__.e(/*! require.ensure | components/verifycode/verifycode */ "components/verifycode/verifycode").then((function () {return resolve(__webpack_require__(/*! ../../../components/verifycode/verifycode */ 636));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {
+var verifyCode = function verifyCode() {__webpack_require__.e(/*! require.ensure | components/verifycode/verifycode */ "components/verifycode/verifycode").then((function () {return resolve(__webpack_require__(/*! ../../../components/verifycode/verifycode */ 644));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {
     return {
       openId: '',
       unionId: '',

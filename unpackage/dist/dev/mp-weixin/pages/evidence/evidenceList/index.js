@@ -96,10 +96,10 @@ var components
 try {
   components = {
     search: function() {
-      return __webpack_require__.e(/*! import() | components/search/search */ "components/search/search").then(__webpack_require__.bind(null, /*! @/components/search/search.vue */ 643))
+      return __webpack_require__.e(/*! import() | components/search/search */ "components/search/search").then(__webpack_require__.bind(null, /*! @/components/search/search.vue */ 651))
     },
     halfSlideItem: function() {
-      return __webpack_require__.e(/*! import() | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then(__webpack_require__.bind(null, /*! @/components/halfSlideItem/halfSlideItem.vue */ 629))
+      return __webpack_require__.e(/*! import() | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then(__webpack_require__.bind(null, /*! @/components/halfSlideItem/halfSlideItem.vue */ 637))
     }
   }
 } catch (e) {
@@ -211,6 +211,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var _request = __webpack_require__(/*! ../../../api/request.js */ 8);
 
 
@@ -268,9 +269,9 @@ var _evidence = __webpack_require__(/*! ../../../api/evidence.js */ 523); //
 //
 //
 //
-var util = __webpack_require__(/*! ../../../utils/utils */ 66);var app = getApp();var search = function search() {__webpack_require__.e(/*! require.ensure | components/search/search */ "components/search/search").then((function () {return resolve(__webpack_require__(/*! ../../../components/search/search */ 643));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var mpHalfScreenDialog = function mpHalfScreenDialog() {__webpack_require__.e(/*! require.ensure | components/half-screen-dialog/half-screen-dialog */ "components/half-screen-dialog/half-screen-dialog").then((function () {return resolve(__webpack_require__(/*! ../../../components/half-screen-dialog/half-screen-dialog */ 685));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../../components/halfSlideItem/halfSlideItem */ 629));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { tabs: [{ name: '签署存证', type: 'sign' }, { name: '数据存证', type: 'data' }], signs: [], pageIndex: 1, total: 0, activeName: 'sign', searchParams: '', pageSize: 10, isTriggered: false, // 是否容器下拉刷新
+//
+var util = __webpack_require__(/*! ../../../utils/utils */ 66);var app = getApp();var search = function search() {__webpack_require__.e(/*! require.ensure | components/search/search */ "components/search/search").then((function () {return resolve(__webpack_require__(/*! ../../../components/search/search */ 651));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var mpHalfScreenDialog = function mpHalfScreenDialog() {__webpack_require__.e(/*! require.ensure | components/half-screen-dialog/half-screen-dialog */ "components/half-screen-dialog/half-screen-dialog").then((function () {return resolve(__webpack_require__(/*! ../../../components/half-screen-dialog/half-screen-dialog */ 693));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var halfSlideItem = function halfSlideItem() {__webpack_require__.e(/*! require.ensure | components/halfSlideItem/halfSlideItem */ "components/halfSlideItem/halfSlideItem").then((function () {return resolve(__webpack_require__(/*! ../../../components/halfSlideItem/halfSlideItem */ 637));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default = { data: function data() {return { tabs: [{ name: '签署存证', type: 'sign' }, { name: '数据存证', type: 'data' }], signs: [], pageIndex: 1, total: 0, activeName: 'sign', searchParams: '', pageSize: 10, isTriggered: false, // 是否容器下拉刷新
       activeItme: null, canDownload: "", pdfUrl: "" };}, components: { search: search, mpHalfScreenDialog: mpHalfScreenDialog, halfSlideItem: halfSlideItem }, props: {}, onLoad: function onLoad() {}, onShow: function onShow() {this.setData({ pageIndex: 1 });this.getPageDataFun(1);}, onReady: function onReady() {this.dialog = this.$refs.mphalfScreenDialog;}, onHide: function onHide() {this.dialog && this.dialog.close();},
-
   onUnload: function onUnload() {
     app.globalData.activeTab = 'sign';
   },
@@ -278,7 +279,18 @@ var util = __webpack_require__(/*! ../../../utils/utils */ 66);var app = getApp(
   onShareAppMessage: function onShareAppMessage() {},
 
   methods: {
-    // 滚动容器下啦刷新
+    /**
+              * @name 前往关联项目
+              */
+    _handleContactProject: function _handleContactProject() {
+      uni.navigateTo({
+        url: '/pages/evidence/contactProject/index?id=' + this.activeItme.id });
+
+      this.$refs.operate.close();
+    },
+    /**
+        * @name 滚动容器下啦刷新
+        */
     pullDownRefreshFun: function pullDownRefreshFun() {var _this = this;
       console.log('容器下拉了');
       this.setData({
